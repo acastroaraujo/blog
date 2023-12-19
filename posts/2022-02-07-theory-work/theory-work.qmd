@@ -66,9 +66,9 @@ The logic behind constructionist arguments is captured more succinctly by Ian Ha
 >
 > @hacking1999 [pp. 6]
 
-This type of argument is *not trivial* when $X$ is taken for granted ---i.e., when $X$ appears to be inevitable.
+This kind of argument is *not trivial* when $X$ is taken for granted ---i.e., when $X$ appears to be inevitable.
 
-A great example of this kind of scholarship is the development of the concept of *racecraft* to explain how social hierarchy gets projected into "nature" in the form of "race."
+The concept of *racecraft*---used to describe how social hierarchy gets projected into "nature" in the form of "race"---is a great example of this kind of argument. 
 
 > Consider the statement "black Southerners were segregated because of their skin color"---a perfectly natural sentence to the ears of most Americans, who tend to overlook its *weird causality.*
 >
