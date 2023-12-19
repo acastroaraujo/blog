@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Blog"
+  navbar:
+    right:
+      - text: about
+        href: https://acastroaraujo.github.io
+      - icon: github
+        href: https://github.com/acastroaraujo
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    fig-align: center
+    code-fold: show
+
+editor: visual
+
+freeze: auto

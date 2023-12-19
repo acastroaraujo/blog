@@ -1,0 +1,81 @@
+---
+title: "Theory-Work"
+description: |
+  Deepities, social constructionism, and sociological theory.
+author: andrés castro araújo
+categories:
+  - Theory
+date: 2022-02-07
+bibliography: references.bib
+---
+
+> A deepity is a proposition that *seems* both important and true ---and profound--- but that achieves this effect by being ambiguous. On one reading it is manifestly false, but it would be earth-shaking if it were true; on the other reading it is true but trivial. The unwary listener picks up the glimmer of truth from the second reading, and the devastating importance from the first reading, and thinks, Wow! That's a deepity.
+>
+> @dennett2013 [pp. 56]
+
+Dennett's favorite example is *love is just a word.*
+
+### Theory-Work
+
+@martin2014 argues that theoretical work should strive, among other things, "to improve the precision, clarity, and coherence of our ideas".
+
+This involves cultivating some good habits.
+
+For example,
+
+> One important habit for theorizing is just the following: as one writes a period at the end of the sentence, to stop and ask oneself "am I sure this is true? Let me entertain the opposite. Do I have any reason to reject it other than my desire to go forward with my own argument?"
+>
+> @martin2014 [pp. 10-1]
+
+Sometimes it involves avoiding common traps.
+
+For example,
+
+> ...the ever more extensive expansion of some theoretical system in a way that effectively closes it off from rebuttal or disconfirmation by anything in the world. This is the nuance of the *conceptual framework*. It is an evasion of the demand that a theory be refutable.
+>
+> @healy2017 [pp. 120-1]
+
+@martin2014 refers to this same problem by calling attention to the ways in which researchers will sometimes stretch their concepts to fit new cases in such a way that calls for the careless redefinition of important terms.
+
+For example, he cites Niklas Luhmann saying that "All meaninglessness... has meaning again through its strangeness." *That's a deepity.* The statement is only true if we accept a *new* definition for the word *meaning*. And why should we?
+
+> Most generally, whenever we find ourselves rushing to claim that "things outside of any set are *themselves* in the set" we may be changing our terminology in ways we do not understand. And if we make a habit of it, we'll end up using meaningless statements.
+>
+> @martin2014 [pp. 13]
+
+Good theory-work should give us the tools to avoid common traps. It should enable us to tell apart good nuance (e.g. getting important details correct, avoiding oversimplifications) from bad nuance. It should enable us to tell apart good empirical tautologies (e.g., "people try to be good, and good is what ever people say is good") from bad argumentative tautologies (i.e., assuming at one place what we are claiming to prove at another). It should prevent us from saying deepities, for god's sake.
+
+In other words, good theory-work should constrain our thinking so that saying stupid things becomes much harder.
+
+### Social constructionism
+
+A lot of social science has a deepity problem, in the sense that ambiguous statements will get rewarded if they seem profound.
+
+A lot of constructionist arguments become deepities when they take the form "$X$ is socially constructed, therefore $X$ is not real". But most sociologists often take the opposite perspective: "$X$ is real *because* it's socially constructed". This is what drove Durkheim to speak of *social facts* and it's what drives contemporary sociologists to speak of *institutions.*
+
+The logic behind constructionist arguments is captured more succinctly by Ian Hacking.
+
+> Social constructionists about $X$ tend to hold that:
+>
+> 1.  $X$ need not have existed, or need not be at all as it is. $X$, or $X$ as it is at present, is not determined by the nature of things; it is not inevitable.
+>
+> Very often they go further, and urge that:
+>
+> 2.  $X$ is quite bad as it is.
+> 3.  We would be much better off if $X$ were done away with, or at least radically transformed.
+>
+> @hacking1999 [pp. 6]
+
+This type of argument is *not trivial* when $X$ is taken for granted ---i.e., when $X$ appears to be inevitable.
+
+A great example of this kind of scholarship is the development of the concept of *racecraft* to explain how social hierarchy gets projected into "nature" in the form of "race."
+
+> Consider the statement "black Southerners were segregated because of their skin color"---a perfectly natural sentence to the ears of most Americans, who tend to overlook its *weird causality.*
+>
+> @fields2014 [pp. 17]
+
+How can skin color *cause* segregation? How can skin color *cause* a stop-and-frisk incident?
+
+This is the opposite of Dennet's "deepity". It's a statement that looks trivial and true at first glance. But, upon closer reflection, it has no well-formed meaning. And if it were true, it would have earth shattering consequences to our conception of causality. *Which begs the question: why did it originally seem so unremarkable?*
+
+At their most ambitious, social constructionist arguments are an indictment of *folk* social theory (or "culture"). These arguments remind us that many arbitrary things come to be seen as "natural" or "inevitable" in the course of everyday life.
