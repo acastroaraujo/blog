@@ -1,0 +1,85 @@
+---
+title: "What is Computational Social Science?"
+description: |
+  tl;dr it is a _trading zone_
+author: andrés castro araújo
+categories:
+  - Social Science
+date: 2023-12-19
+bibliography: references.bib
+draft: true
+---
+
+Computational Social Science (CSS) can best be described as a *trading zone* in which different communities manage to
+
+I don't think it will ever become an autonomous field, and that's OK.
+
+This is not the first time that social scientists, computer scientists, and engineers have engaged in this sort of exchange. Before: cybernetics and cognitive science.
+
+> He claims the problem is solved by the development of “ in-between ” vocabularies through which communication can be accomplished. The simplest of these “ interlanguages ” is a “ jargon, ” more complex is a “ pidgin, ” while a “ creole ” is a new language in itself.
+
+The metaphor is trade. Fomo. Fads.
+
+Finish reading Galison.
+
+> Two groups can agree on rules of exchange even if they ascribe utterly different significance to the objects being exchanged; they may even disagree on the meaning of the exchange process itself. Nonetheless, the trading partners can hammer out a *local* coordination, despite vast *global* differences.
+>
+> [Galison 1997, 783, cited in @gorman2010]
+
+A while back Matt Salganik [argued](https://youtu.be/zGG9wPl1C5E?feature=shared) that we should resist the urge to build boundaries around the field of computational social science (CSS) for two reasons. First, it is changing very quickly. Any definition will surely become obsolete tomorrow. Second, it currently resembles a *social movement*—i.e., it is made of a heterogeneous set of individuals and communities with *different goals.* Drawing strict boundaries around CSS would unnecessarily hamper its growth as a social movement. Thus, we should be content with defining CSS as "anything that's cool" and focus instead of doing interesting work.
+
+Here are some definitions I've found in the wild:
+
+@salganik2017
+
+:   "the intersection of social science and data science"
+
+wolff
+
+:   "an interdisciplinary field that advances theories of human behavior by applying computational techniques to large datasets from social media sites, the Internet, or other digitized archives such as administrative records."
+
+new style: git + github, text editors, reproducibility, open access
+
+new opportunities: amazon turk, digital trace data, webscraping, text-as-data, online experiments
+
+new *profession* (around 2010), first in tech companies (Google, Microsoft, Facebook, Twitter) and then spread outwards, then Netflix, Spotify, Amazon and any social platform in which building a collaborative recommendation system makes sense.
+
+Traditional data analysts discovered that they could participate in all this through via superficial adjustments. For example, they no longer fitted statistical models, they *trained* machine learning algorithms; they began using the word *classifier* when talking about logistic regression; one of them once described logistic regression as "a single layer neural network with a sigmoid activation function"; another one repackage OLS as a form of "artificial intelligence" in a corporate report.
+
+More traditional statisticians saw all forms of regression turned into *supervised learning* and all sorts of clustering and dimension reduction techniques turned into *unsupervised learning.*
+
+logistic regression is a single-layer neural network that uses a sigmoid activation function
+
+agent-based modeling
+
+qualitative epistemology [@nelson2020] the Abbott thing!
+
+agent-based modeling [@smaldino2023]
+
+> Social researchers of the future will need to write code, wrangle data, and think computationally as well as sociologically.
+
+<https://www.ibm.com/topics/rest-apis>
+
+Webscrapping, perhaps using Python's `BeautifulSoup` or R's `rvest`.
+
+artificial intelligence
+
+::: {style="text-align: end;"}
+*One well-instituted tool can ruin the career of a theory that cannot use it.*
+
+— Mary Douglas
+:::
+
+@bechtel2015
+
+cognitive science.
+
+Digital humanities 
+
+Big Data DiMaggio
+
+Artificial Intelligence hype resembles the cybernetics craze of the 1960s
+
+Parallel computing 
+
+Metaphors of the brain and society @daugman1993

@@ -1,15 +1,24 @@
 project:
   type: website
-  output-dir: docs
+  output-dir: _site
 
 website:
-  title: "Blog"
+  title: "blog"
   navbar:
+    title: false
     right:
-      - text: about
+      - icon: house
+        text: about
         href: https://acastroaraujo.github.io
+      - icon: file-person
+        text: cv
+        href: https://acastroaraujo.github.io/cv/
       - icon: github
+        text: github
         href: https://github.com/acastroaraujo
+      - icon: chat-text
+        text: blog
+        href: index.qmd
 
 format:
   html:
@@ -18,5 +27,3 @@ format:
     code-fold: show
 
 editor: visual
-
-freeze: auto

@@ -1,9 +1,8 @@
 ---
 title: "Optimization in R"
 description: |
-  A few different ways to do optimization
-author:
-  - name: andrés
+  A few different ways to do optimization.
+author: andrés castro araújo
 categories:
   - R
 date: 01-24-2021
@@ -26,6 +25,8 @@ parabola <- function(x) 15 + 10*x - 2*x^2
 Then we can visualize it using `curve()` or `ggplot2`.
 
 ```{r}
+#| fig-align: center
+
 library(ggplot2)
 theme_set(theme_light(base_family = "Optima"))
 
@@ -40,6 +41,8 @@ g
 Then we call `optimize()`, which takes the function as its first argument, the interval as its second, and an optional argument indicating whether or not you are searching for the function's maximum (minimize is the default).
 
 ```{r}
+#| fig-align: center
+
 out <- optimize(parabola, interval = c(-100, 100), maximum = TRUE)
 out
 
@@ -120,6 +123,9 @@ coefficients(fit)
 Users of [**Stan**](https://mc-stan.org/) should know that it can be used for optimization as well.
 
 ```{r}
+#| message: false
+#| warning: false
+
 library(cmdstanr)
 mcmc_optim <- cmdstan_model("simple_parabola.stan")
 mcmc_optim$print()

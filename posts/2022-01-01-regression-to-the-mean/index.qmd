@@ -4,8 +4,8 @@ description: |
   A visual explanation.
 author: andrés castro araújo
 categories:
-  - statistics
-  - causality
+  - Statistics
+  - Causality
 date: 2022-01-01
 bibliography: references.bib
 ---
@@ -31,6 +31,7 @@ Regression to the mean is one of the greatest parables in statistics. The term o
 ```{r}
 #| code-fold: show
 #| message: false
+#| fig-align: center
 
 HistData::Galton |> 
   ggplot(aes(x = parent, y = child)) + 
@@ -94,6 +95,7 @@ The following graphs show both ways of interpreting *regression to the mean*, ba
 #| code-fold: true
 #| fig-height: 5
 #| fig-width: 6
+#| fig-align: center
 
 OLS <- lm(child ~ parent, data = HistData::Galton)
 intercept <- coefficients(OLS)[[1]]
