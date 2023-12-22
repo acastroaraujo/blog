@@ -27,3 +27,5 @@ format:
     code-fold: show
 
 editor: visual
+
+csl: american-journal-of-sociology.csl

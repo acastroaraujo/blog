@@ -11,7 +11,7 @@ bibliography: references.bib
 
 ### Theory-Work
 
-@martin2014 argues that theoretical work should strive, among other things, "to improve the precision, clarity, and coherence of our ideas".
+Theoretical work should strive, among other things, "to improve the precision, clarity, and coherence of our ideas" [@martin2014].
 
 This involves cultivating some good habits.
 
@@ -21,23 +21,24 @@ For example,
 >
 > @martin2014 [pp. 10-1]
 
-Sometimes it involves avoiding common traps.
+Sometimes it involves avoiding common traps—e.g., the three "nuance traps" identified described by @healy2017.
 
-For example,
-
-> ...the ever more extensive expansion of some theoretical system in a way that effectively closes it off from rebuttal or disconfirmation by anything in the world. This is the nuance of the *conceptual framework*. It is an evasion of the demand that a theory be refutable.
+> First is the ever more detailed, merely empirical description of the world. This is the nuance of the *fine-grain*. It is a rejection of
+> theory masquerading as increased accuracy. Second is the ever more extensive expansion of some theoretical system in a way that effectively closes it off from rebuttal or disconfirmation by anything in the world. This is the nuance of the *conceptual framework*. It is an evasion of the demand that a theory be refutable. And third is the insinuation that a sensitivity to nuance is a manifestation of one’s distinctive (often metaphorically expressed and at times seemingly ineffable) ability to grasp and express the richness, texture, and flow of social reality itself. This is the nuance of the *connoisseur*. It is mostly a species of self-congratulatory symbolic violence
 >
 > @healy2017 [pp. 120-1]
 
-@martin2014 refers to this same problem by calling attention to the ways in which researchers will sometimes stretch their concepts to fit new cases in such a way that brings about the careless redefinition of important terms.
-
-For example, he cites Niklas Luhmann saying that "All meaninglessness... has meaning again through its strangeness." The statement is only true if we accept a *new* definition for the word *meaning*. And why should we?
+Relatedly, sociologists will sometimes stretch their concepts to fit new cases in such a way that brings about the careless redefinition of important terms. For example, @martin2014 cites Niklas Luhmann saying that "All meaninglessness... has meaning again through its strangeness." The statement is only true if we accept a *new* definition for the word *meaning*. And why should we?
 
 > Most generally, whenever we find ourselves rushing to claim that "things outside of any set are *themselves* in the set" we may be changing our terminology in ways we do not understand. And if we make a habit of it, we'll end up using meaningless statements.
 >
 > @martin2014 [pp. 13]
 
-Good theory-work should give us the tools to avoid common traps. It should enable us to tell apart good nuance (e.g. getting important details correct, avoiding oversimplifications) from bad nuance. It should enable us to tell apart good empirical tautologies (e.g., "people try to be good, and good is what ever people say is good") from bad argumentative tautologies (i.e., assuming at one place what we are claiming to prove at another). It should prevent us from saying **deepities**.
+In short, good theory-work should give us the tools to avoid common traps. It should enable us to tell apart good nuance (e.g. getting important details correct, avoiding oversimplifications) from bad nuance. It should enable us to tell apart good empirical tautologies (e.g., "people try to be good, and good is what ever people say is good") from bad argumentative tautologies (i.e., assuming at one place what we are claiming to prove at another).
+
+## Deepities
+
+Good theory-work should also prevent us from saying **deepities**.
 
 > A deepity is a proposition that *seems* both important and true ---and profound--- but that achieves this effect by being ambiguous. On one reading it is manifestly false, but it would be earth-shaking if it were true; on the other reading it is true but trivial. The unwary listener picks up the glimmer of truth from the second reading, and the devastating importance from the first reading, and thinks, Wow! That's a deepity.
 >
@@ -47,13 +48,15 @@ Good theory-work should give us the tools to avoid common traps. It should enabl
 
 In other words, good theory-work should constrain our thinking so that saying stupid things becomes much harder.
 
-### Social constructionism
+### Constructionist arguments are *not* deepities
 
-A lot of social science has a deepity problem, in the sense that ambiguous statements will get rewarded if they *seem* profound.
+Deepities are found all over social science and the humanities, in the sense that ambiguous statements will get rewarded if they *seem* profound. A lot of constructionist arguments, for example, become deepities when they take the form "$X$ is socially constructed, therefore $X$ is not real".
 
-A lot of constructionist arguments become deepities when they take the form "$X$ is socially constructed, therefore $X$ is not real". But most sociologists often take the opposite perspective: "$X$ is real *because* it's socially constructed".[^1] The logic behind constructionist arguments is captured succinctly by Ian Hacking.
+But most sociologists often take the opposite perspective: "$X$ is real *because* it's socially constructed".[^1]
 
 [^1]: This is what drove Durkheim to speak of *social facts* and it's what drives contemporary sociologists to speak of *institutions.*
+
+The logic behind constructionist arguments is fairly straightforward.
 
 > Social constructionists about $X$ tend to hold that:
 >
@@ -68,7 +71,7 @@ A lot of constructionist arguments become deepities when they take the form "$X$
 
 This kind of argument is *not trivial* when $X$ is taken for granted ---i.e., when $X$ appears to be inevitable.
 
-The notion of *racecraft* is a great example of this kind of argument. It is used to describe used to describe how social hierarchy gets projected into "nature" in the form of "race."
+The notion of *racecraft* is a great example of this kind of argument. It is used to describe how social hierarchy gets *projected* into "nature" in the form of "race."
 
 > Consider the statement "black Southerners were segregated because of their skin color"---a perfectly natural sentence to the ears of most Americans, who tend to overlook its *weird causality.*
 >
@@ -76,6 +79,6 @@ The notion of *racecraft* is a great example of this kind of argument. It is use
 
 How can skin color *cause* segregation? How can skin color *cause* a stop-and-frisk incident?
 
-This is the opposite of Dennet's "deepity." It's a statement that looks trivial and true at first glance. But, upon closer reflection, it has no well-formed meaning. And if it were true, it would have earth shattering consequences to our conception of causality. *Which begs the question: why did it originally seem so unremarkable?*
+In a way, this is the opposite of Dennet's "deepity." It is a statement that looks trivial and true at first glance. But, upon closer reflection, it has no well-formed meaning. And if it were true, it would have earth shattering consequences to our conception of causality. *Which begs the question: why did it originally seem so unremarkable?*
 
-At their most ambitious, social constructionist arguments are an indictment of *folk* social theory (or "culture"). These arguments remind us that many arbitrary things come to be seen as "natural" or "inevitable" in the course of everyday life.
+At their most ambitious, social constructionist arguments are an indictment of *folk* social theory (or "culture"). They remind us that many arbitrary things come to be seen as "natural" or "inevitable" in the course of everyday life.
