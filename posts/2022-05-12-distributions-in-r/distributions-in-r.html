@@ -287,7 +287,7 @@ f(x) = \Pr(X = x) = \begin{cases}
     0 &amp;\text{if} \ x = \text{anything else}
 \end{cases}
 \]</span></p>
-<p>The 1s and 3s come from counting the number of ways in which <span class="math inline">\(x\)</span> can equal one of these numbers. This is not different from “the garden of forking data” stuff in <span class="citation" data-cites="mcelreath2020">McElreath (<a href="#ref-mcelreath2020" role="doc-biblioref">2020, 20–27</a>)</span></p>
+<p>The 1s and 3s come from counting the number of ways in which <span class="math inline">\(x\)</span> can equal one of these numbers. This is not different from “the garden of forking data” stuff in <span class="citation" data-cites="mcelreath2020">McElreath (<a href="#ref-mcelreath2020" role="doc-biblioref">2020, pp. 20–27</a>)</span></p>
 <p>But this is not how you’ll see binomial distributions written out in the wild. We need new notation in order to write <strong>any</strong> binomial distribution, which we get by using the binomial coefficient:</p>
 <p><span class="math display">\[
 {n \choose x} = \frac{n!}{x! (n - x)!}
@@ -503,7 +503,7 @@ F(x) = \Pr(X \leq x) = \int_{-\infty}^x f(x) dx
 </div>
 <p>Knowing that the CDF is an <em>integral,</em> we can understand the PDF as the <em>derivative</em> of the CDF. (The derivative of an integral of a function is just the function itself). In other words, a probability <strong>density</strong> is the rate of change in cumulative probability at <span class="math inline">\(x\)</span>. The PDF is the “slope” of the CDF at <span class="math inline">\(x\)</span>. This means that if the cumulative probability is increasing rapidly, the density can easily exceed 1. But if we calculate the area under the density function, it will never exceed 1.</p>
 <aside>
-See the “overthinking” section in <span class="citation" data-cites="mcelreath2020">McElreath (<a href="#ref-mcelreath2020" role="doc-biblioref">2020, 76</a>)</span> for a similar description of this issue.
+See the “overthinking” section in <span class="citation" data-cites="mcelreath2020">McElreath (<a href="#ref-mcelreath2020" role="doc-biblioref">2020, p. 76</a>)</span> for a similar description of this issue.
 </aside>
 <p>For example, compare the PDF and CDF of the exponential distribution. While the CDF eventually converges to 1, the density easily exceeds 1 at some points.</p>
 <p><em>CDF:</em></p>
