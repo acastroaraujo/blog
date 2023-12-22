@@ -5,9 +5,9 @@ description: |
 author: andrés castro araújo
 categories:
   - Social Science
+  - Computation
 date: 2023-12-19
 bibliography: references.bib
-draft: true
 ---
 
 ::: {style="text-align: end;"}
