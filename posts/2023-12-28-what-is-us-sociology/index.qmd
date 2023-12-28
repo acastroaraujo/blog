@@ -178,9 +178,9 @@ diag(A) |>
 
 ## Two-Mode Networks
 
-The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974]. The resulting matrix is sometimes called a *two-mode projection.[^1]*
+The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974]. The resulting matrix is sometimes called a *two-mode projection.*[^1]
 
-[^1]: The original network represented by $\mathbf X$ goes by many names---e.g, affiliation networks, bipartite graphs, two-mode network, etc.
+[^1]: *The original network represented by* $\mathbf X$ goes by many names---e.g, affiliation networks, bipartite graphs, two-mode network, etc.
 
 $$
 \mathbf{A} = \mathbf{X}^\top \mathbf{X}
@@ -192,7 +192,7 @@ The diagonal of $\mathbf A$ contains the total number of individuals that chose 
 
 The resulting network, unfortunately, is *very dense.* It only takes one single individual with idiosyncratic tastes to create ties among four otherwise disconnected areas. As a result, the "structure" is one in which everything is connected to everything else, as in @fig-full.[^2]
 
-[^2]: @knoke2021 \[pp. 36\] note three problems with using this sort of projection. First, it entails a loss of "identity information" on one of the two node sets---e.g., the cell entries in $\mathbf A$ don't reveal the specific individuals shared across areas. Second, it results in *very dense* networks, which leads to biases in network measurements---e.g., an artificially high number of triangles \[see @opsahl2013\]. Third, it obscures the generative process behind tie formation.
+[^2]: @knoke2021 \[pp. 36\] note three problems with using this sort of projection. First, it entails a loss of "identity information" on one of the two node sets---e.g., the cell entries in $\mathbf A$ don't reveal the specific individuals shared across areas. Second, it results in *very dense* networks, which leads to biases in network measurements---e.g., an artificially high number of triangles [see @opsahl2013]. Third, it obscures the generative process behind tie formation.
 
 ```{r}
 #| label: fig-full

@@ -43,7 +43,7 @@ What exactly *is* a "data scientist"? No one knows exactly. But companies are hi
 
 [^3]: @spector2022 [pp. 7] define data science as "the study of extracting value from data---value in the form of *insights* or *conclusions."* It's impossible to create exclusionary boundaries around such an open definition. But that should not matter as long as companies continue to recruit and students continue to enroll.
 
-At first glance, a lot of data science is *just* statistics. Thus, traditional data analysts discovered they could boost their salaries via superficial adjustments to their vocabulary, see @fig-statistics. For example, they no longer fitted statistical models, they *trained* machine learning algorithms; they began using the word *classifier* when talking about logistic regression; experiments became A/B tests; one of them once described logistic regression as "a single layer neural network with a sigmoid activation function"; another one repackaged OLS as a form of "artificial intelligence" in a corporate report.
+At first glance, a lot of data science is *just* statistics, see @fig-statistics. Thus, traditional data analysts discovered they could boost their salaries via superficial adjustments to their vocabulary. For example, they no longer fitted statistical models, they *trained* machine learning algorithms; they began using the word *classifier* when talking about logistic regression; experiments became A/B tests; one of them once described logistic regression as "a single layer neural network with a sigmoid activation function"; another one repackaged OLS as a form of "artificial intelligence" in a corporate report.
 
 Similarly, social scientists discovered they could find jobs outside academia by calling themselves data scientists and advertising their social science training as the elusive "substantive expertise" in @fig-conway.
 
@@ -121,9 +121,7 @@ This kind of influence via metaphor can be found in cybernetics, where ideas dev
 
 At the moment, computational social scientists seem to be focusing too much on methods and sources of data. But perhaps the future will provide with similar kinds of theoretical influences.[^5]
 
-[^5]: Two examples come to mind. The idea that we should pay more attention to the algorithmic component of small-world networks [@kleinberg2000] and the idea that we
-
-I see only a few theoretical influences. For example, the idea that we should pay more attention to the algorithmic component of small-world networks [@kleinberg2000]. Or maybe we should consider word embeddings as providing a template for cultural learning [@arseniev-koehler2022; cf. @landauer1997].
+[^5]: Two examples come to mind. The idea that we should pay more attention to the algorithmic component of small-world networks [@kleinberg2000] and the idea that we should consider word embeddings as providing a template for cultural learning [@arseniev-koehler2022; cf. @landauer1997].
 
 **Cybernetics or Cognitive Science?**
 
