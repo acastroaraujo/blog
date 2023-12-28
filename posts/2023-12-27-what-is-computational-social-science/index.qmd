@@ -1,34 +1,33 @@
 ---
 title: "What is Computational Social Science?"
 description: |
-  tl;dr it is a _trading zone_, driven by digital technology and associated with a new professional group
+  tl;dr it is a "trading zone" driven by digital technology and associated with a new professional group
 author: andrés castro araújo
 categories:
   - Social Science
   - Computation
-date: 2023-12-19
+date: 2023-12-27
 bibliography: references.bib
+image: images/shakira.jpeg
 ---
 
-::: {style="text-align: end;"}
-*One well-instituted tool can ruin the* *career* *of a theory that cannot use it.*</br> ---Mary Douglas
-:::
-
-I don't think Computational Social Science (CSS) will ever become an autonomous field. Right now, CSS is more akin to a *trading zone* in which different disciplinary cultures manage to exchange ideas, metaphors, and techniques.
+I don't think Computational Social Science (CSS) will ever become an autonomous field. Right now, CSS is more akin to a "trading zone" in which different disciplinary cultures manage to exchange ideas, metaphors, and techniques.
 
 As such, there's no point in creating exclusionary boundaries around CSS. That would be bad for trade.[^1]
 
 [^1]: Matt Salganik has made this point before, although for slightly different reasons; he jokingly argues that we should be happy with defining CSS simply as "anything that's cool." See [An Introduction to Computational Social Science](https://youtu.be/zGG9wPl1C5E).
 
-Most importantly, CSS is distinct from previous interdisciplinary efforts in that it is mainly driven by advances in digital technology and it is associated with a new professional group.
+More importantly, CSS is distinct from previous interdisciplinary efforts in that it is mainly driven by advances in digital technology and it is associated with a new professional group.
 
-#### Trading Zones
+#### Trading Zones[^2]
+
+[^2]: This idea goes back to the historian Peter Galison.
 
 > Two groups can agree on rules of exchange even if they ascribe utterly different significance to the objects being exchanged; they may even disagree on the meaning of the exchange process itself. Nonetheless, the trading partners can hammer out a *local* coordination, despite vast *global* differences.
 >
 > [Galison 1997, 783, cited in @gorman2010]
 
-When I describe CSS as a trading zone*,* the argument I'm trying to make is that there are seemingly insurmountable cultural divides that are not going away anytime soon. For example, some years ago @dimaggio2015 noted that computer scientists tend to trust human judgment more than social scientists do. Computer scientists have developed many machine learning algorithms with the hopes of *imitating* human judgment (i.e., the "gold standard"); but social scientist want to adopt these new techniques with the hope that they can *remove* unreliable human judgments.
+When I describe CSS as a *trading zone*, the argument I'm trying to make is that there are seemingly insurmountable cultural divides between participants that will not going away anytime soon. For example, some years ago @dimaggio2015 noted that computer scientists tend to trust human judgment more than social scientists do. Computer scientists have developed many machine learning algorithms with the hopes of *imitating* human judgment (i.e., the "gold standard"); but social scientist want to adopt these new techniques with the hope that they can *remove* unreliable human judgments.
 
 Cultural exchange in the CSS trading zone is riddled with many similar ironies.
 
@@ -38,9 +37,9 @@ The CSS trading zone is mainly characterized by two recent phenomena that distin
 
 The second is the emergence of a new professional group sometime around the 2010s: *the* *data scientist.* It first started in tech companies---e.g., Google, Microsoft, Amazon, Facebook, Twitter, Netflix, Spotify, etc. But soon enough data scientist were to be found everywhere, including non-profits and government agencies.
 
-What exactly *is* a "data scientist"? No one knows for sure. But companies are hiring and universities are providing legitimacy via publications and newly minted masters programs [@spector2022; @donoho2017].[^2]
+What exactly *is* a "data scientist"? No one knows for sure. But companies are hiring and universities are providing legitimacy via publications and newly minted masters programs [@spector2022; @donoho2017].[^3]
 
-[^2]: @spector2022 [pp. 7] as "the study of extracting value from data---value in the form of *insights* or *conclusions."* It's impossible to create exclusionary boundaries around such a definition. But that should not matter as long as companies continue to recruit and students continue to enroll.
+[^3]: @spector2022 [pp. 7] as "the study of extracting value from data---value in the form of *insights* or *conclusions."* It's impossible to create exclusionary boundaries around such a definition. But that should not matter as long as companies continue to recruit and students continue to enroll.
 
 At first glance, a lot of data science is *just* statistics. Thus, traditional data analysts discovered they could boost their salaries via superficial adjustments to their vocabulary, see @fig-statistics. For example, they no longer fitted statistical models, they *trained* machine learning algorithms; they began using the word *classifier* when talking about logistic regression; experiments became A/B tests; one of them once described logistic regression as "a single layer neural network with a sigmoid activation function"; another one repackaged OLS as a form of "artificial intelligence" in a corporate report.
 
@@ -84,27 +83,31 @@ What can I find in this trading zone?
 
 Here's a non-exhaustive list:
 
--   *New forms of data*---e.g., the "digital trace data" created through people's online behavior, including network data. Also included are digital archives of historical texts ranging from books, administrative records, and newspapers. New data wrangling skills are necessary to deal with all this (perhaps using R's `dplyr` or Python's `pandas`). Learning how to access these new forms of data also requires picking up new skills---e.g., querying APIs or via webscrapping (perhaps using R's `rvest` or Python's `BeautifulSoup`). Although beware of relying too much on corporate APIs [see @freelon2018].
+-   New forms of data---e.g., the "digital footprint" created by people's daily online behavior (including network and text data). Also included are digital archives of historical texts ranging from books, administrative records, and newspapers. New data wrangling skills are necessary to deal with all this (perhaps using R's `dplyr` or Python's `pandas`). Learning how to access these new forms of data also requires picking up new skills---e.g., querying APIs or via web-scrapping (perhaps using R's `rvest` or Python's `BeautifulSoup`). Although beware of relying too much on corporate APIs [see @freelon2018].
 
--   *New forms of creating data* *via online crowdsourcing*---e.g., via Amazon's Mechanical Turk, Prolific, or whatever it is people are using these days.
+-   New forms of creating data via *online crowdsourcing*---e.g., via Amazon's Mechanical Turk, Prolific, or whatever it is people are using these days.
 
--   *Old methods applied in new settings,* such as online experiments [@kohavi2020].
+-   Online experiments [@kohavi2020].
 
--   *Agent-based modeling* and other computationally intensive forms of computer simulation, a tradition that goes all the way back to Thomas Schelling's model of segregation and that benefited a lot from the idea of object-oriented programming [@smaldino2023].
+-   Agent-based modeling and others forms of computer simulation, a tradition that goes all the way back to Thomas Schelling's model of segregation and that benefited a lot from the idea of object-oriented programming [@smaldino2023].
 
--   *Network data and associated modeling techniques* [@rawlings2023]*.* The ideas behind social network analysis have a long interdisciplinary history in sociology, anthropology, psychology, and mathematics. Due to previously mentioned advances in computation---and the creation of the Internet---our ability to collect network information has greatly increased and we're starting to see the rise of a much broader---but fragmented)---field of "network science" that also includes computer scientists (e.g., Kleinberg), physicists (e.g., Barabassi), and statisticians (e.g., Snijders, Hancock).
+-   Network data and associated modeling techniques [@rawlings2023]*.* The ideas behind social network analysis have a long interdisciplinary history in sociology, anthropology, psychology, and mathematics. Due to previously mentioned advances in computation---and the creation of the Internet---our ability to collect network information has greatly increased and we're starting to see the rise of a much broader---but fragmented)---field of "network science" that also includes computer scientists (e.g., Kleinberg), physicists (e.g., Barabassi), and statisticians (e.g., Snijders, Hancock).
 
--   *New tools* for analyzing text-as-data [@rodriguez2023; @grimmer2022; @evans2016]. Some people out there consider CSS to be synonymous with the application of these methods to social science questions.
+-   New tools and ideas for analyzing *text-as-data* [@rodriguez2023; @grimmer2022; @evans2016].[^4]
+
+    In fact, some people may even consider CSS to be synonymous with the application of these methods to social science questions.
 
     Interestingly, this has opened the doors for combining (1) epistemological frameworks traditionally associated with qualitative research with (2) modern tools for pattern recognition or "unsupervised learning" [@nelson2020; @brandt2021]. It should come as no surprise to see traditional social science splits---such as "deductive vs inductive" or "causal vs interpretive"---reappear in the CSS trading zone.
+
+[^4]: Social scientists have been thinking about text-as-data for ages [e.g., @markoff1975].
 
 #### The Future
 
 **Cybernetics or Cognitive Science.**
 
-As mentioned earlier, I don't think CSS will ever become an autonomous discipline. It may be the case that it becomes a historical oddity, much like the short-lived *cybernetics* movement of the 1950s; or it might become a more resilient interdisciplinary effort, much like cognitive science. Both of them---in case you didn't know---where also driven by innovations in computer technology.[^3]
+As mentioned earlier, I don't think CSS will ever become an autonomous discipline. It may be the case that it becomes a historical oddity, much like the short-lived *cybernetics* movement of the 1950s; or it might become a more resilient interdisciplinary effort, much like cognitive science. Both of them---in case you didn't know---where also driven by innovations in computer technology.[^5]
 
-[^3]: See @kline2015 for cybernetics. See @thagard2023 for cognitive science.
+[^5]: See @kline2015 for cybernetics. See @thagard2023 for cognitive science.
 
 The available technologies in every historical period have always constrained our scientific theories via analogy and metaphor.
 
@@ -116,4 +119,4 @@ The most obvious example is the analogy between "cognitive systems" and "digital
 
 Unsurprisingly, many have described cognitive science as a powerful role model for CSS [e.g., @lazer2009]. But perhaps we might end up like cybernetics---i.e., very influential, still relevant, largely forgotten, and with every good thing about it absorbed into nearby disciplines no longer involved in trade.
 
-Much of the hype surrounding artificial intelligence these days resembles the "cybernetics craze" of the 1950s and 1960s [@kline2015, chapter 3]. Individual researchers are incentivized to jump on the bandwagon and ultimately bite off more than what they can chew. If this goes unchecked, CSS might end up as minor historical footnote, and all trade will halt.
+However, much of the hype surrounding artificial intelligence these days resembles the "cybernetics craze" of the 1950s and 1960s [@kline2015, chapter 3]. Individual researchers are incentivized to jump on the bandwagon and ultimately bite off more than what they can chew. If this goes unchecked, CSS might end up as minor historical footnote, and all trade will halt.

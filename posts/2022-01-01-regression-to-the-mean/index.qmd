@@ -8,9 +8,16 @@ categories:
   - Causality
 date: 2022-01-01
 bibliography: references.bib
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    fig-align: center
+    code-fold: show
 ---
 
-```{r setup, include=FALSE}
+```{r}
+#| label: "Set up"
+#| include: false
 
 ## Packages
 library(tidyverse)
@@ -42,15 +49,13 @@ HistData::Galton |>
   geom_smooth(method = lm, se = FALSE, color = "skyblue") 
 ```
 
-This is the data originally analyzed by Galton himself[^1]. The dashed line represents [*equality*]{style="color:red"}, meaning that parents and children have the same height. But Galton noted that children's heights were actually closer to the blue [*prediction line*]{style="color:skyblue"}.
+This is the data originally analyzed by Galton himself. The dashed line represents [*equality*]{style="color:red"}, meaning that parents and children have the same height. But Galton noted that children's heights were actually closer to the blue [*prediction line*]{style="color:skyblue"}.
 
-[^1]: He later analyzed data from pairs of brothers in the same way he analyzed parents and children. And here he also found evidence of "regression to the mean". This was surprising because there was *no directionality*, neither brother inherited his height from the other. He then discovered that, unless both measurements were perfectly correlated $(\rho = 1)$, both the prediction and equality lines *had* to be different from each other.
+<aside>See @stigler2016. </aside>
 
-<aside>@stigler2016 provides a brief historical overview of how of all this relates to problems in Darwin's original theory of evolution.</aside>
+The key insight is that, whenever randomness is involved, the more extreme outcomes will tend to be followed by more moderate outcomes. Why? Because part of the reason these outcomes are so extreme in the first place is due to randomness. Galton also termed this phenomena "regression to mediocrity"[^1].
 
-The key insight is that, whenever randomness is involved, the more extreme outcomes will tend to be followed by more moderate outcomes. Why? Because part of the reason these outcomes are so extreme in the first place is due to randomness. Galton also termed this phenomena "regression to mediocrity"[^2].
-
-[^2]: Historically, there have been two kinds moral judgments regarding averages and normal distributions [@hacking1990]: (1) the Quetelet-Durkheim conception of the normal as the *right* and the *good*; and (2) Galton's notion of the normal as the *mediocre*, and *in need of improvement*.
+[^1]: Historically, there have been two kinds moral judgments regarding averages and normal distributions [@hacking1990]: (1) the Quetelet-Durkheim conception of the normal as the *right* and the *good*; and (2) Galton's notion of the normal as the *mediocre*, and *in need of improvement*.
 
 Nowadays, we would look at this same problem using linear regression, which allows us to put the predicted heights of children into a simple formula.
 
@@ -69,12 +74,6 @@ $$
 \widehat h_\text{child} =  \underbrace{68.09}_\text{mediocrity} + 0.65 \times \widetilde h_\text{parent} 
 $$
 
-If we don't scale the heights of the parents, the corresponding regression line is as follows:
-
-$$\widehat h_\text{child} = 23.94 + 0.65 \times h_\text{parent} $$
-
-<aside>Here, the intercept is the expected heights of children whose parents are zero inches tall.</aside>
-
 At first encounter, some people will interpret this as meaning that *regression to the mean* implies that heights will become "more average" over time. Thus, a parent who is 5 inches above average is predicted to have children 3.2 inches taller than average, who in turn are predicted to have children 2.1 inches taller than average, and so on. This very common misunderstanding arises from neglecting the error term when thinking about future observations.
 
 $$
@@ -87,9 +86,9 @@ In Gelman et al's words:
 >
 > Regression to the mean thus will always arise in some form whenever predictions are imperfect in a stable environment. The imperfection of the prediction induces variation, and regression in the point prediction is required in order to keep the total variation constant.
 >
-> @gelman2020
+> @gelman2020 [pp. 88]
 
-The following graphs show both ways of interpreting *regression to the mean*, based on how the data could look like across 20 generations:
+The following graphs show both ways of interpreting *regression to the mean*, based on how the data could look like across 12 generations:
 
 ```{r}
 #| code-fold: true
@@ -152,17 +151,17 @@ As a general rule, *nothing in the social and biological sciences remains consta
 
 ***Regression to the mean will people to see causality where there is none.***
 
-As mentioned earlier, this phenomena shows up all the time wherever randomness (or "luck") is expected to play a role. Thus, we see it in everything from sports to public policy[^3]. This is a problem because human beings are inclined to find amazing patterns when they look at randomness. Obviously, this is mostly harmless when, for example, the source of randomness is clouds in the sky and the patterns we find take the form of "a cow" or "a face"[^4]. But in other settings, this same phenomena can become worrisome.
+As mentioned earlier, this phenomena shows up all the time wherever randomness (or "luck") is expected to play a role. Thus, we see it in everything from sports to public policy.[^2] This is a problem because human beings are inclined to find amazing patterns when they look at randomness. Obviously, this is mostly harmless when, for example, the source of randomness is clouds in the sky and the patterns we find take the form of "a cow" or "a face."[^3] But in other settings, this same phenomena can become worrisome.
 
-[^3]: This also seems to be the reason why so many bands appear to suffer from "second album syndrome" or "[sophomore slump](https://en.wikipedia.org/wiki/Sophomore_slump)".
+[^2]: This also seems to be the reason why so many bands appear to suffer from "second album syndrome" or "[sophomore slump](https://en.wikipedia.org/wiki/Sophomore_slump)".
 
-[^4]: See: [**pareidolia**](https://en.wikipedia.org/wiki/Pareidolia).
+[^3]: See: [**pareidolia**](https://en.wikipedia.org/wiki/Pareidolia).
 
-**An exercise in simulation**[^5]
+**An exercise in simulation**[^4]
 
-[^5]: This my solution to exercise 6.8 in *Regression and Other Stories*.
+[^4]: This my solution to exercise 6.8 in *Regression and Other Stories*.
 
-A very famous real-world example is contained in an article titled "On the psychology of prediction" (Tversky & Kahneman, 1973):
+A very famous real-world example is contained in an article titled "On the psychology of prediction" Tversky & Kahneman, 1973):
 
 > The instructors in a flight school adopted a policy of consistent positive reinforcement recommended by psychologists. They verbally reinforced each successful execution of a flight maneuver. After some experience with this training approach, the instructors claimed that contrary to psychological doctrine, **high praise for good execution of complex maneuvers typically results in a decrement of performance on the next try**. What should the psychologist say in response?
 
@@ -217,9 +216,7 @@ df |>
   coord_flip()
 ```
 
-Notice that, on average, the pilots who were praised did worse on the second task, whereas the pilots who received negative reinforcement did better. But we know that such effect doesn't exist. And we know this because we *created* these data so that *task 1* and *task 2* were unrelated. The "causal pattern" we have just observed is a consequence of the noise in the data[^6]. Pilots who scored very well on *task 1* are likely to have a higher skill *and also* to have been somewhat lucky. Thus, it makes sense that they perform slightly worse on *task 2*.
-
-[^6]: We could also follow Judea Pearl's causal framework and say that there's a *back-door* between *task 1* and *task 2* due to the fact that we have failed to condition on "true abilities".
+Notice that, on average, the pilots who were praised did worse on the second task, whereas the pilots who received negative reinforcement did better. But we know that such effect doesn't exist. And we know this because we *created* these data so that *task 1* and *task 2* were unrelated. The "causal pattern" we have just observed is a consequence of the noise in the data. Pilots who scored very well on *task 1* are likely to have a higher skill *and also* to have been somewhat lucky. Thus, it makes sense that they perform slightly worse on *task 2*.
 
 This is how Tversky and Kahneman (1982) explain it:
 

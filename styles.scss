@@ -2,11 +2,15 @@
 
 // Import the Optima font from a CDN
 @import url('https://www.cssfontstack.com/Optima');
+
 // Define a variable for the Optima font family
 $optima-font: 'Optima', sans-serif;
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+$fira-font: 'Fira Code', monospace; 
+
 $font-family-sans-serif: $optima-font;
-$font-family-monospace: "Fira Code";
+$font-family-monospace: $fira-font; 
 $link-color: #4974A5;
 $code-block-bg: #F4F4F4;
 //$body-bg: #FEFDFA;

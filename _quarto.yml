@@ -25,6 +25,9 @@ format:
     theme: [cosmo, styles.scss]
     fig-align: center
     code-fold: show
+    grid:
+      sidebar-width: 100px
+      margin-width: 500px
 
 editor: visual
 
