@@ -228,16 +228,16 @@ div.csl-indent {
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>This is the data originally analyzed by Galton himself<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The dashed line represents <span style="color:red"><em>equality</em></span>, meaning that parents and children have the same height. But Galton noted that children’s heights were actually closer to the blue <span style="color:skyblue"><em>prediction line</em></span>.</p>
+<p>This is the data originally analyzed by Galton himself. The dashed line represents <span style="color:red"><em>equality</em></span>, meaning that parents and children have the same height. But Galton noted that children’s heights were actually closer to the blue <span style="color:skyblue"><em>prediction line</em></span>.</p>
 <aside>
-<span class="citation" data-cites="stigler2016">Stigler (<a href="#ref-stigler2016" role="doc-biblioref">2016</a>)</span> provides a brief historical overview of how of all this relates to problems in Darwin’s original theory of evolution.
+See <span class="citation" data-cites="stigler2016">Stigler (<a href="#ref-stigler2016" role="doc-biblioref">2016</a>)</span>.
 </aside>
-<p>The key insight is that, whenever randomness is involved, the more extreme outcomes will tend to be followed by more moderate outcomes. Why? Because part of the reason these outcomes are so extreme in the first place is due to randomness. Galton also termed this phenomena “regression to mediocrity”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>The key insight is that, whenever randomness is involved, the more extreme outcomes will tend to be followed by more moderate outcomes. Why? Because part of the reason these outcomes are so extreme in the first place is due to randomness. Galton also termed this phenomena “regression to mediocrity”<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <p>Nowadays, we would look at this same problem using linear regression, which allows us to put the predicted heights of children into a simple formula.</p>
 <div class="cell">
 <details open="">
@@ -258,11 +258,6 @@ div.csl-indent {
 <p><span class="math display">\[
 \widehat h_\text{child} =  \underbrace{68.09}_\text{mediocrity} + 0.65 \times \widetilde h_\text{parent}
 \]</span></p>
-<p>If we don’t scale the heights of the parents, the corresponding regression line is as follows:</p>
-<p><span class="math display">\[\widehat h_\text{child} = 23.94 + 0.65 \times h_\text{parent} \]</span></p>
-<aside>
-Here, the intercept is the expected heights of children whose parents are zero inches tall.
-</aside>
 <p>At first encounter, some people will interpret this as meaning that <em>regression to the mean</em> implies that heights will become “more average” over time. Thus, a parent who is 5 inches above average is predicted to have children 3.2 inches taller than average, who in turn are predicted to have children 2.1 inches taller than average, and so on. This very common misunderstanding arises from neglecting the error term when thinking about future observations.</p>
 <p><span class="math display">\[
 h_\text{child} = \widehat h_\text{child} + \text{error}
@@ -271,9 +266,9 @@ h_\text{child} = \widehat h_\text{child} + \text{error}
 <blockquote class="blockquote">
 <p>The point predictions regress toward the mean—that’s the coefficient less than 1—and this reduces variation. At the same time, though, the error in the model—the imperfection of the prediction—<em>adds</em> variation, just enough to keep the total variation in height roughly constant from one generation to the next.</p>
 <p>Regression to the mean thus will always arise in some form whenever predictions are imperfect in a stable environment. The imperfection of the prediction induces variation, and regression in the point prediction is required in order to keep the total variation constant.</p>
-<p><span class="citation" data-cites="gelman2020">Gelman et al. (<a href="#ref-gelman2020" role="doc-biblioref">2020</a>)</span></p>
+<p><span class="citation" data-cites="gelman2020">Gelman et al. (<a href="#ref-gelman2020" role="doc-biblioref">2020, p. 88</a>)</span></p>
 </blockquote>
-<p>The following graphs show both ways of interpreting <em>regression to the mean</em>, based on how the data could look like across 20 generations:</p>
+<p>The following graphs show both ways of interpreting <em>regression to the mean</em>, based on how the data could look like across 12 generations:</p>
 <div class="cell" data-layout-align="center">
 <details>
 <summary>Code</summary>
@@ -322,7 +317,7 @@ h_\text{child} = \widehat h_\text{child} + \text{error}
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="576"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="576"></p>
 </figure>
 </div>
 </div>
@@ -335,9 +330,9 @@ h_\text{child} = \widehat h_\text{child} + \text{error}
 <section id="the-lesson" class="level2">
 <h2 class="anchored" data-anchor-id="the-lesson">The lesson</h2>
 <p><strong><em>Regression to the mean will people to see causality where there is none.</em></strong></p>
-<p>As mentioned earlier, this phenomena shows up all the time wherever randomness (or “luck”) is expected to play a role. Thus, we see it in everything from sports to public policy<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. This is a problem because human beings are inclined to find amazing patterns when they look at randomness. Obviously, this is mostly harmless when, for example, the source of randomness is clouds in the sky and the patterns we find take the form of “a cow” or “a face”<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. But in other settings, this same phenomena can become worrisome.</p>
-<p><strong>An exercise in simulation</strong><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
-<p>A very famous real-world example is contained in an article titled “On the psychology of prediction” (Tversky &amp; Kahneman, 1973):</p>
+<p>As mentioned earlier, this phenomena shows up all the time wherever randomness (or “luck”) is expected to play a role. Thus, we see it in everything from sports to public policy.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> This is a problem because human beings are inclined to find amazing patterns when they look at randomness. Obviously, this is mostly harmless when, for example, the source of randomness is clouds in the sky and the patterns we find take the form of “a cow” or “a face.”<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> But in other settings, this same phenomena can become worrisome.</p>
+<p><strong>An exercise in simulation</strong><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>A very famous real-world example is contained in an article titled “On the psychology of prediction” Tversky &amp; Kahneman, 1973):</p>
 <blockquote class="blockquote">
 <p>The instructors in a flight school adopted a policy of consistent positive reinforcement recommended by psychologists. They verbally reinforced each successful execution of a flight maneuver. After some experience with this training approach, the instructors claimed that contrary to psychological doctrine, <strong>high praise for good execution of complex maneuvers typically results in a decrement of performance on the next try</strong>. What should the psychologist say in response?</p>
 </blockquote>
@@ -368,7 +363,7 @@ h_\text{child} = \widehat h_\text{child} + \text{error}
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>We can now compute the average change in scores for each group of pilots, which the instructors interpret to be the causal effect of reinforcement.</p>
@@ -391,10 +386,10 @@ h_\text{child} = \widehat h_\text{child} + \text{error}
 <span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Notice that, on average, the pilots who were praised did worse on the second task, whereas the pilots who received negative reinforcement did better. But we know that such effect doesn’t exist. And we know this because we <em>created</em> these data so that <em>task 1</em> and <em>task 2</em> were unrelated. The “causal pattern” we have just observed is a consequence of the noise in the data<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. Pilots who scored very well on <em>task 1</em> are likely to have a higher skill <em>and also</em> to have been somewhat lucky. Thus, it makes sense that they perform slightly worse on <em>task 2</em>.</p>
+<p>Notice that, on average, the pilots who were praised did worse on the second task, whereas the pilots who received negative reinforcement did better. But we know that such effect doesn’t exist. And we know this because we <em>created</em> these data so that <em>task 1</em> and <em>task 2</em> were unrelated. The “causal pattern” we have just observed is a consequence of the noise in the data. Pilots who scored very well on <em>task 1</em> are likely to have a higher skill <em>and also</em> to have been somewhat lucky. Thus, it makes sense that they perform slightly worse on <em>task 2</em>.</p>
 <p>This is how Tversky and Kahneman (1982) explain it:</p>
 <blockquote class="blockquote">
 <p>Regression is inevitable in flight maneuvers because performance is not perfectly reliable and progress between successive maneuvers is slow. Hence, pilots who did exceptionally well on one trial are likely to deteriorate on the next, regardless of the instructors’ reaction to the initial success. The experienced flight instructors actually discovered the regression but attributed it to the detrimental effect of positive reinforcement. <strong><em>This true story illustrates a saddening aspect of the human condition. We normally reinforce others when their behavior is good and punish them when their behavior is bad. By regression alone, therefore, they are most likely to improve after being punished and most likely to deteriorate after being rewarded.</em></strong> Consequently, we are exposed to a lifetime schedule in which we are most often rewarded for punishing others, and punished for rewarding.</p>
@@ -419,12 +414,10 @@ Stigler, Stephen M. 2016. <em>The Seven Pillars of Statistical Wisdom</em>. Harv
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>He later analyzed data from pairs of brothers in the same way he analyzed parents and children. And here he also found evidence of “regression to the mean”. This was surprising because there was <em>no directionality</em>, neither brother inherited his height from the other. He then discovered that, unless both measurements were perfectly correlated <span class="math inline">\((\rho = 1)\)</span>, both the prediction and equality lines <em>had</em> to be different from each other.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Historically, there have been two kinds moral judgments regarding averages and normal distributions <span class="citation" data-cites="hacking1990">(<a href="#ref-hacking1990" role="doc-biblioref">Hacking 1990</a>)</span>: (1) the Quetelet-Durkheim conception of the normal as the <em>right</em> and the <em>good</em>; and (2) Galton’s notion of the normal as the <em>mediocre</em>, and <em>in need of improvement</em>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>This also seems to be the reason why so many bands appear to suffer from “second album syndrome” or “<a href="https://en.wikipedia.org/wiki/Sophomore_slump">sophomore slump</a>”.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>See: <a href="https://en.wikipedia.org/wiki/Pareidolia"><strong>pareidolia</strong></a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>This my solution to exercise 6.8 in <em>Regression and Other Stories</em>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>We could also follow Judea Pearl’s causal framework and say that there’s a <em>back-door</em> between <em>task 1</em> and <em>task 2</em> due to the fact that we have failed to condition on “true abilities”.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Historically, there have been two kinds moral judgments regarding averages and normal distributions <span class="citation" data-cites="hacking1990">(<a href="#ref-hacking1990" role="doc-biblioref">Hacking 1990</a>)</span>: (1) the Quetelet-Durkheim conception of the normal as the <em>right</em> and the <em>good</em>; and (2) Galton’s notion of the normal as the <em>mediocre</em>, and <em>in need of improvement</em>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>This also seems to be the reason why so many bands appear to suffer from “second album syndrome” or “<a href="https://en.wikipedia.org/wiki/Sophomore_slump">sophomore slump</a>”.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>See: <a href="https://en.wikipedia.org/wiki/Pareidolia"><strong>pareidolia</strong></a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>This my solution to exercise 6.8 in <em>Regression and Other Stories</em>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
