@@ -142,7 +142,7 @@ When a sociologist joins the *American Sociological Association* (ASA), they hav
 
 So, I created a dataset containing the areas of interest of over 1,000 individuals associated with 20 sociology programs in the USA. This dataset is provisional, but see @tbl-sample in case you are curious about the sample.
 
-Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"} . The largest is *stratification/mobility,* which gives credence to the idea that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars---*Cultural*, *Economic*, and *Political* Sociology---which gives credence to the idea that sociology is a miniature version of all social science. Furthermore, the idea that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
+Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is *stratification/mobility,* which gives credence to the idea that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars---*Cultural*, *Economic*, and *Political* Sociology---which gives credence to the idea that sociology is a miniature version of all social science. Furthermore, the idea that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
 
 ```{r}
 #| label: fig-areas
@@ -178,17 +178,17 @@ diag(A) |>
 
 ## Two-Mode Networks
 
-The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974]. The resulting matrix is sometimes called a *two-mode projection.*[^1]
+The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974].
 
-[^1]: *The original network represented by* $\mathbf X$ goes by many names---e.g, affiliation networks, bipartite graphs, two-mode network, etc.
+We start with a $1112 \times 61$ matrix $\mathbf X$ (with rows representing individuals and columns representing areas of interest. We transform $\mathbf X$ into a new $61 \times 61$ adjacency matrix $\mathbf A$ with each cell $a_{ij}$ corresponding to the number of "shared" or "intersecting" individuals between areas $i$ and $j$. This matrix is sometimes called a *two-mode projection*
 
 $$
 \mathbf{A} = \mathbf{X}^\top \mathbf{X}
 $$ {#eq-proj}
 
-Here, we start with a $1112 \times 61$ incidence matrix $\mathbf X$ (with rows representing individuals and columns representing areas of interest. We transform $\mathbf X$ into a new $61 \times 61$ adjacency matrix $\mathbf A$ with each cell $a_{ij}$ corresponding to the number of "shared" or "intersecting" individuals between areas $i$ and $j$.
+The diagonal of $\mathbf A$ contains the total number of individuals that chose each area, which corresponds to the same numbers in @fig-areas.[^1]
 
-The diagonal of $\mathbf A$ contains the total number of individuals that chose each area, which corresponds to the same numbers in @fig-areas.
+[^1]: *The original network represented by* $\mathbf X$ goes by many names---e.g, affiliation networks, bipartite graphs, two-mode network, etc.
 
 The resulting network, unfortunately, is *very dense.* It only takes one single individual with idiosyncratic tastes to create ties among four otherwise disconnected areas. As a result, the "structure" is one in which everything is connected to everything else, as in @fig-full.[^2]
 

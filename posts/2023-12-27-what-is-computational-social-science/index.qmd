@@ -29,7 +29,7 @@ CSS is different from previous interdisciplinary efforts in that it is (1) mainl
 >
 > [Galison 1997, 783, cited in @gorman2010]
 
-When I describe CSS as a *trading zone*, the argument I'm trying to make is that there are seemingly insurmountable cultural divides between participants that will not going away anytime soon. For example, some years ago @dimaggio2015 noted that computer scientists tend to trust human judgment more than social scientists do. Computer scientists have developed many machine learning algorithms with the hopes of *imitating* human judgment (i.e., the "gold standard"); but social scientist want to adopt these new techniques with the hope that they can *remove* unreliable human judgments.
+When I describe CSS as a trading zone, the argument I'm trying to make is that there are seemingly insurmountable cultural divides between participants that will not going away anytime soon. For example, some years ago @dimaggio2015 noted that computer scientists tend to trust human judgment more than social scientists do. Computer scientists have developed many machine learning algorithms with the hopes of *imitating* human judgment (i.e., the "gold standard"); but social scientist want to adopt these new techniques with the hope that they can *remove* unreliable human judgments.
 
 Cultural exchange in the CSS trading zone is riddled with many similar ironies.
 
@@ -119,7 +119,7 @@ The technologies available in every historical period have always constrained ou
 
 This kind of influence via metaphor can be found in cybernetics, where ideas developed to predict the location of enemy planes---the idea of goal-directedness as control over perturbations---were used to study all sorts of technical, biological, and social systems [@galison1994]. A similar influence can be found in the analogy between "cognitive systems" and "digital computers" at the center of cognitive science.
 
-At the moment, computational social scientists seem to be focusing too much on methods and sources of data. But perhaps the future will provide with similar kinds of theoretical influences.[^5]
+At the moment, computational social scientists seem to be focusing too much on new methods and new sources of data. But perhaps the future will provide with similar kinds of theoretical influences.[^5]
 
 [^5]: Two examples come to mind. The idea that we should pay more attention to the algorithmic component of small-world networks [@kleinberg2000] and the idea that we should consider word embeddings as providing a template for cultural learning [@arseniev-koehler2022; cf. @landauer1997].
 

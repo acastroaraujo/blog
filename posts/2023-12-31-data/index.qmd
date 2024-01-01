@@ -1,0 +1,41 @@
+---
+title: "Data"
+description: |
+  What is data, if not experience persevering?
+author: andrés castro araújo
+date: 2023-12-31
+bibliography: references.bib
+---
+
+Data, plural for the Latin word *datum.*
+
+I find it useful to distinguish between *data* and *phenomena*.
+
+-   Phenomena: recurrent features of the world.
+
+-   Data: "public records produced by measurement and experiment that serve as evidence for the existence or features of phenomena" [@woodward2011, pp. 166]
+
+    Even in well-designed experiments, the *data* will reflect the influence of many other causal factors that have nothing to do with the phenomena of interest.
+
+But there's more. When we think about "data" we generally think about *standardized* data---i.e., symbols that are arranged in a way that's convenient for computer processing. We think about symbols that are stable and transportable, or what Bruno Latour [-@latour1987] calls "immutable and combinable mobiles."
+
+*Note. Accepting a distinction between data and phenomena means that we can have different explanations for the phenomena (scientific models) and for the observed data (statistical models). The most obvious examples of this distinction are statistical models whose purpose is to account for some form measurement error or to impute missing data. All variables are measured with error. The distinction becomes less clear when we think about "bespoke statistical models" [@mcelreath2020, chapter 16].*
+
+```{r}
+#| message: false
+#| echo: false
+library(tidyverse)
+
+symbols <- c(0:9, letters, "$", "+", "!", "-", "#", "Ω", "∆", "∑", "π")
+N <- 5e3
+
+tibble(
+  x = runif(N),
+  y = runif(N),
+  sym = sample(symbols, size = N, replace = TRUE),
+) |> 
+  ggplot(aes(x, y, shape = sym)) +
+  geom_point(alpha = 3/4, show.legend = FALSE) +
+  scale_shape_identity() +
+  theme_void(base_family = "Optima")
+```
