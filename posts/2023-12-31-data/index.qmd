@@ -19,7 +19,7 @@ I find it useful to distinguish between *data* and *phenomena*.
 
 But there's more. When we think about "data" we generally think about *standardized* data---i.e., symbols that are arranged in a way that's convenient for computer processing. We think about symbols that are stable and transportable, or what Bruno Latour [-@latour1987] calls "immutable and combinable mobiles."
 
-*Note. Accepting a distinction between data and phenomena means that we can have different explanations for the phenomena (scientific models) and for the observed data (statistical models). The most obvious examples of this distinction are statistical models whose purpose is to account for some form measurement error or to impute missing data. All variables are measured with error. The distinction becomes less clear when we think about "bespoke statistical models" [@mcelreath2020, chapter 16].*
+*Note. Accepting a distinction between data and phenomena means that we can have different explanations for the phenomena (scientific models) and for the observed data (statistical models). The most obvious examples of this distinction are statistical models whose purpose is to account for some form measurement error or to impute missing data. All variables are measured with error. The distinction becomes less clear when we start thinking about "bespoke statistical models" [@mcelreath2020, chapter 16].*
 
 ```{r}
 #| message: false
