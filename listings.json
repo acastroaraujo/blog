@@ -2,8 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2023-12-31-data/index.html",
       "/posts/2023-12-27-what-is-computational-social-science/index.html",
-      "/posts/2022-05-12-distributions-in-r/distributions-in-r.html",
+      "/posts/2022-05-12-distributions-in-r/index.html",
       "/posts/2022-02-07-theory-work/theory-work.html",
       "/posts/2022-01-01-regression-to-the-mean/index.html",
       "/posts/2021-01-24-optimization-in-r/index.html"
