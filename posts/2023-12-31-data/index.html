@@ -23,40 +23,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -209,25 +175,9 @@ div.csl-indent {
 <li><p>Data: “public records produced by measurement and experiment that serve as evidence for the existence or features of phenomena” <span class="citation" data-cites="woodward2011">(<a href="#ref-woodward2011" role="doc-biblioref">Woodward 2011, p. 166</a>)</span></p>
 <p>Even in well-designed experiments, the <em>data</em> will reflect the influence of many other causal factors that have nothing to do with the phenomena of interest.</p></li>
 </ul>
-<p>But there’s more. When we think about “data” we generally think about <em>standardized</em> data—i.e., symbols that are arranged in a way that’s convenient for computer processing. We think about symbols that are stable and transportable, or what Bruno <span class="citation" data-cites="latour1987">Latour (<a href="#ref-latour1987" role="doc-biblioref">1987</a>)</span> calls “immutable and combinable mobiles.”</p>
+<p>But there’s more. When we think about “data” we generally think about <em>standardized</em> data—i.e., symbols that are arranged in a way that’s convenient for computer processing. We think about symbols that are stable and transportable, or what Bruno Latour <span class="citation" data-cites="latour1987">(<a href="#ref-latour1987" role="doc-biblioref">1987</a>)</span> calls “immutable and combinable mobiles.”</p>
+<p><em>Note. Accepting a distinction between data and phenomena means that we can have different explanations for the phenomena (scientific models) and for the observed data (statistical models). The most obvious examples of this distinction are statistical models whose purpose is to account for some form measurement error or to impute missing data. All variables are measured with error. The distinction becomes less clear when we think about “bespoke statistical models” <span class="citation" data-cites="mcelreath2020">(<a href="#ref-mcelreath2020" role="doc-biblioref">McElreath 2020, chap. 16</a>)</span>.</em></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fl">5e3</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>symbols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">9</span>, letters, <span class="st">"$"</span>, <span class="st">"+"</span>, <span class="st">"!"</span>, <span class="st">"-"</span>, <span class="st">"#"</span>, <span class="st">"Ω"</span>, <span class="st">"∆"</span>, <span class="st">"∑"</span>, <span class="st">"π"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">runif</span>(N),</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">runif</span>(N),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">sym =</span> <span class="fu">sample</span>(symbols, <span class="at">size =</span> N, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y, <span class="at">shape =</span> sym)) <span class="sc">+</span> </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">4</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_shape_identity</span>() <span class="sc">+</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>(<span class="at">base_family =</span> <span class="st">"Optima"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -238,7 +188,10 @@ div.csl-indent {
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-latour1987" class="csl-entry" role="listitem">
-Latour, Bruno. 1987. <em>Science in Action: How to Follow Scientists and Engineers Through Society</em>. Harvard university press.
+Latour, Bruno. 1987. <em>Science in Action: How to Follow Scientists and Engineers Through Society</em>. Harvard University Press.
+</div>
+<div id="ref-mcelreath2020" class="csl-entry" role="listitem">
+McElreath, Richard. 2020. <em>Statistical Rethinking: A Bayesian Course with Examples in r and Stan</em>. CRC press.
 </div>
 <div id="ref-woodward2011" class="csl-entry" role="listitem">
 Woodward, James F. 2011. <span>“Data and Phenomena: A Restatement and Defense.”</span> <em>Synthese</em> 182: 165179.
