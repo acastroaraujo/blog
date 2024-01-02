@@ -390,7 +390,7 @@ F(x) = \Pr(X \leq x) = \sum_{i = 0}^x {n \choose x} p^x (1-p)^{n-x}
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(draws <span class="sc">==</span> <span class="dv">7</span>)  <span class="do">## approx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1835</code></pre>
+<pre><code>[1] 0.1914</code></pre>
 </div>
 <details open="">
 <summary>Code</summary>
@@ -407,7 +407,7 @@ F(x) = \Pr(X \leq x) = \sum_{i = 0}^x {n \choose x} p^x (1-p)^{n-x}
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(draws <span class="sc">&lt;=</span> <span class="dv">8</span>)  <span class="do">## approx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9255</code></pre>
+<pre><code>[1] 0.9296</code></pre>
 </div>
 <details open="">
 <summary>Code</summary>
@@ -424,7 +424,7 @@ F(x) = \Pr(X \leq x) = \sum_{i = 0}^x {n \choose x} p^x (1-p)^{n-x}
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(draws <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">9</span>)) <span class="do">## approx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1795</code></pre>
+<pre><code>[1] 0.175</code></pre>
 </div>
 <details open="">
 <summary>Code</summary>
@@ -498,7 +498,7 @@ F(x) = \Pr(X \leq x) = \int_{-\infty}^x f(x) dx
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(draws <span class="sc">&lt;=</span> <span class="dv">0</span>) <span class="do">## approx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.49932</code></pre>
+<pre><code>[1] 0.49868</code></pre>
 </div>
 </div>
 <p>Knowing that the CDF is an <em>integral,</em> we can understand the PDF as the <em>derivative</em> of the CDF. (The derivative of an integral of a function is just the function itself). In other words, a probability <strong>density</strong> is the rate of change in cumulative probability at <span class="math inline">\(x\)</span>. The PDF is the “slope” of the CDF at <span class="math inline">\(x\)</span>. This means that if the cumulative probability is increasing rapidly, the density can easily exceed 1. But if we calculate the area under the density function, it will never exceed 1.</p>
@@ -563,7 +563,7 @@ See the “overthinking” section in <span class="citation" data-cites="mcelrea
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="dv">3</span> <span class="sc">&lt;</span> draws <span class="sc">&amp;</span> draws <span class="sc">&lt;</span> <span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.2618</code></pre>
+<pre><code>[1] 0.2566</code></pre>
 </div>
 </div>
 <p>What is the probability that <span class="math inline">\(x \leq 8\)</span>?</p>
@@ -573,7 +573,7 @@ See the “overthinking” section in <span class="citation" data-cites="mcelrea
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(draws <span class="sc">&lt;=</span> <span class="dv">8</span>)  <span class="do">## approx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8825</code></pre>
+<pre><code>[1] 0.8888</code></pre>
 </div>
 <details open="">
 <summary>Code</summary>
@@ -597,7 +597,7 @@ See the “overthinking” section in <span class="citation" data-cites="mcelrea
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(draws <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">2</span> <span class="sc">|</span> draws <span class="sc">&gt;</span> <span class="dv">2</span>)  <span class="do">## approx</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.7114</code></pre>
+<pre><code>[1] 0.708</code></pre>
 </div>
 </div>
 </section>
@@ -631,7 +631,7 @@ See the “overthinking” section in <span class="citation" data-cites="mcelrea
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>      50% 
-0.2298626 </code></pre>
+0.2295202 </code></pre>
 </div>
 </div>
 
