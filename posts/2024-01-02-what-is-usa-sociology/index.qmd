@@ -7,7 +7,7 @@ date: 2024-01-02
 bibliography: references.bib
 echo: false
 editor_options: 
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
 ```{r}
@@ -221,6 +221,8 @@ Because of this issue, researchers have looked for ways to "trim" uninformative 
 
 In other words, we do a "hypothesis test" for each tie in the network depicted by $\mathbf A$. If the links between individuals and areas of interest was random, the resulting network would consist entirely of isolated nodes.
 
+## Results
+
 The results of this procedure are shown in @fig-0.01, with a significance level of 0.01.
 
 I used Zachary Neal's [-@neal2022] `backbone` package to do all this.[^4]
@@ -262,19 +264,21 @@ vnd <- suppressMessages(process(A, 0.06))
 visualize(vnd)
 ```
 
-Well, that's all for now.
-
 ## Citation
 
 The `backbone` package automatically outputs the following suggest citation text:
 
-> @fig-0.01
+> @fig-0.01:
 >
 > We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.01) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 99%, and reduced the number of connected nodes by 68.9%.
 >
-> @fig-0.05
+> @fig-0.05:
 >
 > We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.05) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 96.3%, and reduced the number of connected nodes by 34.4%.
+>
+> @fig-0.06:
+>
+> We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.06) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 94.9%, and reduced the number of connected nodes by 21.3%.
 >
 > Neal, Z. P. 2022. backbone: An R Package to Extract Network Backbones. PLOS ONE, 17, e0269137. [https://doi.org/10.1371/journal.pone.0269137](https://doi.org/10.1371/journal.pone.0269137Serrano,)
 >
