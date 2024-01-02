@@ -21,10 +21,9 @@ For example,
 >
 > @martin2014 [pp. 10-1]
 
-Sometimes it involves avoiding common traps—e.g., the three "nuance traps" identified described by @healy2017.
+Sometimes it involves avoiding common traps---e.g., the three "nuance traps" described by Kieran Healy [-@healy2017].
 
-> First is the ever more detailed, merely empirical description of the world. This is the nuance of the *fine-grain*. It is a rejection of
-> theory masquerading as increased accuracy. Second is the ever more extensive expansion of some theoretical system in a way that effectively closes it off from rebuttal or disconfirmation by anything in the world. This is the nuance of the *conceptual framework*. It is an evasion of the demand that a theory be refutable. And third is the insinuation that a sensitivity to nuance is a manifestation of one’s distinctive (often metaphorically expressed and at times seemingly ineffable) ability to grasp and express the richness, texture, and flow of social reality itself. This is the nuance of the *connoisseur*. It is mostly a species of self-congratulatory symbolic violence
+> First is the ever more detailed, merely empirical description of the world. This is the nuance of the *fine-grain*. It is a rejection of theory masquerading as increased accuracy. Second is the ever more extensive expansion of some theoretical system in a way that effectively closes it off from rebuttal or disconfirmation by anything in the world. This is the nuance of the *conceptual framework*. It is an evasion of the demand that a theory be refutable. And third is the insinuation that a sensitivity to nuance is a manifestation of one's distinctive (often metaphorically expressed and at times seemingly ineffable) ability to grasp and express the richness, texture, and flow of social reality itself. This is the nuance of the *connoisseur*. It is mostly a species of self-congratulatory symbolic violence
 >
 > @healy2017 [pp. 120-1]
 
@@ -69,9 +68,7 @@ The logic behind constructionist arguments is fairly straightforward.
 >
 > @hacking1999 [pp. 6]
 
-This kind of argument is *not trivial* when $X$ is taken for granted ---i.e., when $X$ appears to be inevitable.
-
-The notion of *racecraft* is a great example of this kind of argument. It is used to describe how social hierarchy gets *projected* into "nature" in the form of "race."
+This kind of argument is *not trivial* when $X$ is taken for granted---i.e., when $X$ appears to be inevitable. Take the notion of *racecraft*, which is used to describe how social hierarchy gets *projected* into "nature" in the form of "race."
 
 > Consider the statement "black Southerners were segregated because of their skin color"---a perfectly natural sentence to the ears of most Americans, who tend to overlook its *weird causality.*
 >
@@ -81,4 +78,4 @@ How can skin color *cause* segregation? How can skin color *cause* a stop-and-fr
 
 In a way, this is the opposite of Dennet's "deepity." It is a statement that looks trivial and true at first glance. But, upon closer reflection, it has no well-formed meaning. And if it were true, it would have earth shattering consequences to our conception of causality. *Which begs the question: why did it originally seem so unremarkable?*
 
-At their most ambitious, social constructionist arguments are an indictment of *folk* social theory (or "culture"). They remind us that many arbitrary things come to be seen as "natural" or "inevitable" in the course of everyday life.
+At their most ambitious, social constructionist arguments are an indictment of *folk* social theory (or "the culture"). They remind us that many arbitrary things come to be seen as "natural" or "inevitable" in the course of everyday life.
