@@ -251,7 +251,7 @@ visualize(vnd)
 
 [Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}) but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This *does not* mean that one is more important than the other. It just means that the connections between [Qualitative Methodology]{.allcaps} and other areas are more compatible with a "null model" of random ties between areas; whereas people who express an interest in [Quantitative Methodology]{.allcaps} are more likely to express an interest in those three areas than what we would expect by chance.
 
-The area of [Ethnography (Anthropology)]{.allcaps}---which has half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology ]{.allcaps}, which reflects 
+The area of [Ethnography (Anthropology)]{.allcaps}---which has half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology ]{.allcaps}, which reflects a long tradition of urban ethnographies.
 
 Also, note the appearance of three areas connected around criminology.
 
