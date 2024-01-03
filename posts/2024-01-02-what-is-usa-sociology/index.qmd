@@ -102,11 +102,9 @@ visualize <- function(vnd, gC = -3000) {
 
 ## Background
 
-Sociologists in the USA like to describe sociology as the most heterogeneous social science of all.
+Sociologists in the USA like describing sociology as the most heterogeneous social science of all, which is
 
-In short:
-
-> It is the most heterogeneous social science, which is perhaps another way of saying that it has been less successful at institutionalizing itself as a discipline than its close relatives. Unlike economics, it does not have a core kit of analytical tools and models codified in textbooks and widely accepted as legitimate both inside and outside the field... Unlike political science, on the other hand, sociology does not have a well-defined empirical core to unify it, either.
+> ...perhaps another way of saying that it has been less successful at institutionalizing itself as a discipline than its close relatives. Unlike economics, it does not have a core kit of analytical tools and models codified in textbooks and widely accepted as legitimate both inside and outside the field... Unlike political science, on the other hand, sociology does not have a well-defined empirical core to unify it, either.
 >
 > @healy2012 [pp. 88]
 
@@ -114,7 +112,7 @@ There are two ways to look at this.
 
 **Glass Half-Full**
 
-Andrew Abbott \[-@abbott2001\] claims sociology's defining characteristic is "the fact that the discipline is not very good at excluding things from itself." Some see this as something good because it turns sociology into some miniature version of *all* social science. In this view, the lack of "internal cohesion" in the discipline is interpreted as the cost we've paid in exchange for occupying a central place in the social science landscape \[@moody2006\].
+Andrew Abbott [-@abbott2001] claims sociology's defining characteristic is "the fact that the discipline is not very good at excluding things from itself." Some see this as something good because it turns sociology into some miniature version of *all* social science. In this view, the lack of "internal cohesion" in the discipline is interpreted as the cost we've paid in exchange for occupying a central place in the social science landscape [@moody2006].
 
 Many celebrate the lack of a disciplinary core as providing some unique form of *academic freedom.*
 
@@ -188,6 +186,12 @@ However, this doesn't provide us with any information of the "structure" of the 
 
 The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974]. This idea should be familiar to everyone who chose "social networks" as area of interest.
 
+<aside>
+
+transmogrification is not the "technical" term for this
+
+</aside>
+
 To do this, we arrange the individuals and their corresponding areas in matrix form. Here, we have a matrix $\mathbf X$ with `r nrow(X)` rows (one for each individual) and `r ncol(X)` columns (one for each area). Each cell $x_{ij}$ is either a $1$ or a $0$. Then we transform $\mathbf X$ into a new adjacency matrix $\mathbf A$ with each cell $a_{ij}$ corresponding to the number of "shared" or "intersecting" individuals between areas $i$ and $j$.
 
 $$
@@ -235,7 +239,7 @@ visualize(vnd)
 
 [Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}) but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This *does not* mean that one is more important than the other. It just means that the connections between [Qualitative Methodology]{.allcaps} and other areas are more compatible with a "null model" of random ties between areas; whereas people who express an interest in [Quantitative Methodology]{.allcaps} are more likely to express an interest in those three areas than what we would expect by chance.
 
-The area of [Ethnography (Anthropology)]{.allcaps}---which has half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology]{.allcaps}, which reflects a long tradition of urban ethnographies.
+The area of [Ethnography (Anthropology)]{.allcaps}---which has about half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology]{.allcaps}, reflecting a long tradition of urban ethnographies.
 
 Also, note the appearance of three areas connected around criminology.
 
@@ -261,6 +265,8 @@ vnd <- suppressMessages(process(A, 0.06))
 visualize(vnd)
 ```
 
+That's all for now.
+
 ## Sample
 
 ```{r}
@@ -273,7 +279,7 @@ d |>
   count(institution, sort = TRUE) |> 
   mutate(prop = n / sum(n)) |> 
   gt::gt(rowname_col = "institution") |> 
-  gt::tab_header("Sample") |>
+  gt::tab_header("Universities and Individuals") |>
   gt::fmt_percent(columns = prop) |> 
   gt::cols_align(columns = everything(), align = "center") |> 
   gt::grand_summary_rows(
