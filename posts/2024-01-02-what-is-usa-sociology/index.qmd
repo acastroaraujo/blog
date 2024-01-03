@@ -180,7 +180,9 @@ diag(A) |>
   coord_cartesian(xlim = c(0, 250))
 ```
 
-However, this doesn't provide us with any information of the "structure" of the sociological areas of interest---i.e., the pattern of connections which some may describe as coherency. This is what the next section is all about.
+However, this doesn't provide us with any information about the "structure" of the sociological areas of interest---i.e., the pattern of connections which some may describe in terms of coherency (or lack thereof).
+
+This is what the next section is all about.
 
 ## Two-Mode Networks
 
