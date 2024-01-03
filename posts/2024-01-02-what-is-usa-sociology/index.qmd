@@ -148,9 +148,7 @@ This is the reason why many people *claim* they haven *chosen* to become sociolo
 
 **Glass Half-Empty**
 
-Others are less optimistic.[^1]
-
-[^1]: Personally, I'm more of a glass half-empty kinda guy these days.
+Others are less optimistic.
 
 Presumably, we are not as interdisciplinary as we'd like to believe.
 
@@ -212,13 +210,13 @@ $$
 \mathbf{A} = \mathbf{X}^\top \mathbf{X}
 $$ {#eq-proj}
 
-The diagonal of $\mathbf A$ contains the total number of individuals that chose each area, which corresponds to the same numbers in @fig-areas.[^2]
+The diagonal of $\mathbf A$ contains the total number of individuals that chose each area, which corresponds to the same numbers in @fig-areas.[^1]
 
-[^2]: This new matrix $\mathbf A$ is sometimes called a *two-mode* or *bipartite projection.* The original network represented by $\mathbf X$ goes by many names---e.g, affiliation network, bipartite graph, two-mode network, etc.
+[^1]: This new matrix $\mathbf A$ is sometimes called a *two-mode* or *bipartite projection.* The original network represented by $\mathbf X$ goes by many names---e.g, affiliation network, bipartite graph, two-mode network, etc.
 
-Unfortunately, the resulting network, is *very dense.* It takes only one single individual with idiosyncratic tastes to create ties among four otherwise disconnected areas. As a result, the "structure" is one in which every area is seemingly connected to every other area.[^3]
+Unfortunately, the resulting network, is *very dense.* It takes only one single individual with idiosyncratic tastes to create ties among four otherwise disconnected areas. As a result, the "structure" is one in which every area is seemingly connected to every other area.[^2]
 
-[^3]: @knoke2021 \[pp. 36\] note three problems with using this sort of projection. First, it entails a loss of "identity information" on one of the two node sets---e.g., the cell entries in $\mathbf A$ don't reveal the specific individuals shared across areas. Second, it results in *very dense* networks, which leads to biases in network measurements---e.g., an artificially high number of triangles [see @opsahl2013]. Third, it obscures the generative process behind tie formation.
+[^2]: @knoke2021 \[pp. 36\] note three problems with using this sort of projection. First, it entails a loss of "identity information" on one of the two node sets---e.g., the cell entries in $\mathbf A$ don't reveal the specific individuals shared across areas. Second, it results in *very dense* networks, which leads to biases in network measurements---e.g., an artificially high number of triangles [see @opsahl2013]. Third, it obscures the generative process behind tie formation.
 
 Because of this issue, researchers have looked for ways to "trim" uninformative ties. The intuition is straightforward. If the observed number of shared individuals between two areas ( $a_{ij}$ ) exceeds the number we would expect to see in a random network *(the null model),* then we draw a tie between area $i$ and area $j$.
 
@@ -228,15 +226,17 @@ In other words, we do a "hypothesis test" for each tie in the network depicted b
 
 The results of this procedure are shown in @fig-0.01, with a significance level of 0.01.
 
-I used Zachary Neal's [-@neal2022] `backbone` package to do all this.[^4]
+I used Zachary Neal's [-@neal2022] `backbone` package to do all this.[^3]
 
-[^4]: Unfortunately, the choice of algorithm and threshold level is rarely discussed in most publications. The threshold level here is arbitrary, *this is a blogpost.* The "disparity filter" algorithm was chosen because it was the fastest, *this is a blogpost.*
+[^3]: The threshold level here is arbitrary, *this is a blogpost.* The "disparity filter" algorithm was chosen because it was the fastest, *this is a blogpost.\
+    \
+    *The choice of algorithm and threshold level is rarely discussed in most publications of this sort, so I guess I'm sort of following tradition here.
 
-As we may have expected, there are strong connections between [Stratification/ Mobility]{.allcaps} and [Education]{.allcaps}, [Demography]{.allcaps} and [Family]{.allcaps}, [Medical Sociology]{.allcaps} and [Mental Health]{.allcaps}, and so on. 
+As we may have expected, there are strong connections between [Stratification/ Mobility]{.allcaps} and [Education]{.allcaps}, [Demography]{.allcaps} and [Family]{.allcaps}, [Medical Sociology]{.allcaps} and [Mental Health]{.allcaps}, and so on.
 
-The strong connection between [Cultural Sociology]{.allcaps} and so-called [Theory]{.allcaps} deserves its own ~~rant~~ blogpost.
+The strong overlap between [Cultural Sociology]{.allcaps} and so-called [Theory]{.allcaps} deserves its own ~~rant~~ blogpost.
 
-_All isolate nodes have been removed._ Keep in mind that a bigger sample of individuals and their areas would obviously result in more connected areas.
+*All isolate nodes have been removed.* Keep in mind that a bigger sample of individuals and their areas would obviously result in more connected areas.
 
 ```{r}
 #| label: fig-0.01
@@ -247,11 +247,11 @@ vnd <- suppressMessages(process(A, 0.01))
 visualize(vnd)
 ```
 
-@fig-0.05 uses a significance level of $0.05$, which means we get to extract more ties and have less isolate areas. 
+@fig-0.05 uses a significance level of $0.05$, which means we get to extract more ties and have less isolate areas.
 
 [Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}) but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This *does not* mean that one is more important than the other. It just means that the connections between [Qualitative Methodology]{.allcaps} and other areas are more compatible with a "null model" of random ties between areas; whereas people who express an interest in [Quantitative Methodology]{.allcaps} are more likely to express an interest in those three areas than what we would expect by chance.
 
-The area of [Ethnography (Anthropology)]{.allcaps}---which has half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology ]{.allcaps}, which reflects a long tradition of urban ethnographies.
+The area of [Ethnography (Anthropology)]{.allcaps}---which has half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology]{.allcaps}, which reflects a long tradition of urban ethnographies.
 
 Also, note the appearance of three areas connected around criminology.
 
@@ -264,9 +264,9 @@ vnd <- suppressMessages(process(A, 0.05))
 visualize(vnd)
 ```
 
-Finally, @fig-0.06 uses a significance level of $0.06$, just enough for connections between smaller areas to start showing up (e.g., [Marxist Sociology]{.allcaps}, [Alcohol and Drugs]{.allcaps}). 
+Finally, @fig-0.06 uses a significance level of $0.06$, just enough for connections between smaller areas to start showing up (e.g., [Marxist Sociology]{.allcaps}, [Alcohol and Drugs]{.allcaps}).
 
-Please keep in mind that this *does not* mean that these connections are somehow "weaker" than the other ones in any _substantive_ way. Hypothesis testing is extremely dependent on sample size.
+Please keep in mind that this *does not* mean that these connections are somehow "weaker" than the other ones in any *substantive* way. Hypothesis testing is extremely dependent on sample size.
 
 ```{r}
 #| label: fig-0.06
