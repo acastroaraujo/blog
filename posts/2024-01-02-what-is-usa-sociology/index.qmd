@@ -49,26 +49,6 @@ X <- sparseMatrix(
 
 A <- t(X) %*% X
 
-i <- seq(0.01, 0.1, by = 0.02)
-
-nets <- map(i, function(x) {
-  
-  out <- backbone::disparity(A, alpha = x, class = "igraph", signed = FALSE)
-  V(out)$size <- diag(A)
-  V(out)$degree <- degree(out)
-  
-  cluster <- as.integer(membership(cluster_walktrap(out))) 
-  tbl <- sort(table(cluster)[table(cluster) > 1], decreasing = TRUE) 
-  lookup <- setNames(letters[seq_along(tbl)], as.integer(names(tbl)))
-  
-  V(out)$group <- lookup[as.character(cluster)]
-  V(out)$group[is.na(V(out)$group)] <- "isolate"
-  V(out)$name <- stringr::str_wrap(V(out)$name, 12)
-  
-  return(out)
-  
-})
-
 # Helpers
 rescale <- function(x, low = 1, high = 30) {
   r <- range(x)
@@ -120,9 +100,11 @@ visualize <- function(vnd, gC = -3000) {
 
 ```
 
-## Two Views
+## Background
 
-Sociologists in the USA like to describe sociology as the most heterogeneous social science of all, to the point that some seem to think of it as a miniature version of *all* social science. Andrew @abbott2001 claims sociology's defining characteristic is "the fact that the discipline is not very good at excluding things from itself." In this view, the lack of "internal cohesion" is the cost we've paid in exchange for occupying a central place in the social science landscape [@moody2006].
+Sociologists in the USA like to describe sociology as the most heterogeneous social science of all.
+
+In short:
 
 > It is the most heterogeneous social science, which is perhaps another way of saying that it has been less successful at institutionalizing itself as a discipline than its close relatives. Unlike economics, it does not have a core kit of analytical tools and models codified in textbooks and widely accepted as legitimate both inside and outside the field... Unlike political science, on the other hand, sociology does not have a well-defined empirical core to unify it, either.
 >
@@ -132,7 +114,9 @@ There are two ways to look at this.
 
 **Glass Half-Full**
 
-The absence of a disciplinary core has been celebrated by many as some unique form of academic freedom.
+Andrew Abbott \[-@abbott2001\] claims sociology's defining characteristic is "the fact that the discipline is not very good at excluding things from itself." Some see this as something good because it turns sociology into some miniature version of *all* social science. In this view, the lack of "internal cohesion" in the discipline is interpreted as the cost we've paid in exchange for occupying a central place in the social science landscape \[@moody2006\].
+
+Many celebrate the lack of a disciplinary core as providing some unique form of *academic freedom.*
 
 This is the reason why many people *claim* they haven *chosen* to become sociologists.
 
@@ -150,7 +134,7 @@ This is the reason why many people *claim* they haven *chosen* to become sociolo
 
 Others are less optimistic.
 
-Presumably, we are not as interdisciplinary as we'd like to believe.
+Presumably, we are not as interdisciplinary as we would like to believe.
 
 > ...most sociologists don't really get interdisciplinarity. Whether we acknowledge it or not, most of us have internalized a sociological supremacy that makes us believe our field's insights are more important, more complete, more *nuanced* than those of other scientists (Healy 2017). This cultural background of intellectual superiority helps create what Lizardo (2014) called the "Comtean schema"---the implicit belief that all proper interdisciplinary research should take the institutional form of a *subfield of sociology.*
 >
