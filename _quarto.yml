@@ -6,7 +6,7 @@ website:
   title: "blog"
   navbar:
     title: false
-    right:
+    left:
       - icon: house
         text: about
         href: https://acastroaraujo.github.io

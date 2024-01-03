@@ -8,11 +8,6 @@ categories:
   - Causality
 date: 2022-01-01
 bibliography: references.bib
-format:
-  html:
-    theme: [cosmo, styles.scss]
-    fig-align: center
-    code-fold: show
 ---
 
 ```{r}
@@ -51,7 +46,7 @@ HistData::Galton |>
 
 This is the data originally analyzed by Galton himself. The dashed line represents [*equality*]{style="color:red"}, meaning that parents and children have the same height. But Galton noted that children's heights were actually closer to the blue [*prediction line*]{style="color:skyblue"}.
 
-<aside>See @stigler2016. </aside>
+<aside>See @stigler2016.</aside>
 
 The key insight is that, whenever randomness is involved, the more extreme outcomes will tend to be followed by more moderate outcomes. Why? Because part of the reason these outcomes are so extreme in the first place is due to randomness. Galton also termed this phenomena "regression to mediocrity"[^1].
 

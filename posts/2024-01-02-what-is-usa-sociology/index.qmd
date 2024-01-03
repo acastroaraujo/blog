@@ -5,9 +5,12 @@ description: |
 author: andrés castro araújo
 date: 2024-01-02
 bibliography: references.bib
+categories:
+  - Sociology
+  - Networks
 echo: false
 editor_options: 
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 ```{r}
@@ -161,11 +164,11 @@ Presumably, we are not as interdisciplinary as we'd like to believe.
 
 ***Note. The visualization provided below is provisional. I will need to email someone at the ASA and politely ask for permission to use the directory.***
 
-When a sociologist joins the *American Sociological Association* (ASA), they have the options to choose up to four "areas of interest" for everyone else to see. For example, I chose (1) Theory; (2) Quantitative Methodology; (3) Organizations, Formal and Complex; and (4) Law and Society. *And I would probably choose something different on another day.*
+When a sociologist joins the *American Sociological Association* (ASA), they have the options to choose up to four "areas of interest" for everyone else to see. For example, I chose (1) [Theory]{.allcaps}; (2) [Quantitative Methodology]{.allcaps}; (3) [Organizations, Formal and Complex]{.allcaps}; and (4) [Law and Society]{.allcaps}. *And I would probably have chosen something different on a different day.*
 
 So, I created a dataset containing the areas of interest of over 1,000 individuals associated with 20 sociology programs in the USA. This dataset is provisional, but see @tbl-sample in case you are curious about the sample.
 
-Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is *stratification/mobility,* which gives credence to the idea that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars---*Cultural*, *Economic*, and *Political* Sociology---which gives credence to the idea that sociology is a miniature version of all social science. Furthermore, the idea that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
+Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is [Stratification/ Mobility]{.allcaps}, which gives credence to the idea that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars---[Cultural Sociology]{.allcaps}, [Economic Sociology]{.allcaps}, and [Political Sociology]{.allcaps}---which gives credence to the idea that sociology is a miniature version of all social science. Furthermore, the idea that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
 
 ```{r}
 #| label: fig-areas
@@ -213,11 +216,11 @@ The diagonal of $\mathbf A$ contains the total number of individuals that chose 
 
 [^2]: This new matrix $\mathbf A$ is sometimes called a *two-mode* or *bipartite projection.* The original network represented by $\mathbf X$ goes by many names---e.g, affiliation network, bipartite graph, two-mode network, etc.
 
-Unfortunately, the resulting network, is *very dense.* It takes only one single individual with idiosyncratic tastes to create ties among four otherwise disconnected areas. As a result, the "structure" is one in which everything is seemingly connected to everything else.[^3]
+Unfortunately, the resulting network, is *very dense.* It takes only one single individual with idiosyncratic tastes to create ties among four otherwise disconnected areas. As a result, the "structure" is one in which every area is seemingly connected to every other area.[^3]
 
 [^3]: @knoke2021 \[pp. 36\] note three problems with using this sort of projection. First, it entails a loss of "identity information" on one of the two node sets---e.g., the cell entries in $\mathbf A$ don't reveal the specific individuals shared across areas. Second, it results in *very dense* networks, which leads to biases in network measurements---e.g., an artificially high number of triangles [see @opsahl2013]. Third, it obscures the generative process behind tie formation.
 
-Because of this issue, researchers have looked for ways to "trim" uninformative ties. The intuition is straightforward. If the observed number of shared individuals between two areas ( $a_{ij}$ ) exceeds the number we would expect to see in a random network (the *null model),* then we draw a tie between area $i$ and area $j$.
+Because of this issue, researchers have looked for ways to "trim" uninformative ties. The intuition is straightforward. If the observed number of shared individuals between two areas ( $a_{ij}$ ) exceeds the number we would expect to see in a random network *(the null model),* then we draw a tie between area $i$ and area $j$.
 
 In other words, we do a "hypothesis test" for each tie in the network depicted by $\mathbf A$. If the links between individuals and areas of interest was random, the resulting network would consist entirely of isolated nodes.
 
@@ -229,60 +232,50 @@ I used Zachary Neal's [-@neal2022] `backbone` package to do all this.[^4]
 
 [^4]: Unfortunately, the choice of algorithm and threshold level is rarely discussed in most publications. The threshold level here is arbitrary, *this is a blogpost.* The "disparity filter" algorithm was chosen because it was the fastest, *this is a blogpost.*
 
-As we may expect, there are strong connections between stratification and education, demography and family, economic sociology and organizations, political sociology and historical sociology, and so on. All isolated notes have been removed.
+As we may have expected, there are strong connections between [Stratification/ Mobility]{.allcaps} and [Education]{.allcaps}, [Demography]{.allcaps} and [Family]{.allcaps}, [Medical Sociology]{.allcaps} and [Mental Health]{.allcaps}, and so on. 
 
-*Note. A bigger sample of individuals and their areas would obviously result in more ties.*
+The strong connection between [Cultural Sociology]{.allcaps} and so-called [Theory]{.allcaps} deserves its own ~~rant~~ blogpost.
+
+_All isolate nodes have been removed._ Keep in mind that a bigger sample of individuals and their areas would obviously result in more connected areas.
 
 ```{r}
 #| label: fig-0.01
 #| column: page
 #| fig-height: 8
-#| fig-cap: "Strong Ties ( α = 0.01 )"
+#| fig-cap: '"Strong" Ties ( α = 0.01 )'
 vnd <- suppressMessages(process(A, 0.01))
 visualize(vnd)
 ```
 
-@fig-0.05 uses a significance level of $0.05$, which means we get to extract more ties than before. Note the appearance of a criminology triad.
+@fig-0.05 uses a significance level of $0.05$, which means we get to extract more ties and have less isolate areas. 
+
+[Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}) but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This *does not* mean that one is more important than the other. It just means that the connections between [Qualitative Methodology]{.allcaps} and other areas are more compatible with a "null model" of random ties between areas; whereas people who express an interest in [Quantitative Methodology]{.allcaps} are more likely to express an interest in those three areas than what we would expect by chance.
+
+The area of [Ethnography (Anthropology)]{.allcaps}---which has half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology ]{.allcaps}, which reflects 
+
+Also, note the appearance of three areas connected around criminology.
 
 ```{r}
 #| label: fig-0.05
 #| column: page
 #| fig-height: 8
-#| fig-cap: "Strongish Ties ( α = 0.05 )"
+#| fig-cap: '"Strongish" Ties ( α = 0.05 )'
 vnd <- suppressMessages(process(A, 0.05))
 visualize(vnd)
 ```
 
-Finally, @fig-0.06 uses a significance level of $0.06$, just enough for connections between smaller areas to start showing up (e.g., "Marxist Sociology", "Alcohol and Drugs"). Please keep in mind that this *does not* mean that these connections are somehow "weaker" than the other ones in any substantive way. Hypothesis testing is extremely dependent on sample size.
+Finally, @fig-0.06 uses a significance level of $0.06$, just enough for connections between smaller areas to start showing up (e.g., [Marxist Sociology]{.allcaps}, [Alcohol and Drugs]{.allcaps}). 
+
+Please keep in mind that this *does not* mean that these connections are somehow "weaker" than the other ones in any _substantive_ way. Hypothesis testing is extremely dependent on sample size.
 
 ```{r}
 #| label: fig-0.06
 #| column: page
 #| fig-height: 8
-#| fig-cap: "Strongish Ties ( α = 0.06 )"
+#| fig-cap: '"Strongish" Ties ( α = 0.06 )'
 vnd <- suppressMessages(process(A, 0.06))
 visualize(vnd)
 ```
-
-## Citation
-
-The `backbone` package automatically outputs the following suggest citation text:
-
-> @fig-0.01:
->
-> We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.01) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 99%, and reduced the number of connected nodes by 68.9%.
->
-> @fig-0.05:
->
-> We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.05) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 96.3%, and reduced the number of connected nodes by 34.4%.
->
-> @fig-0.06:
->
-> We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.06) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 94.9%, and reduced the number of connected nodes by 21.3%.
->
-> Neal, Z. P. 2022. backbone: An R Package to Extract Network Backbones. PLOS ONE, 17, e0269137. [https://doi.org/10.1371/journal.pone.0269137](https://doi.org/10.1371/journal.pone.0269137Serrano,)
->
-> Serrano, M. A., Boguna, M., & Vespignani, A. (2009). Extracting the multiscale backbone of complex weighted networks. Proceedings of the National Academy of Sciences, 106(16), 6483-6488. <https://doi.org/10.1073/pnas.0808904106>
 
 ## Sample
 
@@ -313,3 +306,23 @@ d |>
   gt::tab_style(style = cell_text(weight = "bold"), locations = cells_column_labels()) |> 
   gt::opt_table_font(font = "Optima") 
 ```
+
+## Citation
+
+The `backbone` package automatically outputs the following suggest citation text:
+
+> @fig-0.01:
+>
+> We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.01) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 99%, and reduced the number of connected nodes by 68.9%.
+>
+> @fig-0.05:
+>
+> We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.05) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 96.3%, and reduced the number of connected nodes by 34.4%.
+>
+> @fig-0.06:
+>
+> We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.06) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 94.9%, and reduced the number of connected nodes by 21.3%.
+>
+> Neal, Z. P. 2022. backbone: An R Package to Extract Network Backbones. PLOS ONE, 17, e0269137. [https://doi.org/10.1371/journal.pone.0269137](https://doi.org/10.1371/journal.pone.0269137Serrano,)
+>
+> Serrano, M. A., Boguna, M., & Vespignani, A. (2009). Extracting the multiscale backbone of complex weighted networks. Proceedings of the National Academy of Sciences, 106(16), 6483-6488. <https://doi.org/10.1073/pnas.0808904106>
