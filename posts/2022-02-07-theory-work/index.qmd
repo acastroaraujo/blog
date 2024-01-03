@@ -5,6 +5,7 @@ description: |
 author: andrés castro araújo
 categories:
   - Theory
+  - Sociology
 date: 2022-02-07
 bibliography: references.bib
 ---

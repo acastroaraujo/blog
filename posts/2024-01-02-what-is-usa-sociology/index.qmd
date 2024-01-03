@@ -108,7 +108,7 @@ Sociologists in the USA like describing sociology as the most heterogeneous soci
 >
 > @healy2012 [pp. 88]
 
-There are two ways to look at this.
+There are two ways of looking at this.
 
 **Glass Half-Full**
 
@@ -184,13 +184,9 @@ However, this doesn't provide us with any information of the "structure" of the 
 
 ## Two-Mode Networks
 
-The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974]. This idea should be familiar to everyone who chose "social networks" as area of interest.
+The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974]. This idea should be familiar to everyone who chose [Social Networks]{.allcaps} as area of interest.
 
-<aside>
-
-transmogrification is not the "technical" term for this
-
-</aside>
+<aside>transmogrification is not the "technical" term for this</aside>
 
 To do this, we arrange the individuals and their corresponding areas in matrix form. Here, we have a matrix $\mathbf X$ with `r nrow(X)` rows (one for each individual) and `r ncol(X)` columns (one for each area). Each cell $x_{ij}$ is either a $1$ or a $0$. Then we transform $\mathbf X$ into a new adjacency matrix $\mathbf A$ with each cell $a_{ij}$ corresponding to the number of "shared" or "intersecting" individuals between areas $i$ and $j$.
 
