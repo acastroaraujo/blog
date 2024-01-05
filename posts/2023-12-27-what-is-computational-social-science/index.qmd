@@ -1,7 +1,7 @@
 ---
 title: "What is Computational Social Science?"
 description: |
-  It is a trading zone driven by digital technology and associated with a new professional group.
+  It is a trading zone, driven by improvements in digital technology and associated with a new professional group.
 author: andrés castro araújo
 categories:
   - Social Science
@@ -119,7 +119,7 @@ The technologies available in every historical period have always constrained ou
 
 This kind of influence via metaphor can be found in cybernetics, where ideas developed to predict the location of enemy planes---the idea of goal-directedness as control over perturbations---were used to study all sorts of technical, biological, and social systems [@galison1994]. A similar influence can be found in the analogy between "cognitive systems" and "digital computers" at the center of cognitive science.
 
-At the moment, computational social scientists seem to be focusing too much on new methods and new sources of data. But perhaps the future will provide with similar kinds of theoretical influences.[^5]
+At the moment, computational social scientists seem to be focusing too much on new methods and new sources of data. But perhaps the future will provide similar kinds of theoretical influences.[^5]
 
 [^5]: Two examples come to mind. The idea that we should pay more attention to the algorithmic component of small-world networks [@kleinberg2000] and the idea that we should consider word embeddings as providing a template for cultural learning [@arseniev-koehler2022; cf. @landauer1997].
 

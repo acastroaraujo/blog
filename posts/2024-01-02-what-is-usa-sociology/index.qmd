@@ -148,7 +148,7 @@ When a sociologist joins the *American Sociological Association* (ASA), they hav
 
 So, I created a dataset containing the areas of interest of over 1,000 individuals associated with 20 sociology programs in the USA. This dataset is provisional, but see @tbl-sample in case you are curious about the sample.
 
-Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is [Stratification/ Mobility]{.allcaps}, which gives credence to the idea that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars---[Cultural Sociology]{.allcaps}, [Economic Sociology]{.allcaps}, and [Political Sociology]{.allcaps}---which gives credence to the idea that sociology is a miniature version of all social science. Furthermore, the idea that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
+Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is [Stratification/ Mobility]{.allcaps}, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars---[Cultural Sociology]{.allcaps}, [Economic Sociology]{.allcaps}, and [Political Sociology]{.allcaps}---which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
 
 ```{r}
 #| label: fig-areas
@@ -210,7 +210,7 @@ In other words, we do a "hypothesis test" for each tie in the network depicted b
 
 ## Results
 
-The results of this procedure are shown in @fig-0.01, with a significance level of 0.01.
+The results of this procedure are shown in @fig-0.01, which uses a significance level of 0.01 to draw ties between areas.
 
 I used Zachary Neal's [-@neal2022] `backbone` package to do all this.[^3]
 
@@ -218,11 +218,11 @@ I used Zachary Neal's [-@neal2022] `backbone` package to do all this.[^3]
     \
     *The choice of algorithm and threshold level is rarely discussed in most publications of this sort, so I guess I'm sort of following tradition here.
 
-As we may have expected, there are strong connections between [Stratification/ Mobility]{.allcaps} and [Education]{.allcaps}, [Demography]{.allcaps} and [Family]{.allcaps}, [Medical Sociology]{.allcaps} and [Mental Health]{.allcaps}, and so on.
+As we may have expected, there is a strong overlap between [Stratification/ Mobility]{.allcaps} and [Education]{.allcaps}; [Demography]{.allcaps} and [Family]{.allcaps}; [Medical Sociology]{.allcaps} and [Mental Health]{.allcaps}; [Migration/Immigration]{.allcaps} and [Latina/o Sociology]{.allcaps}; and so on.
 
 The strong overlap between [Cultural Sociology]{.allcaps} and so-called [Theory]{.allcaps} deserves its own ~~rant~~ blogpost.
 
-*All isolate nodes have been removed.* Keep in mind that a bigger sample of individuals and their areas would obviously result in more connected areas.
+*Note. All isolate nodes have been removed. A bigger sample of individuals and their chosen areas would obviously result in more connected areas.*
 
 ```{r}
 #| label: fig-0.01
@@ -233,13 +233,17 @@ vnd <- suppressMessages(process(A, 0.01))
 visualize(vnd)
 ```
 
-@fig-0.05 uses a significance level of $0.05$, which means we get to extract more ties and have less isolate areas.
+@fig-0.05 uses a significance level of $0.05$ to draw the ties between areas, which means we get to extract more of them.
 
-[Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}) but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This *does not* mean that one is more important than the other. It just means that the connections between [Qualitative Methodology]{.allcaps} and other areas are more compatible with a "null model" of random ties between areas; whereas people who express an interest in [Quantitative Methodology]{.allcaps} are more likely to express an interest in those three areas than what we would expect by chance.
+The result is that we get to see more "structure."
 
-The area of [Ethnography (Anthropology)]{.allcaps}---which has about half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology]{.allcaps}, reflecting a long tradition of urban ethnographies.
+For example, the heterogeneity *within* [Economic Sociology]{.allcaps} may be more easily understood by looking at adjacent areas: [Social Networks]{.allcaps}, [Political Economy]{.allcaps}, [Science and Technology]{.allcaps}, and [Organizations, Formal and Complex]{.allcaps}. The same might be said for other areas that look like "hubs" (e.g., [Stratification/ Mobility]{.allcaps}, [Political Sociology]{.allcaps}).
 
-Also, note the appearance of three areas connected around criminology.
+Futhermore, perhaps we may hypothesize that "triangles"---like the overlap between [Medical Sociology]{.allcaps}, [Aging/ Social Gerontology]{.allcaps}, and [Demography]{.allcaps}---are formed by somewhat distinct underlying groups of sociologists.
+
+Also, note that [Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}), but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This does *not* mean that one is more important than the other. It just means that the overlap between [Quantitative Methodology]{.allcaps} and those three areas is stronger than what we would expect by chance; whereas the ties between whereas the overlap between [Qualitative Methodology]{.allcaps} and other areas is more compatible with a "null model" of random ties between areas.[^4]
+
+[^4]: The area of [Ethnography (Anthropology)]{.allcaps}---which has about half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology]{.allcaps}, reflecting a long tradition of famous urban ethnographies.
 
 ```{r}
 #| label: fig-0.05
@@ -250,9 +254,9 @@ vnd <- suppressMessages(process(A, 0.05))
 visualize(vnd)
 ```
 
-Finally, @fig-0.06 uses a significance level of $0.06$, just enough for connections between smaller areas to start showing up (e.g., [Marxist Sociology]{.allcaps}, [Alcohol and Drugs]{.allcaps}).
+Finally, @fig-0.06 uses a significance level of $0.06$ to draw ties, just enough for connections between smaller areas to start showing up (e.g., [Marxist Sociology]{.allcaps}, [Alcohol and Drugs]{.allcaps}). [Religion]{.allcaps} is now connected to [Cultural Sociology]{.allcaps}
 
-Please keep in mind that this *does not* mean that these connections are somehow "weaker" than the other ones in any *substantive* way. Hypothesis testing is extremely dependent on sample size.
+Please keep in mind that this does *not* mean that these connections are somehow "weaker" than the other ones in any *substantive* way. Hypothesis testing is extremely dependent on sample size.
 
 ```{r}
 #| label: fig-0.06
@@ -297,7 +301,7 @@ d |>
 
 ## Citation
 
-The `backbone` package automatically outputs the following suggest citation text:
+The `backbone` package automatically outputs the following suggested text:
 
 > @fig-0.01:
 >
