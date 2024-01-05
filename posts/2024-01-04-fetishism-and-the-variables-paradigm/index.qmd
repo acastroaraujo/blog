@@ -48,23 +48,25 @@ The accusation is that normal people see value as an intrinsic property of commo
 
 Some time ago Andrew Abbott [-@abbott2001] mounted an attack on traditional quantitative researchers by accusing them of foolishly believing that "variables do things, not social actors." In other words, he accused them of being unsophisticated and carrying around a weird metaphysics.
 
-Quantitative researchers simplify too much. They forget the importance of narrative. They ignore that social activity is located space and time, unlike the always sophisticated Chicago School [@abbott1997]. More importantly, most quantitative researchers are depicted as being *plain silly*---e.g., they actually believe that some disembodied form of [education]{.allcaps} acts on another disembodied form of [occupation]{.allcaps}. They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132].
+Here are the charges:
 
-For example:
+-   Quantitative researchers simplify too much.
 
-> Our normal methods parse social reality into fixed entities with variable qualities. They attribute causality to the variables---hypostatized social characteristics---rather than to agents; variables do things, not social actors.
->
-> @abbott2001 [pp. 183]
+-   They forget the importance of narrative.
 
-Here's another example, this time from John Levi Martin:
+-   They ignore that social activity is located space and time, unlike the always sophisticated Chicago School [@abbott1997].
 
-> According to this conception, elements have attributes, mutually exclusive attributes often being considered instances of a "variable." Relations between elements are interpreted as by-products of relations between variables, and causality is said to exist when a change in state in one variable produced by external manipulation would *impel* a change in state in another variable.
->
-> @martin2003 [pp. 4]
+-   *They are* *plain silly*. For example, they actually believe that some disembodied form of [education]{.allcaps} acts on another disembodied form of [occupation]{.allcaps}.
+
+    They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132]!
+
+    > Our normal methods parse social reality into fixed entities with variable qualities. They attribute causality to the variables---hypostatized social characteristics---rather than to agents; variables do things, not social actors.
+    >
+    > @abbott2001 [pp. 183]
 
 The problem with this discussion is that the "variables paradigm" being criticized does not exist. It has never existed. *No one is that dumb.* This criticism is all a bunch of self-congratulatory nonsense.
 
-In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^2] This is akin to overhearing a conversation in which someone mentions the sunset and then rushing to call them foolish for believing the sun revolves around the earth.
+In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^2] Now imagine overhearing a conversation in which someone mentions the sunset and then rushing to call them a fool for believing the sun revolves around the earth. It is obnoxious.
 
 [^2]: "My procedure is simple. I find all the narrative sentences, the sentences whose predicates are activities or parts of the social process. I then consider who are the subjects of these sentences, what kinds of activities are involved, and how the predicates are related to causality" [@abbott2001, pp. 130].
 
