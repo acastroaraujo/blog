@@ -14,7 +14,7 @@ bibliography: references.bib
 
 Theoretical work should strive, among other things, "to improve the precision, clarity, and coherence of our ideas" [@martin2014].
 
-This involves cultivating some good habits.
+This involves cultivating good habits.
 
 For example,
 
@@ -22,7 +22,7 @@ For example,
 >
 > @martin2014 [pp. 10-1]
 
-Sometimes it involves avoiding common traps---e.g., the three "nuance traps" described by Kieran Healy [-@healy2017].
+Sometimes it involves avoiding common traps---e.g., the three "nuance traps" described by Kieran Healy:
 
 > First is the ever more detailed, merely empirical description of the world. This is the nuance of the *fine-grain*. It is a rejection of theory masquerading as increased accuracy. Second is the ever more extensive expansion of some theoretical system in a way that effectively closes it off from rebuttal or disconfirmation by anything in the world. This is the nuance of the *conceptual framework*. It is an evasion of the demand that a theory be refutable. And third is the insinuation that a sensitivity to nuance is a manifestation of one's distinctive (often metaphorically expressed and at times seemingly ineffable) ability to grasp and express the richness, texture, and flow of social reality itself. This is the nuance of the *connoisseur*. It is mostly a species of self-congratulatory symbolic violence
 >
@@ -44,7 +44,7 @@ Good theory-work should also prevent us from saying **deepities**.
 >
 > @dennett2013 [pp. 56]
 
-<aside>Dennett's favorite example is *love is just a word.*</aside>
+<aside>Dennett's favorite example is the expression *"love is just a word."*</aside>
 
 In other words, good theory-work should constrain our thinking so that saying stupid things becomes much harder.
 

@@ -12,13 +12,15 @@ image: redpill.jpeg
 
 Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables paradigm" (i.e., most quantitative research).
 
-Before getting into detail, let me note the following. Both kinds of criticism flaunt an "unmasking style" [cf. @baehr2019] which I find deeply childish. The idea is that some kind of deep critical thinker has gained some unique access to a "reality" that is hidden from less sophisticated individuals.
+Before getting into detail, let me note the following:
 
-It gives off the same vibes as Plato's Cave; Marxist false consciousness; and that one famous red pill scene from The Matrix.
+-   This kind of criticism exhibits an "unmasking style" which I find to be deeply childish [cf. @baehr2019]. The idea is that you get to be some kind of deep critical thinker that somehow has gained a unique access to a "reality" that is hidden from less sophisticated individuals.
 
-Thus, the critic is in a unique position to expose widespread delusions and show that what "normal" people believe to be true is in reality false.
+-   It gives off the same vibes as Plato's Cave; Marxist false consciousness; and that one famous red pill scene from The Matrix.
 
-In order to engage in such criticism, the best strategy is to write in such a way that makes other people look foolish.[^1]
+-   The critic is in a unique position to expose widespread delusions and show that what "normal" people believe to be true is in reality false.
+
+-   In order to engage in such criticism, the best strategy is to write in such a way that makes other people look foolish.[^1]
 
 [^1]: "Connoisseurship gets its aesthetic bite from the easy insinuation that the person trying to simplify things is a bit less sophisticated a thinker than the person pointing out that things are more complicated" [@healy2017, pp. 123].
 
@@ -34,7 +36,7 @@ In order to engage in such criticism, the best strategy is to write in such a wa
 
 The commodity fetishism argument is an invitation to look beyond the surface of appearances, an illusion that ensures that "the definite social relation between men" in a market society "the fantastic form of a relation between things."
 
-The accusation is that normal people see value as an intrinsic property of commodities and fail to see it for what it is: *a relational property.*
+The accusation is that normal people see value as an *intrinsic* property of commodities and fail to see it for what it is: *a relational* property*.*
 
 > There are two ways of ascribing properties to objects. Both have the same surface grammatical form: $A$ is $F$. The book is red, the man is tall, the woman is rich. They differ, however, at a deeper level. The height of a person is a quality that inheres in him quite independently of social context. Wealth, on the other hand, can only be predicated of a person who is inserted in a web of social relations. It makes sense to say that Robinson Crusoe on his island was tall, not that he was rich, even if perhaps he brought some gold coins along with him. To be rich means that other people are willing to exchange their goods or labor for your money. Being rich, unlike being tall, is a relational predicate.
 >
@@ -54,19 +56,19 @@ Here are the charges:
 
 -   They forget the importance of narrative.
 
--   They ignore that social activity is located space and time, unlike the always sophisticated Chicago School [@abbott1997].
+-   They ignore that social activity is located space and time, unlike the always sophisticated Chicago School [cf. @abbott1997].
 
--   *They are* *plain silly*. For example, they actually believe that some disembodied form of [education]{.allcaps} acts on another disembodied form of [occupation]{.allcaps}.
+-   *They are* *plain silly*.
 
-    They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132]!
+    They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132]. For example, they actually believe that some disembodied abstraction called [education]{.allcaps} acts on another disembodied abstraction called [occupation]{.allcaps}.
 
     > Our normal methods parse social reality into fixed entities with variable qualities. They attribute causality to the variables---hypostatized social characteristics---rather than to agents; variables do things, not social actors.
     >
     > @abbott2001 [pp. 183]
 
-The problem with this discussion is that the "variables paradigm" being criticized does not exist. It has never existed. *No one is that dumb.* This criticism is all a bunch of self-congratulatory nonsense.
+The problem with this discussion is that the "variables paradigm" being criticized does not exist. It has never existed. *No one is that dumb.* It's all a bunch of self-congratulatory nonsense.
 
-In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^2] Now imagine overhearing a conversation in which someone mentions the sunset and then rushing to call them a fool for believing the sun revolves around the earth. It is obnoxious.
+In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^2] Now imagine overhearing a conversation in which someone mentions the sunset and then rushing to call them a fool for believing the sun revolves around the earth. It is deeply obnoxious.
 
 [^2]: "My procedure is simple. I find all the narrative sentences, the sentences whose predicates are activities or parts of the social process. I then consider who are the subjects of these sentences, what kinds of activities are involved, and how the predicates are related to causality" [@abbott2001, pp. 130].
 
