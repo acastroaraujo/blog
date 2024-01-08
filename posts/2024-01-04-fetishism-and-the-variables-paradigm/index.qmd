@@ -8,10 +8,11 @@ categories:
 date: 2024-01-04
 bibliography: references.bib
 image: redpill.jpeg
-draft: true
 ---
 
-Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables paradigm" (i.e., most quantitative research).
+Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables-based approach" (i.e., most standard quantitative research).
+
+The former denounces the idea of "value" as an alleged property of commodities *(not people doing things)* to be a capitalist illusion. The latter denounces the idea of "causality" as an alleged property of variables *(not people doing things)* to be a positivist illusion. Both criticism are usually blown out of proportions, mostly because it's hard to believe that there's someone out there who really believe what they're being accused of believing.
 
 Before getting into detail, let me note the following:
 
@@ -19,45 +20,53 @@ Before getting into detail, let me note the following:
 
 -   It gives off the same vibes as Plato's Cave; Marxist false consciousness; and that one famous red pill scene from The Matrix.
 
--   The critic is in a unique position to expose widespread delusions and show that what "normal" people believe to be true is in reality false.
+-   The critic (usually self-described as "critical thinker") is in a unique position to expose some widespread delusion and show that what "normal" people believe to be true is in reality false.
 
--   In order to engage in such criticism, the best strategy is to write in such a way that makes other people look foolish.[^1]
+    This ambition is deeply ingrained in the discipline. "The first wisdom of sociology" according to Peter Berger is that "things are not what they seem." *Wake up, sheeple!*
 
-[^1]: "Connoisseurship gets its aesthetic bite from the easy insinuation that the person trying to simplify things is a bit less sophisticated a thinker than the person pointing out that things are more complicated" [@healy2017, pp. 123].
+-   In order to engage in such criticism, the best strategy is to write in such a way that makes other people look foolish (or at least unsophisticated simpletons).
+
+-   This is related to what Kieran Healy calls the *nuance of the connoisseur.*
+
+    > Connoisseurs call for the contemplation of complexity almost for its own sake or remind everyone that things are subtler than they seem. The attractive thing about this move is that it is always available to the person who wants to make it. Theory is founded on abstraction, abstraction means throwing away detail for the sake of a bit of generality, and so things in the world are always "more complicated than that"---for any value of "that." Connoisseurship gets its aesthetic bite from the easy insinuation that the person trying to simplify things is a bit less sophisticated a thinker than the person pointing out that things are more complicated.
+    >
+    > @healy2017 [pp. 123]
 
 ## Commodity Fetishism
 
 > A commodity appears at first sight an extremely obvious, trivial thing. But its analysis brings out that it is a very strange thing, abounding in metaphysical subtleties and theological niceties.
 >
 > --- Karl Marx, *Capital*
->
-> The first wisdom of sociology is this: things are not what they seem.
->
-> --- Peter Berger, *Invitation to Sociology*
 
-The commodity fetishism argument is an invitation to look beyond the surface of appearances, an illusion that ensures that "the definite social relation between men" in a market society "the fantastic form of a relation between things."
+The commodity fetishism argument is an invitation to look beyond the *surface* of appearances, an illusion according to which "the definite social relation between men themselves" assumes "the fantastic form of a relation between things."
 
-The accusation is that normal people see value as an *intrinsic* property of commodities and fail to see it for what it is: *a relational* property*.*
+The accusation is that normal people see value as an *intrinsic* property of commodities and fail to see it for what it is: a *relational* property*.*
+
+This is the best two-paragraph explanation I've seen of what all this means.
 
 > There are two ways of ascribing properties to objects. Both have the same surface grammatical form: $A$ is $F$. The book is red, the man is tall, the woman is rich. They differ, however, at a deeper level. The height of a person is a quality that inheres in him quite independently of social context. Wealth, on the other hand, can only be predicated of a person who is inserted in a web of social relations. It makes sense to say that Robinson Crusoe on his island was tall, not that he was rich, even if perhaps he brought some gold coins along with him. To be rich means that other people are willing to exchange their goods or labor for your money. Being rich, unlike being tall, is a relational predicate.
 >
 > \[...\]
 >
-> Commodity fetishism is the belief that goods possess value just as they have weight, as an inherent property. To the unmystified mind, it is clear that a commodity has exchange value only because it stands in certain relations io human labor and human needs. In the bewitched world of commodity fetishism, however, goods appear to exchange at a certain rate because of their inherent values. Such, at any rate, was Marx's argument. *It is somewhat unconvincing, because it is hard to believe that anyone ever committed this particular fallacy.*
+> Commodity fetishism is the belief that goods possess value just as they have weight, as an inherent property. To the unmystified mind, it is clear that a commodity has exchange value only because it stands in certain relations to human labor and human needs. In the bewitched world of commodity fetishism, however, goods appear to exchange at a certain rate because of their inherent values. Such, at any rate, was Marx's argument. *It is somewhat unconvincing, because it is hard to believe that anyone ever committed this particular fallacy.*
 >
 > @elster1986 [pp. 56-7, emphasis added]
 
+I agree. It's hard to believe that anyone has ever thought about the value of commodities in this way. But being more sophisticated than others makes us *feel* *good* and motivated reasoning is one helluva drug [@kunda1990].
+
+*Note. Other accusations of economic fetishism are more on point. For example, the idea that "money" has an intrinsic value (especially in the form of gold or silver) has been an amply documented illusion throughout history. A similar dynamic happens with "capital" when it's considered as raw materials or instruments of labor; the "stuff" we identify as capital only becomes capital when it's embedded in a process of accumulation M-C-M′.*
+
+*Thus, arguments about fetishism may hold true in certain domains (e.g., money, capital), but we shouldl doubt about the truthfulness of the more narrow commodity fetishism argument.*
+
 ## The "Variables Paradigm"
 
-Some time ago Andrew Abbott [-@abbott2001] mounted an attack on traditional quantitative researchers by accusing them of foolishly believing that "variables do things, not social actors." In other words, he accused them of being unsophisticated and carrying around a weird metaphysics.
+Some time ago Andrew Abbott [-@abbott2001] mounted an attack on traditional quantitative researchers by accusing them of foolishly believing that "variables do things, not social actors."
 
 Here are the charges:
 
 -   Quantitative researchers simplify too much.
 
 -   They forget the importance of narrative.
-
--   They ignore that social activity is located space and time, unlike the always sophisticated Chicago School [cf. @abbott1997].
 
 -   *They are* *plain silly*.
 
@@ -67,11 +76,24 @@ Here are the charges:
     >
     > @abbott2001 [pp. 183]
 
-The problem with this discussion is that the "variables paradigm" being criticized does not exist. It has never existed. *No one is that dumb.* It's all a bunch of self-congratulatory nonsense.
+```{=html}
+<!-- -->
+```
+-   They ignore that social activity is located space and time, unlike the always rich and sophisticated Chicago School.
 
-In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^2] Now imagine overhearing a conversation in which someone mentions the sunset and then rushing to call them a fool for believing the sun revolves around the earth. It is deeply obnoxious.
+    > For the idea of a variable is the idea of a scale that has the same causal meaning whatever its context: the idea, for example, that "education" can have "an effect" on "occupation' irrespective of the other qualities of an individual, whether those qualities be other past experiences, other personal characteristics, or friends, acquaintances, and connections. Within variable-based thinking, one allows for a few "interactions" to modify this single causal meaning contextually, but the fundamental image of variables' independence is enshrined in the phrase "net of other variables" and in the aim to discover this net effect, whether through experimental or statistical manipulation. The Chicago view was that the concept of net effect was social scientific nonsense. Nothing that ever occurs in the social world occurs "net of other variables." All social facts are located in contexts. So why bother to pretend that they are not?
+    >
+    > @abbott1997 [pp. 1152]
 
-[^2]: "My procedure is simple. I find all the narrative sentences, the sentences whose predicates are activities or parts of the social process. I then consider who are the subjects of these sentences, what kinds of activities are involved, and how the predicates are related to causality" [@abbott2001, pp. 130].
+The problem with this discussion is that the "variables paradigm" being criticized does not exist. It has never existed. *It's hard to believe that someone out there is really that dumb.*
+
+In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^1] Now imagine overhearing a conversation in which someone mentions the sunset and then rushing to call them a fool for believing the sun revolves around the earth. It is deeply obnoxious.
+
+[^1]: "My procedure is simple. I find all the narrative sentences, the sentences whose predicates are activities or parts of the social process. I then consider who are the subjects of these sentences, what kinds of activities are involved, and how the predicates are related to causality" [@abbott2001, pp. 130].
+
+*Note. After writing the above I came across Mustafa Emirbayer's [-@emirbayer1997] "Manifesto for a Relational Sociology." Among other things, he argues that it's futile for quantitative researchers to adjust for confounders because all such attempts "ignore the ontological embeddedness or locatedness of entities within actual situational contexts" [@emirbayer1997, pp. 289]. Yikes! Of course, he quotes Andrew Abbott extensively on the short-comings of the "variables paradigm."*
+
+*TL;DR it's all a bunch of self-congratulatory nonsense.*
 
 ## Data and Phenomena
 
@@ -81,8 +103,8 @@ As mentioned in a previous [blogpost](https://acastroaraujo.github.io/blog/posts
 
 -   **Data**: "public records produced by measurement and experiment that serve as evidence for the existence or features of phenomena" [@woodward2011, pp. 166]
 
-The criticism of the so-called "variables paradigm" may be valid in circumstances in which forget this distinction; or in cases in which people conflate data mining with models about phenomena. *But who the fuck actually goes around the world thinking that measurements cause other measurements in some weird kind of social vacuum?*
+The criticism of the so-called "variables paradigm" may be valid in the rare circumstances in which researchers forget this distinction; or in cases in which people conflate data mining with the scientific modeling of real-world phenomena.
 
-Crossley:
+Self-proclaimed critical thinkers might complain and insist that quantitative research is riddled with variable fetishism; that GLMs and DAGs merely depict relationships between variables, not between real-world phenomena; and that convenient figures of speech reveal some kind of weird metaphysics.
 
-> \'Variable analysis\' obscures the workings of the social world because it shifts the focus of analysis away from interaction between actors, where the work really gets done and outcomes are genuinely decided, onto labels which we treat as properties of individuals.
+But, I assure you, *no one out there thinks that variables "cause" other variables in some weird kind of social vacuum.*
