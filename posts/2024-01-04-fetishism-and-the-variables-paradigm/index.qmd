@@ -8,6 +8,7 @@ categories:
 date: 2024-01-04
 bibliography: references.bib
 image: redpill.jpeg
+draft: true
 ---
 
 Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables paradigm" (i.e., most quantitative research).
@@ -81,3 +82,7 @@ As mentioned in a previous [blogpost](https://acastroaraujo.github.io/blog/posts
 -   **Data**: "public records produced by measurement and experiment that serve as evidence for the existence or features of phenomena" [@woodward2011, pp. 166]
 
 The criticism of the so-called "variables paradigm" may be valid in circumstances in which forget this distinction; or in cases in which people conflate data mining with models about phenomena. *But who the fuck actually goes around the world thinking that measurements cause other measurements in some weird kind of social vacuum?*
+
+Crossley:
+
+> \'Variable analysis\' obscures the workings of the social world because it shifts the focus of analysis away from interaction between actors, where the work really gets done and outcomes are genuinely decided, onto labels which we treat as properties of individuals.
