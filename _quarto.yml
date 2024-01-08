@@ -4,6 +4,7 @@ project:
 
 website:
   title: "blog"
+  open-graph: true
   navbar:
     title: false
     left:
