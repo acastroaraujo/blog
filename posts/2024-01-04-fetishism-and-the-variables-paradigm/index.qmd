@@ -10,7 +10,7 @@ bibliography: references.bib
 image: redpill.jpeg
 ---
 
-Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables-based approach" (i.e., most standard quantitative research).
+Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables-based approach" in sociology (i.e., most standard quantitative research).
 
 The former denounces the idea of "value" as an alleged property of commodities *(not people doing things)* to be a capitalist illusion. The latter denounces the idea of "causality" as an alleged property of variables *(not people doing things)* to be a positivist illusion. Both criticism are usually blown out of proportions, mostly because it's hard to believe that there's someone out there who really believe what they're being accused of believing.
 
