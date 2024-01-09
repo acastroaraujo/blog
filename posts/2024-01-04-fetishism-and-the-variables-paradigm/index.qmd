@@ -5,6 +5,7 @@ description: |
 author: andrés castro araújo
 categories:
   - Sociology
+  - Theory
 date: 2024-01-04
 bibliography: references.bib
 image: redpill.jpeg
@@ -12,7 +13,7 @@ image: redpill.jpeg
 
 Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables-based approach" in sociology (i.e., most standard quantitative research).
 
-The former denounces the idea of "value" as an alleged property of commodities *(and not people doing things)* to be a capitalist illusion. The latter denounces the idea of "causality" as an alleged property of variables *(and not people doing things)* to be a positivist illusion. Both criticism are usually blown out of proportions, mostly because it's hard to believe that there's someone out there who really believe what they're being accused of believing.
+The former denounces the idea of "value" as an alleged property of commodities *(and not people doing things)* to be a capitalist illusion. The latter denounces the idea of "causality" as an alleged property of variables *(and not people doing things)* to be a positivist illusion. Both criticism are usually blown out of proportions, mostly because it is rarely the case that someone out there really under the trappings of such "illusions" in the first place.
 
 Before getting into detail, let me note the following:
 
@@ -76,8 +77,6 @@ Here are the charges:
     >
     > @abbott2001 [pp. 183]
 
-<!-- -->
-
 -   They ignore that social activity is located space and time, unlike the always rich and sophisticated Chicago School.
 
     > For the idea of a variable is the idea of a scale that has the same causal meaning whatever its context: the idea, for example, that "education" can have "an effect" on "occupation' irrespective of the other qualities of an individual, whether those qualities be other past experiences, other personal characteristics, or friends, acquaintances, and connections. Within variable-based thinking, one allows for a few"interactions" to modify this single causal meaning contextually, but the fundamental image of variables' independence is enshrined in the phrase "net of other variables" and in the aim to discover this net effect, whether through experimental or statistical manipulation. The Chicago view was that the concept of net effect was social scientific nonsense. Nothing that ever occurs in the social world occurs "net of other variables." All social facts are located in contexts. So why bother to pretend that they are not?
@@ -102,7 +101,7 @@ As mentioned in a previous [blogpost](https://acastroaraujo.github.io/blog/posts
 
 -   **Data**: "public records produced by measurement and experiment that serve as evidence for the existence or features of phenomena" [@woodward2011, pp. 166]
 
-The criticism of the so-called "variables paradigm" may be valid in the rare circumstances in which researchers forget this distinction; or in cases in which people conflate data mining with the scientific modeling of real-world phenomena.
+Criticism of the so-called "variables paradigm" may be valid in the rare circumstances in which researchers forget this distinction; or in cases in which people conflate data mining with the scientific modeling of real-world phenomena.
 
 Self-proclaimed critical thinkers might complain and insist that quantitative research is riddled with variable fetishism; that GLMs and DAGs merely depict relationships between variables, not between real-world phenomena; and that convenient figures of speech reveal some kind of weird metaphysics.
 
