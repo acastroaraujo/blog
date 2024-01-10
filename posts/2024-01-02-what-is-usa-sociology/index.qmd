@@ -10,7 +10,7 @@ categories:
   - Networks
 echo: false
 editor_options: 
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
 ```{r}
@@ -170,14 +170,21 @@ diag(A) |>
   ) |> 
   mutate(cut = fct_reorder(cut, -n)) |> 
   mutate(color = ifelse(n > 130, "steelblue1", "grey")) |> 
+  mutate(prop = n / nrow(X)) |> 
   ggplot(aes(n, area, fill = color)) + 
   geom_col(width = 1/2, show.legend = FALSE) +
-  geom_text(aes(label = n), nudge_x = 18, size = 3, family = "Optima") +
+  geom_text(
+    mapping = aes(label = str_glue("{n} ({scales::percent(prop, 1)})")), 
+    nudge_x = 5, 
+    size = 3, 
+    hjust = 0,
+    family = "Optima", 
+  ) +
   labs(y = NULL, x = "count") + 
   theme(axis.text.x = element_blank()) + 
   facet_wrap(~cut, scales = "free_y") + 
   scale_fill_identity() +
-  coord_cartesian(xlim = c(0, 250))
+  coord_cartesian(xlim = c(0, 290))
 ```
 
 However, this doesn't provide us with any information about the "structure" of the sociological areas of interest---i.e., the pattern of connections which some may describe in terms of coherency (or lack thereof).

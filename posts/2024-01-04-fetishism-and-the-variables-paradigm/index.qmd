@@ -8,16 +8,20 @@ categories:
   - Theory
 date: 2024-01-04
 bibliography: references.bib
-image: redpill.jpeg
+image: images/redpill.jpeg
 ---
 
 Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables-based approach" in sociology (i.e., most standard quantitative research).
 
-The former denounces the idea of "value" as an alleged property of commodities *(and not people doing things)* to be a capitalist illusion. The latter denounces the idea of "causality" as an alleged property of variables *(and not people doing things)* to be a positivist illusion. Both criticism are usually blown out of proportions, mostly because it is rarely the case that someone out there really under the trappings of such "illusions" in the first place.
+The former denounces the idea of "value" as an alleged property of commodities *(and not people doing things)* to be a capitalist illusion. The latter denounces the idea of "causality" as an alleged property of variables *(and not people doing things)* to be a positivist illusion.
+
+Both criticism are usually blown out of proportions, mostly because it is rare that someone out there is really under the trappings of such "illusions" in the first place.
 
 Before getting into detail, let me note the following:
 
--   This kind of criticism exhibits an "unmasking style" which I find to be deeply childish [cf. @baehr2019]. The idea is that you get to be some kind of deep critical thinker that somehow has gained a unique access to a "reality" that is hidden from less sophisticated individuals.
+-   This kind of criticism exhibits an "unmasking style" which I find to be deeply cringe [cf. @baehr2019].
+
+    *You are a deep critical thinker that has somehow gained a unique access to a "reality" hidden away from less sophisticated individuals.*
 
 -   It gives off the same vibes as Plato's Cave; Marxist false consciousness; and that one famous red pill scene from The Matrix.
 
@@ -39,7 +43,7 @@ Before getting into detail, let me note the following:
 >
 > --- Karl Marx, *Capital*
 
-The commodity fetishism argument is an invitation to look beyond the *surface* of appearances, an illusion according to which "the definite social relation between men themselves" assumes "the fantastic form of a relation between things."
+The commodity fetishism argument is an invitation to look beyond the *surface of appearances,* an illusion according to which "the definite social relation between men themselves" assumes "the fantastic form of a relation between things."
 
 The accusation is that normal people see value as an *intrinsic* property of commodities and fail to see it for what it is: a *relational* property*.*
 
@@ -55,7 +59,7 @@ This is the best two-paragraph explanation I've seen of what all this means.
 
 I agree. It's hard to believe that anyone has ever thought about the value of commodities in this way. But being more sophisticated than others makes us *feel* *good* and motivated reasoning is one helluva drug [@kunda1990].
 
-*Note. Other accusations of economic fetishism are more on point. For example, the idea that "money" has an intrinsic value (especially in the form of gold or silver) has been an amply documented illusion throughout history. A similar dynamic happens with "capital" when it's considered as raw materials or instruments of labor; the "stuff" we identify as capital only becomes capital when it's embedded in a process of accumulation M-C-M′.*
+*Note. Other accusations of economic fetishism are more on point. For example, the idea that "money" has an intrinsic value (especially in the form of gold or silver) has been an amply documented illusion throughout history. A similar dynamic happens with "capital" when it's considered as raw materials or instruments of labor; the "stuff" we identify as capital only becomes capital when it's embedded in a process of accumulation (M-C-M′).*
 
 *Thus, arguments about fetishism may hold true in certain domains (e.g., money, capital), but we shouldl doubt about the truthfulness of the more narrow commodity fetishism argument.*
 
@@ -71,7 +75,7 @@ Here are the charges:
 
 -   *They are* *plain silly*.
 
-    They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132]. For example, they actually believe that some disembodied abstraction called [education]{.allcaps} acts on another disembodied abstraction called [occupation]{.allcaps}.
+    They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132]. For example, they actually believe that some abstraction called [education]{.allcaps} acts on another abstraction called [occupation]{.allcaps}.
 
     > Our normal methods parse social reality into fixed entities with variable qualities. They attribute causality to the variables---hypostatized social characteristics---rather than to agents; variables do things, not social actors.
     >
@@ -79,11 +83,13 @@ Here are the charges:
 
 -   They ignore that social activity is located space and time, unlike the always rich and sophisticated Chicago School.
 
-    > For the idea of a variable is the idea of a scale that has the same causal meaning whatever its context: the idea, for example, that "education" can have "an effect" on "occupation' irrespective of the other qualities of an individual, whether those qualities be other past experiences, other personal characteristics, or friends, acquaintances, and connections. Within variable-based thinking, one allows for a few"interactions" to modify this single causal meaning contextually, but the fundamental image of variables' independence is enshrined in the phrase "net of other variables" and in the aim to discover this net effect, whether through experimental or statistical manipulation. The Chicago view was that the concept of net effect was social scientific nonsense. Nothing that ever occurs in the social world occurs "net of other variables." All social facts are located in contexts. So why bother to pretend that they are not?
+    > For the idea of a variable is the idea of a scale that has the same causal meaning whatever its context: the idea, for example, that "education" can have "an effect" on "occupation' irrespective of the other qualities of an individual, whether those qualities be other past experiences, other personal characteristics, or friends, acquaintances, and connections. Within variable-based thinking, one allows for a few "interactions" to modify this single causal meaning contextually, but the fundamental image of variables' independence is enshrined in the phrase "net of other variables" and in the aim to discover this net effect, whether through experimental or statistical manipulation. The Chicago view was that the concept of net effect was social scientific nonsense. Nothing that ever occurs in the social world occurs "net of other variables." All social facts are located in contexts. So why bother to pretend that they are not?
     >
     > @abbott1997 [pp. 1152]
 
-The problem with this discussion is that the target of criticism---the "variables paradigm"---does not exist. It has never existed. *It's hard to believe that someone out there is really that dumb.*
+    *Except it's not nonsense.*
+
+The problem with this discussion is that the target of criticism---the so-called "variables paradigm"---does not exist. It has never existed. *It's hard to believe that someone out there is really that dumb.*
 
 In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^1] Now imagine overhearing a conversation in which someone mentions the sunset and then rushing to call them a fool for believing the sun revolves around the earth. It is deeply obnoxious.
 
@@ -105,4 +111,4 @@ Criticism of the so-called "variables paradigm" may be valid in the rare circums
 
 Self-proclaimed critical thinkers might complain and insist that quantitative research is riddled with variable fetishism; that GLMs and DAGs merely depict relationships between variables, not between real-world phenomena; and that convenient figures of speech reveal some kind of weird metaphysics.
 
-But, I assure you, *no one out there thinks that variables "cause" other variables in some weird kind of social vacuum.*
+But, I assure you, *no one out there really thinks that variables "cause" other variables in some weird kind of social vacuum.*
