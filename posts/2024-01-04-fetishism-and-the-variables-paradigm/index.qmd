@@ -21,9 +21,9 @@ Before getting into detail, let me note the following:
 
 -   This kind of criticism exhibits an "unmasking style" which I find to be deeply cringe [cf. @baehr2019].
 
-    *You are a deep critical thinker that has somehow gained a unique access to a "reality" hidden away from less sophisticated individuals.*
+    It gives off the same vibes as Plato's Cave; Marxist false consciousness; and that one famous red pill scene from The Matrix.
 
--   It gives off the same vibes as Plato's Cave; Marxist false consciousness; and that one famous red pill scene from The Matrix.
+    *You are a deep critical thinker that has somehow gained a unique access to a "reality" hidden away from less sophisticated individuals.*
 
 -   The critic (usually self-described as "critical thinker") is in a unique position to expose some widespread delusion and show that what "normal" people believe to be true is in reality false.
 
@@ -61,7 +61,7 @@ I agree. It's hard to believe that anyone has ever thought about the value of co
 
 *Note. Other accusations of economic fetishism are more on point. For example, the idea that "money" has an intrinsic value (especially in the form of gold or silver) has been an amply documented illusion throughout history. A similar dynamic happens with "capital" when it's considered as raw materials or instruments of labor; the "stuff" we identify as capital only becomes capital when it's embedded in a process of accumulation (M-C-M′).*
 
-*Thus, arguments about fetishism may hold true in certain domains (e.g., money, capital), but we shouldl doubt about the truthfulness of the more narrow commodity fetishism argument.*
+*Thus, arguments about fetishism may hold true in certain domains (e.g., money, capital), but we should doubt about the truthfulness of the more narrow commodity fetishism argument.*
 
 ## The "Variables Paradigm"
 
@@ -83,7 +83,7 @@ Here are the charges:
 
 -   They ignore that social activity is located space and time, unlike the always rich and sophisticated Chicago School.
 
-    > For the idea of a variable is the idea of a scale that has the same causal meaning whatever its context: the idea, for example, that "education" can have "an effect" on "occupation' irrespective of the other qualities of an individual, whether those qualities be other past experiences, other personal characteristics, or friends, acquaintances, and connections. Within variable-based thinking, one allows for a few "interactions" to modify this single causal meaning contextually, but the fundamental image of variables' independence is enshrined in the phrase "net of other variables" and in the aim to discover this net effect, whether through experimental or statistical manipulation. The Chicago view was that the concept of net effect was social scientific nonsense. Nothing that ever occurs in the social world occurs "net of other variables." All social facts are located in contexts. So why bother to pretend that they are not?
+    > For the idea of a variable is the idea of a scale that has the same causal meaning whatever its context: the idea, for example, that "education" can have "an effect" on "occupation' irrespective of the other qualities of an individual, whether those qualities be other past experiences, other personal characteristics, or friends, acquaintances, and connections. Within variable-based thinking, one allows for a few"interactions" to modify this single causal meaning contextually, but the fundamental image of variables' independence is enshrined in the phrase "net of other variables" and in the aim to discover this net effect, whether through experimental or statistical manipulation. The Chicago view was that the concept of net effect was social scientific nonsense. Nothing that ever occurs in the social world occurs "net of other variables." All social facts are located in contexts. So why bother to pretend that they are not?
     >
     > @abbott1997 [pp. 1152]
 
@@ -95,9 +95,13 @@ In a particularly egregious example of bad faith, Andrew Abbott reads a couple o
 
 [^1]: "My procedure is simple. I find all the narrative sentences, the sentences whose predicates are activities or parts of the social process. I then consider who are the subjects of these sentences, what kinds of activities are involved, and how the predicates are related to causality" [@abbott2001, pp. 130].
 
-*Note. After writing the above I came across Mustafa Emirbayer's [-@emirbayer1997] "Manifesto for a Relational Sociology." Among other things, he argues that it's futile for quantitative researchers to adjust for confounders because all such attempts "ignore the ontological embeddedness or locatedness of entities within actual situational contexts" [@emirbayer1997, pp. 289]. Yikes! Of course, he quotes Andrew Abbott extensively on the short-comings of the "variables paradigm."*
+*Note. After writing the above I came across Mustafa Emirbayer's [-@emirbayer1997] "Manifesto for a Relational Sociology."*
 
 *TL;DR it's all a bunch of self-congratulatory nonsense.*
+
+*Among other things, he argues that it's futile for quantitative researchers to adjust for confounders because all such attempts "ignore the ontological embeddedness or locatedness of entities within actual situational contexts" [@emirbayer1997, pp. 289].*
+
+*Yikes!*
 
 ## Data and Phenomena
 
@@ -111,4 +115,4 @@ Criticism of the so-called "variables paradigm" may be valid in the rare circums
 
 Self-proclaimed critical thinkers might complain and insist that quantitative research is riddled with variable fetishism; that GLMs and DAGs merely depict relationships between variables, not between real-world phenomena; and that convenient figures of speech reveal some kind of weird metaphysics.
 
-But, I assure you, *no one out there really thinks that variables "cause" other variables in some weird kind of social vacuum.*
+But, I assure you, *no one out there really thinks that variables "cause" other variables in a social vacuum.*
