@@ -1,0 +1,8 @@
+---
+title: "The Thermostat"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-01-10
+draft: true
+---
