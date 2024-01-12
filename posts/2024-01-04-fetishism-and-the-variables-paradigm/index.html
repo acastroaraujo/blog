@@ -236,10 +236,10 @@ div.csl-indent {
 <p>For the idea of a variable is the idea of a scale that has the same causal meaning whatever its context: the idea, for example, that “education” can have “an effect” on “occupation’ irrespective of the other qualities of an individual, whether those qualities be other past experiences, other personal characteristics, or friends, acquaintances, and connections. Within variable-based thinking, one allows for a few”interactions” to modify this single causal meaning contextually, but the fundamental image of variables’ independence is enshrined in the phrase “net of other variables” and in the aim to discover this net effect, whether through experimental or statistical manipulation. The Chicago view was that the concept of net effect was social scientific nonsense. Nothing that ever occurs in the social world occurs “net of other variables.” All social facts are located in contexts. So why bother to pretend that they are not?</p>
 <p><span class="citation" data-cites="abbott1997">Abbott (<a href="#ref-abbott1997" role="doc-biblioref">1997, p. 1152</a>)</span></p>
 </blockquote>
-<p><em>Except it’s not nonsense.</em></p></li>
+<p><em>Except it’s not nonsense!</em></p></li>
 </ul>
 <p>The problem with this discussion is that the target of criticism—the so-called “variables paradigm”—does not exist. It has never existed. <em>It’s hard to believe that someone out there is really that dumb.</em></p>
-<p>In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the <em>American Journal of Sociology</em> and finds that “narrative sentences usually have variables as subjects” <span class="citation" data-cites="abbott2001">(<a href="#ref-abbott2001" role="doc-biblioref">Abbott 2001, p. 140</a>)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Now imagine overhearing a conversation in which someone mentions the sunset and then rushing to call them a fool for believing the sun revolves around the earth. It is deeply obnoxious.</p>
+<p>In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the <em>American Journal of Sociology</em> and finds that “narrative sentences usually have variables as subjects” <span class="citation" data-cites="abbott2001">(<a href="#ref-abbott2001" role="doc-biblioref">Abbott 2001, p. 140</a>)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Now imagine overhearing a conversation in which someone mentions the sunset and then concluding they’re being foolish fool for believing the sun revolves around the earth. It is deeply obnoxious. We must be able to distinguish between convenient “figures of speech” and actual “beliefs.”</p>
 <p><em>Note. After writing the above I came across Mustafa Emirbayer’s <span class="citation" data-cites="emirbayer1997">(<a href="#ref-emirbayer1997" role="doc-biblioref">1997</a>)</span> “Manifesto for a Relational Sociology.”</em></p>
 <p><em>TL;DR it’s all a bunch of self-congratulatory nonsense.</em></p>
 <p><em>Among other things, he argues that it’s futile for quantitative researchers to adjust for confounders because all such attempts “ignore the ontological embeddedness or locatedness of entities within actual situational contexts” <span class="citation" data-cites="emirbayer1997">(<a href="#ref-emirbayer1997" role="doc-biblioref">Emirbayer 1997, p. 289</a>)</span>.</em></p>
@@ -255,6 +255,34 @@ div.csl-indent {
 <p>Criticism of the so-called “variables paradigm” may be valid in the rare circumstances in which researchers forget this distinction; or in cases in which people conflate data mining with the scientific modeling of real-world phenomena.</p>
 <p>Self-proclaimed critical thinkers might complain and insist that quantitative research is riddled with variable fetishism; that GLMs and DAGs merely depict relationships between variables, not between real-world phenomena; and that convenient figures of speech reveal some kind of weird metaphysics.</p>
 <p>But, I assure you, <em>no one out there really thinks that variables “cause” other variables in a social vacuum.</em></p>
+</section>
+<section id="on-trained-incapacities" class="level2">
+<h2 class="anchored" data-anchor-id="on-trained-incapacities">On Trained Incapacities</h2>
+<p><em>Note. I added this section after receiving some useful feedback from friends.</em></p>
+<p>Here’s a more charitable view of Andrew Abbott’s full-blown attack on linear regression.</p>
+<ul>
+<li><p>Traditional linear regression—particularly when use to model cross-sectional datasets—is ignorant of temporal context in ways that make it impossible to talk about important social mechanisms. The significance of some measured “variables” (with regards to the real-life phenomena we seek to understand) is severely distorted when they’re ripped from their temporal context, making some research questions impossible to answer.</p>
+<p>In particular, <em>the order in which things happen</em> determines the outcomes we are interested in explaining the outcomes most historical researchers are interested in explaining.</p></li>
+<li><p>A similar thing happens when we want to answer questions for which spatial context is important, which is why there’s a whole subfield of statistics dedicated to modeling “spatial data.”</p></li>
+<li><p>Paul Pierson has a great culinary analogy for how time “works” in linear regression for cross-sectional data:</p>
+<blockquote class="blockquote">
+<p>Imagine that your friend invites you to the trendiest new restaurant in town, charmingly named “The Modern Social Scientist.” As an added bonus, he informs you that he knows the chef well, and that you will have a chance to tour the kitchen. When you arrive, the chef explains that the kitchen is divided into two parts. On the left, she has all the ingredients which to your puzzlement she refers to as “variables”). These ingredients, she insists, are the freshest available and carefully selected. On the right is an extraordinary profusion of measuring devices. You express astonishment at their complexity and detailed ornamentation, and the chef explains that each requires years to learn how to operate properly.</p>
+<p>The chef proceeds to elaborate her culinary approach: good cooking, she says, amounts to having the perfect ingredients, perfectly measured. Traditional cooks have stressed how important the cooking process itself is, including the sequence, pace, and specific manner in which the ingredients are to be combined. Not so, says the proprietor of The Modern Social Scientist. As long as you have the correct ingredients and they are properly measured, she insists, how, in what order, and for how long they are combined <em>makes no difference.</em></p>
+<p><span class="citation" data-cites="pierson2011">Pierson (<a href="#ref-pierson2011" role="doc-biblioref">2011, p. 1</a>)</span></p>
+</blockquote>
+<p>But quantitative research does not <em>have</em> to be decontextualized in this way. There are many ways of adapting quantitative research to answer <em>some</em> of the criticisms levied by scholars like Pierson and Abbott <span class="citation" data-cites="wawro2022">(e.g., <a href="#ref-wawro2022" role="doc-biblioref">Wawro and Katznelson 2022</a>)</span>.</p>
+<p>Thinking about temporal assumptions in linear regression can be very helpful—e.g., did you know that fixed-effect models produce wrong estimates when the “causal lags in the real world do not match the lags found in panel data” <span class="citation" data-cites="vaisey2017">(<a href="#ref-vaisey2017" role="doc-biblioref">Vaisey and Miles 2017</a>)</span>?</p>
+<p>However, there is only way of answering to someone calling you an unsophisticated fool with weird metaphysics: <em>silence</em>.</p></li>
+<li><p>Specializing in quantitative methods produces a sort of “trained incapacity,” limiting the scope of questions that researchers can answer. People that specialize in qualitative methods are <em>usually</em> not experts in quantitative research; people that specialize in social network analysis are <em>usually</em> not experts in archival research; and so on.</p>
+<p><em>However, sociology is actually better than most other disciplines at producing researchers that defy these expectations (e.g., Mario Small, Emily Erikson, Peter Bearman).</em></p>
+<p><em>There’s no reason to think that becoming competent in one form of social research will make you less competent in another.</em></p></li>
+</ul>
+<p>This last point is worth repeating. I worry that students will stumble upon criticism of the “variables paradigm” and conclude that learning about linear regression will actually make them <em>worse</em> sociologists. I had a similar reaction about a decade ago.</p>
+<p>I think this quote by Arthur Stinchcombe sums it best:</p>
+<blockquote class="blockquote">
+<p>A “trained incapacity” is produced by a sufficient level of specialization so that some kinds of good work cannot be produced by some of the competent practitioners in the discipline. If it takes so much time to learn statistics up to a modern standard that quantitative researchers do not have time to learn any history, or if the incentive system among quantitative people discourages dillentantism, or if quantitative workers have a positive ideology against becoming learned in “soft” subjects, or if the social circles that know about hierarchical models do not know about recent good books, then quantitative people will not be able to see things that one can find out about only historically. What one has to look for is not competencies, for there is no general reason that one competence should interfere with another (in fact in general disparate competencies are positively correlated, though generally the correlation is small). <em>Instead one has to look for tendencies for competence in one thing to decrease the ability to develop competence at another thing.</em></p>
+<p><span class="citation" data-cites="stinchcombe1986">Stinchcombe (<a href="#ref-stinchcombe1986" role="doc-biblioref">1986, p. 25</a>, emphasis added)</span></p>
+</blockquote>
 
 
 
@@ -282,6 +310,18 @@ Healy, Kieran. 2017. <span>“Fuck Nuance.”</span> <em>Sociological Theory</em
 </div>
 <div id="ref-kunda1990" class="csl-entry" role="listitem">
 Kunda, Ziva. 1990. <span>“<a href="https://psycnet.apa.org/record/1991-06436-001">The Case for Motivated Reasoning.</a>”</span> <em>Psychological bulletin</em> 108(3): 480.
+</div>
+<div id="ref-pierson2011" class="csl-entry" role="listitem">
+Pierson, Paul. 2011. <em>Politics in Time</em>. Princeton University Press.
+</div>
+<div id="ref-stinchcombe1986" class="csl-entry" role="listitem">
+Stinchcombe, Arthur L. 1986. <em><a href="https://doi.org/10.1017/CBO9780511570759">Stratification and Organization: Selected Papers</a></em>. Cambridge: Cambridge University Press.
+</div>
+<div id="ref-vaisey2017" class="csl-entry" role="listitem">
+Vaisey, Stephen, and Andrew Miles. 2017. <span>“<a href="https://doi.org/10.1177/0049124114547769">What You Can<span></span>and Can<span>’</span>t<span></span>Do With Three-Wave Panel Data</a>.”</span> <em>Sociological Methods &amp; Research</em> 46(1): 44–67.
+</div>
+<div id="ref-wawro2022" class="csl-entry" role="listitem">
+Wawro, Gregory, and Ira Katznelson. 2022. <em>Time Counts: Quantitative Analysis for Historical Social Science</em>. Princeton University Press.
 </div>
 <div id="ref-woodward2011" class="csl-entry" role="listitem">
 Woodward, James F. 2011. <span>“Data and Phenomena: A Restatement and Defense.”</span> <em>Synthese</em> 182: 165179.
