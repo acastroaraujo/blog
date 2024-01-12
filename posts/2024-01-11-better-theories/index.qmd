@@ -10,11 +10,13 @@ date: 2024-01-11
 bibliography: references.bib
 ---
 
-The new editors of *Theory & Society* have a strange [statement of goals](https://link.springer.com/journal/11186/updates/26605018) with some minor platitudes about what makes for a good theory---"general, abstract, and amenable to empirical investigation"---but otherwise it's superficial in content and angry in tone.
+The new editors of *Theory & Society* have a strange [statement of goals](https://link.springer.com/journal/11186/updates/26605018) with some minor platitudes about what makes for a good theory---e.g., "general, abstract, and amenable to empirical investigation."
 
-But what actually makes for a good "scientific theory"?
+But most of the statement is quite superficial in content and angry in tone.
 
-I'm just going to copy-paste a good list of good principles straight from @craver2013 [chapter 6]:
+So, what actually makes for a good "scientific theory"?
+
+I'm just going to copy-paste this list of good principles:
 
 > **FORMAL VIRTUES**
 >
