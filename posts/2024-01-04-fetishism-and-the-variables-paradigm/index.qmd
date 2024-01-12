@@ -125,7 +125,7 @@ Here's a more charitable view of Andrew Abbott's full-blown attack on linear reg
 
 -   Traditional linear regression---particularly when use to model cross-sectional datasets---is ignorant of temporal context in ways that make it impossible to talk about important social mechanisms. The significance of some measured "variables" (with regards to the real-life phenomena we seek to understand) is severely distorted when they're ripped from their temporal context, making some research questions impossible to answer.
 
-    In particular, *the order in which things happen* determines the outcomes we are interested in explaining the outcomes most historical researchers are interested in explaining.
+    In particular, *the order in which things happen* determines the outcomes most historical researchers are interested in explaining.
 
 -   A similar thing happens when we want to answer questions for which spatial context is important, which is why there's a whole subfield of statistics dedicated to modeling "spatial data."
 
