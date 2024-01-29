@@ -13,6 +13,7 @@ $font-family-sans-serif: $optima-font;
 $font-family-monospace: $fira-font; 
 $link-color: #4974A5;
 $code-block-bg: #F4F4F4;
+$font-size-root: 1em;
 //$body-bg: #FEFDFA;
 $primary: #4974A5;
 //$primary: #368DFC;
@@ -31,5 +32,5 @@ h1, h2, h3, h4, h5, h6 {
 
 .allcaps {
   font-family: $custom-font;
-  font-size: 0.95em;
+  font-size: 1em;
 }

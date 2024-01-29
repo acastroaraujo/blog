@@ -6,3 +6,25 @@ author: andrés castro araújo
 date: 2024-01-10
 draft: true
 ---
+
+> The home thermostat is an instructive device. It is the intelligence of the heating system. It controls the temperature by responding to the temperature.
+>
+> Schelling 83
+
+
+> The thermostat is smart but not very smart. For more money you can get a smarter one that acts as though it thinks
+ahead. If you set it for 70 and the temperature is below 68 it
+turns the furnace off at 68, but if the temperature is above 72
+the furnace will go on at 72. It responds not only to temperature
+but to the direction the temperature is going.
+>
+> ADD THING FROM CYBERNETICS BOOK
+
+Schelling  notes that the _rate_ at which the thermostat adjusts room temperature may lead to cyclical patterns of cyclical behavior (e.g., business cycles, predator-prey cycles of growth and decline). 
+
+
+
+https://statmodeling.stat.columbia.edu/2024/01/15/a-feedback-loop-can-destroy-correlation-this-idea-comes-up-in-many-places/
+
+
+Denett

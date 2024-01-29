@@ -1,0 +1,12 @@
+---
+title: "DAGs are not mechanisms"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-01-27
+draft: true
+---
+
+Craver + McElreath
+
+They're both generative, though. In the sense that some process is being depicted.

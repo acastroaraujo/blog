@@ -1,0 +1,10 @@
+---
+title: "Latent Classes in R"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-01-22
+draft: true
+---
+
+<https://mc-stan.org/users/documentation/case-studies/Latent_class_case_study.html>

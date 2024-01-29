@@ -9,3 +9,13 @@ bibliography: references.bib
 ---
 
 @tomasello2022
+
+attribution theory and sellars
+
+<https://acastroaraujo-notebooks.netlify.app/posts/2021-01-26-agency/>
+
+> ¿Qué es agencia? Es la participación -reiterada, prospectiva y evaluativa- de actores sociales en la reproducción y transformación de las estructuras mediante el ejercicio del hábito, la imaginación y el juicio.
+>
+> "What Is Agency?" A. Mische & M. Emirbayer
+
+<https://culturecog.blog/2022/01/24/the-lexical-semantics-of-agency-part-i/>

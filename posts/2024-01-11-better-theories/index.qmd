@@ -10,7 +10,7 @@ date: 2024-01-11
 bibliography: references.bib
 ---
 
-The new editors of *Theory & Society* have a strange [statement of goals](https://link.springer.com/journal/11186/updates/26605018) with some minor platitudes about what makes for a good theory---e.g., "general, abstract, and amenable to empirical investigation."
+The new editors of *Theory & Society* have a strange new [statement of goals](https://link.springer.com/journal/11186/updates/26605018) with some minor platitudes about what makes for a good theory---e.g., "general, abstract, and amenable to empirical investigation."
 
 But most of the statement is quite superficial in content and angry in tone.
 
@@ -76,4 +76,4 @@ I'm just going to copy-paste this list of good principles:
 >
 > From: @craver2013 [pp. 83-4]
 
-*Note. @craver2013 advocate for a mechanism-based view of scientific explanation which nowadays has superseded the "covering law" approach to scientific explanation (i.e., good old-fashioned positivism). Mechanism-based explanations have been heavily endorsed by "analytical sociology" [e.g., @hedstrom1996; @hedstrom2005];* *unfortunately, most sociologists see this literature as being exclusively commited to rational-choice theory and agent-based modeling. Read the book!*
+*Note. @craver2013 advocate for a mechanism-based view of scientific explanation which nowadays has superseded the "covering law" approach to scientific explanation (i.e., 20^th^ century positivism). Mechanism-based explanations have been heavily endorsed by "analytical sociology" [e.g., @hedstrom1996; @hedstrom2005];* *unfortunately, most sociologists see this literature as being exclusively commited to rational-choice theory and agent-based modeling. Read the book!*
