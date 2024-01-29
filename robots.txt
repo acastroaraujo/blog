@@ -1,1 +1,1 @@
-Sitemap: https://github.com/acastroaraujo/blog/sitemap.xml
+Sitemap: https://acastroaraujo.github.io/blog/sitemap.xml

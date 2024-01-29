@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -27,6 +27,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -67,7 +68,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -76,6 +83,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -85,21 +93,48 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <meta property="og:title" content="blog - What is Computational Social Science?">
 <meta property="og:description" content="It is a trading zone, driven by improvements in digital technology and associated with a new professional group.">
-<meta property="og:image" content="https://github.com/acastroaraujo/blog/posts/2023-12-27-what-is-computational-social-science/images/shakira.jpeg">
-<meta property="og:site-name" content="blog">
+<meta property="og:image" content="https://acastroaraujo.github.io/blog/posts/2023-12-27-what-is-computational-social-science/images/shakira.jpeg">
+<meta property="og:site_name" content="blog">
 <meta name="twitter:title" content="blog - What is Computational Social Science?">
 <meta name="twitter:description" content="It is a trading zone, driven by improvements in digital technology and associated with a new professional group.">
-<meta name="twitter:image" content="https://github.com/acastroaraujo/blog/posts/2023-12-27-what-is-computational-social-science/images/shakira.jpeg">
+<meta name="twitter:image" content="https://acastroaraujo.github.io/blog/posts/2023-12-27-what-is-computational-social-science/images/shakira.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -108,29 +143,29 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://acastroaraujo.github.io" rel="" target=""><i class="bi bi-house" role="img">
+    <a class="nav-link" href="https://acastroaraujo.github.io"> <i class="bi bi-house" role="img">
 </i> 
- <span class="menu-text">about</span></a>
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://acastroaraujo.github.io/cv/" rel="" target=""><i class="bi bi-file-person" role="img">
+    <a class="nav-link" href="https://acastroaraujo.github.io/cv/"> <i class="bi bi-file-person" role="img">
 </i> 
- <span class="menu-text">cv</span></a>
+<span class="menu-text">cv</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://github.com/acastroaraujo" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/acastroaraujo"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text">github</span></a>
+<span class="menu-text">github</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target=""><i class="bi bi-chat-text" role="img">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-chat-text" role="img">
 </i> 
- <span class="menu-text">blog</span></a>
+<span class="menu-text">blog</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -182,6 +217,7 @@ div.csl-indent {
 
 
 
+
 <p>I don’t think Computational Social Science (CSS) will ever become an autonomous field.</p>
 <p>CSS is more akin to a “trading zone” in which different disciplinary cultures manage to exchange ideas, metaphors, and techniques.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>As such, there’s no point in creating exclusionary boundaries around CSS. That would be bad for trade.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
@@ -200,29 +236,41 @@ div.csl-indent {
 <p>The CSS trading zone is characterized by two recent phenomena that distinguish it from earlier interdisciplinary efforts like cybernetics or cognitive science. The first is the dramatic increase in computing power and information storage. I refuse to elaborate on this very obvious point.</p>
 <p>The second is the emergence of a new professional group sometime around the early 2010s: <em>the</em> <em>data scientist.</em> It first started in tech companies—e.g., Google, Microsoft, Amazon, Facebook, Twitter, Netflix, Spotify, etc. But soon enough data scientist were to be found everywhere, including non-profits and government agencies.</p>
 <p>What exactly <em>is</em> a “data scientist”? No one knows exactly. But companies are hiring and universities are providing legitimacy via publications and newly minted masters programs <span class="citation" data-cites="spector2022 donoho2017">(<a href="#ref-donoho2017" role="doc-biblioref">Donoho 2017</a>; <a href="#ref-spector2022" role="doc-biblioref">Spector et al. 2022</a>)</span>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<p>At first glance, a lot of data science is <em>just</em> statistics, see <a href="#fig-statistics">Figure&nbsp;1 (a)</a>. Thus, traditional data analysts discovered they could boost their salaries via superficial adjustments to their vocabulary. For example, they no longer fitted statistical models, they <em>trained</em> machine learning algorithms; they began using the word <em>classifier</em> when talking about logistic regression; experiments became A/B tests; one of them once described logistic regression as “a single layer neural network with a sigmoid activation function”; another one repackaged OLS as a form of “artificial intelligence” in a corporate report.</p>
-<p>Similarly, social scientists discovered they could find jobs outside academia by calling themselves data scientists and advertising their social science training as the elusive “substantive expertise” in <a href="#fig-conway">Figure&nbsp;1 (b)</a>.</p>
+<p>At first glance, a lot of data science is <em>just</em> statistics, see <a href="#fig-statistics" class="quarto-xref">Figure&nbsp;1 (a)</a>. Thus, traditional data analysts discovered they could boost their salaries via superficial adjustments to their vocabulary. For example, they no longer fitted statistical models, they <em>trained</em> machine learning algorithms; they began using the word <em>classifier</em> when talking about logistic regression; experiments became A/B tests; one of them once described logistic regression as “a single layer neural network with a sigmoid activation function”; another one repackaged OLS as a form of “artificial intelligence” in a corporate report.</p>
+<p>Similarly, social scientists discovered they could find jobs outside academia by calling themselves data scientists and advertising their social science training as the elusive “substantive expertise” in <a href="#fig-conway" class="quarto-xref">Figure&nbsp;1 (b)</a>.</p>
 <div id="fig-memes" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-statistics" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/statistics.png" class="img-fluid figure-img" data-ref-parent="fig-memes" width="300"></p>
-<figcaption class="figure-caption">(a) Sometimes data science is just statistics.</figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-memes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-memes" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-statistics" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-statistics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/statistics.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-ref-parent="fig-memes" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-statistics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Sometimes data science is just statistics.
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-conway" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/conway.png" class="img-fluid figure-img" data-ref-parent="fig-memes" width="300"></p>
-<figcaption class="figure-caption">(b) Drew Conway’s data science Venn-diagram. This wasn’t originally intended to be a joke.</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-memes" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-conway" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-conway-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/conway.png" class="img-fluid quarto-figure quarto-figure-center figure-img" data-ref-parent="fig-memes" width="300">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-conway-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Drew Conway’s data science Venn-diagram. This wasn’t originally intended to be a joke.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;1: Two common memes.</figcaption><p></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-memes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Two common memes.
+</figcaption>
 </figure>
 </div>
 </section>
@@ -278,7 +326,7 @@ div.csl-indent {
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-arseniev-koehler2022" class="csl-entry" role="listitem">
 Arseniev-Koehler, Alina, and Jacob G. Foster. 2022. <span>“<a href="https://doi.org/10.1177/00491241221122603">Machine Learning as a Model for Cultural Learning: Teaching an Algorithm What It Means to Be Fat</a>.”</span> <em>Sociological Methods &amp; Research</em> 51(4): 1484–1539.
 </div>
@@ -428,10 +476,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -441,8 +488,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -455,6 +511,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -498,6 +673,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -523,6 +699,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -583,6 +785,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

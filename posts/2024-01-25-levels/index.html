@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="andrés castro araújo">
+<meta name="dcterms.date" content="2024-01-25">
+<meta name="description" content="Some of them are good.">
+
+<title>blog - Levels</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="blog - Levels">
+<meta property="og:description" content="Some of them are good.">
+<meta property="og:image" content="https://acastroaraujo.github.io/blog/posts/2024-01-25-levels/wimsatt.png">
+<meta property="og:site_name" content="blog">
+<meta property="og:image:height" content="858">
+<meta property="og:image:width" content="1342">
+<meta name="twitter:title" content="blog - Levels">
+<meta name="twitter:description" content="Some of them are good.">
+<meta name="twitter:image" content="https://acastroaraujo.github.io/blog/posts/2024-01-25-levels/wimsatt.png">
+<meta name="twitter:image-height" content="858">
+<meta name="twitter:image-width" content="1342">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://acastroaraujo.github.io"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://acastroaraujo.github.io/cv/"> <i class="bi bi-file-person" role="img">
+</i> 
+<span class="menu-text">cv</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/acastroaraujo"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-chat-text" role="img">
+</i> 
+<span class="menu-text">blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Levels</h1>
+                  <div>
+        <div class="description">
+          <p>Some of them are good.</p>
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Theory</div>
+                <div class="quarto-category">Sociology</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>andrés castro araújo </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 25, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+
+<p>The metaphor of <em>levels</em> is used to describe the world <em>all the time.</em></p>
+<p>“These metaphors are too basic to how we organize the world to seriously recommend that they could or should be stricken from thought and expression” <span class="citation" data-cites="craver2014">(<a href="#ref-craver2014" role="doc-biblioref">Craver 2014, p. 2</a>)</span>. The word “level” is inevitable, but it is also vague. It invites confusion.</p>
+<p>Most problems with the levels metaphor stem from being committed to the following:</p>
+<ul>
+<li><p>The division of the world into distinct monolithic levels (or “layers”).</p>
+<p>Something like this:</p>
+<p><em>atoms</em> <span class="math inline">\(\subset\)</span> <em>molecules</em> <span class="math inline">\(\subset\)</span> <em>cells</em> <span class="math inline">\(\subset\)</span> <em>organisms</em> <span class="math inline">\(\subset\)</span> <em>societies</em></p>
+<p>in which higher-levels are taken to be stable “emergent” configurations of lower-level ones.</p></li>
+<li><p>The division of labor among scientists in accordance to these levels.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+</ul>
+<p>These additional commitments seem innocuous and maybe obvious at times. For example, Andrew Abbott relies on this metaphor to offer an explanation as to why interdisciplinarity seems more straightforward in the natural sciences.</p>
+<blockquote class="blockquote">
+<p>Political science, we say, is about power, economics about choice, anthropology about ethnography, and so on. In the natural sciences, these axes of cohesion are aligned, to some extent, in a hierarchy of “levels of analysis.” Physics concerns the atomic and subatomic levels, chemistry the molecular level, biology the supermolecular level of living things. But in the social sciences and humanities, axes of cohesion are not aligned… a fact that has made interdisciplinarity in the social sciences much more complicated than the simpler, linear interpenetration of the natural sciences.</p>
+<p><span class="citation" data-cites="abbott2001">Abbott (<a href="#ref-abbott2001" role="doc-biblioref">2001, p. 140</a>)</span></p>
+</blockquote>
+<p>Sounds insightful, right? <em>No, it is not.</em></p>
+<p>Many disciplines cast a wide net. The relationship between scientific disciplines and “ontological levels” is <em>many-to-many.</em> For example, evolutionary biology encompasses genes, organisms, populations, and environments. Take a look at virtually any scientific discipline and you’ll find the same.</p>
+<p>The rest of this notebook focuses on more legitimate ways of using the levels metaphors in different contexts. I will focus on two kinds of levels that I found useful: (1) levels of <span class="allcaps">description</span>, in which we look at the same phenomena from different perspectives; and (2) levels of <span class="allcaps">organization</span>, in which we look at relationships between “wholes” and their relevant “component parts.”</p>
+<hr>
+<p><em>Note. I will ignore three other commonly used kinds of levels.</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<ul>
+<li><p><em>Levels defined with regard to <span class="allcaps">scale</span> (temporal or spatial). These are levels defined by some kind of zooming-in or zooming-out operation, which we usually summarize with the adjectives of micro, meso, and macro.</em></p>
+<p><em>These levels cannot be fixed a priori. Instead, I take them to analytical distinctions driven by pragmatic concerns.</em></p></li>
+<li><p><em>Levels of <span class="allcaps">processing</span>, in which different processing units are related as “upstream” or “downstream” from each other in some flow of information (or some sequence of production). In other words, the relation between entities is temporal.</em></p>
+<p><em>Many interesting discoveries only make sense within this framework. For example, the idea that information flows in organizational hierarchies are characterized by “uncertainty absorption” <span class="citation" data-cites="march1993">(<a href="#ref-march1993" role="doc-biblioref">March and Simon 1993, p. 165</a>)</span>. Workers near the bottom of organizational hierarchies collect “raw” information; this information is then edited, standardized, and summarized in the process of moving upward in the organizational hierarchy; thus, information appears more robust than it actually is by the it reaches those at the top.</em></p></li>
+<li><p><em>Levels defined with regards to loosely defined and overlapping <span class="allcaps">disciplinary topics</span> (e.g., economic, political, social, cultural). These levels seem straightforward because they mimic the academic division of labor between economics, political science, sociology, and anthropology. But these levels shouldn’t be taken seriously. At best, they serve heuristic purposes; at worst, they distort reality.</em></p>
+<p><em>Some sociologists embrace this framework and and then start talking about the constant interpenetration of abstract subsystems or institutional spheres. But vague talk about “interpenetration” should be understood as an admission of non-distinctiveness between levels.</em></p></li>
+</ul>
+<section id="levels-of-description" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="levels-of-description">Levels of Description</h2>
+<p>Levels of description indicate different ways of looking at the same problem or phenomena. Here, the differences between levels are a matter of <em>perspective.</em></p>
+<p>Here, talk of different “levels” usually means we are looking at the same phenomena from different <em>perspectives</em>. As such, these levels don’t raise issues of “emergence” of “higher” levels (or at least they <em>shouldn’t).</em></p>
+<p>These levels are legitimate insofar they make important (non-redundant) contributions to understanding whatever it is we want to understand.</p>
+<p>I will focus on two well-established levels of description:</p>
+<ul>
+<li><p>David Marr’s hierarchy of analysis with regard to information-processing systems, in which we refer to <em>levels of realization.</em></p></li>
+<li><p>The common distinction between <span class="allcaps">social structure</span> and <span class="allcaps">culture</span>, in which levels stem from the classic philosophical distinction between <em>form</em> and <em>content.</em></p></li>
+</ul>
+<section id="realization" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="realization">Realization</h3>
+<p>Marr’s famous hierarchy of analysis consists of three levels, summarized in <a href="#tbl-marr" class="quarto-xref">Table&nbsp;1</a>. It is supposed to help us understand complex information-processing “machines.”</p>
+<ul>
+<li><p>The <span class="allcaps">computational</span> level.</p>
+<p><em>What</em> is being computed and <em>why?</em></p>
+<p>In this framework, the “what” is usually a mathematical calculation (e.g., optimization, prediction); and the “why” is usually determined by looking at the environment in which the information-processing system is embedded.</p></li>
+<li><p>The <span class="allcaps">representation and algorithm</span> level.</p>
+<p>Information-processing systems must represent their inputs and outputs in accordance to some form of formal scheme.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> This is important because “any particular representation makes certain information explicit at the expense of information that is pushed into the background and may be quite hard to recover” <span class="citation" data-cites="minddes2023">(<a href="#ref-minddes2023" role="doc-biblioref">Haugeland et al. 2023, p. 60</a>)</span>.</p>
+<p>Results in this level can be established without regard to the physical entities actually instantiating the algorithm—e.g., is the computation <em>tractable</em> <span class="citation" data-cites="kleinberg2000 vanrooij2008">(e.g., <a href="#ref-kleinberg2000" role="doc-biblioref">Kleinberg 2000</a>; <a href="#ref-vanrooij2008" role="doc-biblioref">Van Rooij 2008</a>)</span>?</p></li>
+<li><p>The <span class="allcaps">physical implementation</span> level.</p>
+<p>An account of physical computation is outside the scope of this notebook <span class="citation" data-cites="piccinini2015">(see <a href="#ref-piccinini2015" role="doc-biblioref">Piccinini 2015</a>)</span>.</p></li>
+</ul>
+<p>These are levels of <em>realization.</em> A computation is implemented by an algorithm, which in turn is implemented by some kind of physical system. The analysis of each level can be partially decoupled from the other because of the general notion of <em>multiple realizability</em>—i.e., the same computation can be realized by a variety of algorithms; and the same algorithm can be realized by a variety of physical entities.</p>
+<blockquote class="blockquote">
+<p>The choice of an algorithm is influenced for example, by what it has to do and by the hardware in which it must run. But there is a wide choice available at each level, and the explication of each level involves issues that are rather independent of the other two.</p>
+<p><span class="citation" data-cites="minddes2023">Haugeland et al. (<a href="#ref-minddes2023" role="doc-biblioref">2023, p. 63</a>)</span></p>
+</blockquote>
+<div id="tbl-marr" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<div aria-describedby="tbl-marr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 34%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Computational theory</th>
+<th>Representation and algorithm</th>
+<th>Hardware implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>What is the goal of the computation, why is it appropriate, and what is the logic of the strategy by which it can be carried out?</td>
+<td>How can this computational theory be implemented? In particular, what is the representation for the input and output, and what is the algorithm for the transformation?</td>
+<td>How can the representation and algorithm be realized physically?</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-tbl" id="tbl-marr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The three levels at which any machine carrying out an information-processing task must be understood.
+</figcaption>
+</figure>
+</div>
+<aside>
+<p>Source: David Marr’s <em>Vision</em> (1982)</p>
+<p><span class="citation" data-cites="minddes2023">Haugeland et al. (<a href="#ref-minddes2023" role="doc-biblioref">2023, p. 64</a>)</span></p>
+</aside>
+<p>More importantly, the three levels also <em>constrain</em> each other.</p>
+<blockquote class="blockquote">
+<p>Working from the top down, knowing the structure of the environment and the information it makes available to the organism limits the types of information-processing algorithms that can utilize that information. Likewise, having identified a mode of organization and the conditions under which it will generate a form of behavior can guide the search for the components that implement the design. Constraints also arise from the bottom up. Knowing features of the implementation can put constraints on the search for algorithms. Some algorithms might not be implementable, given the components available, and alternatives must be sought. Likewise, knowing the algorithm that seems to be functioning can guide investigations into the environment and reveal different features of its structure that are relevant to the organism.</p>
+<p><span class="citation" data-cites="bechtel2015">Bechtel and Shagrir (<a href="#ref-bechtel2015" role="doc-biblioref">2015, p. 321</a>)</span></p>
+</blockquote>
+</section>
+<section id="structure-and-culture" class="level3">
+<h3 class="anchored" data-anchor-id="structure-and-culture">Structure and Culture</h3>
+<p>Many sociologists—following on the footsteps of Georg Simmel—like to distinguish between <span class="allcaps">structure</span> and <span class="allcaps">culture</span> <span class="citation" data-cites="rawlings2023">(e.g., <a href="#ref-rawlings2023" role="doc-biblioref">Rawlings et al. 2023</a>)</span>. These perfectly overlapping “levels” stand in opposition to the level of individuals (a distinction that roughly corresponds to a parts-to-whole relationship). But the difference between <span class="allcaps">structure</span> and <span class="allcaps">culture</span> roughly corresponds to a distinction between <em>form</em> and <em>content.</em></p>
+<p>Perspectives that privilege <span class="allcaps">structure</span> have produced many important ideas such as the strength of weak ties, structural holes, and vacancy chains. Perspectives that privilege <span class="allcaps">culture</span> emphasize ideas such roles, rules, categories, schemas, and legitimacy.</p>
+<p>The idea is that the analysis of each level can be partially decoupled from the other, even though each level is just a different way of representing the same phenomena. Each level constitutes the blind spot of the other. Thus, some novel forms of network analysis have attempted to incorporate both <span class="citation" data-cites="pachucki2010">(e.g., <a href="#ref-pachucki2010" role="doc-biblioref">Pachucki and Breiger 2010</a>)</span>.</p>
+</section>
+</section>
+<section id="levels-of-organization-mechanisms" class="level2">
+<h2 class="anchored" data-anchor-id="levels-of-organization-mechanisms">Levels of Organization (Mechanisms)</h2>
+<p>I find the levels metaphor to be most useful when used to distinguish between <em>wholes</em> (or “systems”) and their component <em>parts.</em><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>The main idea is behind mechanistic explanations is to figure out how the organized activities of parts produce some property or behavior of a larger whole <span class="citation" data-cites="craver2013 craver2007 craver2001 machamer2000">(<a href="#ref-machamer2000" role="doc-biblioref">Machamer et al. 2000</a>; <a href="#ref-craver2001" role="doc-biblioref">Craver 2001</a>; <a href="#ref-craver2007" role="doc-biblioref">Craver and Bechtel 2007</a>; <a href="#ref-craver2013" role="doc-biblioref">Craver and Darden 2013</a>)</span>. Here, the levels metaphor relates some activity or feature of a whole (a <span class="allcaps">mechanism</span>) to the properties and organized activities of relevant component parts. These component parts work together to accomplish something that they cannot do on their own. Mechanisms are, by definition, more than the sum of their parts.</p>
+<p>This provides for a very different view of levels from the “layered” metaphor I complained about at the beginning. Part-to-whole levels don’t represent monolithic divisions in the furniture of the world. There is no correspondence between the levels in the nervous system, the circulatory system, and various sorts of social systems. “Levels of mechanisms cannot be read off a menu of levels in advance” <span class="citation" data-cites="craver2014">(<a href="#ref-craver2014" role="doc-biblioref">Craver 2014, p. 18</a>)</span>.</p>
+<p>For example, a researcher might be interested in explaining how human groups accomplish complex tasks—e.g., spatial learning and navigation <span class="citation" data-cites="vaughan2021 hutchins1995">(<a href="#ref-hutchins1995" role="doc-biblioref">Hutchins 1995</a>; <a href="#ref-vaughan2021" role="doc-biblioref">Vaughan 2021</a>)</span>. Or she might be interested in figuring out when do status hierarchies enhance the performance of task-oriented groups <span class="citation" data-cites="willer2009">(<a href="#ref-willer2009" role="doc-biblioref">Willer 2009</a>)</span>. Or she might simply be an organizational sociologist.</p>
+<p><strong>Mechanism levels are not spooky</strong></p>
+<p>A mechanism approach to levels also guards against “spooky emergentism” or ontologically unmoored macro abstractions—i.e., what happens when sociologists commit to the existence of higher-level phenomena that have no explanation in terms of the organized activities of their component parts. Nothing “emerges” from levels of mechanisms except in the trivial sense that organized parts do things that they cannot do in isolation.</p>
+<p>Importantly, mechanistic explanations are not committed to <span class="allcaps">methodological individualism</span> or the view according to which explanations must always point towards individuals and their choices.</p>
+<blockquote class="blockquote">
+<p>It is not part of our view that all explanations must bottom out in some privileged set of fundamental entities and activities…</p>
+<p>Nor is it part of our view that all mechanistic explanations must go down in a hierarchy of mechanisms to be explanatory. In order to explain why a given strand of DNA is on a particular island in the Galapagos, one would do better to investigate the migratory patterns of birds and the selective effects of a recent drought, rather than the molecular components of its DNA. One must, in such cases, ascend from the part to the whole to understand the relevant mechanisms. If one wants to understand why a cyclist’s cellular glucose metabolism suddenly accelerated, the right answer might well be that the cyclist has started the climb.</p>
+<p><span class="citation" data-cites="craver2013">Craver and Darden (<a href="#ref-craver2013" role="doc-biblioref">2013, p. 25</a>)</span></p>
+</blockquote>
+<p>This is compatible with the view of multi-level explanation in sociology.</p>
+<blockquote class="blockquote">
+<p>…explanations at one level may refer to causal processes at another. If a soldier shoots another soldier, it may have nothing to do with their individual properties or relations: it may simply be that two armies are at war, and thus it might be pointless to study causality as arising from the personalities involved. On the other hand, causal explanation of a societal process—say, a decline in a birth rate—may properly invoke little more than changes in the individuals involved (e.g., a rise in education produces women who prefer to have fewer children). The point here is that the content of an explanation must be worked out empirically, considering possible connections at multiple levels of analysis, sorting out which connections are present and substantial, and which are not.</p>
+<p><span class="citation" data-cites="jepperson2021">Jepperson and Meyer (<a href="#ref-jepperson2021" role="doc-biblioref">2021, p. 199</a>)</span></p>
+</blockquote>
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-abbott2001" class="csl-entry" role="listitem">
+Abbott, Andrew. 2001. <em>Chaos of Disciplines</em>. University of Chicago Press.
+</div>
+<div id="ref-bechtel2015" class="csl-entry" role="listitem">
+Bechtel, William, and Oron Shagrir. 2015. <span>“<a href="https://doi.org/10.1111/tops.12141">The Non-Redundant Contributions of Marr’s Three Levels of Analysis for Explaining Information-Processing Mechanisms</a>.”</span> <em>Topics in Cognitive Science</em> 7(2): 312–22.
+</div>
+<div id="ref-craver2001" class="csl-entry" role="listitem">
+Craver, Carl F. 2001. <span>“<a href="https://doi.org/10.1086/392866">Role Functions, Mechanisms, and Hierarchy</a>.”</span> <em>Philosophy of Science</em> 68(1): 53–74.
+</div>
+<div id="ref-craver2014" class="csl-entry" role="listitem">
+———. 2014. <span>“<a href="https://doi.org/10.15502/9783958570498">Levels</a>.”</span> edited by T. Metzinger and J. M. Windt. Open MIND. Frankfurt am Main: MIND Group.
+</div>
+<div id="ref-craver2007" class="csl-entry" role="listitem">
+Craver, Carl F., and William Bechtel. 2007. <span>“<a href="https://doi.org/10.1007/s10539-006-9028-8">Top-down Causation Without Top-down Causes</a>.”</span> <em>Biology &amp; Philosophy</em> 22(4): 547–63.
+</div>
+<div id="ref-craver2013" class="csl-entry" role="listitem">
+Craver, Carl F., and Lindley Darden. 2013. <em><a href="https://books.google.com/books?hl=en&amp;lr=&amp;id=ESI3AAAAQBAJ&amp;oi=fnd&amp;pg=PR7&amp;dq=craver+in+search+of+mechanisms&amp;ots=XIiU0N81Y2&amp;sig=R13AJvNXJTueEKAN7wI6rF2MA2s">In Search of Mechanisms: Discoveries Across the Life Sciences</a></em>. University of Chicago Press.
+</div>
+<div id="ref-minddes2023" class="csl-entry" role="listitem">
+Haugeland, John, Carl F. Craver, and Colin Klein (eds.). 2023. <em>Mind Design III: Philosophy, Psychology, and Artificial Intelligence</em>. The MIT Press.
+</div>
+<div id="ref-hutchins1995" class="csl-entry" role="listitem">
+Hutchins, Edwin. 1995. <em>Cognition in the Wild</em>. MIT press.
+</div>
+<div id="ref-jepperson2021" class="csl-entry" role="listitem">
+Jepperson, Ronald L., and John W. Meyer. 2021. <em>Institutional Theory: The Cultural Construction of Organizations, States, and Identities</em>. Cambridge University Press.
+</div>
+<div id="ref-kleinberg2000" class="csl-entry" role="listitem">
+Kleinberg, Jon. 2000. <span>“The Small-World Phenomenon: An Algorithmic Perspective.”</span> Pp. 163–70 in <em>Proceedings of the Thirty-Second Annual ACM Symposium on Theory of Computing</em>.
+</div>
+<div id="ref-machamer2000" class="csl-entry" role="listitem">
+Machamer, Peter, Lindley Darden, and Carl F. Craver. 2000. <span>“<a href="https://doi.org/10.1086/392759">Thinking about Mechanisms</a>.”</span> <em>Philosophy of Science</em> 67(1): 1–25.
+</div>
+<div id="ref-march1993" class="csl-entry" role="listitem">
+March, James G., and Herbert A. Simon. 1993. <em>Organizations</em>. John wiley &amp; sons.
+</div>
+<div id="ref-pachucki2010" class="csl-entry" role="listitem">
+Pachucki, Mark A., and Ronald L. Breiger. 2010. <span>“Cultural Holes: Beyond Relationality in Social Networks and Culture.”</span> <em>Annual review of sociology</em> 36: 205224.
+</div>
+<div id="ref-piccinini2015" class="csl-entry" role="listitem">
+Piccinini, Gualtiero. 2015. <em><a href="https://doi.org/10.1093/acprof:oso/9780199658855.001.0001">Physical Computation: A Mechanistic Account</a></em>. Oxford University Press.
+</div>
+<div id="ref-rawlings2023" class="csl-entry" role="listitem">
+Rawlings, Craig M., Jeffrey A. Smith, James Moody, and Daniel A. McFarland. 2023. <em><a href="https://doi.org/10.1017/9781139794985">Network Analysis: Integrating Social Network Theory, Method, and Application with r</a></em>. Cambridge: Cambridge University Press.
+</div>
+<div id="ref-vanrooij2008" class="csl-entry" role="listitem">
+Van Rooij, Iris. 2008. <span>“<a href="https://doi.org/10.1080/03640210801897856">The Tractable Cognition Thesis</a>.”</span> <em>Cognitive Science</em> 32(6): 939–84.
+</div>
+<div id="ref-vaughan2021" class="csl-entry" role="listitem">
+Vaughan, Diane. 2021. <em>Dead Reckoning: Air Traffic Control, System Effects, and Risk</em>. University of Chicago Press.
+</div>
+<div id="ref-willer2009" class="csl-entry" role="listitem">
+Willer, Robb. 2009. <span>“<a href="https://doi.org/10.1177/000312240907400102">Groups Reward Individual Sacrifice: The Status Solution to the Collective Action Problem</a>.”</span> <em>American Sociological Review</em> 74(1): 23–43.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Some social scientists find this “ontological stratification” of the world very attractive because they want to protect themselves against incursions from nearby disciplines—e.g., psychologists protecting themselves against the neuroscientists, sociologists protecting themselves against the <del>psychologists</del> economists. They further complicate matters by developing some goofy view about the <em>autonomy</em> or <em>irreducibility</em> of their preferred level.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>I will also ignore the related (and important) notion of <em>units of analysis</em>—i.e., levels individuated by units of measurement (e.g., individuals, organizations, groups, populations).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>“To say that something is a formal scheme means only that it is a set of symbols with rules for putting them together—no more and no less” <span class="citation" data-cites="minddes2023">(<a href="#ref-minddes2023" role="doc-biblioref">Haugeland et al. 2023, p. 60</a>)</span>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>“Levels of parts and wholes must also be correlated with size differences because parts can be no larger than the wholes they compose. But the size differences between levels of parts and wholes are an accidental consequence of the part-whole relationship itself, not part of defining what it is for things to be at different part-whole levels” <span class="citation" data-cites="craver2014">(<a href="#ref-craver2014" role="doc-biblioref">Craver 2014, p. 12</a>)</span>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

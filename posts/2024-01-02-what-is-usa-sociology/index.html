@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -27,6 +27,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -67,7 +68,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -76,6 +83,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -89,25 +97,46 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <meta property="og:title" content="blog - What is Sociology in the USA?">
 <meta property="og:description" content="A visualization.">
-<meta property="og:image" content="https://github.com/acastroaraujo/blog/posts/2024-01-02-what-is-usa-sociology/index_files/figure-html/fig-areas-1.png">
-<meta property="og:site-name" content="blog">
-<meta property="og:image:height" content="1152">
-<meta property="og:image:width" content="2304">
+<meta property="og:site_name" content="blog">
 <meta name="twitter:title" content="blog - What is Sociology in the USA?">
 <meta name="twitter:description" content="A visualization.">
-<meta name="twitter:image" content="https://github.com/acastroaraujo/blog/posts/2024-01-02-what-is-usa-sociology/index_files/figure-html/fig-areas-1.png">
-<meta name="twitter:image-height" content="1152">
-<meta name="twitter:image-width" content="2304">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -116,29 +145,29 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://acastroaraujo.github.io" rel="" target=""><i class="bi bi-house" role="img">
+    <a class="nav-link" href="https://acastroaraujo.github.io"> <i class="bi bi-house" role="img">
 </i> 
- <span class="menu-text">about</span></a>
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://acastroaraujo.github.io/cv/" rel="" target=""><i class="bi bi-file-person" role="img">
+    <a class="nav-link" href="https://acastroaraujo.github.io/cv/"> <i class="bi bi-file-person" role="img">
 </i> 
- <span class="menu-text">cv</span></a>
+<span class="menu-text">cv</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://github.com/acastroaraujo" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/acastroaraujo"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text">github</span></a>
+<span class="menu-text">github</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target=""><i class="bi bi-chat-text" role="img">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-chat-text" role="img">
 </i> 
- <span class="menu-text">blog</span></a>
+<span class="menu-text">blog</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -192,6 +221,7 @@ div.csl-indent {
 
 
 
+
 <section id="background" class="level2">
 <h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>Sociologists in the USA like describing sociology as the most heterogeneous social science of all, which is</p>
@@ -224,14 +254,18 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <p><strong><em>Note. The visualization provided below is provisional. I will need to email someone at the ASA and politely ask for permission to use the directory.</em></strong></p>
 <p>When a sociologist joins the <em>American Sociological Association</em> (ASA), they have the options to choose up to four “areas of interest” for everyone else to see. For example, I chose (1) <span class="allcaps">Theory</span>; (2) <span class="allcaps">Quantitative Methodology</span>; (3) <span class="allcaps">Organizations, Formal and Complex</span>; and (4) <span class="allcaps">Law and Society</span>. <em>And I would probably have chosen something different on a different day.</em></p>
-<p>So, I created a dataset containing the areas of interest of over 1,000 individuals associated with 20 sociology programs in the USA. This dataset is provisional, but see <a href="#tbl-sample">Table&nbsp;1</a> in case you are curious about the sample.</p>
-<p>Each of these individuals chose anywhere between one and four areas of interest. <a href="#fig-areas">Figure&nbsp;1</a> highlights the ten largest areas of interest in <span style="color:#63B8FF;">blue</span>. The largest is <span class="allcaps">Stratification/ Mobility</span>, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars—<span class="allcaps">Cultural Sociology</span>, <span class="allcaps">Economic Sociology</span>, and <span class="allcaps">Political Sociology</span>—which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.</p>
+<p>So, I created a dataset containing the areas of interest of over 1,000 individuals associated with 20 sociology programs in the USA. This dataset is provisional, but see <a href="#tbl-sample" class="quarto-xref">Table&nbsp;1</a> in case you are curious about the sample.</p>
+<p>Each of these individuals chose anywhere between one and four areas of interest. <a href="#fig-areas" class="quarto-xref">Figure&nbsp;1</a> highlights the ten largest areas of interest in <span style="color:#63B8FF;">blue</span>. The largest is <span class="allcaps">Stratification/ Mobility</span>, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars—<span class="allcaps">Cultural Sociology</span>, <span class="allcaps">Economic Sociology</span>, and <span class="allcaps">Political Sociology</span>—which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.</p>
 <div class="cell page-columns page-full">
-<div class="cell-output-display column-page">
-<div id="fig-areas" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="index_files/figure-html/fig-areas-1.png" class="img-fluid figure-img" width="1152"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Areas of interest in the dataset. The largest 10 areas are highlighted in blue.</figcaption>
+<div class="cell-output-display page-columns page-full">
+<div id="fig-areas" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-areas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="index_files/figure-html/fig-areas-1.png" class="img-fluid figure-img column-page" width="1152">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-areas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Areas of interest in the dataset. The largest 10 areas are highlighted in blue.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -249,49 +283,61 @@ transmogrification is not the “technical” term for this
 <p><span id="eq-proj"><span class="math display">\[
 \mathbf{A} = \mathbf{X}^\top \mathbf{X}
 \tag{1}\]</span></span></p>
-<p>The diagonal of <span class="math inline">\(\mathbf A\)</span> contains the total number of individuals that chose each area, which corresponds to the same numbers in <a href="#fig-areas">Figure&nbsp;1</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The diagonal of <span class="math inline">\(\mathbf A\)</span> contains the total number of individuals that chose each area, which corresponds to the same numbers in <a href="#fig-areas" class="quarto-xref">Figure&nbsp;1</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>Unfortunately, the resulting network, is <em>very dense.</em> It takes only one single individual with idiosyncratic tastes to create ties among four otherwise disconnected areas. As a result, the “structure” is one in which every area is seemingly connected to every other area.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p>Because of this issue, researchers have looked for ways to “trim” uninformative ties. The intuition is straightforward. If the observed number of shared individuals between two areas ( <span class="math inline">\(a_{ij}\)</span> ) exceeds the number we would expect to see in a random network <em>(the null model),</em> then we draw a tie between area <span class="math inline">\(i\)</span> and area <span class="math inline">\(j\)</span>.</p>
 <p>In other words, we do a “hypothesis test” for each tie in the network depicted by <span class="math inline">\(\mathbf A\)</span>. If the links between individuals and areas of interest was random, the resulting network would consist entirely of isolated nodes.</p>
 </section>
 <section id="results" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>The results of this procedure are shown in <a href="#fig-0.01">Figure&nbsp;2</a>, which uses a significance level of 0.01 to draw ties between areas.</p>
+<p>The results of this procedure are shown in <a href="#fig-0.01" class="quarto-xref">Figure&nbsp;2</a>, which uses a significance level of 0.01 to draw ties between areas.</p>
 <p>I used Zachary Neal’s <span class="citation" data-cites="neal2022">(<a href="#ref-neal2022" role="doc-biblioref">2022</a>)</span> <code>backbone</code> package to do all this.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <p>As we may have expected, there is a strong overlap between <span class="allcaps">Stratification/ Mobility</span> and <span class="allcaps">Education</span>; <span class="allcaps">Demography</span> and <span class="allcaps">Family</span>; <span class="allcaps">Medical Sociology</span> and <span class="allcaps">Mental Health</span>; <span class="allcaps">Migration/Immigration</span> and <span class="allcaps">Latina/o Sociology</span>; and so on.</p>
 <p>The strong overlap between <span class="allcaps">Cultural Sociology</span> and so-called <span class="allcaps">Theory</span> deserves its own <del>rant</del> blogpost.</p>
 <p><em>Note. All isolate nodes have been removed. A bigger sample of individuals and their chosen areas would obviously result in more connected areas.</em></p>
-<div class="cell page-columns page-full">
-<div id="fig-0.01" class="quarto-figure quarto-figure-center column-page anchored">
-<figure class="figure">
+<div class="cell column-page">
+<div id="fig-0.01" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-0.01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="visNetwork html-widget html-fill-item" id="htmlwidget-72d47d7261c2aa615531" style="width:100%;height:742px;"></div>
 <script type="application/json" data-for="htmlwidget-72d47d7261c2aa615531">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Political Sociology","Racial and Ethnic Relations","Theory","Comparative Sociology/Historical Sociology","Medical Sociology","Economic Sociology","Family","Demography","Cultural Sociology","Stratification/Mobility","Aging/Social Gerontology","Latina/o Sociology","Education","Mental Health","Organizations, Formal and Complex","Sexualities"],"size":[66,111,135,163,168,126,127,130,175,126,147,197,221,41,31,164,42,116,51],"eigen":[0.7071067811865475,0,2.392599080724903e-16,0.9999999999999999,0,1.196299540362451e-16,0.7071067811865478,7.177797242174709e-17,0,0,0,2.392599080724903e-17,-0,0,0,0,2.392599080724903e-17,7.177797242174709e-17,1.914079264579922e-16],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Political Sociology","Racial and Ethnic\nRelations","Theory","Comparative\nSociology /\nHistorical Sociology","Medical Sociology","Economic Sociology","Family","Demography","Cultural Sociology","Stratification /\nMobility","Aging / Social\nGerontology","Latina / o Sociology","Education","Mental Health","Organizations,\nFormal and Complex","Sexualities"],"value":[66,111,135,163,168,126,127,130,175,126,147,197,221,41,31,164,42,116,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Family <\/br> Size: 126","Demography <\/br> Size: 147","Cultural Sociology <\/br> Size: 197","Stratification/Mobility <\/br> Size: 221","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Mental Health <\/br> Size: 42","Organizations, Formal and Complex <\/br> Size: 116","Sexualities <\/br> Size: 51"],"x":[0.1624029159940481,-0.9645621777856349,-0.1429531883085073,0.4104551879576961,-1,1,0.541361957249449,0.2229830381774678,0.8738328534686501,-0.7990951778403141,-0.5055160177271619,0.9559756205053787,-0.4326480454293403,-0.3026511112958552,-0.9712470526581671,-0.5268733865623669,0.1788667984986105,0.773393310063367,0.1538775665049765],"y":[-1,0.1325400599255733,0.08739490395367944,-0.8316231844965039,-0.1520544316147063,-0.3268875279531335,-0.5796701882961288,1,0.4271417861804876,-0.7140599101324266,-0.7830653411612275,-0.06180831983147228,0.9663982061930085,-0.5689076309788192,0.4224393047479131,0.714881589433864,0.7323090128136782,0.6744458884744826,0.05049172893621878]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Sex and Gender","Political Sociology","Theory","Medical Sociology","Economic Sociology","Family","Demography","Stratification/Mobility"],"to":["Political Sociology","Racial and Ethnic Relations","Latina/o Sociology","Sexualities","Comparative Sociology/Historical Sociology","Cultural Sociology","Mental Health","Organizations, Formal and Complex","Demography","Aging/Social Gerontology","Education"],"weight":[1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 50","Shared Individuals: 45","Shared Individuals: 27","Shared Individuals: 51","Shared Individuals: 48","Shared Individuals: 24","Shared Individuals: 70"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
-<figcaption class="figure-caption">Figure&nbsp;2: “Strong” Ties ( α = 0.01 )</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-0.01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: “Strong” Ties ( α = 0.01 )
+</figcaption>
 </figure>
 </div>
 </div>
-<p><a href="#fig-0.05">Figure&nbsp;3</a> uses a significance level of <span class="math inline">\(0.05\)</span> to draw the ties between areas, which means we get to extract more of them.</p>
+<p><a href="#fig-0.05" class="quarto-xref">Figure&nbsp;3</a> uses a significance level of <span class="math inline">\(0.05\)</span> to draw the ties between areas, which means we get to extract more of them.</p>
 <p>The result is that we get to see more “structure.”</p>
 <p>For example, the heterogeneity <em>within</em> <span class="allcaps">Economic Sociology</span> may be more easily understood by looking at adjacent areas: <span class="allcaps">Social Networks</span>, <span class="allcaps">Political Economy</span>, <span class="allcaps">Science and Technology</span>, and <span class="allcaps">Organizations, Formal and Complex</span>. The same might be said for other areas that look like “hubs” (e.g., <span class="allcaps">Stratification/ Mobility</span>, <span class="allcaps">Political Sociology</span>).</p>
 <p>Futhermore, perhaps we may hypothesize that “triangles”—like the overlap between <span class="allcaps">Medical Sociology</span>, <span class="allcaps">Aging/ Social Gerontology</span>, and <span class="allcaps">Demography</span>—are formed by somewhat distinct underlying groups of sociologists.</p>
 <p>Also, note that <span class="allcaps">Quantitative Methodology</span> now appears connected to three areas (<span class="allcaps">Stratification/ Mobility</span>, <span class="allcaps">Demography</span>, and <span class="allcaps">Mathematical Sociology</span>), but <span class="allcaps">Qualitative Methodology</span> is nowhere to be seen yet. This does <em>not</em> mean that one is more important than the other. It just means that the overlap between <span class="allcaps">Quantitative Methodology</span> and those three areas is stronger than what we would expect by chance; whereas the ties between whereas the overlap between <span class="allcaps">Qualitative Methodology</span> and other areas is more compatible with a “null model” of random ties between areas.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
-<div class="cell page-columns page-full">
-<div id="fig-0.05" class="quarto-figure quarto-figure-center column-page anchored">
-<figure class="figure">
+<div class="cell column-page">
+<div id="fig-0.05" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-0.05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="visNetwork html-widget html-fill-item" id="htmlwidget-411f74501e8a44a37354" style="width:100%;height:742px;"></div>
 <script type="application/json" data-for="htmlwidget-411f74501e8a44a37354">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Law and Society","Race, Class and Gender","Social Change","Work and Labor Markets","Political Sociology","Racial and Ethnic Relations","Criminal Justice","Quantitative Methodology","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Medical Sociology","Economic Sociology","Science and Technology","Family","Ethnography (Anthropology)","Social Networks","Political Economy","Demography","Mathematical Sociology","Biosociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Urban Sociology","Global and Transnational Sociology","Criminology/Delinquency","Aging/Social Gerontology","Latina/o Sociology","Education","Knowledge","Mental Health","Policy","Organizations, Formal and Complex","Occupations/Professions","Mass Communication/Public Opinion","Sexualities"],"size":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,126,40,65,55,147,27,16,197,61,221,136,88,34,41,31,164,38,42,83,116,53,13,51],"eigen":[4.249274171765568e-17,0,0,0,0.5299505652978987,3.035195836975406e-17,0.2658293976455384,2.185341002622292e-16,0,0,0.4741269344018596,4.856313339160649e-17,1.456894001748195e-16,6.677430841345892e-17,0.2762470856670793,0.01366714374365091,0.003909386431347671,0.4377987503106739,0.1163352278518703,0.03996131268009497,0.003633128588909725,0.6469162334500068,0.1366597690584466,0.07343459638421515,6.070391673950811e-17,0.1477859398004899,1,0.4376311607454103,5.766872090253271e-17,0,0.2454039490493509,0,0.5559428005684689,0.001039229840208802,0.07343459638421516,0.4136153374460281,0.0039093864313477,0.0010392298402088,1.214078334790162e-17,0],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Law and Society","Race, Class and\nGender","Social Change","Work and Labor\nMarkets","Political Sociology","Racial and Ethnic\nRelations","Criminal Justice","Quantitative\nMethodology","Theory","Comparative\nSociology /\nHistorical Sociology","Peace, War, World\nConflict, and\nConflict Resolution","Medical Sociology","Economic Sociology","Science and\nTechnology","Family","Ethnography\n(Anthropology)","Social Networks","Political Economy","Demography","Mathematical\nSociology","Biosociology","Cultural Sociology","Children and Youth","Stratification /\nMobility","Urban Sociology","Global and\nTransnational\nSociology","Criminology /\nDelinquency","Aging / Social\nGerontology","Latina / o Sociology","Education","Knowledge","Mental Health","Policy","Organizations,\nFormal and Complex","Occupations /\nProfessions","Mass Communication /\nPublic Opinion","Sexualities"],"value":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,126,40,65,55,147,27,16,197,61,221,136,88,34,41,31,164,38,42,83,116,53,13,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Law and Society <\/br> Size: 83","Race, Class and Gender <\/br> Size: 191","Social Change <\/br> Size: 25","Work and Labor Markets <\/br> Size: 71","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Criminal Justice <\/br> Size: 44","Quantitative Methodology <\/br> Size: 117","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Peace, War, World Conflict, and Conflict Resolution <\/br> Size: 22","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Science and Technology <\/br> Size: 84","Family <\/br> Size: 126","Ethnography (Anthropology) <\/br> Size: 40","Social Networks <\/br> Size: 65","Political Economy <\/br> Size: 55","Demography <\/br> Size: 147","Mathematical Sociology <\/br> Size: 27","Biosociology <\/br> Size: 16","Cultural Sociology <\/br> Size: 197","Children and Youth <\/br> Size: 61","Stratification/Mobility <\/br> Size: 221","Urban Sociology <\/br> Size: 136","Global and Transnational Sociology <\/br> Size: 88","Criminology/Delinquency <\/br> Size: 34","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Knowledge <\/br> Size: 38","Mental Health <\/br> Size: 42","Policy <\/br> Size: 83","Organizations, Formal and Complex <\/br> Size: 116","Occupations/Professions <\/br> Size: 53","Mass Communication/Public Opinion <\/br> Size: 13","Sexualities <\/br> Size: 51"],"x":[-0.3425141295073804,-0.05192074586971585,-0.9223664533562375,0.1984140772143519,0.6900870310394018,-0.6608695901731916,0.3514934068135074,-0.5271222920467256,0.1217657455781063,0.375596176162468,0.2352492314663972,-0.7560826453334846,-0.6445834426015797,-0.3243745282602974,0.4611313091040019,-0.3558104921417817,-0.5189846803172542,0.529452575499529,0.6379538058252736,-0.1682590838357105,-0.5430293629221197,0.3783753378053545,-0.004643688904347965,0.4372784349003518,-0.8635739763426016,1,0.5212411633139968,0.5899335147320233,-0.6138908197044661,0.05967797134649455,0.2841456275090775,-0.223547321471658,0.7912526042549843,-0.6458108727006671,0.6666142035099618,0.7404803886021771,-0.2912237920878149,-0.3148704528666898,-1,-0.9801997663121451],"y":[-0.2940935731422418,-0.9638113567286162,0.5147675102796145,0.8867086854267845,0.2500641068368723,-0.2332471172661488,0.2775847756525955,-0.4413950226314434,-0.9856394225505286,0.8960552425357502,-0.0155979062915087,-0.4700478085934944,-0.6500965060548547,-0.5735085743232287,-0.5654491026438309,0.5741138692372856,0.4151723492071828,-0.1789989503725378,0.6305792271887576,0.3737370972288414,0.7150386149886716,-0.2593636331137403,0.1598467943126747,-0.8055005371799918,-0.2628306770950045,0.03613685374085041,0.06392310720634953,0.3956995036359496,-0.8597512050988669,0.9950345844567134,-0.4879393225967306,-1,0.09038160300822851,0.2617280406751812,-0.661489182336495,-0.08332686055537886,0.8012187968307687,1,-0.1071742136246705,0.3401700196677628]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Sex and Gender","Law and Society","Law and Society","Race, Class and Gender","Race, Class and Gender","Race, Class and Gender","Social Change","Social Change","Work and Labor Markets","Political Sociology","Political Sociology","Political Sociology","Quantitative Methodology","Quantitative Methodology","Quantitative Methodology","Theory","Theory","Comparative Sociology/Historical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Science and Technology","Family","Family","Ethnography (Anthropology)","Social Networks","Demography","Demography","Cultural Sociology","Children and Youth","Stratification/Mobility","Stratification/Mobility","Stratification/Mobility","Education","Organizations, Formal and Complex"],"to":["Political Sociology","Racial and Ethnic Relations","Latina/o Sociology","Sexualities","Criminal Justice","Criminology/Delinquency","Stratification/Mobility","Urban Sociology","Education","Political Sociology","Cultural Sociology","Stratification/Mobility","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Demography","Mathematical Sociology","Stratification/Mobility","Comparative Sociology/Historical Sociology","Cultural Sociology","Global and Transnational Sociology","Demography","Biosociology","Aging/Social Gerontology","Mental Health","Science and Technology","Social Networks","Political Economy","Organizations, Formal and Complex","Knowledge","Demography","Stratification/Mobility","Urban Sociology","Mathematical Sociology","Stratification/Mobility","Aging/Social Gerontology","Mass Communication/Public Opinion","Education","Urban Sociology","Education","Policy","Policy","Occupations/Professions"],"weight":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 19","Shared Individuals: 12","Shared Individuals: 47","Shared Individuals: 33","Shared Individuals: 47","Shared Individuals: 8","Shared Individuals: 8","Shared Individuals: 28","Shared Individuals: 35","Shared Individuals: 50","Shared Individuals: 10","Shared Individuals: 35","Shared Individuals: 12","Shared Individuals: 38","Shared Individuals: 39","Shared Individuals: 45","Shared Individuals: 24","Shared Individuals: 34","Shared Individuals: 9","Shared Individuals: 23","Shared Individuals: 27","Shared Individuals: 21","Shared Individuals: 20","Shared Individuals: 25","Shared Individuals: 51","Shared Individuals: 11","Shared Individuals: 48","Shared Individuals: 44","Shared Individuals: 11","Shared Individuals: 12","Shared Individuals: 50","Shared Individuals: 24","Shared Individuals: 8","Shared Individuals: 21","Shared Individuals: 33","Shared Individuals: 70","Shared Individuals: 27","Shared Individuals: 21","Shared Individuals: 19"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
-<figcaption class="figure-caption">Figure&nbsp;3: “Strongish” Ties ( α = 0.05 )</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-0.05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: “Strongish” Ties ( α = 0.05 )
+</figcaption>
 </figure>
 </div>
 </div>
-<p>Finally, <a href="#fig-0.06">Figure&nbsp;4</a> uses a significance level of <span class="math inline">\(0.06\)</span> to draw ties, just enough for connections between smaller areas to start showing up (e.g., <span class="allcaps">Marxist Sociology</span>, <span class="allcaps">Alcohol and Drugs</span>). <span class="allcaps">Religion</span> is now connected to <span class="allcaps">Cultural Sociology</span></p>
+<p>Finally, <a href="#fig-0.06" class="quarto-xref">Figure&nbsp;4</a> uses a significance level of <span class="math inline">\(0.06\)</span> to draw ties, just enough for connections between smaller areas to start showing up (e.g., <span class="allcaps">Marxist Sociology</span>, <span class="allcaps">Alcohol and Drugs</span>). <span class="allcaps">Religion</span> is now connected to <span class="allcaps">Cultural Sociology</span></p>
 <p>Please keep in mind that this does <em>not</em> mean that these connections are somehow “weaker” than the other ones in any <em>substantive</em> way. Hypothesis testing is extremely dependent on sample size.</p>
-<div class="cell page-columns page-full">
-<div id="fig-0.06" class="quarto-figure quarto-figure-center column-page anchored">
-<figure class="figure">
+<div class="cell column-page">
+<div id="fig-0.06" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-0.06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="visNetwork html-widget html-fill-item" id="htmlwidget-59f590c00468728eaf54" style="width:100%;height:742px;"></div>
 <script type="application/json" data-for="htmlwidget-59f590c00468728eaf54">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Law and Society","Race, Class and Gender","Social Change","Work and Labor Markets","Political Sociology","Racial and Ethnic Relations","Criminal Justice","Quantitative Methodology","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Medical Sociology","Economic Sociology","Science and Technology","Marxist Sociology","Family","Ethnography (Anthropology)","Communication and Information Technologies","Social Networks","Development","Political Economy","Demography","Mathematical Sociology","Biosociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Urban Sociology","Environmental Sociology","Asians/Asian-Americans","Global and Transnational Sociology","Criminology/Delinquency","Aging/Social Gerontology","Latina/o Sociology","Education","Knowledge","Mental Health","Policy","Labor and Labor Movements","Organizations, Formal and Complex","Religion","Occupations/Professions","Alcohol and Drugs","Mass Communication/Public Opinion","Sexualities"],"size":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,19,126,40,31,65,53,55,147,27,16,197,61,221,136,44,38,88,34,41,31,164,38,42,83,32,116,34,53,11,13,51],"eigen":[0.02042234309510454,0.03343079958667112,0,0,0.4848334386066729,0.06709470682633734,0.2464733038167888,0.08285823567442037,0.119156995341712,0,0.4299423019374817,0.1049324594354982,0.06891143939552655,0.03740717323369047,0.3207070909021327,0.5029089829061782,0.238330668360186,0,0.453051009661433,0.1109171957183483,0.05874214723159854,0.1597786493845924,0.03740717323369041,0.1239536385360269,0.599026283925156,0.1453504712023312,0.07904573625211994,0.1893607259223732,0.239107918220321,1,0.4500170769033728,0.1109171957183483,0.00823979962336375,0.01698483013858589,0,0.226689723524247,0.00823979962336375,0.5170658935389935,0.08460519718628706,0.0790457362521199,0.3739162428883248,0,0.16449800539766,0.04667236373123281,0.16449800539766,0.07904573625211989,0.0466723637312328,0],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Law and Society","Race, Class and\nGender","Social Change","Work and Labor\nMarkets","Political Sociology","Racial and Ethnic\nRelations","Criminal Justice","Quantitative\nMethodology","Theory","Comparative\nSociology /\nHistorical Sociology","Peace, War, World\nConflict, and\nConflict Resolution","Medical Sociology","Economic Sociology","Science and\nTechnology","Marxist Sociology","Family","Ethnography\n(Anthropology)","Communication\nand Information\nTechnologies","Social Networks","Development","Political Economy","Demography","Mathematical\nSociology","Biosociology","Cultural Sociology","Children and Youth","Stratification /\nMobility","Urban Sociology","Environmental\nSociology","Asians /\nAsian-Americans","Global and\nTransnational\nSociology","Criminology /\nDelinquency","Aging / Social\nGerontology","Latina / o Sociology","Education","Knowledge","Mental Health","Policy","Labor and Labor\nMovements","Organizations,\nFormal and Complex","Religion","Occupations /\nProfessions","Alcohol and Drugs","Mass Communication /\nPublic Opinion","Sexualities"],"value":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,19,126,40,31,65,53,55,147,27,16,197,61,221,136,44,38,88,34,41,31,164,38,42,83,32,116,34,53,11,13,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Law and Society <\/br> Size: 83","Race, Class and Gender <\/br> Size: 191","Social Change <\/br> Size: 25","Work and Labor Markets <\/br> Size: 71","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Criminal Justice <\/br> Size: 44","Quantitative Methodology <\/br> Size: 117","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Peace, War, World Conflict, and Conflict Resolution <\/br> Size: 22","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Science and Technology <\/br> Size: 84","Marxist Sociology <\/br> Size: 19","Family <\/br> Size: 126","Ethnography (Anthropology) <\/br> Size: 40","Communication and Information Technologies <\/br> Size: 31","Social Networks <\/br> Size: 65","Development <\/br> Size: 53","Political Economy <\/br> Size: 55","Demography <\/br> Size: 147","Mathematical Sociology <\/br> Size: 27","Biosociology <\/br> Size: 16","Cultural Sociology <\/br> Size: 197","Children and Youth <\/br> Size: 61","Stratification/Mobility <\/br> Size: 221","Urban Sociology <\/br> Size: 136","Environmental Sociology <\/br> Size: 44","Asians/Asian-Americans <\/br> Size: 38","Global and Transnational Sociology <\/br> Size: 88","Criminology/Delinquency <\/br> Size: 34","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Knowledge <\/br> Size: 38","Mental Health <\/br> Size: 42","Policy <\/br> Size: 83","Labor and Labor Movements <\/br> Size: 32","Organizations, Formal and Complex <\/br> Size: 116","Religion <\/br> Size: 34","Occupations/Professions <\/br> Size: 53","Alcohol and Drugs <\/br> Size: 11","Mass Communication/Public Opinion <\/br> Size: 13","Sexualities <\/br> Size: 51"],"x":[-0.8311559585382964,0.5704079284693224,0.5254428672054685,-0.893303049724258,0.7452326613182276,-0.5716754467843677,0.4984412645132446,-0.7983719699803198,0.6999736376919552,-0.9875240483594475,0.2721061679440195,-0.5877521907900702,-0.8512514185357962,-0.9779880557568256,-0.1238050969982676,0.01600430602557212,-0.2620765369560759,-0.3127456470262331,0.5014299987272304,0.9262467892156139,-0.5064245772931055,-0.02908217813967406,-1,0.2114457569867927,0.236523756291122,0.07134039030127903,-0.291672616698694,-0.3152751252550821,0.7322370448228464,0.4602089581106386,0.7566817720369055,1,0.5725024734777273,-0.9725816844204107,-0.7926717033253653,0.09916049057348619,0.3728795482072986,0.7454016292941341,-0.4866246124646889,-0.3897603182622316,0.6413537764638382,-0.1296881931839684,-0.07313920286905884,-0.1886178316151509,0.04957874790667471,-0.08323004897556052,-0.3741713874538474,0.3666651735147661],"y":[-0.7834463516996698,-0.8211245854427727,0.8347323799801059,0.5016333032202143,-0.05308061705794032,-0.6940239395519685,-0.2498445847380412,-0.5463918787001451,-0.5880723656016691,0.3488078212931021,0.1098002046839568,-0.4268168653476551,-0.3365604743569161,-0.5199674428369729,0.3870384653756989,-0.318551973538264,0.01460283951527264,0.9709038759698834,0.3023088563663454,-0.4460955105380499,0.1372518938703275,-0.139516909877493,-0.3646794080223797,-0.5011474074620654,0.2907268969966508,0.03593793588274541,0.6085788294807641,-0.6314337010847311,0.4030119897756776,-0.02020536556327823,-0.2797199364799983,-0.2188963653113344,-1,-0.1053822488814935,0.6528144600101196,0.4824507325680574,-0.9587734828292409,0.1701617082525266,-0.1746410660316036,0.451733225207978,0.105777748952171,1,-0.5297156460244009,-0.8962871153018162,-0.608203055361646,0.6474321331838573,-0.9029018335061174,0.9039076582337053]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Migration/Immigration","Sex and Gender","Law and Society","Law and Society","Race, Class and Gender","Race, Class and Gender","Race, Class and Gender","Social Change","Social Change","Work and Labor Markets","Political Sociology","Political Sociology","Political Sociology","Political Sociology","Racial and Ethnic Relations","Quantitative Methodology","Quantitative Methodology","Quantitative Methodology","Theory","Theory","Theory","Comparative Sociology/Historical Sociology","Comparative Sociology/Historical Sociology","Comparative Sociology/Historical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Science and Technology","Science and Technology","Marxist Sociology","Family","Family","Family","Ethnography (Anthropology)","Social Networks","Demography","Demography","Cultural Sociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Stratification/Mobility","Stratification/Mobility","Urban Sociology","Education","Organizations, Formal and Complex"],"to":["Political Sociology","Racial and Ethnic Relations","Asians/Asian-Americans","Latina/o Sociology","Sexualities","Criminal Justice","Criminology/Delinquency","Stratification/Mobility","Urban Sociology","Education","Political Sociology","Cultural Sociology","Stratification/Mobility","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Development","Urban Sociology","Demography","Mathematical Sociology","Stratification/Mobility","Comparative Sociology/Historical Sociology","Cultural Sociology","Knowledge","Peace, War, World Conflict, and Conflict Resolution","Development","Global and Transnational Sociology","Science and Technology","Demography","Biosociology","Aging/Social Gerontology","Mental Health","Alcohol and Drugs","Science and Technology","Social Networks","Political Economy","Cultural Sociology","Stratification/Mobility","Organizations, Formal and Complex","Occupations/Professions","Communication and Information Technologies","Knowledge","Labor and Labor Movements","Demography","Children and Youth","Stratification/Mobility","Urban Sociology","Mathematical Sociology","Stratification/Mobility","Aging/Social Gerontology","Religion","Mass Communication/Public Opinion","Education","Urban Sociology","Education","Policy","Environmental Sociology","Policy","Occupations/Professions"],"weight":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 14","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 19","Shared Individuals: 12","Shared Individuals: 47","Shared Individuals: 33","Shared Individuals: 47","Shared Individuals: 8","Shared Individuals: 8","Shared Individuals: 28","Shared Individuals: 35","Shared Individuals: 50","Shared Individuals: 10","Shared Individuals: 15","Shared Individuals: 31","Shared Individuals: 35","Shared Individuals: 12","Shared Individuals: 38","Shared Individuals: 39","Shared Individuals: 45","Shared Individuals: 10","Shared Individuals: 9","Shared Individuals: 15","Shared Individuals: 24","Shared Individuals: 19","Shared Individuals: 34","Shared Individuals: 9","Shared Individuals: 23","Shared Individuals: 27","Shared Individuals: 6","Shared Individuals: 21","Shared Individuals: 20","Shared Individuals: 25","Shared Individuals: 36","Shared Individuals: 38","Shared Individuals: 51","Shared Individuals: 16","Shared Individuals: 9","Shared Individuals: 11","Shared Individuals: 9","Shared Individuals: 48","Shared Individuals: 19","Shared Individuals: 44","Shared Individuals: 11","Shared Individuals: 12","Shared Individuals: 50","Shared Individuals: 24","Shared Individuals: 12","Shared Individuals: 8","Shared Individuals: 21","Shared Individuals: 33","Shared Individuals: 70","Shared Individuals: 27","Shared Individuals: 14","Shared Individuals: 21","Shared Individuals: 19"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
-<figcaption class="figure-caption">Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-0.06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
+</figcaption>
 </figure>
 </div>
 </div>
@@ -299,11 +345,12 @@ transmogrification is not the “technical” term for this
 </section>
 <section id="sample" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="sample">Sample</h2>
-<div class="cell page-columns page-full">
-<div class="cell-output-display page-columns page-full">
-<div id="tbl-sample" class="anchored page-columns page-full">
-
-<div id="ezrlgpqjyi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;" class="page-columns page-full">
+<div class="cell page-columns page-full" data-tbl-cap-location="margin">
+<div id="tbl-sample" class="cell quarto-float anchored page-columns page-full" data-tbl-cap-location="margin">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="ezrlgpqjyi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#ezrlgpqjyi table {
   font-family: Optima, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
@@ -743,88 +790,134 @@ transmogrification is not the “technical” term for this
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-  <thead>
-    <tr class="gt_heading">
-      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style="">Universities and Individuals</td>
-    </tr>
-    
-    <tr class="gt_col_headings">
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=""></th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="n">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="font-weight: bold;" scope="col" id="%">%</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><th id="stub_1_1" scope="row" class="gt_row gt_center gt_stub">Northwestern University</th>
-<td headers="stub_1_1 n" class="gt_row gt_center">84</td>
-<td headers="stub_1_1 prop" class="gt_row gt_center">7.55%</td></tr>
-    <tr><th id="stub_1_2" scope="row" class="gt_row gt_center gt_stub">University of Michigan-Ann Arbor</th>
-<td headers="stub_1_2 n" class="gt_row gt_center">76</td>
-<td headers="stub_1_2 prop" class="gt_row gt_center">6.83%</td></tr>
-    <tr><th id="stub_1_3" scope="row" class="gt_row gt_center gt_stub">University of Chicago</th>
-<td headers="stub_1_3 n" class="gt_row gt_center">72</td>
-<td headers="stub_1_3 prop" class="gt_row gt_center">6.47%</td></tr>
-    <tr><th id="stub_1_4" scope="row" class="gt_row gt_center gt_stub">Harvard University</th>
-<td headers="stub_1_4 n" class="gt_row gt_center">69</td>
-<td headers="stub_1_4 prop" class="gt_row gt_center">6.21%</td></tr>
-    <tr><th id="stub_1_5" scope="row" class="gt_row gt_center gt_stub">University of Wisconsin-Madison</th>
-<td headers="stub_1_5 n" class="gt_row gt_center">68</td>
-<td headers="stub_1_5 prop" class="gt_row gt_center">6.12%</td></tr>
-    <tr><th id="stub_1_6" scope="row" class="gt_row gt_center gt_stub">Stanford University</th>
-<td headers="stub_1_6 n" class="gt_row gt_center">66</td>
-<td headers="stub_1_6 prop" class="gt_row gt_center">5.94%</td></tr>
-    <tr><th id="stub_1_7" scope="row" class="gt_row gt_center gt_stub">University of Pennsylvania</th>
-<td headers="stub_1_7 n" class="gt_row gt_center">66</td>
-<td headers="stub_1_7 prop" class="gt_row gt_center">5.94%</td></tr>
-    <tr><th id="stub_1_8" scope="row" class="gt_row gt_center gt_stub">Cornell University</th>
-<td headers="stub_1_8 n" class="gt_row gt_center">65</td>
-<td headers="stub_1_8 prop" class="gt_row gt_center">5.85%</td></tr>
-    <tr><th id="stub_1_9" scope="row" class="gt_row gt_center gt_stub">Brown University</th>
-<td headers="stub_1_9 n" class="gt_row gt_center">62</td>
-<td headers="stub_1_9 prop" class="gt_row gt_center">5.58%</td></tr>
-    <tr><th id="stub_1_10" scope="row" class="gt_row gt_center gt_stub">New York University</th>
-<td headers="stub_1_10 n" class="gt_row gt_center">61</td>
-<td headers="stub_1_10 prop" class="gt_row gt_center">5.49%</td></tr>
-    <tr><th id="stub_1_11" scope="row" class="gt_row gt_center gt_stub">Princeton University</th>
-<td headers="stub_1_11 n" class="gt_row gt_center">59</td>
-<td headers="stub_1_11 prop" class="gt_row gt_center">5.31%</td></tr>
-    <tr><th id="stub_1_12" scope="row" class="gt_row gt_center gt_stub">Columbia University</th>
-<td headers="stub_1_12 n" class="gt_row gt_center">47</td>
-<td headers="stub_1_12 prop" class="gt_row gt_center">4.23%</td></tr>
-    <tr><th id="stub_1_13" scope="row" class="gt_row gt_center gt_stub">UC Berkeley</th>
-<td headers="stub_1_13 n" class="gt_row gt_center">46</td>
-<td headers="stub_1_13 prop" class="gt_row gt_center">4.14%</td></tr>
-    <tr><th id="stub_1_14" scope="row" class="gt_row gt_center gt_stub">Ohio State University</th>
-<td headers="stub_1_14 n" class="gt_row gt_center">45</td>
-<td headers="stub_1_14 prop" class="gt_row gt_center">4.05%</td></tr>
-    <tr><th id="stub_1_15" scope="row" class="gt_row gt_center gt_stub">Duke University</th>
-<td headers="stub_1_15 n" class="gt_row gt_center">42</td>
-<td headers="stub_1_15 prop" class="gt_row gt_center">3.78%</td></tr>
-    <tr><th id="stub_1_16" scope="row" class="gt_row gt_center gt_stub">Yale University</th>
-<td headers="stub_1_16 n" class="gt_row gt_center">42</td>
-<td headers="stub_1_16 prop" class="gt_row gt_center">3.78%</td></tr>
-    <tr><th id="stub_1_17" scope="row" class="gt_row gt_center gt_stub">University of California-Los Angeles</th>
-<td headers="stub_1_17 n" class="gt_row gt_center">41</td>
-<td headers="stub_1_17 prop" class="gt_row gt_center">3.69%</td></tr>
-    <tr><th id="stub_1_18" scope="row" class="gt_row gt_center gt_stub">University of North Carolina-Chapel Hill</th>
-<td headers="stub_1_18 n" class="gt_row gt_center">36</td>
-<td headers="stub_1_18 prop" class="gt_row gt_center">3.24%</td></tr>
-    <tr><th id="stub_1_19" scope="row" class="gt_row gt_center gt_stub">Indiana University-Bloomington</th>
-<td headers="stub_1_19 n" class="gt_row gt_center">33</td>
-<td headers="stub_1_19 prop" class="gt_row gt_center">2.97%</td></tr>
-    <tr><th id="stub_1_20" scope="row" class="gt_row gt_center gt_stub">University of Texas-Austin</th>
-<td headers="stub_1_20 n" class="gt_row gt_center">32</td>
-<td headers="stub_1_20 prop" class="gt_row gt_center">2.88%</td></tr>
-    <tr><th id="grand_summary_stub_1" scope="row" class="gt_row gt_left gt_stub gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row">Total</th>
-<td headers="grand_summary_stub_1 n" class="gt_row gt_center gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row">1,112</td>
-<td headers="grand_summary_stub_1 prop" class="gt_row gt_center gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row">100%</td></tr>
-  </tbody>
-  
-  
+
+<table class="gt_table do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border">Universities and Individuals</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">n</th>
+<th id="%" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">%</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Northwestern University</td>
+<td class="gt_row gt_center" headers="stub_1_1 n">84</td>
+<td class="gt_row gt_center" headers="stub_1_1 prop">7.55%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Michigan-Ann Arbor</td>
+<td class="gt_row gt_center" headers="stub_1_2 n">76</td>
+<td class="gt_row gt_center" headers="stub_1_2 prop">6.83%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Chicago</td>
+<td class="gt_row gt_center" headers="stub_1_3 n">72</td>
+<td class="gt_row gt_center" headers="stub_1_3 prop">6.47%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_4" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Harvard University</td>
+<td class="gt_row gt_center" headers="stub_1_4 n">69</td>
+<td class="gt_row gt_center" headers="stub_1_4 prop">6.21%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_5" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Wisconsin-Madison</td>
+<td class="gt_row gt_center" headers="stub_1_5 n">68</td>
+<td class="gt_row gt_center" headers="stub_1_5 prop">6.12%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_6" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Stanford University</td>
+<td class="gt_row gt_center" headers="stub_1_6 n">66</td>
+<td class="gt_row gt_center" headers="stub_1_6 prop">5.94%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_7" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Pennsylvania</td>
+<td class="gt_row gt_center" headers="stub_1_7 n">66</td>
+<td class="gt_row gt_center" headers="stub_1_7 prop">5.94%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_8" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Cornell University</td>
+<td class="gt_row gt_center" headers="stub_1_8 n">65</td>
+<td class="gt_row gt_center" headers="stub_1_8 prop">5.85%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_9" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Brown University</td>
+<td class="gt_row gt_center" headers="stub_1_9 n">62</td>
+<td class="gt_row gt_center" headers="stub_1_9 prop">5.58%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_10" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">New York University</td>
+<td class="gt_row gt_center" headers="stub_1_10 n">61</td>
+<td class="gt_row gt_center" headers="stub_1_10 prop">5.49%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_11" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Princeton University</td>
+<td class="gt_row gt_center" headers="stub_1_11 n">59</td>
+<td class="gt_row gt_center" headers="stub_1_11 prop">5.31%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_12" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Columbia University</td>
+<td class="gt_row gt_center" headers="stub_1_12 n">47</td>
+<td class="gt_row gt_center" headers="stub_1_12 prop">4.23%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_13" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">UC Berkeley</td>
+<td class="gt_row gt_center" headers="stub_1_13 n">46</td>
+<td class="gt_row gt_center" headers="stub_1_13 prop">4.14%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_14" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Ohio State University</td>
+<td class="gt_row gt_center" headers="stub_1_14 n">45</td>
+<td class="gt_row gt_center" headers="stub_1_14 prop">4.05%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_15" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Duke University</td>
+<td class="gt_row gt_center" headers="stub_1_15 n">42</td>
+<td class="gt_row gt_center" headers="stub_1_15 prop">3.78%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_16" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Yale University</td>
+<td class="gt_row gt_center" headers="stub_1_16 n">42</td>
+<td class="gt_row gt_center" headers="stub_1_16 prop">3.78%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_17" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of California-Los Angeles</td>
+<td class="gt_row gt_center" headers="stub_1_17 n">41</td>
+<td class="gt_row gt_center" headers="stub_1_17 prop">3.69%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_18" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of North Carolina-Chapel Hill</td>
+<td class="gt_row gt_center" headers="stub_1_18 n">36</td>
+<td class="gt_row gt_center" headers="stub_1_18 prop">3.24%</td>
+</tr>
+<tr class="odd">
+<td id="stub_1_19" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Indiana University-Bloomington</td>
+<td class="gt_row gt_center" headers="stub_1_19 n">33</td>
+<td class="gt_row gt_center" headers="stub_1_19 prop">2.97%</td>
+</tr>
+<tr class="even">
+<td id="stub_1_20" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Texas-Austin</td>
+<td class="gt_row gt_center" headers="stub_1_20 n">32</td>
+<td class="gt_row gt_center" headers="stub_1_20 prop">2.88%</td>
+</tr>
+<tr class="odd">
+<td id="grand_summary_stub_1" class="gt_row gt_left gt_stub gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row" data-quarto-table-cell-role="th" scope="row">Total</td>
+<td class="gt_row gt_center gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row" headers="grand_summary_stub_1 n">1,112</td>
+<td class="gt_row gt_center gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row" headers="grand_summary_stub_1 prop">100%</td>
+</tr>
+</tbody>
 </table>
-<div class="quarto-table-caption margin-caption">Table&nbsp;1:  <p>Number of individuals extracted from the ASA member directory</p> </div></div>
+
 </div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Number of individuals extracted from the ASA member directory
+</figcaption>
+</figure>
 </div>
 </div>
 </section>
@@ -832,11 +925,11 @@ transmogrification is not the “technical” term for this
 <h2 class="anchored" data-anchor-id="citation">Citation</h2>
 <p>The <code>backbone</code> package automatically outputs the following suggested text:</p>
 <blockquote class="blockquote">
-<p><a href="#fig-0.01">Figure&nbsp;2</a>:</p>
+<p><a href="#fig-0.01" class="quarto-xref">Figure&nbsp;2</a>:</p>
 <p>We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.01) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 99%, and reduced the number of connected nodes by 68.9%.</p>
-<p><a href="#fig-0.05">Figure&nbsp;3</a>:</p>
+<p><a href="#fig-0.05" class="quarto-xref">Figure&nbsp;3</a>:</p>
 <p>We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.05) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 96.3%, and reduced the number of connected nodes by 34.4%.</p>
-<p><a href="#fig-0.06">Figure&nbsp;4</a>:</p>
+<p><a href="#fig-0.06" class="quarto-xref">Figure&nbsp;4</a>:</p>
 <p>We used the backbone package for R (v2.1.2; Neal, 2022) to extract the unweighted backbone of a weighted and undirected unipartite network containing 61 nodes. An edge was retained in the backbone if its weight was statistically significant (alpha = 0.06) using the disparity filter (Serrano et al., 2009). This reduced the number of edges by 94.9%, and reduced the number of connected nodes by 21.3%.</p>
 <p>Neal, Z. P. 2022. backbone: An R Package to Extract Network Backbones. PLOS ONE, 17, e0269137. <a href="https://doi.org/10.1371/journal.pone.0269137Serrano,">https://doi.org/10.1371/journal.pone.0269137</a></p>
 <p>Serrano, M. A., Boguna, M., &amp; Vespignani, A. (2009). Extracting the multiscale backbone of complex weighted networks. Proceedings of the National Academy of Sciences, 106(16), 6483-6488. <a href="https://doi.org/10.1073/pnas.0808904106" class="uri">https://doi.org/10.1073/pnas.0808904106</a></p>
@@ -847,7 +940,7 @@ transmogrification is not the “technical” term for this
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-abbott2001" class="csl-entry" role="listitem">
 Abbott, Andrew. 2001. <em>Chaos of Disciplines</em>. University of Chicago Press.
 </div>
@@ -965,10 +1058,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -978,8 +1070,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -992,6 +1093,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1035,6 +1255,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1060,6 +1281,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1120,6 +1367,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -94,19 +101,44 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="">
-<meta property="og:image" content="https://github.com/acastroaraujo/blog/posts/2024-01-04-fetishism-and-the-variables-paradigm/images/redpill.jpeg">
-<meta property="og:site-name" content="blog">
-<meta name="twitter:title" content="">
-<meta name="twitter:image" content="https://github.com/acastroaraujo/blog/posts/2024-01-04-fetishism-and-the-variables-paradigm/images/redpill.jpeg">
-<meta name="twitter:card" content="summary_large_image">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="blog">
+<meta property="og:site_name" content="blog">
+<meta name="twitter:title" content="blog">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -115,29 +147,29 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://acastroaraujo.github.io" rel="" target=""><i class="bi bi-house" role="img">
+    <a class="nav-link" href="https://acastroaraujo.github.io"> <i class="bi bi-house" role="img">
 </i> 
- <span class="menu-text">about</span></a>
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://acastroaraujo.github.io/cv/" rel="" target=""><i class="bi bi-file-person" role="img">
+    <a class="nav-link" href="https://acastroaraujo.github.io/cv/"> <i class="bi bi-file-person" role="img">
 </i> 
- <span class="menu-text">cv</span></a>
+<span class="menu-text">cv</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://github.com/acastroaraujo" rel="" target=""><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/acastroaraujo"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text">github</span></a>
+<span class="menu-text">github</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page"><i class="bi bi-chat-text" role="img">
+    <a class="nav-link active" href="./index.html" aria-current="page"> <i class="bi bi-chat-text" role="img">
 </i> 
- <span class="menu-text">blog</span></a>
+<span class="menu-text">blog</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -147,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Causality">Causality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Computation">Computation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Networks">Networks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Philosophy">Philosophy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Probability">Probability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Social Science">Social Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Sociology">Sociology <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Theory">Theory <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Causality">Causality <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Computation">Computation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Networks">Networks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Philosophy">Philosophy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Probability">Probability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Social Science">Social Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Sociology">Sociology <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Theory">Theory <span class="quarto-category-count">(4)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -157,21 +189,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Theory,Sociology" data-listing-date-sort="1704931200000" data-listing-file-modified-sort="1705036527065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="0" data-categories="Theory,Sociology" data-listing-date-sort="1706140800000" data-listing-file-modified-sort="1706559736149" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2458">
 <div class="thumbnail">
-<p><a href="./posts/2024-01-11-better-theories/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2024-01-25-levels/index.html" class="no-external"></a></p><a href="./posts/2024-01-25-levels/index.html" class="no-external">
+<p><img src="./posts/2024-01-25-levels/wimsatt.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-01-25-levels/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-01-11-better-theories/index.html">
 <h3 class="no-anchor listing-title">
-“Better Theories”
+<a href="./posts/2024-01-25-levels/index.html" class="no-external">Levels</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2024-01-25-levels/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Theory'); return false;">
 Theory
@@ -180,14 +213,48 @@ Theory
 Sociology
 </div>
 </div>
-<a href="./posts/2024-01-11-better-theories/index.html">
 <div class="listing-description">
-<p>Formal, pragmatic, aesthetic, and empirical virtues</p>
+<a href="./posts/2024-01-25-levels/index.html" class="no-external">Some of them are good. </a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/2024-01-25-levels/index.html" class="no-external">
+<div class="listing-date">
+Jan 25, 2024
+</div>
+<div class="listing-author">
+andrés castro araújo
 </div>
 </a>
 </div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Theory,Sociology" data-listing-date-sort="1704931200000" data-listing-file-modified-sort="1706559736145" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="444">
+<div class="thumbnail">
+<p><a href="./posts/2024-01-11-better-theories/index.html" class="no-external"></a></p><a href="./posts/2024-01-11-better-theories/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2024-01-11-better-theories/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2024-01-11-better-theories/index.html" class="no-external">“Better Theories”</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/2024-01-11-better-theories/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Theory'); return false;">
+Theory
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Sociology'); return false;">
+Sociology
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/2024-01-11-better-theories/index.html" class="no-external">Formal, pragmatic, aesthetic, and empirical virtues </a>
+</div>
+</div>
 <div class="metadata">
-<a href="./posts/2024-01-11-better-theories/index.html">
+<a href="./posts/2024-01-11-better-theories/index.html" class="no-external">
 <div class="listing-date">
 Jan 11, 2024
 </div>
@@ -197,19 +264,19 @@ andrés castro araújo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Sociology,Theory" data-listing-date-sort="1704326400000" data-listing-file-modified-sort="1705036527065" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12">
+<div class="quarto-post image-right" data-index="2" data-categories="Sociology,Theory" data-listing-date-sort="1704326400000" data-listing-file-modified-sort="1706559736145" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2346">
 <div class="thumbnail">
-<p><a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html"> <img src="./posts/2024-01-04-fetishism-and-the-variables-paradigm/images/redpill.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html" class="no-external"></a></p><a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html" class="no-external">
+<p><img src="./posts/2024-01-04-fetishism-and-the-variables-paradigm/images/redpill.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html">
 <h3 class="no-anchor listing-title">
-Fetishism and The “Variables Paradigm”
+<a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html" class="no-external">Fetishism and The “Variables Paradigm”</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Sociology'); return false;">
 Sociology
@@ -218,14 +285,12 @@ Sociology
 Theory
 </div>
 </div>
-<a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html">
 <div class="listing-description">
-<p>Please don’t.</p>
+<a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html" class="no-external">Please don’t. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html">
+<a href="./posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html" class="no-external">
 <div class="listing-date">
 Jan 4, 2024
 </div>
@@ -235,19 +300,19 @@ andrés castro araújo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Sociology,Networks" data-listing-date-sort="1704153600000" data-listing-file-modified-sort="1705036527057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13">
+<div class="quarto-post image-right" data-index="3" data-categories="Sociology,Networks" data-listing-date-sort="1704153600000" data-listing-file-modified-sort="1706559736137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2537">
 <div class="thumbnail">
-<p><a href="./posts/2024-01-02-what-is-usa-sociology/index.html"> <p class="card-img-top"><img src="posts/2024-01-02-what-is-usa-sociology/index_files/figure-html/fig-areas-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2024-01-02-what-is-usa-sociology/index.html" class="no-external"></a></p><a href="./posts/2024-01-02-what-is-usa-sociology/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2024-01-02-what-is-usa-sociology/index_files/figure-html/fig-areas-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2024-01-02-what-is-usa-sociology/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2024-01-02-what-is-usa-sociology/index.html">
 <h3 class="no-anchor listing-title">
-What is Sociology in the USA?
+<a href="./posts/2024-01-02-what-is-usa-sociology/index.html" class="no-external">What is Sociology in the USA?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2024-01-02-what-is-usa-sociology/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Sociology'); return false;">
 Sociology
@@ -256,14 +321,12 @@ Sociology
 Networks
 </div>
 </div>
-<a href="./posts/2024-01-02-what-is-usa-sociology/index.html">
 <div class="listing-description">
-<p>A visualization.</p>
+<a href="./posts/2024-01-02-what-is-usa-sociology/index.html" class="no-external">A visualization. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2024-01-02-what-is-usa-sociology/index.html">
+<a href="./posts/2024-01-02-what-is-usa-sociology/index.html" class="no-external">
 <div class="listing-date">
 Jan 2, 2024
 </div>
@@ -273,19 +336,19 @@ andrés castro araújo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Philosophy,Statistics" data-listing-date-sort="1703980800000" data-listing-file-modified-sort="1705036527057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="4" data-categories="Philosophy,Statistics" data-listing-date-sort="1703980800000" data-listing-file-modified-sort="1706559736137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="253">
 <div class="thumbnail">
-<p><a href="./posts/2023-12-31-data/index.html"> <p class="card-img-top"><img src="posts/2023-12-31-data/index_files/figure-html/unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2023-12-31-data/index.html" class="no-external"></a></p><a href="./posts/2023-12-31-data/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2023-12-31-data/index_files/figure-html/unnamed-chunk-1-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2023-12-31-data/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-12-31-data/index.html">
 <h3 class="no-anchor listing-title">
-Data
+<a href="./posts/2023-12-31-data/index.html" class="no-external">Data</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-12-31-data/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Philosophy'); return false;">
 Philosophy
@@ -294,14 +357,12 @@ Philosophy
 Statistics
 </div>
 </div>
-<a href="./posts/2023-12-31-data/index.html">
 <div class="listing-description">
-<p>What is data, if not experience persevering?</p>
+<a href="./posts/2023-12-31-data/index.html" class="no-external">What is data, if not experience persevering? </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-12-31-data/index.html">
+<a href="./posts/2023-12-31-data/index.html" class="no-external">
 <div class="listing-date">
 Dec 31, 2023
 </div>
@@ -311,19 +372,19 @@ andrés castro araújo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Social Science,Computation" data-listing-date-sort="1703635200000" data-listing-file-modified-sort="1705036527057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="5" data-categories="Social Science,Computation" data-listing-date-sort="1703635200000" data-listing-file-modified-sort="1706559736137" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1565">
 <div class="thumbnail">
-<p><a href="./posts/2023-12-27-what-is-computational-social-science/index.html"> <img src="./posts/2023-12-27-what-is-computational-social-science/images/shakira.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/2023-12-27-what-is-computational-social-science/index.html" class="no-external"></a></p><a href="./posts/2023-12-27-what-is-computational-social-science/index.html" class="no-external">
+<p><img src="./posts/2023-12-27-what-is-computational-social-science/images/shakira.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./posts/2023-12-27-what-is-computational-social-science/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2023-12-27-what-is-computational-social-science/index.html">
 <h3 class="no-anchor listing-title">
-What is Computational Social Science?
+<a href="./posts/2023-12-27-what-is-computational-social-science/index.html" class="no-external">What is Computational Social Science?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2023-12-27-what-is-computational-social-science/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Social Science'); return false;">
 Social Science
@@ -332,14 +393,12 @@ Social Science
 Computation
 </div>
 </div>
-<a href="./posts/2023-12-27-what-is-computational-social-science/index.html">
 <div class="listing-description">
-<p>It is a trading zone, driven by improvements in digital technology and associated with a new professional group.</p>
+<a href="./posts/2023-12-27-what-is-computational-social-science/index.html" class="no-external">It is a trading zone, driven by improvements in digital technology and associated with a new professional group. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2023-12-27-what-is-computational-social-science/index.html">
+<a href="./posts/2023-12-27-what-is-computational-social-science/index.html" class="no-external">
 <div class="listing-date">
 Dec 27, 2023
 </div>
@@ -349,19 +408,19 @@ andrés castro araújo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="R,Probability" data-listing-date-sort="1652313600000" data-listing-file-modified-sort="1705036527053" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="6" data-categories="R,Probability" data-listing-date-sort="1652313600000" data-listing-file-modified-sort="1706559736133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1584">
 <div class="thumbnail">
-<p><a href="./posts/2022-05-12-distributions-in-r/index.html"> <p class="card-img-top"><img src="posts/2022-05-12-distributions-in-r/index_files/figure-html/unnamed-chunk-3-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2022-05-12-distributions-in-r/index.html" class="no-external"></a></p><a href="./posts/2022-05-12-distributions-in-r/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2022-05-12-distributions-in-r/index_files/figure-html/unnamed-chunk-3-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2022-05-12-distributions-in-r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-05-12-distributions-in-r/index.html">
 <h3 class="no-anchor listing-title">
-Distributions in R
+<a href="./posts/2022-05-12-distributions-in-r/index.html" class="no-external">Distributions in R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-05-12-distributions-in-r/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
@@ -370,14 +429,12 @@ R
 Probability
 </div>
 </div>
-<a href="./posts/2022-05-12-distributions-in-r/index.html">
 <div class="listing-description">
-<p>A short tutorial.</p>
+<a href="./posts/2022-05-12-distributions-in-r/index.html" class="no-external">A short tutorial. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-05-12-distributions-in-r/index.html">
+<a href="./posts/2022-05-12-distributions-in-r/index.html" class="no-external">
 <div class="listing-date">
 May 12, 2022
 </div>
@@ -387,19 +444,19 @@ andrés castro araújo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Theory,Sociology" data-listing-date-sort="1644192000000" data-listing-file-modified-sort="1705036527053" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
+<div class="quarto-post image-right" data-index="7" data-categories="Theory,Sociology" data-listing-date-sort="1644192000000" data-listing-file-modified-sort="1706559736133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="871">
 <div class="thumbnail">
-<p><a href="./posts/2022-02-07-theory-work/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
+<p><a href="./posts/2022-02-07-theory-work/index.html" class="no-external"></a></p><a href="./posts/2022-02-07-theory-work/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2022-02-07-theory-work/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-02-07-theory-work/index.html">
 <h3 class="no-anchor listing-title">
-Theory-Work
+<a href="./posts/2022-02-07-theory-work/index.html" class="no-external">Theory-Work</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-02-07-theory-work/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Theory'); return false;">
 Theory
@@ -408,14 +465,12 @@ Theory
 Sociology
 </div>
 </div>
-<a href="./posts/2022-02-07-theory-work/index.html">
 <div class="listing-description">
-<p>Deepities, social constructionism, and sociological theory.</p>
+<a href="./posts/2022-02-07-theory-work/index.html" class="no-external">Deepities, social constructionism, and sociological theory. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-02-07-theory-work/index.html">
+<a href="./posts/2022-02-07-theory-work/index.html" class="no-external">
 <div class="listing-date">
 Feb 7, 2022
 </div>
@@ -425,19 +480,19 @@ andrés castro araújo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Statistics,Causality" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1705036527053" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="8" data-categories="Statistics,Causality" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1706559736133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1648">
 <div class="thumbnail">
-<p><a href="./posts/2022-01-01-regression-to-the-mean/index.html"> <p class="card-img-top"><img src="posts/2022-01-01-regression-to-the-mean/index_files/figure-html/unnamed-chunk-2-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2022-01-01-regression-to-the-mean/index.html" class="no-external"></a></p><a href="./posts/2022-01-01-regression-to-the-mean/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2022-01-01-regression-to-the-mean/index_files/figure-html/unnamed-chunk-2-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2022-01-01-regression-to-the-mean/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2022-01-01-regression-to-the-mean/index.html">
 <h3 class="no-anchor listing-title">
-Regression to the Mean
+<a href="./posts/2022-01-01-regression-to-the-mean/index.html" class="no-external">Regression to the Mean</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2022-01-01-regression-to-the-mean/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
 Statistics
@@ -446,14 +501,12 @@ Statistics
 Causality
 </div>
 </div>
-<a href="./posts/2022-01-01-regression-to-the-mean/index.html">
 <div class="listing-description">
-<p>A visual explanation.</p>
+<a href="./posts/2022-01-01-regression-to-the-mean/index.html" class="no-external">A visual explanation. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2022-01-01-regression-to-the-mean/index.html">
+<a href="./posts/2022-01-01-regression-to-the-mean/index.html" class="no-external">
 <div class="listing-date">
 Jan 1, 2022
 </div>
@@ -463,32 +516,30 @@ andrés castro araújo
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="R" data-listing-date-sort="1611446400000" data-listing-file-modified-sort="1705036527041" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="9" data-categories="R" data-listing-date-sort="1611446400000" data-listing-file-modified-sort="1706559736121" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="471">
 <div class="thumbnail">
-<p><a href="./posts/2021-01-24-optimization-in-r/index.html"> <p class="card-img-top"><img src="posts/2021-01-24-optimization-in-r/index_files/figure-html/unnamed-chunk-2-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<p><a href="./posts/2021-01-24-optimization-in-r/index.html" class="no-external"></a></p><a href="./posts/2021-01-24-optimization-in-r/index.html" class="no-external">
+<p class="card-img-top"><img src="posts/2021-01-24-optimization-in-r/index_files/figure-html/unnamed-chunk-2-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/2021-01-24-optimization-in-r/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/2021-01-24-optimization-in-r/index.html">
 <h3 class="no-anchor listing-title">
-Optimization in R
+<a href="./posts/2021-01-24-optimization-in-r/index.html" class="no-external">Optimization in R</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/2021-01-24-optimization-in-r/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
 R
 </div>
 </div>
-<a href="./posts/2021-01-24-optimization-in-r/index.html">
 <div class="listing-description">
-<p>A few different ways to do optimization.</p>
+<a href="./posts/2021-01-24-optimization-in-r/index.html" class="no-external">A few different ways to do optimization. </a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/2021-01-24-optimization-in-r/index.html">
+<a href="./posts/2021-01-24-optimization-in-r/index.html" class="no-external">
 <div class="listing-date">
 Jan 24, 2021
 </div>
@@ -582,10 +633,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -595,8 +645,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -609,6 +668,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -652,6 +830,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -677,6 +856,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -737,6 +942,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
