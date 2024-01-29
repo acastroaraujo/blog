@@ -103,7 +103,7 @@ These are levels of *realization.* A computation is implemented by an algorithm,
 > @minddes2023 [pp. 63]
 
 | Computational theory                                                                                                              | Representation and algorithm                                                                                                                                            | Hardware implementation                                          |
-|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+|------------------------|-----------------------------|-------------------|
 | What is the goal of the computation, why is it appropriate, and what is the logic of the strategy by which it can be carried out? | How can this computational theory be implemented? In particular, what is the representation for the input and output, and what is the algorithm for the transformation? | How can the representation and algorithm be realized physically? |
 
 : The three levels at which any machine carrying out an information-processing task must be understood. {#tbl-marr tbl-colwidths="\[33,34,33\]"}
@@ -146,7 +146,7 @@ For example, a researcher might be interested in explaining how human groups acc
 
 A mechanism approach to levels also guards against "spooky emergentism" or ontologically unmoored macro abstractions---i.e., what happens when sociologists commit to the existence of higher-level phenomena that have no explanation in terms of the organized activities of their component parts. Nothing "emerges" from levels of mechanisms except in the trivial sense that organized parts do things that they cannot do in isolation.
 
-Importantly, mechanistic explanations are not committed to [methodological individualism]{.allcaps} or the view according to which explanations must always point towards individuals and their choices.
+Importantly, mechanistic explanations are *not* committed to [methodological individualism]{.allcaps}---i.e., the view according to which good explanations must always point towards individuals and their choices.
 
 > It is not part of our view that all explanations must bottom out in some privileged set of fundamental entities and activities...
 >
