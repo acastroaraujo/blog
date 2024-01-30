@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>blog</title>
+<link>https://acastroaraujo.github.io/blog/</link>
+<atom:link href="https://acastroaraujo.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>andrés writes unpublishable stuff instead of working on his dissertation</description>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Thu, 25 Jan 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Levels</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2024-01-25-levels/</link>
+  <description><![CDATA[ Some of them are good. ]]></description>
+  <category>Theory</category>
+  <category>Sociology</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2024-01-25-levels/</guid>
+  <pubDate>Thu, 25 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://acastroaraujo.github.io/blog/posts/2024-01-25-levels/wimsatt.png" medium="image" type="image/png" height="92" width="144"/>
+</item>
+<item>
+  <title>“Better Theories”</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2024-01-11-better-theories/</link>
+  <description><![CDATA[ Formal, pragmatic, aesthetic, and empirical virtues ]]></description>
+  <category>Theory</category>
+  <category>Sociology</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2024-01-11-better-theories/</guid>
+  <pubDate>Thu, 11 Jan 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Fetishism and The “Variables Paradigm”</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2024-01-04-fetishism-and-the-variables-paradigm/</link>
+  <description><![CDATA[ Please don’t. ]]></description>
+  <category>Sociology</category>
+  <category>Theory</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2024-01-04-fetishism-and-the-variables-paradigm/</guid>
+  <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://acastroaraujo.github.io/blog/posts/2024-01-04-fetishism-and-the-variables-paradigm/images/redpill.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>What is Sociology in the USA?</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2024-01-02-what-is-usa-sociology/</link>
+  <description><![CDATA[ A visualization. ]]></description>
+  <category>Sociology</category>
+  <category>Networks</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2024-01-02-what-is-usa-sociology/</guid>
+  <pubDate>Tue, 02 Jan 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Data</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2023-12-31-data/</link>
+  <description><![CDATA[ What is data, if not experience persevering? ]]></description>
+  <category>Philosophy</category>
+  <category>Statistics</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2023-12-31-data/</guid>
+  <pubDate>Sun, 31 Dec 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>What is Computational Social Science?</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2023-12-27-what-is-computational-social-science/</link>
+  <description><![CDATA[ It is a trading zone, driven by improvements in digital technology and associated with a new professional group. ]]></description>
+  <category>Social Science</category>
+  <category>Computation</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2023-12-27-what-is-computational-social-science/</guid>
+  <pubDate>Wed, 27 Dec 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://acastroaraujo.github.io/blog/posts/2023-12-27-what-is-computational-social-science/images/shakira.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Distributions in R</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2022-05-12-distributions-in-r/</link>
+  <description><![CDATA[ A short tutorial. ]]></description>
+  <category>R</category>
+  <category>Probability</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2022-05-12-distributions-in-r/</guid>
+  <pubDate>Thu, 12 May 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Theory-Work</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2022-02-07-theory-work/</link>
+  <description><![CDATA[ Deepities, social constructionism, and sociological theory. ]]></description>
+  <category>Theory</category>
+  <category>Sociology</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2022-02-07-theory-work/</guid>
+  <pubDate>Mon, 07 Feb 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Regression to the Mean</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2022-01-01-regression-to-the-mean/</link>
+  <description><![CDATA[ A visual explanation. ]]></description>
+  <category>Statistics</category>
+  <category>Causality</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2022-01-01-regression-to-the-mean/</guid>
+  <pubDate>Sat, 01 Jan 2022 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Optimization in R</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2021-01-24-optimization-in-r/</link>
+  <description><![CDATA[ A few different ways to do optimization. ]]></description>
+  <category>R</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2021-01-24-optimization-in-r/</guid>
+  <pubDate>Sun, 24 Jan 2021 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
