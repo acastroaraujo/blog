@@ -4,6 +4,9 @@ listing:
   sort: "date desc"
   type: default
   categories: true
+  feed: 
+    type: partial
+    description: "andrés writes unpublishable stuff instead of working on his dissertation"
   sort-ui: false
   filter-ui: false
 page-layout: full

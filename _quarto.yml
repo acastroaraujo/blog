@@ -4,6 +4,7 @@ project:
 
 website:
   title: "blog"
+  site-url: https://acastroaraujo.github.io/blog/
   open-graph: true
   twitter-card: true
   navbar:
@@ -21,6 +22,9 @@ website:
       - icon: chat-text
         text: blog
         href: index.qmd
+    right:
+      - icon: rss
+        href: index.xml
 
 format:
   html:

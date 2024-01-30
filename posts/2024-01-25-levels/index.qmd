@@ -14,7 +14,7 @@ tbl-cap-location: bottom
 
 The metaphor of *levels* is used to describe the world *all the time.*
 
-These metaphors are too basic to how we organize the world. Scientists use them all the time. Rejecting these metaphors just because some obscure sociologist made poor use of them is laughable. So the word "level" may be inevitable, but it is also vague and invites confusion.
+These metaphors are too basic to how we organize the world. Scientists use them all the time. Rejecting these metaphors just because some obscure sociologist made poor use of them is laughable. So, the word "level" is inevitable, but it is also vague and invites confusion.
 
 **Problems**
 
@@ -46,23 +46,23 @@ The rest of this entry focuses on more legitimate ways of using the levels metap
 
 ------------------------------------------------------------------------
 
-*Note. I will ignore three other commonly used kinds of levels:* [*scale*]{.allcaps}*, [processing]{.allcaps}, and [disciplinary topic]{.allcaps}.[^2]*
+*Note. I will ignore three other commonly used kinds of levels:* [*scale*]{.allcaps}*, [processing]{.allcaps}, and [disciplinary topic]{.allcaps}.*[^2]
 
-[^2]: I will also ignore the related (and important) notion of units of analysis---i.e., levels individuated by units of measurement (e.g., individuals, organizations, groups, populations).
+[^2]: *I will also ignore the related (and important) notion of units of analysis---i.e., levels are individuated (made distinct) by units of measurement (e.g., individuals, organizations, groups, populations).*
 
--   *Levels defined with regard to [scale]{.allcaps} (temporal or spatial). These are levels defined by some kind of zooming-in or zooming-out operation, which we usually summarize with the adjectives of micro, meso, and macro.*
+-   *Levels defined with regard to [scale]{.allcaps} (temporal or spatial). These are levels defined by some kind of zooming-in and zooming-out operation, to which we commonly apply the adjectives of micro, meso, and macro.*
 
     *These levels cannot be fixed a priori; they are analytical distinctions driven by pragmatic concerns.*
 
--   *Levels of [processing]{.allcaps}, in which different processing units are related as "upstream" or "downstream" from each other in some [flow of information]{.allcaps}* *(or some [sequence of production]{.allcaps}). In other words, the relation between units is temporal.*
+-   *Levels of [processing]{.allcaps}, in which different processing units are related as "upstream" or "downstream" from each other in some [flow of information]{.allcaps}* *(or in some [sequence of production]{.allcaps}). In other words, the relation between units is temporal.*
 
     *Many interesting discoveries only make sense within this framework. For example, the idea that information flows in organizational hierarchies are characterized by "uncertainty absorption" [@march1993, pp. 165]. Workers near the bottom of organizational hierarchies collect "raw" information; this information is then edited, standardized, and summarized in the process of moving upward in the organizational hierarchy; thus, by the time it reaches those at the top, the information appears more robust than it actually is.*
 
 -   *Levels defined with regards to loosely defined and overlapping [disciplinary topics]{.allcaps} (e.g., economic, political, social, cultural). These levels seem straightforward because they mimic the academic division of labor between economics, political science, sociology, and anthropology. But these levels shouldn't be taken seriously. At best, they serve heuristic purposes; at worst, they distort reality.*
 
-    *Some sociologists embrace this framework and and then start talking about the constant interpenetration of abstract subsystems or institutional spheres. But vague talk about "interpenetration" should be understood as an admission of non-distinctiveness between levels.*
-
     *Avoid when possible.*
+
+    *Some sociologists embrace this framework and and then start talking about the constant interpenetration of abstract subsystems or institutional spheres. But vague talk about "interpenetration" should be understood as an admission of non-distinctiveness between levels.*
 
 ## Levels of Description
 
@@ -112,11 +112,7 @@ These are levels of *realization.* A computation is implemented by an algorithm,
 
 : The three levels at which any machine carrying out an information-processing task must be understood. {#tbl-marr tbl-colwidths="\[33,34,33\]"}
 
-<aside>
-
-Source: David Marr [-@marr1982, pp. 64]
-
-</aside>
+<aside>Source: David Marr [-@marr1982, pp. 64]</aside>
 
 More importantly, the three levels also *constrain* each other.
 
@@ -130,7 +126,9 @@ Many sociologists---following on the footsteps of Georg Simmel---like to disting
 
 Perspectives that privilege [structure]{.allcaps} have produced many important ideas such as the strength of weak ties, structural holes, and vacancy chains. Perspectives that privilege [culture]{.allcaps} emphasize ideas such roles, rules, categories, schemas, and legitimacy.
 
-The idea is that the analysis of each level can be partially decoupled from the other, even though each level is just a different way of representing the same phenomena. Each level constitutes the blind spot of the other. Thus, some novel forms of network analysis have attempted to incorporate both [e.g., @pachucki2010].
+The idea is that the analysis of each level can be partially decoupled from the other, even though each level is just a different way of representing the same phenomena. They are different sides of the same coin. Each level makes up the blind spot of the other.
+
+Some novel forms of network analysis attempt to incorporate both levels simultaneously [e.g., @pachucki2010].
 
 ## Levels of Organization
 
