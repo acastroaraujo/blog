@@ -14,7 +14,9 @@ tbl-cap-location: bottom
 
 The metaphor of *levels* is used to describe the world *all the time.*
 
-These metaphors are too basic to how we organize the world. Scientists use them all the time. Rejecting these metaphors just because some obscure sociologist made poor use of them is laughable. So the word "level" may be inevitable, but it is also vague. It invites confusion.
+These metaphors are too basic to how we organize the world. Scientists use them all the time. Rejecting these metaphors just because some obscure sociologist made poor use of them is laughable. So the word "level" may be inevitable, but it is also vague and invites confusion.
+
+**Problems**
 
 Most problems with the levels metaphor stem from being committed to the following:
 
@@ -40,25 +42,27 @@ Sounds insightful, right? *No, it is not.*
 
 Many disciplines cast a wide net. The relationship between scientific disciplines and "ontological levels" is *many-to-many.* For example, evolutionary biology encompasses genes, organisms, populations, and environments. Take a look at virtually any scientific discipline and you'll find the same.
 
-The rest of this notebook focuses on more legitimate ways of using the levels metaphors in different contexts. I will focus on two kinds of levels that I found useful: (1) levels of [description]{.allcaps}, in which we look at the same phenomena from different perspectives; and (2) levels of [organization]{.allcaps}, in which we look at relationships between "wholes" and their relevant "component parts."
+The rest of this entry focuses on more legitimate ways of using the levels metaphors in different contexts. I will focus on two kinds of levels that I find useful: (1) levels of [description]{.allcaps}, in which we look at the same phenomena from different perspectives; and (2) levels of [organization]{.allcaps}, in which we look at relationships between "wholes" and their relevant "component parts."
 
 ------------------------------------------------------------------------
 
-*Note. I will ignore three other commonly used kinds of levels.*[^2]
+*Note. I will ignore three other commonly used kinds of levels:* [*scale*]{.allcaps}*, [processing]{.allcaps}, and [disciplinary topic]{.allcaps}.[^2]*
 
-[^2]: I will also ignore the related (and important) notion of *units of analysis*---i.e., levels individuated by units of measurement (e.g., individuals, organizations, groups, populations).
+[^2]: I will also ignore the related (and important) notion of units of analysis---i.e., levels individuated by units of measurement (e.g., individuals, organizations, groups, populations).
 
 -   *Levels defined with regard to [scale]{.allcaps} (temporal or spatial). These are levels defined by some kind of zooming-in or zooming-out operation, which we usually summarize with the adjectives of micro, meso, and macro.*
 
-    *These levels cannot be fixed a priori. Instead, I take them to analytical distinctions driven by pragmatic concerns.*
+    *These levels cannot be fixed a priori; they are analytical distinctions driven by pragmatic concerns.*
 
--   *Levels of [processing]{.allcaps}, in which different processing units are related as "upstream" or "downstream" from each other in some flow of information (or some sequence of production). In other words, the relation between entities is temporal.*
+-   *Levels of [processing]{.allcaps}, in which different processing units are related as "upstream" or "downstream" from each other in some [flow of information]{.allcaps}* *(or some [sequence of production]{.allcaps}). In other words, the relation between units is temporal.*
 
-    *Many interesting discoveries only make sense within this framework. For example, the idea that information flows in organizational hierarchies are characterized by "uncertainty absorption" [@march1993, pp. 165]. Workers near the bottom of organizational hierarchies collect "raw" information; this information is then edited, standardized, and summarized in the process of moving upward in the organizational hierarchy; thus, information appears more robust than it actually is by the it reaches those at the top.*
+    *Many interesting discoveries only make sense within this framework. For example, the idea that information flows in organizational hierarchies are characterized by "uncertainty absorption" [@march1993, pp. 165]. Workers near the bottom of organizational hierarchies collect "raw" information; this information is then edited, standardized, and summarized in the process of moving upward in the organizational hierarchy; thus, by the time it reaches those at the top, the information appears more robust than it actually is.*
 
 -   *Levels defined with regards to loosely defined and overlapping [disciplinary topics]{.allcaps} (e.g., economic, political, social, cultural). These levels seem straightforward because they mimic the academic division of labor between economics, political science, sociology, and anthropology. But these levels shouldn't be taken seriously. At best, they serve heuristic purposes; at worst, they distort reality.*
 
     *Some sociologists embrace this framework and and then start talking about the constant interpenetration of abstract subsystems or institutional spheres. But vague talk about "interpenetration" should be understood as an admission of non-distinctiveness between levels.*
+
+    *Avoid when possible.*
 
 ## Levels of Description
 
@@ -70,9 +74,9 @@ These levels are legitimate insofar they make important (non-redundant) contribu
 
 I will focus on two well-established levels of description:
 
--   David Marr's hierarchy of analysis with regard to information-processing systems, in which we refer to *levels of realization.*
+-   David Marr's hierarchy for the analysis of information-processing systems, in which levels refer to [realization]{.allcaps} (or *implementation)*.
 
--   The common distinction between [social structure]{.allcaps} and [culture]{.allcaps}, in which levels stem from the classic philosophical distinction between *form* and *content.*
+-   The distinction between [social structure]{.allcaps} and [culture]{.allcaps}, in which levels stem from the classic philosophical distinction between *form* and *content.*
 
 ### Realization
 
@@ -86,21 +90,21 @@ Marr's famous hierarchy of analysis consists of three levels, summarized in @tbl
 
 -   The [representation and algorithm]{.allcaps} level.
 
-    Information-processing systems must represent their inputs and outputs in accordance to some form of formal scheme.[^3] This is important because "any particular representation makes certain information explicit at the expense of information that is pushed into the background and may be quite hard to recover" [@minddes2023, pp. 60].
+    Information-processing systems must represent their inputs and outputs in accordance to some form of formal scheme.[^3] This is important because "any particular representation makes certain information explicit at the expense of information that is pushed into the background and may be quite hard to recover" [@marr1982, pp. 60].
 
-    Results in this level can be established without regard to the physical entities actually instantiating the algorithm---e.g., is the computation *tractable* [e.g., @kleinberg2000; @vanrooij2008]?
+    Results at this level can be established without regard to the physical entities actually instantiating the algorithm---e.g., is the computation *tractable* [e.g., @kleinberg2000; @vanrooij2008]?
 
 -   The [physical implementation]{.allcaps} level.
 
-    An account of physical computation is outside the scope of this notebook [see @piccinini2015].
+    An account of physical computation is outside the scope of this entry [see @piccinini2015].
 
-[^3]: "To say that something is a formal scheme means only that it is a set of symbols with rules for putting them together---no more and no less" [@minddes2023, pp. 60].
+[^3]: "To say that something is a formal scheme means only that it is a set of symbols with rules for putting them together---no more and no less" [@marr1982, pp. 60].
 
-These are levels of *realization.* A computation is implemented by an algorithm, which in turn is implemented by some kind of physical system. The analysis of each level can be partially decoupled from the other because of the general notion of *multiple realizability*---i.e., the same computation can be realized by a variety of algorithms; and the same algorithm can be realized by a variety of physical entities.
+These are levels of *realization.* A computation is implemented by an algorithm, which in turn is implemented by some kind of physical system. The analysis at each level can be partially decoupled from the others because of the general notion of *multiple realizability*---i.e., the same computation can be realized by a variety of algorithms; and the same algorithm can be realized by a variety of physical entities.
 
 > The choice of an algorithm is influenced for example, by what it has to do and by the hardware in which it must run. But there is a wide choice available at each level, and the explication of each level involves issues that are rather independent of the other two.
 >
-> @minddes2023 [pp. 63]
+> @marr1982 [pp. 63]
 
 | Computational theory                                                                                                              | Representation and algorithm                                                                                                                                            | Hardware implementation                                          |
 |------------------------|-----------------------------|-------------------|
@@ -110,9 +114,7 @@ These are levels of *realization.* A computation is implemented by an algorithm,
 
 <aside>
 
-Source: David Marr's *Vision* (1982)
-
-@minddes2023 [pp. 64]
+Source: David Marr [-@marr1982, pp. 64]
 
 </aside>
 
@@ -130,21 +132,21 @@ Perspectives that privilege [structure]{.allcaps} have produced many important i
 
 The idea is that the analysis of each level can be partially decoupled from the other, even though each level is just a different way of representing the same phenomena. Each level constitutes the blind spot of the other. Thus, some novel forms of network analysis have attempted to incorporate both [e.g., @pachucki2010].
 
-## Levels of Organization (Mechanisms)
+## Levels of Organization
 
-I find the levels metaphor to be most useful when used to distinguish between *wholes* (or "systems") and their component *parts.*[^4]
+The levels metaphor is most useful when it distinguishes between *wholes* and their component *parts.*[^4]
 
 [^4]: "Levels of parts and wholes must also be correlated with size differences because parts can be no larger than the wholes they compose. But the size differences between levels of parts and wholes are an accidental consequence of the part-whole relationship itself, not part of defining what it is for things to be at different part-whole levels" [@craver2014, pp. 12].
 
-The main idea is behind mechanistic explanations is to figure out how the organized activities of parts produce some property or behavior of a larger whole [@craver2013; @craver2007; @craver2001; @machamer2000]. Here, the levels metaphor relates some activity or feature of a whole (a [mechanism]{.allcaps}) to the properties and organized activities of relevant component parts. These component parts work together to accomplish something that they cannot do on their own. Mechanisms are, by definition, more than the sum of their parts.
+The main idea is behind mechanistic explanations is to figure out how the organized activities of parts produce some property or behavior of a larger whole [@craver2013; @craver2007; @craver2001; @machamer2000]. Here, the levels metaphor relates some activity or feature of a whole to the properties and organized activities of relevant component parts. This is what it means to describe a [mechanism]{.allcaps}: the component parts work *together* to accomplish something that they cannot do on their own. [Mechanisms]{.allcaps}--- by definition---are more than the sum of their parts.
 
 This provides for a very different view of levels from the "layered" metaphor I complained about at the beginning. Part-to-whole levels don't represent monolithic divisions in the furniture of the world. There is no correspondence between the levels in the nervous system, the circulatory system, and various sorts of social systems. "Levels of mechanisms cannot be read off a menu of levels in advance" [@craver2014, pp. 18].
 
-For example, a researcher might be interested in explaining how human groups accomplish complex tasks---e.g., spatial learning and navigation [@vaughan2021; @hutchins1995]. Or she might be interested in figuring out when do status hierarchies enhance the performance of task-oriented groups [@willer2009]. Or she might simply be an organizational sociologist.
+For example, a researcher might be interested in explaining how human groups accomplish complex tasks---e.g., spatial learning and navigation [@vaughan2021; @hutchins1995]. Or they might be interested in figuring out how status hierarchies enhance the performance of task-oriented groups [@willer2009]. Or they might simply be an organizational sociologist.
 
-**Mechanism levels are not spooky**
+[**Mechanism**]{.allcaps} **levels are not spooky**
 
-A mechanism approach to levels also guards against "spooky emergentism" or ontologically unmoored macro abstractions---i.e., what happens when sociologists commit to the existence of higher-level phenomena that have no explanation in terms of the organized activities of their component parts. Nothing "emerges" from levels of mechanisms except in the trivial sense that organized parts do things that they cannot do in isolation.
+A [mechanism]{.allcaps} approach to levels also guards against "spooky emergentism" or ontologically unmoored macro abstractions---i.e., what happens when sociologists commit to the existence of higher-level phenomena that have no explanation in terms of the organized activities of their component parts. Nothing "emerges" from levels of [mechanisms]{.allcaps} except in the trivial sense that organized parts do things that they cannot do in isolation.
 
 Importantly, mechanistic explanations are *not* committed to [methodological individualism]{.allcaps}---i.e., the view according to which good explanations must always point towards individuals and their choices.
 
