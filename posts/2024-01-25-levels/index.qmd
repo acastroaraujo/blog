@@ -38,7 +38,7 @@ These additional commitments seem innocuous and maybe obvious at times. For exam
 >
 > @abbott2001 [pp. 140]
 
-Sounds insightful, right? *No, it is not.*
+Sounds insightful, right? Maybe, a little bit, but it's also very *misleading.*
 
 Many disciplines cast a wide net. The relationship between scientific disciplines and "ontological levels" is *many-to-many.* For example, evolutionary biology encompasses genes, organisms, populations, and environments. Take a look at virtually any scientific discipline and you'll find the same.
 
@@ -107,7 +107,7 @@ These are levels of *realization.* A computation is implemented by an algorithm,
 > @marr1982 [pp. 63]
 
 | Computational theory                                                                                                              | Representation and algorithm                                                                                                                                            | Hardware implementation                                          |
-|------------------------|-----------------------------|-------------------|
+|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
 | What is the goal of the computation, why is it appropriate, and what is the logic of the strategy by which it can be carried out? | How can this computational theory be implemented? In particular, what is the representation for the input and output, and what is the algorithm for the transformation? | How can the representation and algorithm be realized physically? |
 
 : The three levels at which any machine carrying out an information-processing task must be understood. {#tbl-marr tbl-colwidths="\[33,34,33\]"}
