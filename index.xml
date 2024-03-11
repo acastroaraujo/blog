@@ -9,8 +9,16 @@
 <link>https://acastroaraujo.github.io/blog/</link>
 <atom:link href="https://acastroaraujo.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>andrés writes unpublishable stuff instead of working on his dissertation</description>
-<generator>quarto-1.4.549</generator>
-<lastBuildDate>Thu, 25 Jan 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.551</generator>
+<lastBuildDate>Sun, 10 Mar 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Path Dependence</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2024-03-10-path-dependence/</link>
+  <description><![CDATA[ Polya Urns ]]></description>
+  <guid>https://acastroaraujo.github.io/blog/posts/2024-03-10-path-dependence/</guid>
+  <pubDate>Sun, 10 Mar 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Levels</title>
   <dc:creator>andrés castro araújo</dc:creator>

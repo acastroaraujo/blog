@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://acastroaraujo.github.io/blog/posts/2022-02-07-theory-work/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.833Z</lastmod>
-  </url>
-  <url>
-    <loc>https://acastroaraujo.github.io/blog/posts/2024-01-11-better-theories/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.845Z</lastmod>
-  </url>
-  <url>
-    <loc>https://acastroaraujo.github.io/blog/posts/2024-01-02-what-is-usa-sociology/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.833Z</lastmod>
-  </url>
-  <url>
-    <loc>https://acastroaraujo.github.io/blog/posts/2022-05-12-distributions-in-r/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.833Z</lastmod>
-  </url>
-  <url>
-    <loc>https://acastroaraujo.github.io/blog/posts/2022-01-01-regression-to-the-mean/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.833Z</lastmod>
-  </url>
-  <url>
     <loc>https://acastroaraujo.github.io/blog/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.817Z</lastmod>
+    <lastmod>2024-03-11T00:04:53.524Z</lastmod>
   </url>
   <url>
     <loc>https://acastroaraujo.github.io/blog/posts/2021-01-24-optimization-in-r/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.817Z</lastmod>
+    <lastmod>2024-03-11T00:04:53.528Z</lastmod>
   </url>
   <url>
-    <loc>https://acastroaraujo.github.io/blog/posts/2024-01-25-levels/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.845Z</lastmod>
+    <loc>https://acastroaraujo.github.io/blog/posts/2022-02-07-theory-work/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.540Z</lastmod>
   </url>
   <url>
-    <loc>https://acastroaraujo.github.io/blog/posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.845Z</lastmod>
+    <loc>https://acastroaraujo.github.io/blog/posts/2022-05-12-distributions-in-r/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.540Z</lastmod>
   </url>
   <url>
-    <loc>https://acastroaraujo.github.io/blog/posts/2023-12-31-data/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.833Z</lastmod>
+    <loc>https://acastroaraujo.github.io/blog/posts/2022-01-01-regression-to-the-mean/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.540Z</lastmod>
   </url>
   <url>
     <loc>https://acastroaraujo.github.io/blog/posts/2023-12-27-what-is-computational-social-science/index.html</loc>
-    <lastmod>2024-01-30T20:26:47.833Z</lastmod>
+    <lastmod>2024-03-11T00:04:53.540Z</lastmod>
+  </url>
+  <url>
+    <loc>https://acastroaraujo.github.io/blog/posts/2024-01-04-fetishism-and-the-variables-paradigm/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.552Z</lastmod>
+  </url>
+  <url>
+    <loc>https://acastroaraujo.github.io/blog/posts/2024-03-10-path-dependence/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.556Z</lastmod>
+  </url>
+  <url>
+    <loc>https://acastroaraujo.github.io/blog/posts/2024-01-25-levels/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.556Z</lastmod>
+  </url>
+  <url>
+    <loc>https://acastroaraujo.github.io/blog/posts/2024-01-02-what-is-usa-sociology/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://acastroaraujo.github.io/blog/posts/2023-12-31-data/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.544Z</lastmod>
+  </url>
+  <url>
+    <loc>https://acastroaraujo.github.io/blog/posts/2024-01-11-better-theories/index.html</loc>
+    <lastmod>2024-03-11T00:04:53.556Z</lastmod>
   </url>
 </urlset>
