@@ -259,10 +259,11 @@ window.Quarto = {
 </section>
 <section id="data" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
-<p><strong><em>Note. The visualization provided below is provisional. I will need to email someone at the ASA and politely ask for permission to use the directory.</em></strong></p>
+<p><strong><em>Note. The visualization provided below is provisional. I will need to email someone at the ASA and politely ask for permission to use the full directory.</em></strong></p>
 <p>When a sociologist joins the <em>American Sociological Association</em> (ASA), they have the options to choose up to four “areas of interest” for everyone else to see. For example, I chose (1) <span class="allcaps">Theory</span>; (2) <span class="allcaps">Quantitative Methodology</span>; (3) <span class="allcaps">Organizations, Formal and Complex</span>; and (4) <span class="allcaps">Law and Society</span>. <em>And I would probably have chosen something different on a different day.</em></p>
 <p>So, I created a dataset containing the areas of interest of over 1,000 individuals associated with 20 sociology programs in the USA. This dataset is provisional, but see <a href="#tbl-sample" class="quarto-xref">Table&nbsp;1</a> in case you are curious about the sample.</p>
-<p>Each of these individuals chose anywhere between one and four areas of interest. <a href="#fig-areas" class="quarto-xref">Figure&nbsp;1</a> highlights the ten largest areas of interest in <span style="color:#63B8FF;">blue</span>. The largest is <span class="allcaps">Stratification/ Mobility</span>, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars—<span class="allcaps">Cultural Sociology</span>, <span class="allcaps">Economic Sociology</span>, and <span class="allcaps">Political Sociology</span>—which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.</p>
+<p>Each of these individuals chose anywhere between one and four areas of interest. <a href="#fig-areas" class="quarto-xref">Figure&nbsp;1</a> highlights the ten largest areas of interest in <span style="color:#63B8FF;">blue</span>. The largest is <span class="allcaps">Stratification/ Mobility</span>, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as sub-disciplinary avatars—<span class="allcaps">Cultural Sociology</span>, <span class="allcaps">Economic Sociology</span>, and <span class="allcaps">Political Sociology</span>—which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.</p>
+<p>Note that some areas of interest like <span id=".allcaps">Demography</span> and Medical Sociology are very well represented but don’t seem to</p>
 <div class="cell page-columns page-full">
 <div class="cell-output-display page-columns page-full">
 <div id="fig-areas" class="quarto-figure quarto-figure-center quarto-float anchored page-columns page-full">
@@ -292,22 +293,22 @@ transmogrification is not the “technical” term for this
 \tag{1}\]</span></span></p>
 <p>The diagonal of <span class="math inline">\(\mathbf A\)</span> contains the total number of individuals that chose each area, which corresponds to the same numbers in <a href="#fig-areas" class="quarto-xref">Figure&nbsp;1</a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>Unfortunately, the resulting network, is <em>very dense.</em> It takes only one single individual with idiosyncratic tastes to create ties among four otherwise disconnected areas. As a result, the “structure” is one in which every area is seemingly connected to every other area.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
-<p>Because of this issue, researchers have looked for ways to “trim” uninformative ties. The intuition is straightforward. If the observed number of shared individuals between two areas ( <span class="math inline">\(a_{ij}\)</span> ) exceeds the number we would expect to see in a random network <em>(the null model),</em> then we draw a tie between area <span class="math inline">\(i\)</span> and area <span class="math inline">\(j\)</span>.</p>
-<p>In other words, we do a “hypothesis test” for each tie in the network depicted by <span class="math inline">\(\mathbf A\)</span>. If the links between individuals and areas of interest was random, the resulting network would consist entirely of isolated nodes.</p>
+<p>Because of this issue, researchers have looked for ways to “trim” uninformative ties. The intuition is straightforward. If the observed number of shared individuals between two areas ( <span class="math inline">\(a_{ij}\)</span> ) exceeds the number we would expect to see in a <em>random</em> network <em>(the null model),</em> then we draw a tie between area <span class="math inline">\(i\)</span> and area <span class="math inline">\(j\)</span>. In other words, we do a “significance test” for each tie in the network depicted by <span class="math inline">\(\mathbf A\)</span>.</p>
+<p>If the links between individuals and areas of interest were random, the resulting network would consist entirely of isolated nodes. This is what would happen if there was no disciplinary structure.</p>
 </section>
 <section id="results" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
 <p>The results of this procedure are shown in <a href="#fig-0.01" class="quarto-xref">Figure&nbsp;2</a>, which uses a significance level of 0.01 to draw ties between areas.</p>
 <p>I used Zachary Neal’s <span class="citation" data-cites="neal2022">(<a href="#ref-neal2022" role="doc-biblioref">2022</a>)</span> <code>backbone</code> package to do all this.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <p>As we may have expected, there is a strong overlap between <span class="allcaps">Stratification/ Mobility</span> and <span class="allcaps">Education</span>; <span class="allcaps">Demography</span> and <span class="allcaps">Family</span>; <span class="allcaps">Medical Sociology</span> and <span class="allcaps">Mental Health</span>; <span class="allcaps">Migration/Immigration</span> and <span class="allcaps">Latina/o Sociology</span>; and so on.</p>
-<p>The strong overlap between <span class="allcaps">Cultural Sociology</span> and so-called <span class="allcaps">Theory</span> deserves its own <del>rant</del> blogpost.</p>
+<p>The strong overlap between <span class="allcaps">Cultural Sociology</span> and so-called <span class="allcaps">Theory</span> deserves its own blog post.</p>
 <p><em>Note. All isolate nodes have been removed. A bigger sample of individuals and their chosen areas would obviously result in more connected areas.</em></p>
 <div class="cell column-page">
 <div id="fig-0.01" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-0.01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="visNetwork html-widget html-fill-item" id="htmlwidget-72d47d7261c2aa615531" style="width:100%;height:742px;"></div>
-<script type="application/json" data-for="htmlwidget-72d47d7261c2aa615531">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Political Sociology","Racial and Ethnic Relations","Theory","Comparative Sociology/Historical Sociology","Medical Sociology","Economic Sociology","Family","Demography","Cultural Sociology","Stratification/Mobility","Aging/Social Gerontology","Latina/o Sociology","Education","Mental Health","Organizations, Formal and Complex","Sexualities"],"size":[66,111,135,163,168,126,127,130,175,126,147,197,221,41,31,164,42,116,51],"eigen":[0.7071067811865475,0,2.392599080724903e-16,0.9999999999999999,0,1.196299540362451e-16,0.7071067811865478,7.177797242174709e-17,0,0,0,2.392599080724903e-17,-0,0,0,0,2.392599080724903e-17,7.177797242174709e-17,1.914079264579922e-16],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Political Sociology","Racial and Ethnic\nRelations","Theory","Comparative\nSociology /\nHistorical Sociology","Medical Sociology","Economic Sociology","Family","Demography","Cultural Sociology","Stratification /\nMobility","Aging / Social\nGerontology","Latina / o Sociology","Education","Mental Health","Organizations,\nFormal and Complex","Sexualities"],"value":[66,111,135,163,168,126,127,130,175,126,147,197,221,41,31,164,42,116,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Family <\/br> Size: 126","Demography <\/br> Size: 147","Cultural Sociology <\/br> Size: 197","Stratification/Mobility <\/br> Size: 221","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Mental Health <\/br> Size: 42","Organizations, Formal and Complex <\/br> Size: 116","Sexualities <\/br> Size: 51"],"x":[0.1624029159940481,-0.9645621777856349,-0.1429531883085073,0.4104551879576961,-1,1,0.541361957249449,0.2229830381774678,0.8738328534686501,-0.7990951778403141,-0.5055160177271619,0.9559756205053787,-0.4326480454293403,-0.3026511112958552,-0.9712470526581671,-0.5268733865623669,0.1788667984986105,0.773393310063367,0.1538775665049765],"y":[-1,0.1325400599255733,0.08739490395367944,-0.8316231844965039,-0.1520544316147063,-0.3268875279531335,-0.5796701882961288,1,0.4271417861804876,-0.7140599101324266,-0.7830653411612275,-0.06180831983147228,0.9663982061930085,-0.5689076309788192,0.4224393047479131,0.714881589433864,0.7323090128136782,0.6744458884744826,0.05049172893621878]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Sex and Gender","Political Sociology","Theory","Medical Sociology","Economic Sociology","Family","Demography","Stratification/Mobility"],"to":["Political Sociology","Racial and Ethnic Relations","Latina/o Sociology","Sexualities","Comparative Sociology/Historical Sociology","Cultural Sociology","Mental Health","Organizations, Formal and Complex","Demography","Aging/Social Gerontology","Education"],"weight":[1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 50","Shared Individuals: 45","Shared Individuals: 27","Shared Individuals: 51","Shared Individuals: 48","Shared Individuals: 24","Shared Individuals: 70"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
+<div class="visNetwork html-widget html-fill-item" id="htmlwidget-6a3773dfe1869027ada2" style="width:100%;height:742px;"></div>
+<script type="application/json" data-for="htmlwidget-6a3773dfe1869027ada2">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Political Sociology","Racial and Ethnic Relations","Theory","Comparative Sociology/Historical Sociology","Medical Sociology","Economic Sociology","Family","Demography","Cultural Sociology","Stratification/Mobility","Aging/Social Gerontology","Latina/o Sociology","Education","Mental Health","Organizations, Formal and Complex","Sexualities"],"size":[66,111,135,163,168,126,127,130,175,126,147,197,221,41,31,164,42,116,51],"eigen":[0.7071067811865477,0,0,1,0,0,0.7071067811865476,1.223507852431752e-16,0,0,0,0,1.468209422918102e-16,0,0,1.223507852431752e-16,1.468209422918102e-16,0,0],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Political Sociology","Racial and Ethnic\nRelations","Theory","Comparative\nSociology /\nHistorical Sociology","Medical Sociology","Economic Sociology","Family","Demography","Cultural Sociology","Stratification /\nMobility","Aging / Social\nGerontology","Latina / o Sociology","Education","Mental Health","Organizations,\nFormal and Complex","Sexualities"],"value":[66,111,135,163,168,126,127,130,175,126,147,197,221,41,31,164,42,116,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Family <\/br> Size: 126","Demography <\/br> Size: 147","Cultural Sociology <\/br> Size: 197","Stratification/Mobility <\/br> Size: 221","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Mental Health <\/br> Size: 42","Organizations, Formal and Complex <\/br> Size: 116","Sexualities <\/br> Size: 51"],"x":[-1,0.2608941979877402,0.968241074623913,-0.8411609400869979,0.5445660452309302,-0.2694244026507601,-0.6126098358280703,-0.7939008932197426,1,-0.5402591193718987,-0.2435143281943936,-0.002314465041968972,0.5301820270993152,0.05255705003772659,-0.02396845732672437,0.3877536710264515,-0.5680429341641763,0.9447476649756554,0.7206189270200645],"y":[-0.1365986515835061,0.974389966122591,0.4708119109045756,-0.3987874803411025,0.9301268772983768,-0.9557774188764461,-0.5880428523127421,0.7265316824703967,-0.1570998713327698,0.2393176767776615,0.1625019324142341,-1,-0.8237209564725788,0.07092305906931196,1,-0.5637527678798946,0.9128003496840491,-0.433174117094418,0.3406234461305326]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Sex and Gender","Political Sociology","Theory","Medical Sociology","Economic Sociology","Family","Demography","Stratification/Mobility"],"to":["Political Sociology","Racial and Ethnic Relations","Latina/o Sociology","Sexualities","Comparative Sociology/Historical Sociology","Cultural Sociology","Mental Health","Organizations, Formal and Complex","Demography","Aging/Social Gerontology","Education"],"weight":[1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 50","Shared Individuals: 45","Shared Individuals: 27","Shared Individuals: 51","Shared Individuals: 48","Shared Individuals: 24","Shared Individuals: 70"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-0.01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: “Strong” Ties ( α = 0.01 )
@@ -319,13 +320,13 @@ Figure&nbsp;2: “Strong” Ties ( α = 0.01 )
 <p>The result is that we get to see more “structure.”</p>
 <p>For example, the heterogeneity <em>within</em> <span class="allcaps">Economic Sociology</span> may be more easily understood by looking at adjacent areas: <span class="allcaps">Social Networks</span>, <span class="allcaps">Political Economy</span>, <span class="allcaps">Science and Technology</span>, and <span class="allcaps">Organizations, Formal and Complex</span>. The same might be said for other areas that look like “hubs” (e.g., <span class="allcaps">Stratification/ Mobility</span>, <span class="allcaps">Political Sociology</span>).</p>
 <p>Futhermore, perhaps we may hypothesize that “triangles”—like the overlap between <span class="allcaps">Medical Sociology</span>, <span class="allcaps">Aging/ Social Gerontology</span>, and <span class="allcaps">Demography</span>—are formed by somewhat distinct underlying groups of sociologists.</p>
-<p>Also, note that <span class="allcaps">Quantitative Methodology</span> now appears connected to three areas (<span class="allcaps">Stratification/ Mobility</span>, <span class="allcaps">Demography</span>, and <span class="allcaps">Mathematical Sociology</span>), but <span class="allcaps">Qualitative Methodology</span> is nowhere to be seen yet. This does <em>not</em> mean that one is more important than the other. It just means that the overlap between <span class="allcaps">Quantitative Methodology</span> and those three areas is stronger than what we would expect by chance; whereas the ties between whereas the overlap between <span class="allcaps">Qualitative Methodology</span> and other areas is more compatible with a “null model” of random ties between areas.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>Also, note that <span class="allcaps">Quantitative Methodology</span> now appears connected to three areas (<span class="allcaps">Stratification/ Mobility</span>, <span class="allcaps">Demography</span>, and <span class="allcaps">Mathematical Sociology</span>), but <span class="allcaps">Qualitative Methodology</span> is nowhere to be seen yet. This does <em>not</em> mean that one is more important than the other. It just means that the overlap between <span class="allcaps">Quantitative Methodology</span> and those three areas is stronger than what we would expect by chance; whereas the overlap between <span class="allcaps">Qualitative Methodology</span> and other areas is more compatible with a “null model” of random ties between areas.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
 <div class="cell column-page">
 <div id="fig-0.05" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-0.05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="visNetwork html-widget html-fill-item" id="htmlwidget-411f74501e8a44a37354" style="width:100%;height:742px;"></div>
-<script type="application/json" data-for="htmlwidget-411f74501e8a44a37354">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Law and Society","Race, Class and Gender","Social Change","Work and Labor Markets","Political Sociology","Racial and Ethnic Relations","Criminal Justice","Quantitative Methodology","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Medical Sociology","Economic Sociology","Science and Technology","Family","Ethnography (Anthropology)","Social Networks","Political Economy","Demography","Mathematical Sociology","Biosociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Urban Sociology","Global and Transnational Sociology","Criminology/Delinquency","Aging/Social Gerontology","Latina/o Sociology","Education","Knowledge","Mental Health","Policy","Organizations, Formal and Complex","Occupations/Professions","Mass Communication/Public Opinion","Sexualities"],"size":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,126,40,65,55,147,27,16,197,61,221,136,88,34,41,31,164,38,42,83,116,53,13,51],"eigen":[4.249274171765568e-17,0,0,0,0.5299505652978987,3.035195836975406e-17,0.2658293976455384,2.185341002622292e-16,0,0,0.4741269344018596,4.856313339160649e-17,1.456894001748195e-16,6.677430841345892e-17,0.2762470856670793,0.01366714374365091,0.003909386431347671,0.4377987503106739,0.1163352278518703,0.03996131268009497,0.003633128588909725,0.6469162334500068,0.1366597690584466,0.07343459638421515,6.070391673950811e-17,0.1477859398004899,1,0.4376311607454103,5.766872090253271e-17,0,0.2454039490493509,0,0.5559428005684689,0.001039229840208802,0.07343459638421516,0.4136153374460281,0.0039093864313477,0.0010392298402088,1.214078334790162e-17,0],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Law and Society","Race, Class and\nGender","Social Change","Work and Labor\nMarkets","Political Sociology","Racial and Ethnic\nRelations","Criminal Justice","Quantitative\nMethodology","Theory","Comparative\nSociology /\nHistorical Sociology","Peace, War, World\nConflict, and\nConflict Resolution","Medical Sociology","Economic Sociology","Science and\nTechnology","Family","Ethnography\n(Anthropology)","Social Networks","Political Economy","Demography","Mathematical\nSociology","Biosociology","Cultural Sociology","Children and Youth","Stratification /\nMobility","Urban Sociology","Global and\nTransnational\nSociology","Criminology /\nDelinquency","Aging / Social\nGerontology","Latina / o Sociology","Education","Knowledge","Mental Health","Policy","Organizations,\nFormal and Complex","Occupations /\nProfessions","Mass Communication /\nPublic Opinion","Sexualities"],"value":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,126,40,65,55,147,27,16,197,61,221,136,88,34,41,31,164,38,42,83,116,53,13,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Law and Society <\/br> Size: 83","Race, Class and Gender <\/br> Size: 191","Social Change <\/br> Size: 25","Work and Labor Markets <\/br> Size: 71","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Criminal Justice <\/br> Size: 44","Quantitative Methodology <\/br> Size: 117","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Peace, War, World Conflict, and Conflict Resolution <\/br> Size: 22","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Science and Technology <\/br> Size: 84","Family <\/br> Size: 126","Ethnography (Anthropology) <\/br> Size: 40","Social Networks <\/br> Size: 65","Political Economy <\/br> Size: 55","Demography <\/br> Size: 147","Mathematical Sociology <\/br> Size: 27","Biosociology <\/br> Size: 16","Cultural Sociology <\/br> Size: 197","Children and Youth <\/br> Size: 61","Stratification/Mobility <\/br> Size: 221","Urban Sociology <\/br> Size: 136","Global and Transnational Sociology <\/br> Size: 88","Criminology/Delinquency <\/br> Size: 34","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Knowledge <\/br> Size: 38","Mental Health <\/br> Size: 42","Policy <\/br> Size: 83","Organizations, Formal and Complex <\/br> Size: 116","Occupations/Professions <\/br> Size: 53","Mass Communication/Public Opinion <\/br> Size: 13","Sexualities <\/br> Size: 51"],"x":[-0.3425141295073804,-0.05192074586971585,-0.9223664533562375,0.1984140772143519,0.6900870310394018,-0.6608695901731916,0.3514934068135074,-0.5271222920467256,0.1217657455781063,0.375596176162468,0.2352492314663972,-0.7560826453334846,-0.6445834426015797,-0.3243745282602974,0.4611313091040019,-0.3558104921417817,-0.5189846803172542,0.529452575499529,0.6379538058252736,-0.1682590838357105,-0.5430293629221197,0.3783753378053545,-0.004643688904347965,0.4372784349003518,-0.8635739763426016,1,0.5212411633139968,0.5899335147320233,-0.6138908197044661,0.05967797134649455,0.2841456275090775,-0.223547321471658,0.7912526042549843,-0.6458108727006671,0.6666142035099618,0.7404803886021771,-0.2912237920878149,-0.3148704528666898,-1,-0.9801997663121451],"y":[-0.2940935731422418,-0.9638113567286162,0.5147675102796145,0.8867086854267845,0.2500641068368723,-0.2332471172661488,0.2775847756525955,-0.4413950226314434,-0.9856394225505286,0.8960552425357502,-0.0155979062915087,-0.4700478085934944,-0.6500965060548547,-0.5735085743232287,-0.5654491026438309,0.5741138692372856,0.4151723492071828,-0.1789989503725378,0.6305792271887576,0.3737370972288414,0.7150386149886716,-0.2593636331137403,0.1598467943126747,-0.8055005371799918,-0.2628306770950045,0.03613685374085041,0.06392310720634953,0.3956995036359496,-0.8597512050988669,0.9950345844567134,-0.4879393225967306,-1,0.09038160300822851,0.2617280406751812,-0.661489182336495,-0.08332686055537886,0.8012187968307687,1,-0.1071742136246705,0.3401700196677628]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Sex and Gender","Law and Society","Law and Society","Race, Class and Gender","Race, Class and Gender","Race, Class and Gender","Social Change","Social Change","Work and Labor Markets","Political Sociology","Political Sociology","Political Sociology","Quantitative Methodology","Quantitative Methodology","Quantitative Methodology","Theory","Theory","Comparative Sociology/Historical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Science and Technology","Family","Family","Ethnography (Anthropology)","Social Networks","Demography","Demography","Cultural Sociology","Children and Youth","Stratification/Mobility","Stratification/Mobility","Stratification/Mobility","Education","Organizations, Formal and Complex"],"to":["Political Sociology","Racial and Ethnic Relations","Latina/o Sociology","Sexualities","Criminal Justice","Criminology/Delinquency","Stratification/Mobility","Urban Sociology","Education","Political Sociology","Cultural Sociology","Stratification/Mobility","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Demography","Mathematical Sociology","Stratification/Mobility","Comparative Sociology/Historical Sociology","Cultural Sociology","Global and Transnational Sociology","Demography","Biosociology","Aging/Social Gerontology","Mental Health","Science and Technology","Social Networks","Political Economy","Organizations, Formal and Complex","Knowledge","Demography","Stratification/Mobility","Urban Sociology","Mathematical Sociology","Stratification/Mobility","Aging/Social Gerontology","Mass Communication/Public Opinion","Education","Urban Sociology","Education","Policy","Policy","Occupations/Professions"],"weight":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 19","Shared Individuals: 12","Shared Individuals: 47","Shared Individuals: 33","Shared Individuals: 47","Shared Individuals: 8","Shared Individuals: 8","Shared Individuals: 28","Shared Individuals: 35","Shared Individuals: 50","Shared Individuals: 10","Shared Individuals: 35","Shared Individuals: 12","Shared Individuals: 38","Shared Individuals: 39","Shared Individuals: 45","Shared Individuals: 24","Shared Individuals: 34","Shared Individuals: 9","Shared Individuals: 23","Shared Individuals: 27","Shared Individuals: 21","Shared Individuals: 20","Shared Individuals: 25","Shared Individuals: 51","Shared Individuals: 11","Shared Individuals: 48","Shared Individuals: 44","Shared Individuals: 11","Shared Individuals: 12","Shared Individuals: 50","Shared Individuals: 24","Shared Individuals: 8","Shared Individuals: 21","Shared Individuals: 33","Shared Individuals: 70","Shared Individuals: 27","Shared Individuals: 21","Shared Individuals: 19"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
+<div class="visNetwork html-widget html-fill-item" id="htmlwidget-ecf3a2e9ed2c43ad60ff" style="width:100%;height:742px;"></div>
+<script type="application/json" data-for="htmlwidget-ecf3a2e9ed2c43ad60ff">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Law and Society","Race, Class and Gender","Social Change","Work and Labor Markets","Political Sociology","Racial and Ethnic Relations","Criminal Justice","Quantitative Methodology","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Medical Sociology","Economic Sociology","Science and Technology","Family","Ethnography (Anthropology)","Social Networks","Political Economy","Demography","Mathematical Sociology","Biosociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Urban Sociology","Global and Transnational Sociology","Criminology/Delinquency","Aging/Social Gerontology","Latina/o Sociology","Education","Knowledge","Mental Health","Policy","Organizations, Formal and Complex","Occupations/Professions","Mass Communication/Public Opinion","Sexualities"],"size":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,126,40,65,55,147,27,16,197,61,221,136,88,34,41,31,164,38,42,83,116,53,13,51],"eigen":[0,0,0,0,0.5299505652978989,0,0.2658293976455389,0,0,0,0.4741269344018597,0,0,0,0.2762470856670795,0.01366714374365063,0.003909386431347537,0.4377987503106742,0.1163352278518703,0.0399613126800949,0.003633128588909619,0.6469162334500071,0.1366597690584465,0.07343459638421521,0,0.1477859398004898,1,0.4376311607454107,0,0,0.2454039490493511,0,0.5559428005684692,0.00103922984020871,0.07343459638421518,0.4136153374460287,0.003909386431347539,0.001039229840208718,0,0],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Law and Society","Race, Class and\nGender","Social Change","Work and Labor\nMarkets","Political Sociology","Racial and Ethnic\nRelations","Criminal Justice","Quantitative\nMethodology","Theory","Comparative\nSociology /\nHistorical Sociology","Peace, War, World\nConflict, and\nConflict Resolution","Medical Sociology","Economic Sociology","Science and\nTechnology","Family","Ethnography\n(Anthropology)","Social Networks","Political Economy","Demography","Mathematical\nSociology","Biosociology","Cultural Sociology","Children and Youth","Stratification /\nMobility","Urban Sociology","Global and\nTransnational\nSociology","Criminology /\nDelinquency","Aging / Social\nGerontology","Latina / o Sociology","Education","Knowledge","Mental Health","Policy","Organizations,\nFormal and Complex","Occupations /\nProfessions","Mass Communication /\nPublic Opinion","Sexualities"],"value":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,126,40,65,55,147,27,16,197,61,221,136,88,34,41,31,164,38,42,83,116,53,13,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Law and Society <\/br> Size: 83","Race, Class and Gender <\/br> Size: 191","Social Change <\/br> Size: 25","Work and Labor Markets <\/br> Size: 71","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Criminal Justice <\/br> Size: 44","Quantitative Methodology <\/br> Size: 117","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Peace, War, World Conflict, and Conflict Resolution <\/br> Size: 22","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Science and Technology <\/br> Size: 84","Family <\/br> Size: 126","Ethnography (Anthropology) <\/br> Size: 40","Social Networks <\/br> Size: 65","Political Economy <\/br> Size: 55","Demography <\/br> Size: 147","Mathematical Sociology <\/br> Size: 27","Biosociology <\/br> Size: 16","Cultural Sociology <\/br> Size: 197","Children and Youth <\/br> Size: 61","Stratification/Mobility <\/br> Size: 221","Urban Sociology <\/br> Size: 136","Global and Transnational Sociology <\/br> Size: 88","Criminology/Delinquency <\/br> Size: 34","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Knowledge <\/br> Size: 38","Mental Health <\/br> Size: 42","Policy <\/br> Size: 83","Organizations, Formal and Complex <\/br> Size: 116","Occupations/Professions <\/br> Size: 53","Mass Communication/Public Opinion <\/br> Size: 13","Sexualities <\/br> Size: 51"],"x":[-0.1310165520616985,0.9476814984120077,0.3047258237869968,-0.6661121560501818,-0.3643983353034783,0.2942217876551081,-0.3073155763626757,0.09174193773869099,1,-0.5309095674029534,-0.3821579287737517,0.2568652362236066,0.009153180175662357,0.1477824775356542,-0.804182217915325,0.4181220247600821,0.5854155781339543,-0.7146893293526159,0.03816757187237507,0.1400900512612491,0.6258381518505491,-0.6501735922511671,-0.1227407981103424,-1,0.4909676205746665,-0.5406278662447964,-0.4804066873800341,-0.1729895803517162,-0.1912185166437316,-0.824482180837808,-0.8875282890967459,0.8753822250144683,-0.5581035394692723,0.7748390196875958,-0.7127192116103207,-0.7120588799126624,0.4347979248291318,0.4919428428471881,0.7062866186174259,0.4665826108748401],"y":[0.8962469172543239,-0.313382458304435,-1,0.6920752809387252,-0.641412718009609,0.5776078965809992,-0.7998679502143238,0.7847202076834703,-0.1122029364256266,0.8110260829312919,-0.2151070757259115,0.7219180591951742,0.6051965779537865,1,0.05010521982447713,-0.09193321938026244,0.1243614880797161,-0.3867399420682691,-0.7343192046385835,-0.05775333141010675,-0.1333619567872488,-0.2044695178448168,-0.08396752377745764,0.1774779868864782,0.6473543734302172,-0.9888196020148362,-0.5056211558089976,-0.5978625683362584,0.4882244630813457,0.5988135094901443,-0.1205862465858794,-0.5103162356320614,-0.754792038880723,0.2448318880856168,0.2545354519198504,-0.6420890719344579,-0.3556881372888677,-0.5635798483363168,0.6207240365826474,-0.9239237273308932]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Sex and Gender","Law and Society","Law and Society","Race, Class and Gender","Race, Class and Gender","Race, Class and Gender","Social Change","Social Change","Work and Labor Markets","Political Sociology","Political Sociology","Political Sociology","Quantitative Methodology","Quantitative Methodology","Quantitative Methodology","Theory","Theory","Comparative Sociology/Historical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Science and Technology","Family","Family","Ethnography (Anthropology)","Social Networks","Demography","Demography","Cultural Sociology","Children and Youth","Stratification/Mobility","Stratification/Mobility","Stratification/Mobility","Education","Organizations, Formal and Complex"],"to":["Political Sociology","Racial and Ethnic Relations","Latina/o Sociology","Sexualities","Criminal Justice","Criminology/Delinquency","Stratification/Mobility","Urban Sociology","Education","Political Sociology","Cultural Sociology","Stratification/Mobility","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Demography","Mathematical Sociology","Stratification/Mobility","Comparative Sociology/Historical Sociology","Cultural Sociology","Global and Transnational Sociology","Demography","Biosociology","Aging/Social Gerontology","Mental Health","Science and Technology","Social Networks","Political Economy","Organizations, Formal and Complex","Knowledge","Demography","Stratification/Mobility","Urban Sociology","Mathematical Sociology","Stratification/Mobility","Aging/Social Gerontology","Mass Communication/Public Opinion","Education","Urban Sociology","Education","Policy","Policy","Occupations/Professions"],"weight":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 19","Shared Individuals: 12","Shared Individuals: 47","Shared Individuals: 33","Shared Individuals: 47","Shared Individuals: 8","Shared Individuals: 8","Shared Individuals: 28","Shared Individuals: 35","Shared Individuals: 50","Shared Individuals: 10","Shared Individuals: 35","Shared Individuals: 12","Shared Individuals: 38","Shared Individuals: 39","Shared Individuals: 45","Shared Individuals: 24","Shared Individuals: 34","Shared Individuals: 9","Shared Individuals: 23","Shared Individuals: 27","Shared Individuals: 21","Shared Individuals: 20","Shared Individuals: 25","Shared Individuals: 51","Shared Individuals: 11","Shared Individuals: 48","Shared Individuals: 44","Shared Individuals: 11","Shared Individuals: 12","Shared Individuals: 50","Shared Individuals: 24","Shared Individuals: 8","Shared Individuals: 21","Shared Individuals: 33","Shared Individuals: 70","Shared Individuals: 27","Shared Individuals: 21","Shared Individuals: 19"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-0.05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: “Strongish” Ties ( α = 0.05 )
@@ -339,8 +340,8 @@ Figure&nbsp;3: “Strongish” Ties ( α = 0.05 )
 <div id="fig-0.06" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-0.06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="visNetwork html-widget html-fill-item" id="htmlwidget-59f590c00468728eaf54" style="width:100%;height:742px;"></div>
-<script type="application/json" data-for="htmlwidget-59f590c00468728eaf54">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Law and Society","Race, Class and Gender","Social Change","Work and Labor Markets","Political Sociology","Racial and Ethnic Relations","Criminal Justice","Quantitative Methodology","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Medical Sociology","Economic Sociology","Science and Technology","Marxist Sociology","Family","Ethnography (Anthropology)","Communication and Information Technologies","Social Networks","Development","Political Economy","Demography","Mathematical Sociology","Biosociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Urban Sociology","Environmental Sociology","Asians/Asian-Americans","Global and Transnational Sociology","Criminology/Delinquency","Aging/Social Gerontology","Latina/o Sociology","Education","Knowledge","Mental Health","Policy","Labor and Labor Movements","Organizations, Formal and Complex","Religion","Occupations/Professions","Alcohol and Drugs","Mass Communication/Public Opinion","Sexualities"],"size":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,19,126,40,31,65,53,55,147,27,16,197,61,221,136,44,38,88,34,41,31,164,38,42,83,32,116,34,53,11,13,51],"eigen":[0.02042234309510454,0.03343079958667112,0,0,0.4848334386066729,0.06709470682633734,0.2464733038167888,0.08285823567442037,0.119156995341712,0,0.4299423019374817,0.1049324594354982,0.06891143939552655,0.03740717323369047,0.3207070909021327,0.5029089829061782,0.238330668360186,0,0.453051009661433,0.1109171957183483,0.05874214723159854,0.1597786493845924,0.03740717323369041,0.1239536385360269,0.599026283925156,0.1453504712023312,0.07904573625211994,0.1893607259223732,0.239107918220321,1,0.4500170769033728,0.1109171957183483,0.00823979962336375,0.01698483013858589,0,0.226689723524247,0.00823979962336375,0.5170658935389935,0.08460519718628706,0.0790457362521199,0.3739162428883248,0,0.16449800539766,0.04667236373123281,0.16449800539766,0.07904573625211989,0.0466723637312328,0],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Law and Society","Race, Class and\nGender","Social Change","Work and Labor\nMarkets","Political Sociology","Racial and Ethnic\nRelations","Criminal Justice","Quantitative\nMethodology","Theory","Comparative\nSociology /\nHistorical Sociology","Peace, War, World\nConflict, and\nConflict Resolution","Medical Sociology","Economic Sociology","Science and\nTechnology","Marxist Sociology","Family","Ethnography\n(Anthropology)","Communication\nand Information\nTechnologies","Social Networks","Development","Political Economy","Demography","Mathematical\nSociology","Biosociology","Cultural Sociology","Children and Youth","Stratification /\nMobility","Urban Sociology","Environmental\nSociology","Asians /\nAsian-Americans","Global and\nTransnational\nSociology","Criminology /\nDelinquency","Aging / Social\nGerontology","Latina / o Sociology","Education","Knowledge","Mental Health","Policy","Labor and Labor\nMovements","Organizations,\nFormal and Complex","Religion","Occupations /\nProfessions","Alcohol and Drugs","Mass Communication /\nPublic Opinion","Sexualities"],"value":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,19,126,40,31,65,53,55,147,27,16,197,61,221,136,44,38,88,34,41,31,164,38,42,83,32,116,34,53,11,13,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Law and Society <\/br> Size: 83","Race, Class and Gender <\/br> Size: 191","Social Change <\/br> Size: 25","Work and Labor Markets <\/br> Size: 71","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Criminal Justice <\/br> Size: 44","Quantitative Methodology <\/br> Size: 117","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Peace, War, World Conflict, and Conflict Resolution <\/br> Size: 22","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Science and Technology <\/br> Size: 84","Marxist Sociology <\/br> Size: 19","Family <\/br> Size: 126","Ethnography (Anthropology) <\/br> Size: 40","Communication and Information Technologies <\/br> Size: 31","Social Networks <\/br> Size: 65","Development <\/br> Size: 53","Political Economy <\/br> Size: 55","Demography <\/br> Size: 147","Mathematical Sociology <\/br> Size: 27","Biosociology <\/br> Size: 16","Cultural Sociology <\/br> Size: 197","Children and Youth <\/br> Size: 61","Stratification/Mobility <\/br> Size: 221","Urban Sociology <\/br> Size: 136","Environmental Sociology <\/br> Size: 44","Asians/Asian-Americans <\/br> Size: 38","Global and Transnational Sociology <\/br> Size: 88","Criminology/Delinquency <\/br> Size: 34","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Knowledge <\/br> Size: 38","Mental Health <\/br> Size: 42","Policy <\/br> Size: 83","Labor and Labor Movements <\/br> Size: 32","Organizations, Formal and Complex <\/br> Size: 116","Religion <\/br> Size: 34","Occupations/Professions <\/br> Size: 53","Alcohol and Drugs <\/br> Size: 11","Mass Communication/Public Opinion <\/br> Size: 13","Sexualities <\/br> Size: 51"],"x":[-0.8311559585382964,0.5704079284693224,0.5254428672054685,-0.893303049724258,0.7452326613182276,-0.5716754467843677,0.4984412645132446,-0.7983719699803198,0.6999736376919552,-0.9875240483594475,0.2721061679440195,-0.5877521907900702,-0.8512514185357962,-0.9779880557568256,-0.1238050969982676,0.01600430602557212,-0.2620765369560759,-0.3127456470262331,0.5014299987272304,0.9262467892156139,-0.5064245772931055,-0.02908217813967406,-1,0.2114457569867927,0.236523756291122,0.07134039030127903,-0.291672616698694,-0.3152751252550821,0.7322370448228464,0.4602089581106386,0.7566817720369055,1,0.5725024734777273,-0.9725816844204107,-0.7926717033253653,0.09916049057348619,0.3728795482072986,0.7454016292941341,-0.4866246124646889,-0.3897603182622316,0.6413537764638382,-0.1296881931839684,-0.07313920286905884,-0.1886178316151509,0.04957874790667471,-0.08323004897556052,-0.3741713874538474,0.3666651735147661],"y":[-0.7834463516996698,-0.8211245854427727,0.8347323799801059,0.5016333032202143,-0.05308061705794032,-0.6940239395519685,-0.2498445847380412,-0.5463918787001451,-0.5880723656016691,0.3488078212931021,0.1098002046839568,-0.4268168653476551,-0.3365604743569161,-0.5199674428369729,0.3870384653756989,-0.318551973538264,0.01460283951527264,0.9709038759698834,0.3023088563663454,-0.4460955105380499,0.1372518938703275,-0.139516909877493,-0.3646794080223797,-0.5011474074620654,0.2907268969966508,0.03593793588274541,0.6085788294807641,-0.6314337010847311,0.4030119897756776,-0.02020536556327823,-0.2797199364799983,-0.2188963653113344,-1,-0.1053822488814935,0.6528144600101196,0.4824507325680574,-0.9587734828292409,0.1701617082525266,-0.1746410660316036,0.451733225207978,0.105777748952171,1,-0.5297156460244009,-0.8962871153018162,-0.608203055361646,0.6474321331838573,-0.9029018335061174,0.9039076582337053]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Migration/Immigration","Sex and Gender","Law and Society","Law and Society","Race, Class and Gender","Race, Class and Gender","Race, Class and Gender","Social Change","Social Change","Work and Labor Markets","Political Sociology","Political Sociology","Political Sociology","Political Sociology","Racial and Ethnic Relations","Quantitative Methodology","Quantitative Methodology","Quantitative Methodology","Theory","Theory","Theory","Comparative Sociology/Historical Sociology","Comparative Sociology/Historical Sociology","Comparative Sociology/Historical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Science and Technology","Science and Technology","Marxist Sociology","Family","Family","Family","Ethnography (Anthropology)","Social Networks","Demography","Demography","Cultural Sociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Stratification/Mobility","Stratification/Mobility","Urban Sociology","Education","Organizations, Formal and Complex"],"to":["Political Sociology","Racial and Ethnic Relations","Asians/Asian-Americans","Latina/o Sociology","Sexualities","Criminal Justice","Criminology/Delinquency","Stratification/Mobility","Urban Sociology","Education","Political Sociology","Cultural Sociology","Stratification/Mobility","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Development","Urban Sociology","Demography","Mathematical Sociology","Stratification/Mobility","Comparative Sociology/Historical Sociology","Cultural Sociology","Knowledge","Peace, War, World Conflict, and Conflict Resolution","Development","Global and Transnational Sociology","Science and Technology","Demography","Biosociology","Aging/Social Gerontology","Mental Health","Alcohol and Drugs","Science and Technology","Social Networks","Political Economy","Cultural Sociology","Stratification/Mobility","Organizations, Formal and Complex","Occupations/Professions","Communication and Information Technologies","Knowledge","Labor and Labor Movements","Demography","Children and Youth","Stratification/Mobility","Urban Sociology","Mathematical Sociology","Stratification/Mobility","Aging/Social Gerontology","Religion","Mass Communication/Public Opinion","Education","Urban Sociology","Education","Policy","Environmental Sociology","Policy","Occupations/Professions"],"weight":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 14","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 19","Shared Individuals: 12","Shared Individuals: 47","Shared Individuals: 33","Shared Individuals: 47","Shared Individuals: 8","Shared Individuals: 8","Shared Individuals: 28","Shared Individuals: 35","Shared Individuals: 50","Shared Individuals: 10","Shared Individuals: 15","Shared Individuals: 31","Shared Individuals: 35","Shared Individuals: 12","Shared Individuals: 38","Shared Individuals: 39","Shared Individuals: 45","Shared Individuals: 10","Shared Individuals: 9","Shared Individuals: 15","Shared Individuals: 24","Shared Individuals: 19","Shared Individuals: 34","Shared Individuals: 9","Shared Individuals: 23","Shared Individuals: 27","Shared Individuals: 6","Shared Individuals: 21","Shared Individuals: 20","Shared Individuals: 25","Shared Individuals: 36","Shared Individuals: 38","Shared Individuals: 51","Shared Individuals: 16","Shared Individuals: 9","Shared Individuals: 11","Shared Individuals: 9","Shared Individuals: 48","Shared Individuals: 19","Shared Individuals: 44","Shared Individuals: 11","Shared Individuals: 12","Shared Individuals: 50","Shared Individuals: 24","Shared Individuals: 12","Shared Individuals: 8","Shared Individuals: 21","Shared Individuals: 33","Shared Individuals: 70","Shared Individuals: 27","Shared Individuals: 14","Shared Individuals: 21","Shared Individuals: 19"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
+<div class="visNetwork html-widget html-fill-item" id="htmlwidget-1f6c60a4a48411fcea27" style="width:100%;height:742px;"></div>
+<script type="application/json" data-for="htmlwidget-1f6c60a4a48411fcea27">{"x":{"nodes":{"id":["Collective Behavior/Social Movements","Migration/Immigration","Sex and Gender","Law and Society","Race, Class and Gender","Social Change","Work and Labor Markets","Political Sociology","Racial and Ethnic Relations","Criminal Justice","Quantitative Methodology","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Medical Sociology","Economic Sociology","Science and Technology","Marxist Sociology","Family","Ethnography (Anthropology)","Communication and Information Technologies","Social Networks","Development","Political Economy","Demography","Mathematical Sociology","Biosociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Urban Sociology","Environmental Sociology","Asians/Asian-Americans","Global and Transnational Sociology","Criminology/Delinquency","Aging/Social Gerontology","Latina/o Sociology","Education","Knowledge","Mental Health","Policy","Labor and Labor Movements","Organizations, Formal and Complex","Religion","Occupations/Professions","Alcohol and Drugs","Mass Communication/Public Opinion","Sexualities"],"size":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,19,126,40,31,65,53,55,147,27,16,197,61,221,136,44,38,88,34,41,31,164,38,42,83,32,116,34,53,11,13,51],"eigen":[0.02042234309510441,0.03343079958667076,0,0,0.4848334386066727,0.06709470682633713,0.2464733038167891,0.08285823567441952,0.1191569953417119,0,0.4299423019374815,0.1049324594354978,0.06891143939552578,0.03740717323369027,0.3207070909021323,0.5029089829061776,0.2383306683601857,0,0.453051009661433,0.1109171957183482,0.05874214723159843,0.1597786493845923,0.03740717323369027,0.1239536385360266,0.5990262839251562,0.1453504712023312,0.07904573625211984,0.1893607259223725,0.2391079182203211,1,0.4500170769033726,0.1109171957183483,0.008239799623363683,0.01698483013858579,0,0.2266897235242469,0.00823979962336369,0.5170658935389932,0.08460519718628672,0.07904573625211986,0.3739162428883244,0,0.1644980053976597,0.04667236373123271,0.1644980053976597,0.07904573625211989,0.04667236373123269,0],"label":["Collective\nBehavior / Social\nMovements","Migration /\nImmigration","Sex and Gender","Law and Society","Race, Class and\nGender","Social Change","Work and Labor\nMarkets","Political Sociology","Racial and Ethnic\nRelations","Criminal Justice","Quantitative\nMethodology","Theory","Comparative\nSociology /\nHistorical Sociology","Peace, War, World\nConflict, and\nConflict Resolution","Medical Sociology","Economic Sociology","Science and\nTechnology","Marxist Sociology","Family","Ethnography\n(Anthropology)","Communication\nand Information\nTechnologies","Social Networks","Development","Political Economy","Demography","Mathematical\nSociology","Biosociology","Cultural Sociology","Children and Youth","Stratification /\nMobility","Urban Sociology","Environmental\nSociology","Asians /\nAsian-Americans","Global and\nTransnational\nSociology","Criminology /\nDelinquency","Aging / Social\nGerontology","Latina / o Sociology","Education","Knowledge","Mental Health","Policy","Labor and Labor\nMovements","Organizations,\nFormal and Complex","Religion","Occupations /\nProfessions","Alcohol and Drugs","Mass Communication /\nPublic Opinion","Sexualities"],"value":[66,111,135,83,191,25,71,163,168,44,117,126,127,22,130,175,84,19,126,40,31,65,53,55,147,27,16,197,61,221,136,44,38,88,34,41,31,164,38,42,83,32,116,34,53,11,13,51],"title":["Collective Behavior/Social Movements <\/br> Size: 66","Migration/Immigration <\/br> Size: 111","Sex and Gender <\/br> Size: 135","Law and Society <\/br> Size: 83","Race, Class and Gender <\/br> Size: 191","Social Change <\/br> Size: 25","Work and Labor Markets <\/br> Size: 71","Political Sociology <\/br> Size: 163","Racial and Ethnic Relations <\/br> Size: 168","Criminal Justice <\/br> Size: 44","Quantitative Methodology <\/br> Size: 117","Theory <\/br> Size: 126","Comparative Sociology/Historical Sociology <\/br> Size: 127","Peace, War, World Conflict, and Conflict Resolution <\/br> Size: 22","Medical Sociology <\/br> Size: 130","Economic Sociology <\/br> Size: 175","Science and Technology <\/br> Size: 84","Marxist Sociology <\/br> Size: 19","Family <\/br> Size: 126","Ethnography (Anthropology) <\/br> Size: 40","Communication and Information Technologies <\/br> Size: 31","Social Networks <\/br> Size: 65","Development <\/br> Size: 53","Political Economy <\/br> Size: 55","Demography <\/br> Size: 147","Mathematical Sociology <\/br> Size: 27","Biosociology <\/br> Size: 16","Cultural Sociology <\/br> Size: 197","Children and Youth <\/br> Size: 61","Stratification/Mobility <\/br> Size: 221","Urban Sociology <\/br> Size: 136","Environmental Sociology <\/br> Size: 44","Asians/Asian-Americans <\/br> Size: 38","Global and Transnational Sociology <\/br> Size: 88","Criminology/Delinquency <\/br> Size: 34","Aging/Social Gerontology <\/br> Size: 41","Latina/o Sociology <\/br> Size: 31","Education <\/br> Size: 164","Knowledge <\/br> Size: 38","Mental Health <\/br> Size: 42","Policy <\/br> Size: 83","Labor and Labor Movements <\/br> Size: 32","Organizations, Formal and Complex <\/br> Size: 116","Religion <\/br> Size: 34","Occupations/Professions <\/br> Size: 53","Alcohol and Drugs <\/br> Size: 11","Mass Communication/Public Opinion <\/br> Size: 13","Sexualities <\/br> Size: 51"],"x":[0.9046327658629942,-0.73427703227955,-0.4000239538469385,0.09411291000743871,-0.7332552498966424,0.6208459037904195,-0.4878362793966408,0.8276117972501393,-0.7535052676211882,0.14693579104274,-0.2941357952188969,0.6156299131365279,0.8502868242353516,0.9953598517758311,0.07605483079530106,-0.003730849781860779,0.2490094456155061,0.6196978079817272,-0.5120857393841954,-1,0.474706851039135,0.01759237211526488,1,0.1207808832923849,-0.2674677255912788,-0.08395352193905226,0.2250470368267745,0.3614444995667043,-0.7312012233192025,-0.4624636496053216,-0.7598243949318089,-0.9437947112622291,-0.6034569641441307,0.8997097856165814,-0.06476673479524608,-0.1507642600888216,-0.844606601708647,-0.7426606528382973,0.4909516841371158,0.3323934093400343,-0.6276120449377651,0.483333362212659,-0.1766045216741933,0.2686623420568504,-0.06696817997685955,0.02284247778405879,0.4626946290722624,-0.2977754259004294],"y":[-0.3184828181470019,-0.4871322019616363,-0.8957170299885342,-0.9523860923231864,0.2448187294135669,-0.2058249213442215,0.06653488113163841,-0.07472030820884668,-0.2520252641292127,-0.8026441109452161,0.4664180963372526,0.05622511374425709,0.138982263540482,-0.04617410862386961,0.7625169525017093,0.09660904190622621,0.4351053442833155,-0.7850710136880201,0.6151058099080404,0.07329126925727492,0.5842818255390008,0.287383820900418,0.1098424462292078,-0.06429325105380923,0.6395820343559844,0.4558842984122649,0.965851171911164,-0.1441742948433626,0.6793094388943262,0.3092516041029292,0.04085957168579157,-0.1234402597231609,-0.6270266789931347,0.3866582462223682,-1,0.8406627578116872,-0.6296338044404409,0.4528190101639278,0.2955191448005077,0.8288741030248588,0.4089294487810002,-0.8700970638294698,-0.1073518617140792,-0.3912611980430817,-0.1890211610975998,1,-0.3961742894822787,-0.7727852573974138]},"edges":{"from":["Collective Behavior/Social Movements","Migration/Immigration","Migration/Immigration","Migration/Immigration","Sex and Gender","Law and Society","Law and Society","Race, Class and Gender","Race, Class and Gender","Race, Class and Gender","Social Change","Social Change","Work and Labor Markets","Political Sociology","Political Sociology","Political Sociology","Political Sociology","Racial and Ethnic Relations","Quantitative Methodology","Quantitative Methodology","Quantitative Methodology","Theory","Theory","Theory","Comparative Sociology/Historical Sociology","Comparative Sociology/Historical Sociology","Comparative Sociology/Historical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Medical Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Economic Sociology","Science and Technology","Science and Technology","Marxist Sociology","Family","Family","Family","Ethnography (Anthropology)","Social Networks","Demography","Demography","Cultural Sociology","Cultural Sociology","Children and Youth","Stratification/Mobility","Stratification/Mobility","Stratification/Mobility","Urban Sociology","Education","Organizations, Formal and Complex"],"to":["Political Sociology","Racial and Ethnic Relations","Asians/Asian-Americans","Latina/o Sociology","Sexualities","Criminal Justice","Criminology/Delinquency","Stratification/Mobility","Urban Sociology","Education","Political Sociology","Cultural Sociology","Stratification/Mobility","Theory","Comparative Sociology/Historical Sociology","Peace, War, World Conflict, and Conflict Resolution","Development","Urban Sociology","Demography","Mathematical Sociology","Stratification/Mobility","Comparative Sociology/Historical Sociology","Cultural Sociology","Knowledge","Peace, War, World Conflict, and Conflict Resolution","Development","Global and Transnational Sociology","Science and Technology","Demography","Biosociology","Aging/Social Gerontology","Mental Health","Alcohol and Drugs","Science and Technology","Social Networks","Political Economy","Cultural Sociology","Stratification/Mobility","Organizations, Formal and Complex","Occupations/Professions","Communication and Information Technologies","Knowledge","Labor and Labor Movements","Demography","Children and Youth","Stratification/Mobility","Urban Sociology","Mathematical Sociology","Stratification/Mobility","Aging/Social Gerontology","Religion","Mass Communication/Public Opinion","Education","Urban Sociology","Education","Policy","Environmental Sociology","Policy","Occupations/Professions"],"weight":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"sign":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"width":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"title":["Shared Individuals: 26","Shared Individuals: 48","Shared Individuals: 14","Shared Individuals: 22","Shared Individuals: 25","Shared Individuals: 19","Shared Individuals: 12","Shared Individuals: 47","Shared Individuals: 33","Shared Individuals: 47","Shared Individuals: 8","Shared Individuals: 8","Shared Individuals: 28","Shared Individuals: 35","Shared Individuals: 50","Shared Individuals: 10","Shared Individuals: 15","Shared Individuals: 31","Shared Individuals: 35","Shared Individuals: 12","Shared Individuals: 38","Shared Individuals: 39","Shared Individuals: 45","Shared Individuals: 10","Shared Individuals: 9","Shared Individuals: 15","Shared Individuals: 24","Shared Individuals: 19","Shared Individuals: 34","Shared Individuals: 9","Shared Individuals: 23","Shared Individuals: 27","Shared Individuals: 6","Shared Individuals: 21","Shared Individuals: 20","Shared Individuals: 25","Shared Individuals: 36","Shared Individuals: 38","Shared Individuals: 51","Shared Individuals: 16","Shared Individuals: 9","Shared Individuals: 11","Shared Individuals: 9","Shared Individuals: 48","Shared Individuals: 19","Shared Individuals: 44","Shared Individuals: 11","Shared Individuals: 12","Shared Individuals: 50","Shared Individuals: 24","Shared Individuals: 12","Shared Individuals: 8","Shared Individuals: 21","Shared Individuals: 33","Shared Individuals: 70","Shared Individuals: 27","Shared Individuals: 14","Shared Individuals: 21","Shared Individuals: 19"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":true,"label":{"inherit":"to"}},"manipulation":{"enabled":false},"edges":{"smooth":false,"color":{"inherit":"to"}},"physics":{"solver":"barnesHut","maxVelocity":3,"barnesHut":{"theta":0.1,"gravitationalConstant":-3000,"centralGravity":0.2}},"interaction":{"hover":true,"zoomSpeed":1}},"groups":null,"width":null,"height":null,"idselection":{"enabled":true,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","highlight":{"enabled":true,"hoverNearest":true,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"}},"evals":[],"jsHooks":[]}</script>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-0.06-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
@@ -358,23 +359,23 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
 <div aria-describedby="tbl-sample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <div>
-<div id="ezrlgpqjyi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ezrlgpqjyi table {
+<div id="qstzkdgaef" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qstzkdgaef table {
   font-family: Optima, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ezrlgpqjyi thead, #ezrlgpqjyi tbody, #ezrlgpqjyi tfoot, #ezrlgpqjyi tr, #ezrlgpqjyi td, #ezrlgpqjyi th {
+#qstzkdgaef thead, #qstzkdgaef tbody, #qstzkdgaef tfoot, #qstzkdgaef tr, #qstzkdgaef td, #qstzkdgaef th {
   border-style: none;
 }
 
-#ezrlgpqjyi p {
+#qstzkdgaef p {
   margin: 0;
   padding: 0;
 }
 
-#ezrlgpqjyi .gt_table {
+#qstzkdgaef .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -400,12 +401,12 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-left-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_caption {
+#qstzkdgaef .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ezrlgpqjyi .gt_title {
+#qstzkdgaef .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -417,7 +418,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-bottom-width: 0;
 }
 
-#ezrlgpqjyi .gt_subtitle {
+#qstzkdgaef .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -429,7 +430,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-top-width: 0;
 }
 
-#ezrlgpqjyi .gt_heading {
+#qstzkdgaef .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -441,13 +442,13 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-right-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_bottom_border {
+#qstzkdgaef .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_col_headings {
+#qstzkdgaef .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -462,7 +463,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-right-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_col_heading {
+#qstzkdgaef .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -482,7 +483,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   overflow-x: hidden;
 }
 
-#ezrlgpqjyi .gt_column_spanner_outer {
+#qstzkdgaef .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -494,15 +495,15 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   padding-right: 4px;
 }
 
-#ezrlgpqjyi .gt_column_spanner_outer:first-child {
+#qstzkdgaef .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ezrlgpqjyi .gt_column_spanner_outer:last-child {
+#qstzkdgaef .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ezrlgpqjyi .gt_column_spanner {
+#qstzkdgaef .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -514,11 +515,11 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   width: 100%;
 }
 
-#ezrlgpqjyi .gt_spanner_row {
+#qstzkdgaef .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ezrlgpqjyi .gt_group_heading {
+#qstzkdgaef .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -544,7 +545,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   text-align: left;
 }
 
-#ezrlgpqjyi .gt_empty_group_heading {
+#qstzkdgaef .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -559,15 +560,15 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   vertical-align: middle;
 }
 
-#ezrlgpqjyi .gt_from_md > :first-child {
+#qstzkdgaef .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ezrlgpqjyi .gt_from_md > :last-child {
+#qstzkdgaef .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ezrlgpqjyi .gt_row {
+#qstzkdgaef .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -586,7 +587,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   overflow-x: hidden;
 }
 
-#ezrlgpqjyi .gt_stub {
+#qstzkdgaef .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -599,7 +600,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   padding-right: 5px;
 }
 
-#ezrlgpqjyi .gt_stub_row_group {
+#qstzkdgaef .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -613,15 +614,15 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   vertical-align: top;
 }
 
-#ezrlgpqjyi .gt_row_group_first td {
+#qstzkdgaef .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ezrlgpqjyi .gt_row_group_first th {
+#qstzkdgaef .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ezrlgpqjyi .gt_summary_row {
+#qstzkdgaef .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -631,16 +632,16 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   padding-right: 5px;
 }
 
-#ezrlgpqjyi .gt_first_summary_row {
+#qstzkdgaef .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_first_summary_row.thick {
+#qstzkdgaef .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ezrlgpqjyi .gt_last_summary_row {
+#qstzkdgaef .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -650,7 +651,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-bottom-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_grand_summary_row {
+#qstzkdgaef .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -660,7 +661,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   padding-right: 5px;
 }
 
-#ezrlgpqjyi .gt_first_grand_summary_row {
+#qstzkdgaef .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -670,7 +671,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-top-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_last_grand_summary_row_top {
+#qstzkdgaef .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -680,11 +681,11 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-bottom-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_striped {
+#qstzkdgaef .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ezrlgpqjyi .gt_table_body {
+#qstzkdgaef .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -693,7 +694,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-bottom-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_footnotes {
+#qstzkdgaef .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -707,7 +708,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-right-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_footnote {
+#qstzkdgaef .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -716,7 +717,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   padding-right: 5px;
 }
 
-#ezrlgpqjyi .gt_sourcenotes {
+#qstzkdgaef .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -730,7 +731,7 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   border-right-color: #D3D3D3;
 }
 
-#ezrlgpqjyi .gt_sourcenote {
+#qstzkdgaef .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -738,63 +739,63 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
   padding-right: 5px;
 }
 
-#ezrlgpqjyi .gt_left {
+#qstzkdgaef .gt_left {
   text-align: left;
 }
 
-#ezrlgpqjyi .gt_center {
+#qstzkdgaef .gt_center {
   text-align: center;
 }
 
-#ezrlgpqjyi .gt_right {
+#qstzkdgaef .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ezrlgpqjyi .gt_font_normal {
+#qstzkdgaef .gt_font_normal {
   font-weight: normal;
 }
 
-#ezrlgpqjyi .gt_font_bold {
+#qstzkdgaef .gt_font_bold {
   font-weight: bold;
 }
 
-#ezrlgpqjyi .gt_font_italic {
+#qstzkdgaef .gt_font_italic {
   font-style: italic;
 }
 
-#ezrlgpqjyi .gt_super {
+#qstzkdgaef .gt_super {
   font-size: 65%;
 }
 
-#ezrlgpqjyi .gt_footnote_marks {
+#qstzkdgaef .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ezrlgpqjyi .gt_asterisk {
+#qstzkdgaef .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ezrlgpqjyi .gt_indent_1 {
+#qstzkdgaef .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ezrlgpqjyi .gt_indent_2 {
+#qstzkdgaef .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ezrlgpqjyi .gt_indent_3 {
+#qstzkdgaef .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ezrlgpqjyi .gt_indent_4 {
+#qstzkdgaef .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ezrlgpqjyi .gt_indent_5 {
+#qstzkdgaef .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
