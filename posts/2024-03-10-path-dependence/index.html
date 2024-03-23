@@ -124,6 +124,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="blog - Path Dependence">
 <meta property="og:description" content="Polya Urns">
@@ -224,13 +253,6 @@ div.csl-indent {
 
 
 
-<div class="cell">
-<details open="" class="code-fold">
-<summary>Packages</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_light</span>(<span class="at">base_family =</span> <span class="st">"Avenir Next Condensed"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 <p>A path-dependent explanation can usually be decomposed into two causal components: (1) an original cause and (2) a maintenance structure. More contemporary formulations refer to this same distinction in terms of “critical junctures” and “mechanisms of reproduction.”</p>
 <blockquote class="blockquote">
 <p>The first is the particular circumstances which caused a tradition to be started. The second is the general process by which social patterns reproduce themselves.</p>
@@ -250,6 +272,13 @@ div.csl-indent {
 </blockquote>
 <p>The preferred metaphor is that of a <span class="allcaps">Polya urn process</span>.</p>
 <p>Here’s some R code:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Packages</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_light</span>(<span class="at">base_family =</span> <span class="st">"Avenir Next Condensed"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -303,6 +332,38 @@ div.csl-indent {
 </div>
 </div>
 <p>The first few trials correspond to a “critical juncture” and the eventual equilibrium is explained by the sampling procedure in place.</p>
+<table class="table">
+<colgroup>
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Table 1 Model Overview</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Agent Initialization</strong></td>
+</tr>
+<tr class="even">
+<td><p>Each agent has two things.</p>
+<ol type="1">
+<li>First thing <span class="math inline">\(X\)</span></li>
+<li>Second thing <span class="math inline">\(\Phi\)</span></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td><strong>Modeling Sequence</strong></td>
+</tr>
+<tr class="even">
+<td><ol type="1">
+<li>Do</li>
+<li>Do another thing</li>
+<li>And another thing</li>
+</ol></td>
+</tr>
+</tbody>
+</table>
 
 
 
