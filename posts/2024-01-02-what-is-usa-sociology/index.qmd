@@ -142,13 +142,15 @@ Presumably, we are not as interdisciplinary as we would like to believe.
 
 ## Data
 
-***Note. The visualization provided below is provisional. I will need to email someone at the ASA and politely ask for permission to use the directory.***
+***Note. The visualization provided below is provisional. I will need to email someone at the ASA and politely ask for permission to use the full directory.***
 
 When a sociologist joins the *American Sociological Association* (ASA), they have the options to choose up to four "areas of interest" for everyone else to see. For example, I chose (1) [Theory]{.allcaps}; (2) [Quantitative Methodology]{.allcaps}; (3) [Organizations, Formal and Complex]{.allcaps}; and (4) [Law and Society]{.allcaps}. *And I would probably have chosen something different on a different day.*
 
 So, I created a dataset containing the areas of interest of over 1,000 individuals associated with 20 sociology programs in the USA. This dataset is provisional, but see @tbl-sample in case you are curious about the sample.
 
-Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is [Stratification/ Mobility]{.allcaps}, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as subdisciplinary avatars---[Cultural Sociology]{.allcaps}, [Economic Sociology]{.allcaps}, and [Political Sociology]{.allcaps}---which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
+Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is [Stratification/ Mobility]{.allcaps}, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as sub-disciplinary avatars---[Cultural Sociology]{.allcaps}, [Economic Sociology]{.allcaps}, and [Political Sociology]{.allcaps}---which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
+
+Note that some areas of interest like [Demography]{#.allcaps} and Medical Sociology are very well represented but don't seem to
 
 ```{r}
 #| label: fig-areas
@@ -211,9 +213,9 @@ Unfortunately, the resulting network, is *very dense.* It takes only one single 
 
 [^2]: @knoke2021 \[pp. 36\] note three problems with using this sort of projection. First, it entails a loss of "identity information" on one of the two node sets---e.g., the cell entries in $\mathbf A$ don't reveal the specific individuals shared across areas. Second, it results in *very dense* networks, which leads to biases in network measurements---e.g., an artificially high number of triangles [see @opsahl2013]. Third, it obscures the generative process behind tie formation.
 
-Because of this issue, researchers have looked for ways to "trim" uninformative ties. The intuition is straightforward. If the observed number of shared individuals between two areas ( $a_{ij}$ ) exceeds the number we would expect to see in a random network *(the null model),* then we draw a tie between area $i$ and area $j$.
+Because of this issue, researchers have looked for ways to "trim" uninformative ties. The intuition is straightforward. If the observed number of shared individuals between two areas ( $a_{ij}$ ) exceeds the number we would expect to see in a *random* network *(the null model),* then we draw a tie between area $i$ and area $j$. In other words, we do a "significance test" for each tie in the network depicted by $\mathbf A$.
 
-In other words, we do a "hypothesis test" for each tie in the network depicted by $\mathbf A$. If the links between individuals and areas of interest was random, the resulting network would consist entirely of isolated nodes.
+If the links between individuals and areas of interest were random, the resulting network would consist entirely of isolated nodes. This is what would happen if there was no disciplinary structure.
 
 ## Results
 
@@ -227,7 +229,7 @@ I used Zachary Neal's [-@neal2022] `backbone` package to do all this.[^3]
 
 As we may have expected, there is a strong overlap between [Stratification/ Mobility]{.allcaps} and [Education]{.allcaps}; [Demography]{.allcaps} and [Family]{.allcaps}; [Medical Sociology]{.allcaps} and [Mental Health]{.allcaps}; [Migration/Immigration]{.allcaps} and [Latina/o Sociology]{.allcaps}; and so on.
 
-The strong overlap between [Cultural Sociology]{.allcaps} and so-called [Theory]{.allcaps} deserves its own ~~rant~~ blogpost.
+The strong overlap between [Cultural Sociology]{.allcaps} and so-called [Theory]{.allcaps} deserves its own blog post.
 
 *Note. All isolate nodes have been removed. A bigger sample of individuals and their chosen areas would obviously result in more connected areas.*
 
@@ -248,7 +250,7 @@ For example, the heterogeneity *within* [Economic Sociology]{.allcaps} may be mo
 
 Futhermore, perhaps we may hypothesize that "triangles"---like the overlap between [Medical Sociology]{.allcaps}, [Aging/ Social Gerontology]{.allcaps}, and [Demography]{.allcaps}---are formed by somewhat distinct underlying groups of sociologists.
 
-Also, note that [Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}), but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This does *not* mean that one is more important than the other. It just means that the overlap between [Quantitative Methodology]{.allcaps} and those three areas is stronger than what we would expect by chance; whereas the ties between whereas the overlap between [Qualitative Methodology]{.allcaps} and other areas is more compatible with a "null model" of random ties between areas.[^4]
+Also, note that [Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}), but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This does *not* mean that one is more important than the other. It just means that the overlap between [Quantitative Methodology]{.allcaps} and those three areas is stronger than what we would expect by chance; whereas the overlap between [Qualitative Methodology]{.allcaps} and other areas is more compatible with a "null model" of random ties between areas.[^4]
 
 [^4]: The area of [Ethnography (Anthropology)]{.allcaps}---which has about half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology]{.allcaps}, reflecting a long tradition of famous urban ethnographies.
 

@@ -105,7 +105,7 @@ Here's a non-exhaustive list:
 
 #### The Future
 
-As mentioned earlier, I don't think CSS will become an autonomous discipline. It may be the case that it becomes a historical oddity, much like the short-lived *cybernetics* movement of the 1950s; or it might become a more resilient interdisciplinary effort, much like *cognitive science*. Both of them---in case you didn't know---where also driven by innovations in computer technology.[^4]
+As mentioned earlier, I don't think CSS will become an autonomous discipline. It may be the case that it becomes a historical oddity, much like the short-lived *cybernetics* movement of the 1950s; or it might become a more resilient interdisciplinary effort, much like *cognitive science*. Both of them---in case you didn't know---were also driven by innovations in computer technology.[^4]
 
 [^4]: See @kline2015 for cybernetics. See @thagard2023 for cognitive science.
 
