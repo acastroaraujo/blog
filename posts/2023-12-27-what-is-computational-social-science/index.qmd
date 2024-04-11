@@ -13,7 +13,7 @@ image: images/shakira.jpeg
 
 I don't think Computational Social Science (CSS) will ever become an autonomous field.
 
-CSS is more akin to a "trading zone" in which different disciplinary cultures manage to exchange ideas, metaphors, and techniques.[^1]
+CSS is more akin to a "trading zone" in which different disciplinary cultures manage to exchange ideas, techniques, and metaphors.[^1]
 
 [^1]: The idea of "trading zones" in science goes back to historian Peter Galison.
 
@@ -29,7 +29,7 @@ CSS is different from previous interdisciplinary efforts in that it is (1) mainl
 >
 > [Galison 1997, 783, cited in @gorman2010]
 
-When I describe CSS as a trading zone, the argument I'm trying to make is that there are seemingly insurmountable cultural divides between participants that will not going away anytime soon. For example, some years ago @dimaggio2015 noted that computer scientists tend to trust human judgment more than social scientists do. Computer scientists have developed many machine learning algorithms with the hopes of *imitating* human judgment (i.e., the "gold standard"); but social scientist want to adopt these new techniques with the hope that they can *remove* unreliable human judgments.
+When I describe CSS as a trading zone, the argument I'm trying to make is that there are seemingly insurmountable cultural divides between participants that will not going away anytime soon. For example, some years ago @dimaggio2015 noted that computer scientists tend to trust human judgment more than social scientists do. Computer scientists have developed many machine learning algorithms with the hopes of *imitating* human judgment (i.e., the "gold standard"); but social scientist want to adopt these new techniques with the hope that they can *remove* unreliable human judgments from the equation.
 
 Cultural exchange in the CSS trading zone is riddled with many similar ironies.
 
@@ -39,13 +39,13 @@ The CSS trading zone is characterized by two recent phenomena that distinguish i
 
 The second is the emergence of a new professional group sometime around the early 2010s: *the* *data scientist.* It first started in tech companies---e.g., Google, Microsoft, Amazon, Facebook, Twitter, Netflix, Spotify, etc. But soon enough data scientist were to be found everywhere, including non-profits and government agencies.
 
-What exactly *is* a "data scientist"? No one knows exactly. But companies are hiring and universities are providing legitimacy via publications and newly minted masters programs [@spector2022; @donoho2017].[^3]
+But what exactly *is* a "data scientist"? No one knows exactly. However, companies are hiring and universities are providing legitimacy via publications and newly minted masters programs [@spector2022; @donoho2017].[^3]
 
 [^3]: @spector2022 [pp. 7] define data science as "the study of extracting value from data---value in the form of *insights* or *conclusions."* It's impossible to create exclusionary boundaries around such an open definition. But that should not matter as long as companies continue to recruit and students continue to enroll.
 
 At first glance, a lot of data science is *just* statistics, see @fig-statistics. Thus, traditional data analysts discovered they could boost their salaries via superficial adjustments to their vocabulary. For example, they no longer fitted statistical models, they *trained* machine learning algorithms; they began using the word *classifier* when talking about logistic regression; experiments became A/B tests; one of them once described logistic regression as "a single layer neural network with a sigmoid activation function"; another one repackaged OLS as a form of "artificial intelligence" in a corporate report.
 
-Similarly, social scientists discovered they could find jobs outside academia by calling themselves data scientists and advertising their social science training as the elusive "substantive expertise" in @fig-conway.
+Similarly, social scientists discovered they could find jobs outside academia by calling themselves data scientists and advertising their social science training as the elusive "substantive expertise" in @fig-conway. It also helps that most social science training revolves around *research design.*
 
 ::: {#fig-memes layout-ncol="2"}
 ![Sometimes data science is just statistics.](images/statistics.png){#fig-statistics fig-align="center" width="300"}
@@ -95,7 +95,7 @@ Here's a non-exhaustive list:
 
 -   Agent-based modeling and others forms of computer simulation, a tradition that goes all the way back to Thomas Schelling's model of segregation and that benefited a lot from the development of object-oriented programming [@smaldino2023].
 
--   Network data and associated modeling techniques [@rawlings2023]*.* The ideas behind social network analysis have a long interdisciplinary history in sociology, anthropology, psychology, and mathematics. Due to previously mentioned advances in computation---and the creation of the Internet---our ability to collect network information has greatly increased and we're starting to see the rise of a much broader---but fragmented)---field of "network science" that also includes computer scientists (e.g., Kleinberg), physicists (e.g., Barabassi), and statisticians (e.g., Snijders, Hancock).
+-   Network data and associated modeling techniques [@rawlings2023]*.* The ideas behind social network analysis have a long interdisciplinary history in sociology, anthropology, psychology, and mathematics. Due to the previously mentioned advances in computation---and the creation of the Internet---our ability to collect network information has greatly increased and we're starting to see the rise of a much broader (but fragmented) field of "network science" that also includes computer scientists, physicists, and statisticians.
 
 -   New tools and ideas for analyzing *text-as-data* [@grimmer2022].
 
@@ -117,7 +117,7 @@ The technologies available in every historical period have always constrained ou
 >
 > @boone2016 [pp. 1511-2]
 
-This kind of influence via metaphor can be found in cybernetics, where ideas developed to predict the location of enemy planes---the idea of goal-directedness as control over perturbations---were used to study all sorts of technical, biological, and social systems [@galison1994]. A similar influence can be found in the analogy between "cognitive systems" and "digital computers" at the center of cognitive science.
+This kind of influence via metaphor can be found in cybernetics, where the idea of goal-directedness as control over perturbations (first developed to predict the location of enemy planes) was used to study all sorts of technical, biological, and social systems [@galison1994]. A similar influence can be found in the analogy between "cognitive systems" and "digital computers" at the center of cognitive science.
 
 At the moment, computational social scientists seem to be focusing too much on new methods and new sources of data. But perhaps the future will provide similar kinds of theoretical influences.[^5]
 
