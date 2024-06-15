@@ -3,6 +3,10 @@ title: "Path Dependence"
 description: |
   Polya Urns and the "frozen accidents" of history
 author: andrés castro araújo
+categories: 
+  - Theory
+  - Sociology
+  - Computation
 date: 2024-03-10
 bibliography: references.bib
 ---
