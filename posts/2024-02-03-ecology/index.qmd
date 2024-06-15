@@ -1,0 +1,60 @@
+---
+title: "Ecology and Sociology"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-02-03
+draft: true
+bibliography: references.bib
+---
+
+Ecological models analyze the interaction between individual organisms and their environments; including interactions within and between species. 
+
+In sociology, the word "ecology" is usually interpreted as an "ecology of relationships"; the word environment is variously construed as being more about [social structure]{.allcaps} or [culture]{.allcaps}; and the word "species" is variously construed as being about different kinds of [identities]{.allcaps}. The analog of "species" in sociology is more straightforward when talking about different _organizational forms_ (e.g., schools, hospitals, banks) competing for similar resources.
+
+_Note. Ecological interactions also set the stage for evolutionary processes because they provide for a proper notion an entity's "fitness" to its environment._
+
+Population ecology studies 
+population, community, and ecosystem ecology
+
+Metapopulation ecology studies interacting groups of population connected through movement (e.g., migration patterns).
+
+Metacommunity ecology studies interacting groups of communities (i.e., connected via the interaction of species).
+
+The central concern of classical population ecology is the size of populations over time (e.g., growth rate, density).
+
+
+For example, the Lotka-Volterra model of predator-prey dynamics predicts population cycles. 
+
+For a single species, the exponential growth model is supposed to capture the behavior of a population in a setting with unlimited resources; the logistic growth model incorporates limited resources in the form of a "carrying capacity" parameter ( $K$ ).
+
+
+
+<https://plato.stanford.edu/entries/ecology/>
+
+@mcpherson1983
+
+@aldrich2020
+
+@ruef2000
+
+@abbott1988
+
+@lieberson2002
+
+@godfrey-smith2013
+
+## Other Metaphors
+
+Fields, Systems
+
+> Bourdieu's and my approaches have much in common. First, they are both concerned with locating actors relative to other actors. They refuse to consider social actors in unrelated, mass terms. Second, they agree that locations in social space are not given ex ante—by functions or by some rule system—but are rather enacted in the process of social life and in particular in the process of relating to other actors. Third, they both agree that there are units or collections of social locations that are usefully considered as macro structures—fields and ecologies. And we both see processes of conflict and competition as crucial to understanding the internal evolution of these collections of social locations.
+
+https://home.uchicago.edu/\~aabbott/Papers/BOURD.pdf
+
+Abbott also draws attention to some important differences. Most important, the notion of field is primarily grounded on a notion of *dominance* between and within fields, whereas the notion of ecology is broader—i.e., it allows for much wider forms of co-existence (e.g., competition, symbiosis, dominance).[^1]
+
+[^1]: "My concept of ecologies has no concept of dominance or subordination. In fact, I have emphasized the empirical fact that dominant professions often destroy themselves by a ruinous exercise of domination, so restricting demand as to drive clients to expedients that proves deadly to that very dominance."
+
+*Note. Abbott's notion of ecologies downplays "dominance" relationships, but I am interested here in a more general view of ecology in which dominance relationships will sometimes play an important role [e.g., @aldrich2020, chapter 11].*
+

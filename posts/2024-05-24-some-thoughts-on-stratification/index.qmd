@@ -1,0 +1,14 @@
+---
+title: "Some Thoughts on Stratification"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-05-24
+draft: true
+---
+
+Meyer.
+
+The second source can be traced back to Davis and Moore’s (1945) writings on social stratification and the subsequent backlash it generated among inequality scholars. The classic functionalist approach to inequality argues that *some* form of inequality has a *benevolent effect*—i.e., it *motivates* the most qualified workers to take on difficult jobs, to work hard, and to innovate. Davis and Moore (1945) spoke of stratification as a “functional necessity” in allusion to the idea that it solves the problem of individual motivation; this is *why* different positions carry different degrees of prestige. Davis and Moore (1945, p. 243) conclude that “social inequality is thus an unconsciously evolved device by which societies insure that the most important positions are conscientiously filled by the most qualified persons. Hence every society, no matter how simple or complex, must differentiate persons in terms of both prestige and esteem, and must therefore possess a certain amount of institutionalized inequality.” 
+
+Sociologists took these arguments to be a *justification for* rather than an *explanation of* inequality. Alternative frameworks didn’t see actually existing social inequality as arising from functional necessities, but rather from a less palatable set of circumstances (e.g., in Marx’s discussion of primitive accumulation). Furthermore, they were quick to point out many obvious ways in which inequality doesn’t serve any purpose at all or might instead be labeled dysfunctional (e.g., Tumin 1953)—i.e., it hinders the discovery of talent among the poorest segments of the population; it provides the elite with the necessary political power to establish, maintain, and rationalize their dominance; it encourages distrust and hostility; it might not even serve as motivation for people if the system has low mobility; etc.

@@ -1,0 +1,89 @@
+---
+title: "Functionalist Foundations for problem-solving sociologists"
+description: |
+  Lessons from organizational sociology
+author: andrés castro araújo
+date: 2024-02-01
+draft: true
+bibliography: references.bib
+---
+
+**Abstract**
+
+This paper advocates for "functionalism" an unlikely but useful theoretical foundation for problem-solving sociology. It is divided into three sections. First, I defend a broad notion of functionalism as any theory that features prominent use of *proper functions* and/or *role functions.* This distinction clarifies many confusions that arise when making sense of various functionalisms. Second, I note that problem-solving sociologists seem to want to *build* a world in which the existence of various phenomena can be explained in terms of the "problems" they solve or the "benefits" they provide—i.e., a world in which certain institutions and organizations are adequately described as having proper functions. Finally, I argue that the organizational sociology of Arthur Stinchcombe [-@stinchcombe1990; -@stinchcombe2001] provides a useful functionalist foundation for problem-solving sociology. In particular, the argument that formal structures that "work" are likely to satisfy three desiderata: cognitive adequacy, communicability, and trajectory of improvement.
+
+------------------------------------------------------------------------
+
+**Introduction**
+
+Sociologists regularly avoid the term "functionalism" due to its association with now defunct *substantive* theories about society (e.g., Parsons). The received wisdom is that functionalism is always (1) *ahistorical;* (2) aimed towards the preservation of the *status quo;* and (3) *incapable of accounting for social change* [@turner1979, pp. 109-18; @spillerman2009, pp. 160]. This what makes it an unlikely candidate for theoretical agendas aimed at solving problems and bringing about positive social change.
+
+Unfortunately, the price we have paid for this received wisdom is a widely-shared reluctance to attribute functions, purposes, or goals to various social phenomena (e.g., behaviors, institutions, organizations). And when we do—which is more often than we'd care to admit—we do so implicitly. This trained incapacity to talk plainly about functions hinders sociological theory writ large. This paper introduces the necessary vocabulary we need to talk transparently about functions *without* committing oneself to any substantive theoretical program—i.e., the distinction between *role functions* and *proper functions*. Second, it argues for the relevance of functionalist arguments of various kinds for problem-solving sociologists [see @prasad2021]. Finally, it argues that the organizational sociology of Arthur Stinchcombe [-@stinchcombe1990; -@stinchcombe2001] provides a useful theoretical foundation for sociologists interested in providing solutions for various societal problems.
+
+**What does it mean to describe something as having a "function" or serving a "purpose"?**
+
+It's common among philosophers to distinguish between (1) *role functions* and (2) *proper functions* or "selected effects." Roughly speaking, both play important roles in answering two different kinds of questions: role functions are tied to *how-does-it-work* questions or *systemic arguments* [@cummins1975], whereas proper functions are tied to *why-is-it-there* questions or *etiological arguments* [@wright1973].[^1] Sociologists tend to conflate both senses of the word "function" in everyday practice, which is an important source of confusion. In other words, the very meaning of the word "function" depends on the argument we are trying to make.[^2]
+
+[^1]: For a broad introduction to this literature, see @craver2013, [@millikan2002; -@millikan1989], @neander1991, @kitcher1993, and @godfrey-smith1993.
+
+[^2]: The distinction between *how-*questions and *why*-questions is an analytical distinction
+
+This distinction shows up in other disciplines,[^3] but we can also find it in the sociological cannon. For example, Durkheim himself advocated forcefully for a strict separation between the *why*-questions and *how*-questions and placed role functions at the center of his own functionalist arguments about the division of labor role in generating novel kinds of organic solidarity—i.e., a *how-does-it-work* kind of explanatory project.[^4] Max Weber's explanation of origins of bureaucracy—can be viewed as a very different form of functionalist argument. Bureaucracy—according to Weber—developed as an adaptive response to certain tasks related to the difficulties of managing large-scale armies, but also as a response to particular demands that could only be fostered and managed by a public administration—e.g., public roads, water-ways, railroads, the telegraph, etc.[^5] In other words, Weber embarked on a *why-is-it-there* kind of explanatory project with regards to bureaucratic organization.
+
+[^3]: Following @mayr1961, biologists commonly distinguish between “evolutionary” and “functional” descriptions of traits. The first deals with the historical explanations in terms of natural selection (e.g., why did an organism evolved a particular trait), whereas the second deals with physiology (e.g., how does a heart manage to pump blood). In philosophy, @salmon1984 [pp. 275] refers to this same distinction as emphasizing the difference between *etiological* and *constitutive* aspects of explanations.
+
+[^4]: "...*when one undertakes to explain a social phenomenon the efficient cause which produces it and the function it fulfills must be investigated separately.* We use the word ‘function’ in preference to ‘end’ or ‘goal’ precisely because social phenomena generally do not exist for the usefulness of the results they produce" [@durkheim1982, pp. 81].
+
+[^5]: "The decisive reason for the advance of bureaucratic organization has always been its purely technical superiority over any other form of organization" [@weber1978, pp. 973]—i.e., bureaucratic forms of government proliferated because they were efficient adaptation.
+
+*Systemic arguments and how-questions*
+
+Ascribing a role function to some $X$ in a systemic argument purports to explain its causal contribution to a more complex capacity or behavior of some higher level "containing system" (e.g., a government’s capacity to surveil, an army’s capacity to destroy). In other words, systems are explained in terms of the organized activities of their component parts. "The goal is to find a set of entities and activities, to describe how they are organized together, and to show that when they are organized together just so, they produce the phenomenon one is trying to explain" [@craver2013, pp. 65]. This kind of argument is prominent in the study of organizations (obvious examples of "containing systems")—e.g., in Diane Vaughan's [-@vaughan2021] careful analysis of "dead reckoning" in air-traffic control systems.
+
+Within this kind of argument, functional ascriptions are always relative (1) to a *chosen* "containing system" and (2) to an *analytical account* of how this system is arranged in order to produce the "complex capacity" we seek to explain [@cummins1975; @cummins2009]. For example, fingerprints contribute to the overall surveillance capacity of a law-enforcement organization insofar as these organizations also have an infrastructure that collects, stores, and retrieves them—i.e., their contribution cannot be understood without reference to the properties of other interacting parts. But the "function" of fingerprints in this system does not have a history of selection. Fingerprints themselves do not exist for the sake of surveillance systems.[^6] A role function is not restricted to behaviors of a component part that contribute (or contributed in some distant past) to survival and reproduction.
+
+[^6]: The capacity of fingerprints to contribute to larger surveillance systems may be better characterized as an *exaptation*—i.e., traits designed for some other purpose (or no purpose at all) often get co-opted to serve new purposes.
+
+*Etiological arguments and why-questions*
+
+Ascribing a proper function to some $X$ in an etiological argument purports to explain *why* $X$ is there [@wright1973]; these types of functions are typically labeled "adaptations" or "selected effects." Unlike role functions, proper functions contribute to the survival and reproduction of $X$. This is what @granovetter2017 [pp. 5] has in mind when he says that functional arguments account for a behavior, practice, or institution by reference to the "problem" it solves or the "benefits" it provides. Researchers are required to specify some concrete history of selection and reproduction for different domains—e.g., natural selection for genotypes, deliberate selection for artifacts, or a more complicated history of selection for institutions and other social structures. Failure to do so results in circular reasoning [@hempel1965, pp. 310]; "functionalist explanations fall short to the extent that they infer the origins of a structure by only examining its consequences, rather than the processes that brought it about" [@aldrich2020, pp. 57].
+
+Unlike proper functions grounded on natural selection, various historical processes of social selection involve at least *some* amount of deliberation (or foresight). Even then, $X$ is usually best described as a "kludge," selected not for its optimality or superiority but because it *satisficed* (was good enough) for the purposes at hand [@simon1956].
+
+In this paper I highlight some of the potential problems faced by this sort of argument, especially as they have been formulated by organizational sociologists—i.e., discussions of *goal-displacement*, *co-optation*, and *means-ends decoupling.*[^7] Additionally, selection and reproduction may be contingent on *perceived* success. For example, sociologists have long argued that some organizations don’t usually adopt new technologies or procedures because of their *technical efficiency*, but rather because of their *cultural legitimacy* [@jepperson2021]. Finally, the "problems" for which $X$ can be said to be a successful solution also have a history of their own. Thus, any concrete history of selection that takes "problems" or "success" to be devoid of a history of their own risks to fail on empirical grounds [@abbott1988].
+
+[^7]: @bromley2012 use the notion of *means-ends decoupling* to describe situations in which organizations pursue activities that are weakly linked to their intended goals. When organizational goals are ambiguous and the consequences of various actions are hard to measure, the appearance of new calculable practices (or "means") may reshape activities in ways that hold little connection to professed goals (or "ends"). Hence the term of "decoupling" [see @meyer1977]. [@merton1968, pp. 253] refers to this phenomena—when "an instrumental value becomes a terminal value"—as *goal displacement*.
+
+*Maintenance and self-correcting behavior*
+
+There is one particular systemic behavior that deserves special attention: a system's capacity for *self-reproduction* or *self-correction.* Here, to ascribe a function to some $X$ is to explain its causal contribution to the *maintenance* of some system [see @robinson2007]. These arguments always posit some kind of *negative feedback loop* that purports to explain what researchers variously characterize as "reproduction," "stability," "equilibrium," or "homeostasis."[^8]
+
+[^8]: See @barrow1993 for a review of Marxists theories about how states serve a “maintenance function” within capitalist systems. The premise is that capitalist societies are inherently prone to crises and that the state serves the “function” of protecting, repairing, and reproducing the capitalist system.
+
+The notion of negative feedback is central to Arthur Stinchcombe's [-@stinchcombe1968] definition of functional explanations: "By a functional explanation we mean one in which the *consequences* of some behavior or social arrangement are essential elements of the *causes* of that behavior." As such, these kinds of argument sometimes provide answer *how-*questions and they sometimes provide answers to *why*-questions.[^9]
+
+[^9]: One of the ongoing tensions within the literature on "racial capitalism"—which argues that racism played a key role in the development and spread of capitalism via colonialism—is precisely the extent to which race has a proper function or merely a role function. It’s obvious that racial stratification provides all sorts of benefits to powerful groups, but it’s not obvious that race exists because it provides such benefits [@go2021, pp. 43-44].
+
+**Relevance to problem-solving sociology**
+
+There are two main reasons why problem-solving sociologist should be interested in functionalism, broadly understood as an umbrella term for theories that feature prominent use of proper functions or role functions. First, it seems to me that problem-solving sociologists would like to help build a world in which the existence of various phenomena can be explained in terms of the "problems" they solve or the "benefits" they provide—i.e., a world in which certain institutions and organizations are adequately described as having proper functions. Second, many functionalist arguments—particularly those that posit negative feedback loops—may be useful to explain obstacles to social change—i.e., "why known solutions are not implemented, and what would have to change for a solution to be implemented" [@prasad2021, pp. 15].
+
+**Arthur Stinchcombe's contribution**
+
+Many years ago, @stinchcombe2001 wrote a book about "formal structures" that actually succeed at solving clearly defined organizational problems.
+
+Stinchcombe prefaced his discussion with a small reflection on what he considered to be sociologists default reaction to formal structures. According to him, our profession has largely focused on abstractions that either (1) are pathological or (2) serve ritual purposes disconnected from the substance of what organizations do. Thus, we tend to ignore the cases when abstractions actually serve their intended purpose.[^10] Problem-solving sociology, as defined by @prasad2021, is built upon a similar dissatisfaction.
+
+[^10]: "Because the gut reaction of sociologists is that formality is all a fraud, I am led to write a book emphasizing that formality can work and that one can tell whether formality satisfies the criteria that can make it work" [@stinchcombe2001, pp. 1].
+
+*Note. In what follows, the notion of a "formal structure" is meant to encapsulate three kinds of abstractions: (1) regulations, rules, and procedures; (2) expert knowledge and techniques; and (3) classification systems and categories. This definition of formal structure is compatible with the way neoinstitutionalists speak of such things [e.g., @meyer1977].*
+
+Stinchcombe elaborates on three desiderata that make formal structures successful: cognitive adequacy, communicability, and trajectory of improvement. This means that the ascription of proper functions becomes a *matter of degree*. Formal structures that exhibit these desiderata are deemed "functional," whereas those that lack them are prime candidates for being described as "pathological" or "ritual" [@stinchcombe2001, pp. 181]. First, a formal structure (e.g., a rule, a blueprint) needs to be an adequate representation of the problems for which an organization is meant to provide solutions; otherwise it can't provide a useful guide to action. Second, a formal structure must be communicable, which means that information must be transparent and reach relevant stake-holders in a timely fashion. Finally, formal structures must have feedback systems that allow for self-correction in response to changing realities and, thus, lead to improvement over time.
+
+*Note. The rest of the paper uses this framework to say something interesting about something that you all care about. Help.*
+
+En otras palabras, el MFMP debe superar una especie de *examen de transparencia útil.* De acuerdo a Fung, Graham y Weil (2017, p. 11), para que la información pública sea útil debe tener dos características. Primero, debe tomar en cuenta los intereses y necesidades de los futuros usuarios de esta información; en este caso, los congresistas encargados de legislar sobre la materia y las organizaciones (sociales o académicas) encargadas de hacer veeduría ciudadana. Segundo, la información debe ser sostenible en el tiempo; quienes producen esta información deben poder corregir las deficiencias que van descubriendo con el tiempo, de manera que la información se haga más precisa.
+
+@dobbin2015
+
+@fung2007

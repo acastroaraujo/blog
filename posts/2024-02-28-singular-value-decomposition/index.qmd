@@ -1,0 +1,180 @@
+---
+title: "Singular Value Decomposition"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-02-28
+bibliography: references.bib
+draft: true
+execute: 
+  eval: false
+editor_options: 
+  chunk_output_type: console
+---
+
+> The SVD constitutes one of science's superheroes in the fight against monstrous data, and it arises in seemingly every scientific discipline.
+>
+> Martin & Porter 839
+>
+> Several stories might be, and are, told about eigenvectors. They are the low-dimensional scaffolds that support higher-dimensional structures.
+>
+> Breiger
+
+```{r}
+
+M <- as.matrix(mtcars)
+M <- scale(M, scale = TRUE)
+
+
+pca <- prcomp(M)
+pca$sdev
+
+sing <- svd(M)
+
+s <- sqrt(nrow(M)-1)
+
+plot(pca$sdev, sing$d)
+plot(pca$sdev, sing$d / s)
+
+head(sing$u %*% diag(sing$d))
+
+head(pca$x)
+
+head(sing$v %*% diag(sing$d) / s)
+
+head(pca$rotation)
+
+
+pca <- princomp(M, cor = TRUE)
+e <- eigen(cov(M))
+sqrt(e$values)
+pca$sdev
+head(pca$loadings)
+head(e$vectors)
+
+
+head(M %*% e$vectors)
+head(pca$scores)
+
+head(sing$u %*% diag(sing$d))
+```
+
+```{r}
+
+
+i <- rbind(
+  c("a", "b"),
+  c("b", "c"),
+  c("c", "a"),
+  c("d", "e"),
+  c("e", "f"),
+  c("f", "d"),
+  c("d", "a")
+)
+
+M <- array(0L, dim = c(6, 6))
+
+colnames(M) <- rownames(M) <- letters[1:6]
+
+M[i] <- 1L
+M[i[, 2:1]] <- 1L
+M
+
+svd(M)
+
+igraph::graph_from_adjacency_matrix(M, mode = "undirected") |> 
+  tidygraph::as_tbl_graph() |> 
+  ggraph::ggraph("graphopt") + 
+  ggraph::geom_edge_fan() +
+  ggraph::geom_node_label(aes(label = name))
+
+
+# M[upper.tri(M)] <- 0L
+M
+
+net <- igraph::graph_from_adjacency_matrix(M, mode = "directed") 
+igraph::laplacian_matrix(net) 
+  
+L <- diag(rowSums(M)) - M ## diagonal matrix - adjacency matrix
+L
+
+sign(eigen(L)$vectors[, ncol(M) - 1])
+
+fit <- kmeans(eigen(L)$vectors[ , 5 ], 2)
+
+fit$cluster
+
+barplot(eigen(L)$values)
+
+library(Matrix)
+
+X %*% c(1, 1, 1, 0, 0, 0)
+X %*% c(0, 0, 0, 1, 1, 1)
+
+X
+
+M %*% c(0, 0, 0, 1, 1, 1) 
+
+M %*% c(1, 1, 1, 0, 0, 0)
+
+with(eigen(M), M %*% vectors[, 1, drop = FALSE])
+with(eigen(M),  2 * vectors[, 1, drop = FALSE])
+
+with(eigen(M),  vectors %*% t(vectors))
+
+
+# The vector x2 is hence often called the Fiedler vector, and the corresponding eigenvalue
+# λ2, the Fiedler value.
+
+data("karate", package = "igraphdata")
+
+L <- igraph::laplacian_matrix(karate)
+
+barplot(eigen(L)$values)
+
+eigenvectors <- eigen(L)$vector
+
+f_vec <- eigenvectors[, ncol(eigenvectors) - 1L]
+
+V(karate)$f <-f_vec
+
+
+library(ggraph) 
+
+karate |> 
+  ggraph("stress") + 
+  geom_edge_fan() + 
+  geom_node_point(aes(color = sign(f), fill = f), stroke = 1, shape = 21, size = 5) 
+
+
+```
+
+> All real matrices can be expressed as $\mathbf{A} = \mathbf{U} \mathbf \Sigma \mathbf{V}^\top$, where U and V are basis transformations and Sigma is an A-shaped matrix containing stretching/shrinking factors on its main diagonal... Many doors are opened with SVD, especially those involving approximation and compression.
+
+SVD helps us identify the "most importnat features of a system" (e.g., the important websites in the Internet, the building blocks of images).
+
+Take a rectangular $m \times n$ matrix $\mathbf{A}$.
+
+$$
+\underset{\scriptsize{m \times n}}{\mathbf{A}_{}} \ \underset{\scriptsize{n \times 1}}{\widehat{\mathbf{v}_i}} = \sigma_i \underset{\scriptsize{m \times 1}}{\widehat{\mathbf{u}_i}}
+$$
+
+The story is A sends v to u. It's a mapping.
+
+We call $\mathbf{v}_i$ and $\mathbf{u}_i$ *singular vectors,* and $\sigma_i$ a *singular value*.
+
+The vectors $\mathbf{v}_i$ form an *orthonormal* basis for $\mathbb R^n$ (column space?)
+
+The vectors $\mathbf{u}_i$ form an *orthonormal* basis for $\mathbb R^m$ (row space?)
+
+Suprising, $\mathbf{A}^\top \mathbf{A}$ and $\mathbf{A}\mathbf{A}^\top$ have the same eigenvalues!
+
+Truncated thing.
+
+*It's a sum of weighted outer-products (i.e., all rank 1 matrices).*
+
+Page Rank, PCA (correlations)
+
+<https://databookuw.com/page-2/page-4/>
+
+wiggly MSNIST from Rohe lab

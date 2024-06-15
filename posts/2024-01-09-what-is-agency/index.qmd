@@ -19,3 +19,5 @@ attribution theory and sellars
 > "What Is Agency?" A. Mische & M. Emirbayer
 
 <https://culturecog.blog/2022/01/24/the-lexical-semantics-of-agency-part-i/>
+
+To be an agent, a system must engage in goal-directed interaction with an environment.

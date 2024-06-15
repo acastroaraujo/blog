@@ -144,7 +144,7 @@ As a general rule, *nothing in the social and biological sciences remains consta
 
 ## The lesson
 
-***Regression to the mean will people to see causality where there is none.***
+***Regression to the mean will trick people into seeing causality where there is none.***
 
 As mentioned earlier, this phenomena shows up all the time wherever randomness (or "luck") is expected to play a role. Thus, we see it in everything from sports to public policy.[^2] This is a problem because human beings are inclined to find amazing patterns when they look at randomness. Obviously, this is mostly harmless when, for example, the source of randomness is clouds in the sky and the patterns we find take the form of "a cow" or "a face."[^3] But in other settings, this same phenomena can become worrisome.
 

@@ -1,0 +1,30 @@
+---
+title: "The Desire for Just So Stories"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-05-30
+draft: true
+---
+
+Functionalist explanations, as we have described them, are not “just-so” stories. They are not meant to be mere conjectures about a historical process that may have taken place or about how the inner-workings of some “system” may look like. Nevertheless, there are reasons as to why some sociologists remain skeptical about the validity of many functionalist explanations—i.e., they are very easy to fabricate. And the rate at which we can fabricate them easily exceeds the rate at which we can back them up with evidence.
+
+This is what Gould and Lewontin had in mind in their critique of the so-called “adaptationist programme,” which comfortably ascribes proper functions to all sorts of phenomena. 
+
+“...the rejection of one adaptive story usually leads to its replacement by another, rather than to a suspicion that a different kind of explanation might be required. Since the range of adaptive stories is as wide as our minds are fertile, new stories can always be postulated” (Gould & Lewontin 1979: 153).
+
+The same can be said of the hidden-causal-loop interpretation of functionalist explanations (Elster 1983). It is very easy to imagine ways in which some social phenomena is “beneficial” (whatever that means) to at least some subset of the population and then argue—via leap of faith—that this is sufficient to explain their origin. Furthermore, the insistence that these benefits must also be unintended and unrecognized (“latent functions”) provides these conjectures with an extra layer of protection against empirical refutation. Similarly, it is also easy to speculate that these beneficiaries may be following a hidden agenda or that they are being directed towards a “goal” that they rather keep secret (or that is secret to themselves).  
+
+We can think of at least one potential explanation for why unsubstantiated functionalist explanations are so widespread. It is a mere hypothesis. The irony is not lost on us. 
+
+The first explanation is due to Jon Elster (1983), who argued that we may have a psychological predisposition to “make sense” of unintended or accidental phenomena; in this case, attributing “meaning” to something means attributing purpose to it.
+
+“The attraction stems, I believe, from the implicit assumption that all social and psychological phenomena must have a meaning, i.e., that there must be some sense, some perspective in which they are beneficial for someone or something; and that furthermore these beneficial effects are what explain the phenomena in question. This mode of thought is wholly foreign to the idea that there may be elements of sound and fury in social life, unintended and accidental consequences that have no meaning whatsoever” (Elster 1983: 55).
+
+It is easy to fabricate purposes, whether they take the guise of “functions” or “goals.” And doing so makes us feel better. This is not unlike Malinowski’s argument about how magic rituals are intended to reduce the anxiety elicited by uncertainty.
+
+**\[Others, like Bronislaw Malinowski, maintained that some magic rituals help reduce the anxiety linked with uncertain and dangerous activities; hence, people would be motivated—consciously or not—to appeal to supernatural forces in an attempt to maintain “control” over uncertainty (Stinchcombe 1968: 83).\]** \[**We can go crazy and incorporate all ritual purposes here: group solidarity; collective effervescence; costly signaling; symbolic markers of group membership and generate feelings of belonging among participants; Rituals have long fascinated anthropologists because of the way they seemingly produce “useful effects” through means that are causally opaque (Xylagatas 2022: 88).  …human beings seem to have a real desire for providing lazy functionalist explanations\]**
+
+**\[rewrite everything, this section may have started as a joke, but I think it’s very cool and very clever, perhaps too clever, perfect for AJS. we would be accusing Elster of being a functionalist like Malinowski, beautiful!\].**
+
+Functional arguments are tempting, easy to come up with, but much more difficult to forward rigorously. An important reason for this is that people often tend to overestimate their ability to explain the inner workings of complex phenomena, including everyday artifacts such as toasters and cars (Wilson and Keil 1998; Rozenblit and Keil 2002). We are not very good at understanding the world. Craver and Darden (2013: 91–92) refer to this fact of human cognition as the *everyday vice of boxology*: we navigate the world with incomplete schemas about the inner workings of things for which we cannot provide answers to simple how-does-it-work questions. Therefore, it is legitimate to be wary of function talk in the social world, but discarding it altogether has only led to theoretical obfuscation.

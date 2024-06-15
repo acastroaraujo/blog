@@ -1,0 +1,11 @@
+---
+title: "Factor Analysis"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-02-28
+draft: true
+bibliography: references.bib
+---
+
+@rohe2023

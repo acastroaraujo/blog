@@ -1,5 +1,5 @@
 ---
-title: "The Thermostat"
+title: "The Thermostat Framework of Human Action"
 #description: |
   
 author: andrés castro araújo
@@ -21,6 +21,8 @@ but to the direction the temperature is going.
 > ADD THING FROM CYBERNETICS BOOK
 
 Schelling  notes that the _rate_ at which the thermostat adjusts room temperature may lead to cyclical patterns of cyclical behavior (e.g., business cycles, predator-prey cycles of growth and decline). 
+
+market tattonment is essentially a thermostat that describes the mutual adjustment of production and consumption in an economy in response to price signals
 
 
 

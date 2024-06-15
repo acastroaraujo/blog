@@ -1,7 +1,7 @@
 ---
 title: 'Fetishism and The "Variables Paradigm"'
 description: |
-  Please don't.
+  Are all regression coefficients riddled with metaphysical subtleties and theological niceties?
 author: andrés castro araújo
 categories:
   - Sociology
@@ -19,17 +19,17 @@ Both criticism are usually blown out of proportions, mostly because it is rare t
 
 Before getting into detail, let me note the following:
 
--   This kind of criticism exhibits an "unmasking style" which I find to be deeply cringe [cf. @baehr2019].
+-   This kind of criticism exhibits an "unmasking style" which I find to be deeply immature [cf. @baehr2019].
 
-    It gives off the same vibes as Plato's Cave; Marxist false consciousness; and that one famous red pill scene from The Matrix.
+    See: Plato's Cave; Marxist false consciousness; the famous red pill scene from The Matrix; etc.
 
-    *You are a deep critical thinker that has somehow gained a unique access to a "reality" hidden away from less sophisticated individuals.*
+-   The critic (or "critical thinker") is in a unique position to expose some widespread delusion and show that what "normal" people believe to be true is in reality false.
 
--   The critic (usually self-described as "critical thinker") is in a unique position to expose some widespread delusion and show that what "normal" people believe to be true is in reality false.
+    In other words, you get to cosplay as deep critical thinker that has somehow gained a unique access to a "reality" that is *hidden away* from the masses.
 
     This ambition is deeply ingrained in the discipline. "The first wisdom of sociology" according to Peter Berger is that "things are not what they seem." *Wake up, sheeple!*
 
--   In order to engage in such criticism, the best strategy is to write in such a way that makes other people look foolish (or at least unsophisticated simpletons).
+-   In order to engage in such criticism, the best strategy is to write in such a way that makes other people look foolish (or at least less sophisticated).
 
 -   This is related to what Kieran Healy calls the *nuance of the connoisseur.*
 
@@ -97,7 +97,7 @@ In a particularly egregious example of bad faith, Andrew Abbott reads a couple o
 
 *Note. After writing the above I came across Mustafa Emirbayer's [-@emirbayer1997] "Manifesto for a Relational Sociology."*
 
-*TL;DR it's all a bunch of self-congratulatory nonsense.*
+*TL;DR it's not good, it's mostly nonsense.*
 
 *Among other things, he argues that it's futile for quantitative researchers to adjust for confounders because all such attempts "ignore the ontological embeddedness or locatedness of entities within actual situational contexts" [@emirbayer1997, pp. 289].*
 

@@ -1,7 +1,7 @@
 ---
 title: "Levels"
 description: |
-  Some of them are good.
+  I have some thoughts.
 author: andrés castro araújo
 categories: 
   - Theory
@@ -32,15 +32,15 @@ Most problems with the levels metaphor stem from being committed to the followin
 
 [^1]: Some social scientists find this "ontological stratification" of the world very attractive because they want to protect themselves against incursions from nearby disciplines---e.g., psychologists protecting themselves against the neuroscientists, sociologists protecting themselves against the ~~psychologists~~ economists. They further complicate matters by developing some goofy view about the *autonomy* or *irreducibility* of their preferred level.
 
-These additional commitments seem innocuous and maybe obvious at times. For example, Andrew Abbott relies on this metaphor to offer an explanation as to why interdisciplinarity seems more straightforward in the natural sciences.
+These commitments seem innocuous and maybe obvious at times. For example, Andrew Abbott relies on this metaphor to offer an explanation as to why interdisciplinarity seems more straightforward in the natural sciences than in the social sciences.
 
 > Political science, we say, is about power, economics about choice, anthropology about ethnography, and so on. In the natural sciences, these axes of cohesion are aligned, to some extent, in a hierarchy of "levels of analysis." Physics concerns the atomic and subatomic levels, chemistry the molecular level, biology the supermolecular level of living things. But in the social sciences and humanities, axes of cohesion are not aligned... a fact that has made interdisciplinarity in the social sciences much more complicated than the simpler, linear interpenetration of the natural sciences.
 >
 > @abbott2001 [pp. 140]
 
-Sounds insightful, right? Maybe, a little bit, but it's also very *misleading.*
+Sounds insightful, right? Maybe, a little bit, but it's also *very misleading.*
 
-Many disciplines cast a wide net. The relationship between scientific disciplines and "ontological levels" is *many-to-many.* For example, evolutionary biology encompasses genes, organisms, populations, and environments. Take a look at virtually any scientific discipline and you'll find the same.
+Most disciplines cast a wide net. The relationship between scientific disciplines and "ontological levels" is *many-to-many.* For example, evolutionary biology encompasses genes, organisms, populations, and environments. Take a look at virtually any scientific discipline and you'll find the same.
 
 The rest of this entry focuses on more legitimate ways of using the levels metaphors in different contexts. I will focus on two kinds of levels that I find useful: (1) levels of [description]{.allcaps}, in which we look at the same phenomena from different perspectives; and (2) levels of [organization]{.allcaps}, in which we look at relationships between "wholes" and their relevant "component parts."
 
@@ -107,7 +107,7 @@ These are levels of *realization.* A computation is implemented by an algorithm,
 > @marr1982 [pp. 63]
 
 | Computational theory                                                                                                              | Representation and algorithm                                                                                                                                            | Hardware implementation                                          |
-|-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|
+|------------------------|-------------------------------|-----------------|
 | What is the goal of the computation, why is it appropriate, and what is the logic of the strategy by which it can be carried out? | How can this computational theory be implemented? In particular, what is the representation for the input and output, and what is the algorithm for the transformation? | How can the representation and algorithm be realized physically? |
 
 : The three levels at which any machine carrying out an information-processing task must be understood. {#tbl-marr tbl-colwidths="\[33,34,33\]"}
@@ -128,7 +128,7 @@ Perspectives that privilege [structure]{.allcaps} have produced many important i
 
 The idea is that the analysis of each level can be partially decoupled from the other, even though each level is just a different way of representing the same phenomena. They are different sides of the same coin. Each level makes up the blind spot of the other.
 
-Some novel forms of network analysis attempt to incorporate both levels simultaneously [e.g., @pachucki2010].
+Some novel forms of network analysis attempt to incorporate both levels simultaneously [e.g., @lizardo2023a; @lizardo2023].
 
 ## Levels of Organization
 
@@ -138,7 +138,7 @@ The levels metaphor is most useful when it distinguishes between *wholes* and th
 
 The main idea behind mechanistic explanations is to figure out how the organized activities of parts produce some property or behavior of a larger whole [@craver2013; @craver2007; @craver2001; @machamer2000]. Here, the levels metaphor relates some activity or feature of a whole to the properties and organized activities of relevant component parts. This is what it means to describe a [mechanism]{.allcaps}: the component parts work *together* to accomplish something that they cannot do on their own. [Mechanisms]{.allcaps}--- by definition---are more than the sum of their parts.
 
-This provides for a very different view of levels from the "layered" metaphor I complained about at the beginning. Part-to-whole levels don't represent monolithic divisions in the furniture of the world. There is no correspondence between the levels in the nervous system, the circulatory system, and various sorts of social systems. "Levels of mechanisms cannot be read off a menu of levels in advance" [@craver2014, pp. 18].
+This provides for a view of levels that is very different from the notion of ontological "layers"; "Levels of mechanisms cannot be read off a menu of levels in advance" [@craver2014, pp. 18].
 
 For example, a researcher might be interested in explaining how human groups accomplish complex tasks---e.g., spatial learning and navigation [@vaughan2021; @hutchins1995]. Or they might be interested in figuring out how status hierarchies enhance the performance of task-oriented groups [@willer2009]. Or they might simply be an organizational sociologist.
 
