@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="andrés castro araújo">
-<meta name="dcterms.date" content="2021-01-24">
-<meta name="description" content="A few different ways to do optimization.">
+<meta name="dcterms.date" content="2024-02-28">
 
-<title>blog - Optimization in R</title>
+<title>blog - Singular Value Decomposition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,7 +56,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -134,11 +153,11 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="blog - Optimization in R">
-<meta property="og:description" content="A few different ways to do optimization.">
+<meta property="og:title" content="blog - Singular Value Decomposition">
+<meta property="og:description" content="">
 <meta property="og:site_name" content="blog">
-<meta name="twitter:title" content="blog - Optimization in R">
-<meta name="twitter:description" content="A few different ways to do optimization.">
+<meta name="twitter:title" content="blog - Singular Value Decomposition">
+<meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -192,16 +211,8 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Optimization in R</h1>
-                  <div>
-        <div class="description">
-          <p>A few different ways to do optimization.</p>
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">R</div>
-              </div>
-                  </div>
+      <h1 class="title">Singular Value Decomposition</h1>
+                      </div>
   </div>
     
   
@@ -217,7 +228,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 24, 2021</p>
+        <p class="date">February 28, 2024</p>
       </div>
     </div>
     
@@ -230,231 +241,183 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
 
-<p><em>Finding the peak of parabola</em></p>
-<p><span class="math display">\[y = 15 + 10x - 2x^2\]</span></p>
-<p>First we write this statement as an R function.</p>
+<p>Replace * with <span class="math inline">\(\top\)</span> !</p>
+<p>A <em>singular value decomposition</em> (SVD) is a factorization of the form:</p>
+<p><span class="math display">\[
+\mathbf{A} = \mathbf{U} \boldsymbol{\Sigma} \mathbf{V}^*
+\]</span></p>
+<aside>
+definition
+</aside>
+<p>where</p>
+<ul>
+<li><p><span class="math inline">\(\mathbf{A}\)</span> is an <span class="math inline">\(m\times n\)</span> matrix with rank <span class="math inline">\(r\)</span></p></li>
+<li><p><span class="math inline">\(\mathbf{U}\)</span> is an <span class="math inline">\(m\times r\)</span> with <span class="math inline">\(\mathbf{U}^*\mathbf{U}=\mathbf{I}_r\)</span></p></li>
+<li><p><span class="math inline">\(\mathbf{V}\)</span> is an <span class="math inline">\(n\times r\)</span> matrix with <span class="math inline">\(\mathbf{V}^*\mathbf{V}=\mathbf{I}_r\)</span></p></li>
+<li><p><span class="math inline">\(\boldsymbol \Sigma\)</span> is a diagonal matrix comprised of <em>singular values</em> (<span class="math inline">\(\sigma_1, \sigma_2, \dots, \sigma_r\)</span>)</p></li>
+<li><p>The singular values are sorted such that <span class="math inline">\(\sigma_1 \geq \sigma_2 \geq \dots &gt;0\)</span></p></li>
+</ul>
+<p>The <strong><em>rank</em></strong> <strong><em>k</em></strong> <strong><em>approximation</em></strong> of <span class="math inline">\(\mathbf{A}\)</span> is given by the following sum:</p>
+<p><span class="math display">\[
+\mathbf{A} \approx \sigma_1 \cdot \mathbf{u}_1 \mathbf{v}_1^* + \dots + \sigma_k \cdot \mathbf{u}_k \mathbf{v}_k^*
+\]</span></p>
+<p>The columns of <span class="math inline">\(\mathbf U\)</span> and <span class="math inline">\(\mathbf V\)</span> are usually called “left” and “right” singular vectors.</p>
+<p>SVD is a bit magical.</p>
+<ul>
+<li><p><span class="math inline">\(\underset{n \times n}{\mathbf A^\top \mathbf A} = \mathbf V \boldsymbol \Sigma^2 \mathbf V^\top\)</span></p></li>
+<li><p><span class="math inline">\(\underset{m \times m}{\mathbf{AA}^\top} = \mathbf{U \Sigma}^2 \mathbf U^\top\)</span></p></li>
+</ul>
+<p>This is related to eigen-vector decomposition!</p>
+<p>Ever heard of principal components analysis (PCA)? It’s literally SVD if we first center the columns of <span class="math inline">\(\mathbf A\)</span> such that each one as a mean of zero.</p>
+<p>In fact, if you check the documentation for <code>prcomp()</code> you’ll see the following description:</p>
+<p>“The calculation is done by a singular value decomposition of the (centered and possibly scaled) data matrix, not by using eigen() on the covariance matrix. This is generally the preferred method for numerical accuracy.”</p>
+<p><strong>Example</strong></p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>parabola <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="dv">15</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>x <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(davis, <span class="at">package =</span> <span class="st">"latentnet"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> network<span class="sc">::</span><span class="fu">as.matrix.network</span>(davis)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>M </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>svddecomp <span class="ot">&lt;-</span> <span class="fu">svd</span>(M)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(svddecomp, u[, <span class="dv">1</span><span class="sc">:</span>k] <span class="sc">%*%</span> <span class="fu">diag</span>(d[<span class="dv">1</span><span class="sc">:</span>k]) <span class="sc">%*%</span> <span class="fu">t</span>(v[, <span class="dv">1</span><span class="sc">:</span>k]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Then we can visualize it using <code>curve()</code> or <code>ggplot2</code>.</p>
-<div class="cell" data-layout-align="center">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_light</span>(<span class="at">base_family =</span> <span class="st">"Optima"</span>))</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> parabola) <span class="sc">+</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>, <span class="at">y =</span> <span class="st">"f(x)"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Then we call <code>optimize()</code>, which takes the function as its first argument, the interval as its second, and an optional argument indicating whether or not you are searching for the function’s maximum (minimize is the default).</p>
-<div class="cell" data-layout-align="center">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">optimize</span>(parabola, <span class="at">interval =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">100</span>, <span class="dv">100</span>), <span class="at">maximum =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>$maximum
-[1] 2.5
-
-$objective
-[1] 27.5</code></pre>
-</div>
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> out<span class="sc">$</span>maximum, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> out<span class="sc">$</span>objective, <span class="at">linetype =</span> <span class="st">"dashed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>There are many more ways of using optimization in R. For example, if you want to find the maximum of a function with many parameters you can use <code>optim()</code>.</p>
+<p><a href="file:///Users/acastroaraujo/Repositories/notebooks/_site/posts/2021-04-01-linear-algebra-basics/index.html" class="uri">file:///Users/acastroaraujo/Repositories/notebooks/_site/posts/2021-04-01-linear-algebra-basics/index.html</a></p>
+<p><a href="https://rpubs.com/aaronsc32/singular-value-decomposition-r" class="uri">https://rpubs.com/aaronsc32/singular-value-decomposition-r</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Singular_value_decomposition" class="uri">https://en.wikipedia.org/wiki/Singular_value_decomposition</a></p>
+<p>Similarity with word embedding</p>
+<ul>
+<li><p>The columns of <strong>V</strong> (referred to as right-singular vectors) are <a href="https://en.wikipedia.org/wiki/Eigenvectors" title="Eigenvectors">eigenvectors</a> of <strong>M</strong><sup>⁎</sup><strong>M</strong>.</p></li>
+<li><p>The columns of <strong>U</strong> (referred to as left-singular vectors) are eigenvectors of <strong>MM</strong><sup>⁎</sup>.</p></li>
+</ul>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>opt <span class="ot">&lt;-</span> <span class="fu">optim</span>(</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">par =</span> <span class="dv">99</span>, <span class="do">## initial values; use c(...) to do it with many parameters</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">fn =</span> parabola, </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">method =</span> <span class="st">"BFGS"</span>,</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># this next line is critical: </span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># it tells R to maximize rather than minimize</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">fnscale =</span> <span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>opt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(igraph)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> <span class="fu">graph_from_biadjacency_matrix</span>(M) <span class="sc">|&gt;</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  igraph<span class="sc">::</span><span class="fu">bipartite_projection</span>(<span class="at">multiplicity =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">eigen_centrality</span>(out<span class="sc">$</span>proj1, <span class="at">scale =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>vector <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>(svddecomp<span class="sc">$</span>v[, <span class="dv">1</span>]) <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>proj <span class="ot">&lt;-</span> M <span class="sc">%*%</span> <span class="fu">t</span>(M)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">diag</span>(proj) <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>edecomp <span class="ot">&lt;-</span> <span class="fu">eigen</span>(proj) </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>(edecomp<span class="sc">$</span>vectors[, <span class="dv">1</span>] <span class="sc">*</span> <span class="fu">max</span>(edecomp<span class="sc">$</span>values)) <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>svddecomp<span class="sc">$</span>v[, <span class="dv">1</span>] <span class="sc">*</span> svddecomp<span class="sc">$</span>d[[<span class="dv">1</span>]]</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="do">## first comparison</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>edecomp<span class="sc">$</span>vectors[, <span class="dv">1</span>] <span class="sc">|&gt;</span> <span class="fu">abs</span>() <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">eigen_centrality</span>(out<span class="sc">$</span>proj1, <span class="at">scale =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>vector <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="do">## second</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>edecomp <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M <span class="sc">%*%</span> <span class="fu">t</span>(M)) </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>svddecomp <span class="ot">&lt;-</span> <span class="fu">svd</span>(M)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="fu">abs</span>(edecomp<span class="sc">$</span>vectors[, <span class="dv">1</span>]) <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">abs</span>(svddecomp<span class="sc">$</span>u[, <span class="dv">1</span>]) <span class="sc">|&gt;</span> <span class="fu">sort</span>()</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="do">## third</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> igraph<span class="sc">::</span><span class="fu">graph_from_biadjacency_matrix</span>(M)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>out <span class="sc">|&gt;</span> </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  igraph<span class="sc">::</span><span class="fu">authority_score</span>(<span class="at">scale =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">pluck</span>(<span class="st">"vector"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sort</span>()</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="do">## extra</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(edecomp, vectors <span class="sc">%*%</span> <span class="fu">t</span>(vectors)) <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>$par
-[1] 2.5
-
-$value
-[1] 27.5
-
-$counts
-function gradient 
-       6        3 
-
-$convergence
-[1] 0
-
-$message
-NULL</code></pre>
 </div>
-</div>
-<section id="logistic-regression" class="level2">
-<h2 class="anchored" data-anchor-id="logistic-regression">Logistic Regression</h2>
-<p>In statistics we usually try to find the maximum of likelihood functions in order to fit regression models.</p>
-<p>For example<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, a simple logistic regression can be fit by doing the following:</p>
+<p>French stuff</p>
+<p><span class="citation" data-cites="breiger1974">Breiger (<a href="#ref-breiger1974" role="doc-biblioref">1974</a>)</span>, <span class="citation" data-cites="breiger2000">Breiger (<a href="#ref-breiger2000" role="doc-biblioref">2000</a>)</span></p>
+<p>and the correlation stuff</p>
+<p>and maybe this:</p>
+<p><a href="https://pages.stat.wisc.edu/~karlrohe/netsci/whyDoesSpectralWork.html" class="uri">https://pages.stat.wisc.edu/~karlrohe/netsci/whyDoesSpectralWork.html</a></p>
+<p><strong>Coleman and Bourdieu: Dual equilibria in a social field</strong></p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">## The dataset</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"wells"</span>, <span class="at">package =</span> <span class="st">"rstanarm"</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(wells)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>MAT <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">14</span>, .<span class="dv">11</span>, .<span class="dv">15</span>, .<span class="dv">17</span>, .<span class="dv">13</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">14</span>, .<span class="dv">13</span>, .<span class="dv">13</span>, .<span class="dv">16</span>, .<span class="dv">13</span>),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">13</span>, .<span class="dv">13</span>, .<span class="dv">13</span>, .<span class="dv">12</span>, .<span class="dv">13</span>),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">13</span>, .<span class="dv">11</span>, .<span class="dv">11</span>, .<span class="dv">14</span>, .<span class="dv">13</span>),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">09</span>, .<span class="dv">12</span>, .<span class="dv">11</span>, .<span class="dv">14</span>, .<span class="dv">11</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">11</span>, .<span class="dv">12</span>, .<span class="dv">10</span>, .<span class="dv">10</span>, .<span class="dv">05</span>),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">10</span>, .<span class="dv">10</span>, .<span class="dv">11</span>, .<span class="dv">07</span>, .<span class="dv">16</span>),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">11</span>, .<span class="dv">10</span>, .<span class="dv">10</span>, .<span class="dv">07</span>, .<span class="dv">08</span>),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(.<span class="dv">06</span>, .<span class="dv">08</span>, .<span class="dv">06</span>, .<span class="dv">03</span>, .<span class="dv">08</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(MAT) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"crime"</span>, <span class="st">"economy"</span>, <span class="st">"civil_rights"</span>, <span class="st">"first_amend"</span>, <span class="st">"due_process"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(MAT) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"rehnquist"</span>, <span class="st">"kennedy"</span>, <span class="st">"oconnor"</span>, <span class="st">"scalia"</span>, <span class="st">"stevens"</span>, <span class="st">"blackmun"</span>, <span class="st">"white"</span>, <span class="st">"souter"</span>, <span class="st">"thomas"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>total <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">256</span>, <span class="dv">287</span>, <span class="dv">192</span>, <span class="dv">58</span>, <span class="dv">38</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">sweep</span>(MAT, <span class="dv">2</span>, total, <span class="at">FUN =</span> <span class="st">"*"</span>))</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">svd</span>(M)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="fu">svd</span>(MAT)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(M, <span class="at">margin =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> <span class="fu">t</span>()</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>C <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(M, <span class="at">margin =</span> <span class="dv">2</span>) </span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="fu">eigen</span>(C <span class="sc">%*%</span> X)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="fu">eigen</span>(X <span class="sc">%*%</span> C)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="fu">eigen</span>(M <span class="sc">%*%</span> <span class="fu">t</span>(M))<span class="sc">$</span>vectors</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(out, u <span class="sc">%*%</span> <span class="fu">diag</span>(d[<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>'data.frame':   3020 obs. of  5 variables:
- $ switch : int  1 1 0 1 1 1 1 1 1 1 ...
- $ arsenic: num  2.36 0.71 2.07 1.15 1.1 3.9 2.97 3.24 3.28 2.52 ...
- $ dist   : num  16.8 47.3 21 21.5 40.9 ...
- $ assoc  : int  0 0 0 0 1 1 1 0 1 1 ...
- $ educ   : int  0 0 10 12 14 9 4 10 0 0 ...</code></pre>
 </div>
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="do">## The model</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="fu">formula</span>(<span class="cf">switch</span> <span class="sc">~</span> dist <span class="sc">+</span> arsenic <span class="sc">+</span> dist<span class="sc">:</span>arsenic)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="do">## The design matrix</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(f, <span class="at">data =</span> wells)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3020    4</code></pre>
-</div>
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">## The outcome variable</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> wells<span class="sc">$</span><span class="cf">switch</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="do">## The log-likelihood function</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>log_likelihood <span class="ot">&lt;-</span> <span class="cf">function</span>(beta, outcome, dmat) {</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  linpred <span class="ot">&lt;-</span> dmat <span class="sc">%*%</span> beta <span class="do">## the linear predictor</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  p <span class="ot">&lt;-</span> <span class="fu">plogis</span>(linpred)     <span class="do">## the link function</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(<span class="fu">dbinom</span>(outcome, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> p, <span class="at">log =</span> <span class="cn">TRUE</span>))  <span class="do">## the log-likelihood</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="do">## The maximum likelihood estimate (MLE)</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>opt <span class="ot">&lt;-</span> <span class="fu">optim</span>(</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">par =</span> <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">ncol</span>(X)), <span class="do">## initial values are all 0's</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">fn =</span> log_likelihood, <span class="at">method =</span> <span class="st">"BFGS"</span>,</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">outcome =</span> y, <span class="at">dmat =</span> X,</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># this next line is critical: </span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>  <span class="co"># it tells R to maximize rather than minimize</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">control =</span> <span class="fu">list</span>(<span class="at">fnscale =</span> <span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(opt<span class="sc">$</span>par) <span class="ot">&lt;-</span> <span class="fu">colnames</span>(X)</span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>opt<span class="sc">$</span>par</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code> (Intercept)         dist      arsenic dist:arsenic 
--0.147139626 -0.005811349  0.555574583 -0.001768792 </code></pre>
-</div>
-</div>
-<p>We can compare this to the outcome given by R’s <code>glm()</code> function:</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(f, <span class="at">data =</span> wells, <span class="at">family =</span> <span class="fu">binomial</span>(<span class="at">link =</span> <span class="st">"logit"</span>))</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coefficients</span>(fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(davis, <span class="at">package =</span> <span class="st">"latentnet"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> network<span class="sc">::</span><span class="fu">as.matrix.network</span>(davis)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>svddecomp <span class="ot">&lt;-</span> <span class="fu">svd</span>(M)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(svddecomp, u <span class="sc">%*%</span> <span class="fu">diag</span>(d) <span class="sc">%*%</span> <span class="fu">t</span>(v))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code> (Intercept)         dist      arsenic dist:arsenic 
--0.147868069 -0.005772178  0.555976744 -0.001789060 </code></pre>
 </div>
-</div>
-</section>
-<section id="stan" class="level2">
-<h2 class="anchored" data-anchor-id="stan">Stan</h2>
-<p>Users of <a href="https://mc-stan.org/"><strong>Stan</strong></a> should know that it can be used for optimization as well.</p>
+<p>“Coleman’s mathematical solutions for the ‘power’ of actors and for the ‘value’ of events are eigenvectors of products of his C and X matrices, even though he never quite says so.” ???</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cmdstanr)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>mcmc_optim <span class="ot">&lt;-</span> <span class="fu">cmdstan_model</span>(<span class="st">"simple_parabola.stan"</span>)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>mcmc_optim<span class="sc">$</span><span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>igraph<span class="sc">::</span><span class="fu">graph_from_biadjacency_matrix</span>(M) <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    igraph<span class="sc">::</span><span class="fu">hub_score</span>(<span class="at">scale =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    purrr<span class="sc">::</span><span class="fu">pluck</span>(<span class="st">"vector"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sort</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>parameters {
-  real&lt;lower=0&gt; x; // easily does constrained optimization
-}
-
-model {
-  target += 15 + 10*x - 2*x^2;
-}</code></pre>
-</div>
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> mcmc_optim<span class="sc">$</span><span class="fu">optimize</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Initial log joint probability = 17.7521 
-    Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes  
-       4          27.5    0.00019008   2.86238e-06           1           1       12    
-Optimization terminated normally:  
-  Convergence detected: relative gradient magnitude is below tolerance 
-Finished in  0.3 seconds.</code></pre>
-</div>
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code> variable estimate
-     lp__    27.50
-     x        2.50</code></pre>
-</div>
 </div>
 
 
-</section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>The data: «<em>A survey of 3020 residents in a small area of Bangladesh suffering from arsenic contamination of groundwater. Respondents with elevated arsenic levels in their wells had been encouraged to switch their water source to a safe public or private well in the nearby area and the survey was conducted several years later to learn which of the affected residents had switched wells»</em><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-breiger1974" class="csl-entry" role="listitem">
+Breiger, Ronald L. 1974. <span>“The Duality of Persons and Groups.”</span> <em>Social forces</em> 53(2): 181190.
+</div>
+<div id="ref-breiger2000" class="csl-entry" role="listitem">
+———. 2000. <span>“A Tool Kit for Practice Theory.”</span> <em>Poetics</em> 27(2-3): 91115.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

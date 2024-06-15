@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="andrés castro araújo">
+<meta name="dcterms.date" content="2024-02-01">
+<meta name="description" content="Lessons from organizational sociology">
+
+<title>blog - Functionalist Foundations for problem-solving sociologists</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="blog - Functionalist Foundations for problem-solving sociologists">
+<meta property="og:description" content="Lessons from organizational sociology">
+<meta property="og:site_name" content="blog">
+<meta name="twitter:title" content="blog - Functionalist Foundations for problem-solving sociologists">
+<meta name="twitter:description" content="Lessons from organizational sociology">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://acastroaraujo.github.io"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://acastroaraujo.github.io/cv/"> <i class="bi bi-file-person" role="img">
+</i> 
+<span class="menu-text">cv</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/acastroaraujo"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-chat-text" role="img">
+</i> 
+<span class="menu-text">blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Functionalist Foundations for problem-solving sociologists</h1>
+                  <div>
+        <div class="description">
+          <p>Lessons from organizational sociology</p>
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>andrés castro araújo </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 1, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p><strong>Abstract</strong></p>
+<p>This paper advocates for “functionalism” an unlikely but useful theoretical foundation for problem-solving sociology. It is divided into three sections. First, I defend a broad notion of functionalism as any theory that features prominent use of <em>proper functions</em> and/or <em>role functions.</em> This distinction clarifies many confusions that arise when making sense of various functionalisms. Second, I note that problem-solving sociologists seem to want to <em>build</em> a world in which the existence of various phenomena can be explained in terms of the “problems” they solve or the “benefits” they provide—i.e., a world in which certain institutions and organizations are adequately described as having proper functions. Finally, I argue that the organizational sociology of Arthur Stinchcombe <span class="citation" data-cites="stinchcombe1990 stinchcombe2001">(<a href="#ref-stinchcombe1990" role="doc-biblioref">1990</a>, <a href="#ref-stinchcombe2001" role="doc-biblioref">2001</a>)</span> provides a useful functionalist foundation for problem-solving sociology. In particular, the argument that formal structures that “work” are likely to satisfy three desiderata: cognitive adequacy, communicability, and trajectory of improvement.</p>
+<hr>
+<p><strong>Introduction</strong></p>
+<p>Sociologists regularly avoid the term “functionalism” due to its association with now defunct <em>substantive</em> theories about society (e.g., Parsons). The received wisdom is that functionalism is always (1) <em>ahistorical;</em> (2) aimed towards the preservation of the <em>status quo;</em> and (3) <em>incapable of accounting for social change</em> <span class="citation" data-cites="turner1979 spillerman2009">(<a href="#ref-turner1979" role="doc-biblioref">Turner and Maryanski 1979, pp. 109–18</a>; <a href="#ref-spillerman2009" role="doc-biblioref">Spillerman and Gerratana 2009, p. 160</a>)</span>. This what makes it an unlikely candidate for theoretical agendas aimed at solving problems and bringing about positive social change.</p>
+<p>Unfortunately, the price we have paid for this received wisdom is a widely-shared reluctance to attribute functions, purposes, or goals to various social phenomena (e.g., behaviors, institutions, organizations). And when we do—which is more often than we’d care to admit—we do so implicitly. This trained incapacity to talk plainly about functions hinders sociological theory writ large. This paper introduces the necessary vocabulary we need to talk transparently about functions <em>without</em> committing oneself to any substantive theoretical program—i.e., the distinction between <em>role functions</em> and <em>proper functions</em>. Second, it argues for the relevance of functionalist arguments of various kinds for problem-solving sociologists <span class="citation" data-cites="prasad2021">(see <a href="#ref-prasad2021" role="doc-biblioref">Prasad 2021</a>)</span>. Finally, it argues that the organizational sociology of Arthur Stinchcombe <span class="citation" data-cites="stinchcombe1990 stinchcombe2001">(<a href="#ref-stinchcombe1990" role="doc-biblioref">1990</a>, <a href="#ref-stinchcombe2001" role="doc-biblioref">2001</a>)</span> provides a useful theoretical foundation for sociologists interested in providing solutions for various societal problems.</p>
+<p><strong>What does it mean to describe something as having a “function” or serving a “purpose”?</strong></p>
+<p>It’s common among philosophers to distinguish between (1) <em>role functions</em> and (2) <em>proper functions</em> or “selected effects.” Roughly speaking, both play important roles in answering two different kinds of questions: role functions are tied to <em>how-does-it-work</em> questions or <em>systemic arguments</em> <span class="citation" data-cites="cummins1975">(<a href="#ref-cummins1975" role="doc-biblioref">Cummins 1975</a>)</span>, whereas proper functions are tied to <em>why-is-it-there</em> questions or <em>etiological arguments</em> <span class="citation" data-cites="wright1973">(<a href="#ref-wright1973" role="doc-biblioref">Wright 1973</a>)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Sociologists tend to conflate both senses of the word “function” in everyday practice, which is an important source of confusion. In other words, the very meaning of the word “function” depends on the argument we are trying to make.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>This distinction shows up in other disciplines,<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> but we can also find it in the sociological cannon. For example, Durkheim himself advocated forcefully for a strict separation between the <em>why</em>-questions and <em>how</em>-questions and placed role functions at the center of his own functionalist arguments about the division of labor role in generating novel kinds of organic solidarity—i.e., a <em>how-does-it-work</em> kind of explanatory project.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Max Weber’s explanation of origins of bureaucracy—can be viewed as a very different form of functionalist argument. Bureaucracy—according to Weber—developed as an adaptive response to certain tasks related to the difficulties of managing large-scale armies, but also as a response to particular demands that could only be fostered and managed by a public administration—e.g., public roads, water-ways, railroads, the telegraph, etc.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> In other words, Weber embarked on a <em>why-is-it-there</em> kind of explanatory project with regards to bureaucratic organization.</p>
+<p><em>Systemic arguments and how-questions</em></p>
+<p>Ascribing a role function to some <span class="math inline">\(X\)</span> in a systemic argument purports to explain its causal contribution to a more complex capacity or behavior of some higher level “containing system” (e.g., a government’s capacity to surveil, an army’s capacity to destroy). In other words, systems are explained in terms of the organized activities of their component parts. “The goal is to find a set of entities and activities, to describe how they are organized together, and to show that when they are organized together just so, they produce the phenomenon one is trying to explain” <span class="citation" data-cites="craver2013">(<a href="#ref-craver2013" role="doc-biblioref">Craver 2013, p. 65</a>)</span>. This kind of argument is prominent in the study of organizations (obvious examples of “containing systems”)—e.g., in Diane Vaughan’s <span class="citation" data-cites="vaughan2021">(<a href="#ref-vaughan2021" role="doc-biblioref">2021</a>)</span> careful analysis of “dead reckoning” in air-traffic control systems.</p>
+<p>Within this kind of argument, functional ascriptions are always relative (1) to a <em>chosen</em> “containing system” and (2) to an <em>analytical account</em> of how this system is arranged in order to produce the “complex capacity” we seek to explain <span class="citation" data-cites="cummins1975 cummins2009">(<a href="#ref-cummins1975" role="doc-biblioref">Cummins 1975</a>; <a href="#ref-cummins2009" role="doc-biblioref">Cummins and Roth 2009</a>)</span>. For example, fingerprints contribute to the overall surveillance capacity of a law-enforcement organization insofar as these organizations also have an infrastructure that collects, stores, and retrieves them—i.e., their contribution cannot be understood without reference to the properties of other interacting parts. But the “function” of fingerprints in this system does not have a history of selection. Fingerprints themselves do not exist for the sake of surveillance systems.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> A role function is not restricted to behaviors of a component part that contribute (or contributed in some distant past) to survival and reproduction.</p>
+<p><em>Etiological arguments and why-questions</em></p>
+<p>Ascribing a proper function to some <span class="math inline">\(X\)</span> in an etiological argument purports to explain <em>why</em> <span class="math inline">\(X\)</span> is there <span class="citation" data-cites="wright1973">(<a href="#ref-wright1973" role="doc-biblioref">Wright 1973</a>)</span>; these types of functions are typically labeled “adaptations” or “selected effects.” Unlike role functions, proper functions contribute to the survival and reproduction of <span class="math inline">\(X\)</span>. This is what <span class="citation" data-cites="granovetter2017">Granovetter (<a href="#ref-granovetter2017" role="doc-biblioref">2017, p. 5</a>)</span> has in mind when he says that functional arguments account for a behavior, practice, or institution by reference to the “problem” it solves or the “benefits” it provides. Researchers are required to specify some concrete history of selection and reproduction for different domains—e.g., natural selection for genotypes, deliberate selection for artifacts, or a more complicated history of selection for institutions and other social structures. Failure to do so results in circular reasoning <span class="citation" data-cites="hempel1965">(<a href="#ref-hempel1965" role="doc-biblioref">Hempel 1965, p. 310</a>)</span>; “functionalist explanations fall short to the extent that they infer the origins of a structure by only examining its consequences, rather than the processes that brought it about” <span class="citation" data-cites="aldrich2020">(<a href="#ref-aldrich2020" role="doc-biblioref">Aldrich et al. 2020, p. 57</a>)</span>.</p>
+<p>Unlike proper functions grounded on natural selection, various historical processes of social selection involve at least <em>some</em> amount of deliberation (or foresight). Even then, <span class="math inline">\(X\)</span> is usually best described as a “kludge,” selected not for its optimality or superiority but because it <em>satisficed</em> (was good enough) for the purposes at hand <span class="citation" data-cites="simon1956">(<a href="#ref-simon1956" role="doc-biblioref">Simon 1956</a>)</span>.</p>
+<p>In this paper I highlight some of the potential problems faced by this sort of argument, especially as they have been formulated by organizational sociologists—i.e., discussions of <em>goal-displacement</em>, <em>co-optation</em>, and <em>means-ends decoupling.</em><a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Additionally, selection and reproduction may be contingent on <em>perceived</em> success. For example, sociologists have long argued that some organizations don’t usually adopt new technologies or procedures because of their <em>technical efficiency</em>, but rather because of their <em>cultural legitimacy</em> <span class="citation" data-cites="jepperson2021">(<a href="#ref-jepperson2021" role="doc-biblioref">Jepperson and Meyer 2021</a>)</span>. Finally, the “problems” for which <span class="math inline">\(X\)</span> can be said to be a successful solution also have a history of their own. Thus, any concrete history of selection that takes “problems” or “success” to be devoid of a history of their own risks to fail on empirical grounds <span class="citation" data-cites="abbott1988">(<a href="#ref-abbott1988" role="doc-biblioref">Abbott 1988</a>)</span>.</p>
+<p><em>Maintenance and self-correcting behavior</em></p>
+<p>There is one particular systemic behavior that deserves special attention: a system’s capacity for <em>self-reproduction</em> or <em>self-correction.</em> Here, to ascribe a function to some <span class="math inline">\(X\)</span> is to explain its causal contribution to the <em>maintenance</em> of some system <span class="citation" data-cites="robinson2007">(see <a href="#ref-robinson2007" role="doc-biblioref">Robinson 2007</a>)</span>. These arguments always posit some kind of <em>negative feedback loop</em> that purports to explain what researchers variously characterize as “reproduction,” “stability,” “equilibrium,” or “homeostasis.”<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<p>The notion of negative feedback is central to Arthur Stinchcombe’s <span class="citation" data-cites="stinchcombe1968">(<a href="#ref-stinchcombe1968" role="doc-biblioref">1968</a>)</span> definition of functional explanations: “By a functional explanation we mean one in which the <em>consequences</em> of some behavior or social arrangement are essential elements of the <em>causes</em> of that behavior.” As such, these kinds of argument sometimes provide answer <em>how-</em>questions and they sometimes provide answers to <em>why</em>-questions.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p><strong>Relevance to problem-solving sociology</strong></p>
+<p>There are two main reasons why problem-solving sociologist should be interested in functionalism, broadly understood as an umbrella term for theories that feature prominent use of proper functions or role functions. First, it seems to me that problem-solving sociologists would like to help build a world in which the existence of various phenomena can be explained in terms of the “problems” they solve or the “benefits” they provide—i.e., a world in which certain institutions and organizations are adequately described as having proper functions. Second, many functionalist arguments—particularly those that posit negative feedback loops—may be useful to explain obstacles to social change—i.e., “why known solutions are not implemented, and what would have to change for a solution to be implemented” <span class="citation" data-cites="prasad2021">(<a href="#ref-prasad2021" role="doc-biblioref">Prasad 2021, p. 15</a>)</span>.</p>
+<p><strong>Arthur Stinchcombe’s contribution</strong></p>
+<p>Many years ago, <span class="citation" data-cites="stinchcombe2001">Stinchcombe (<a href="#ref-stinchcombe2001" role="doc-biblioref">2001</a>)</span> wrote a book about “formal structures” that actually succeed at solving clearly defined organizational problems.</p>
+<p>Stinchcombe prefaced his discussion with a small reflection on what he considered to be sociologists default reaction to formal structures. According to him, our profession has largely focused on abstractions that either (1) are pathological or (2) serve ritual purposes disconnected from the substance of what organizations do. Thus, we tend to ignore the cases when abstractions actually serve their intended purpose.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> Problem-solving sociology, as defined by <span class="citation" data-cites="prasad2021">Prasad (<a href="#ref-prasad2021" role="doc-biblioref">2021</a>)</span>, is built upon a similar dissatisfaction.</p>
+<p><em>Note. In what follows, the notion of a “formal structure” is meant to encapsulate three kinds of abstractions: (1) regulations, rules, and procedures; (2) expert knowledge and techniques; and (3) classification systems and categories. This definition of formal structure is compatible with the way neoinstitutionalists speak of such things <span class="citation" data-cites="meyer1977">(e.g., <a href="#ref-meyer1977" role="doc-biblioref">Meyer and Rowan 1977</a>)</span>.</em></p>
+<p>Stinchcombe elaborates on three desiderata that make formal structures successful: cognitive adequacy, communicability, and trajectory of improvement. This means that the ascription of proper functions becomes a <em>matter of degree</em>. Formal structures that exhibit these desiderata are deemed “functional,” whereas those that lack them are prime candidates for being described as “pathological” or “ritual” <span class="citation" data-cites="stinchcombe2001">(<a href="#ref-stinchcombe2001" role="doc-biblioref">Stinchcombe 2001, p. 181</a>)</span>. First, a formal structure (e.g., a rule, a blueprint) needs to be an adequate representation of the problems for which an organization is meant to provide solutions; otherwise it can’t provide a useful guide to action. Second, a formal structure must be communicable, which means that information must be transparent and reach relevant stake-holders in a timely fashion. Finally, formal structures must have feedback systems that allow for self-correction in response to changing realities and, thus, lead to improvement over time.</p>
+<p><em>Note. The rest of the paper uses this framework to say something interesting about something that you all care about. Help.</em></p>
+<p>En otras palabras, el MFMP debe superar una especie de <em>examen de transparencia útil.</em> De acuerdo a Fung, Graham y Weil (2017, p.&nbsp;11), para que la información pública sea útil debe tener dos características. Primero, debe tomar en cuenta los intereses y necesidades de los futuros usuarios de esta información; en este caso, los congresistas encargados de legislar sobre la materia y las organizaciones (sociales o académicas) encargadas de hacer veeduría ciudadana. Segundo, la información debe ser sostenible en el tiempo; quienes producen esta información deben poder corregir las deficiencias que van descubriendo con el tiempo, de manera que la información se haga más precisa.</p>
+<p><span class="citation" data-cites="dobbin2015">Dobbin et al. (<a href="#ref-dobbin2015" role="doc-biblioref">2015</a>)</span></p>
+<p><span class="citation" data-cites="fung2007">Fung et al. (<a href="#ref-fung2007" role="doc-biblioref">2007</a>)</span></p>
+
+
+
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-abbott1988" class="csl-entry" role="listitem">
+Abbott, Andrew. 1988. <em>The System of Professions: An Essay on the Division of Expert Labor</em>. University of Chicago Press.
+</div>
+<div id="ref-aldrich2020" class="csl-entry" role="listitem">
+Aldrich, Howard E., Martin Ruef, and Stephen Lippmann. 2020. <em>Organizations Evolving</em>. Edward Elgar Publishing.
+</div>
+<div id="ref-barrow1993" class="csl-entry" role="listitem">
+Barrow, Clyde W. 1993. <em>Critical Theories of the State: Marxist, Neomarxist, Postmarxist</em>. University of Wisconsin Press.
+</div>
+<div id="ref-bromley2012" class="csl-entry" role="listitem">
+Bromley, Patricia, and Walter W. Powell. 2012. <span>“<a href="https://doi.org/10.5465/19416520.2012.684462">From Smoke and Mirrors to Walking the Talk: Decoupling in the Contemporary World</a>.”</span> <em>Academy of Management Annals</em> 6(1): 483–530.
+</div>
+<div id="ref-craver2013" class="csl-entry" role="listitem">
+Craver, Carl F. 2013. <span>“<a href="https://link.springer.com/10.1007/978-94-007-5304-4_8">Functions and Mechanisms: A Perspectivalist View</a>.”</span> Pp. 133–58 in, edited by P. Huneman. Dordrecht: Springer Netherlands.
+</div>
+<div id="ref-cummins1975" class="csl-entry" role="listitem">
+Cummins, Robert. 1975. <span>“Functional Analysis.”</span> <em>The Journal of Philosophy</em> 72(20): 741–65.
+</div>
+<div id="ref-cummins2009" class="csl-entry" role="listitem">
+Cummins, Robert, and Martin Roth. 2009. <span>“Traits Have Not Evolved to Function the Way They Do Because of a Past Advantage.”</span> P. 7285 in, edited by F. J. Ayala and R. Arp. Wiley-Blackwell Oxford.
+</div>
+<div id="ref-dobbin2015" class="csl-entry" role="listitem">
+Dobbin, Frank, Daniel Schrage, and Alexandra Kalev. 2015. <span>“Rage Against the Iron Cage: The Varied Effects of Bureaucratic Personnel Reforms on Diversity.”</span> <em>American Sociological Review</em> 80(5): 10141044.
+</div>
+<div id="ref-durkheim1982" class="csl-entry" role="listitem">
+Durkheim, Emile. 1982. <em>The Rules of Sociological Method</em>. New York: Free Press.
+</div>
+<div id="ref-fung2007" class="csl-entry" role="listitem">
+Fung, Archon, Mary Graham, and David Weil. 2007. <em><a href="https://books.google.com/books?hl=en&amp;lr=&amp;id=vSJcyLQgrKcC&amp;oi=fnd&amp;pg=PA183&amp;dq=Full+Disclosure:+The+Perils+and+Promise+of+Transparency&amp;ots=NWAuCYnQFJ&amp;sig=vTHGW9xjmr9-kBQewT1RkYvpAvA">Full Disclosure: The Perils and Promise of Transparency</a></em>. Cambridge University Press.
+</div>
+<div id="ref-go2021" class="csl-entry" role="listitem">
+Go, Julian. 2021. <span>“<a href="https://doi.org/10.1177/0735275120979822">Three Tensions in the Theory of Racial Capitalism</a>.”</span> <em>Sociological Theory</em> 39(1): 38–47.
+</div>
+<div id="ref-godfrey-smith1993" class="csl-entry" role="listitem">
+Godfrey-Smith, Peter. 1993. <span>“Functions: Consensus Without Unity.”</span> <em>Pacific philosophical quarterly</em> 74(3): 196208.
+</div>
+<div id="ref-granovetter2017" class="csl-entry" role="listitem">
+Granovetter, Mark. 2017. <em>Society and Economy</em>. Harvard University Press.
+</div>
+<div id="ref-hempel1965" class="csl-entry" role="listitem">
+Hempel, Carl G. 1965. <em>Aspects of Scientific Explanation and Other Essays</em>. First Edition. First Edition. Free Press.
+</div>
+<div id="ref-jepperson2021" class="csl-entry" role="listitem">
+Jepperson, Ronald L., and John W. Meyer. 2021. <em>Institutional Theory: The Cultural Construction of Organizations, States, and Identities</em>. Cambridge University Press.
+</div>
+<div id="ref-kitcher1993" class="csl-entry" role="listitem">
+Kitcher, Philip. 1993. <span>“Function and Design.”</span> <em>Midwest studies in philosophy</em> 18: 379397.
+</div>
+<div id="ref-mayr1961" class="csl-entry" role="listitem">
+Mayr, Ernst. 1961. <span>“<a href="https://doi.org/10.1126/science.134.3489.1501">Cause and Effect in Biology</a>.”</span> <em>Science</em> 134(3489): 1501–6.
+</div>
+<div id="ref-merton1968" class="csl-entry" role="listitem">
+Merton, Robert K. 1968. <em>Social Theory and Social Structure</em>. New York: Free Press.
+</div>
+<div id="ref-meyer1977" class="csl-entry" role="listitem">
+Meyer, John W., and Brian Rowan. 1977. <span>“Institutionalized Organizations: Formal Structure as Myth and Ceremony.”</span> <em>American journal of sociology</em> 83(2): 340363.
+</div>
+<div id="ref-millikan1989" class="csl-entry" role="listitem">
+Millikan, Ruth. 1989. <span>“<a href="https://doi.org/10.1086/289488">In Defense of Proper Functions</a>.”</span> <em>Philosophy of Science</em> 56(2): 288–302.
+</div>
+<div id="ref-millikan2002" class="csl-entry" role="listitem">
+———. 2002. <span>“Biofunctions: Two Paradigms.”</span> Pp. 113–43 in, edited by A. Ariew, R. Cummins, and M. Perlman.
+</div>
+<div id="ref-neander1991" class="csl-entry" role="listitem">
+Neander, Karen. 1991. <span>“<a href="https://doi.org/10.1086/289610">Functions as Selected Effects: The Conceptual Analyst’s Defense</a>.”</span> <em>Philosophy of Science</em> 58(2): 168–84.
+</div>
+<div id="ref-prasad2021" class="csl-entry" role="listitem">
+Prasad, Monica. 2021. <em>Problem-Solving Sociology: A Guide for Students</em>. Oxford University Press.
+</div>
+<div id="ref-robinson2007" class="csl-entry" role="listitem">
+Robinson, Dawn T. 2007. <span>“Control Theories in Sociology.”</span> <em>Annu. Rev. Sociol.</em> 33: 157174.
+</div>
+<div id="ref-salmon1984" class="csl-entry" role="listitem">
+Salmon, Wesley C. 1984. <em><a href="https://books.google.com/books?hl=en&amp;lr=&amp;id=2ug9DwAAQBAJ&amp;oi=fnd&amp;pg=PR9&amp;dq=wesley+salmon&amp;ots=a5F-IG8QyJ&amp;sig=r73JnJAleIef59lce23tNqQyQeM">Scientific Explanation and the Causal Structure of the World</a></em>. Princeton University Press.
+</div>
+<div id="ref-simon1956" class="csl-entry" role="listitem">
+Simon, Herbert A. 1956. <span>“Rational Choice and the Structure of the Environment.”</span> <em>Psychological review</em> 63(2): 129.
+</div>
+<div id="ref-spillerman2009" class="csl-entry" role="listitem">
+Spillerman, Seymour, and Emanuele Gerratana. 2009. <span>“Models and Theories in Sociology.”</span> edited by A. Gelman and J. Cortina. Cambridge University Press.
+</div>
+<div id="ref-stinchcombe1968" class="csl-entry" role="listitem">
+Stinchcombe, Arthur L. 1968. <em>Constructing Social Theories</em>. University of Chicago Press.
+</div>
+<div id="ref-stinchcombe1990" class="csl-entry" role="listitem">
+———. 1990. <em>Information and Organizations</em>. Berkeley: University of California Press.
+</div>
+<div id="ref-stinchcombe2001" class="csl-entry" role="listitem">
+———. 2001. <em>When Formality Works: Authority and Abstraction in Law and Organizations</em>. University of Chicago Press.
+</div>
+<div id="ref-turner1979" class="csl-entry" role="listitem">
+Turner, Jonathan H., and Alexandra Maryanski. 1979. <em>Functionalism</em>. Benjamin/Cummings Publishing Company Menlo Park, CA.
+</div>
+<div id="ref-vaughan2021" class="csl-entry" role="listitem">
+Vaughan, Diane. 2021. <em>Dead Reckoning: Air Traffic Control, System Effects, and Risk</em>. University of Chicago Press.
+</div>
+<div id="ref-weber1978" class="csl-entry" role="listitem">
+Weber, Max. 1978. <em>Economy and Society: An Outline of Interpretive Sociology</em>. University of California Press.
+</div>
+<div id="ref-wright1973" class="csl-entry" role="listitem">
+Wright, Larry. 1973. <span>“<a href="https://doi.org/10.2307/2183766">Functions</a>.”</span> <em>The Philosophical Review</em> 82(2): 139–68.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>For a broad introduction to this literature, see <span class="citation" data-cites="craver2013">Craver (<a href="#ref-craver2013" role="doc-biblioref">2013</a>)</span>, <span class="citation" data-cites="millikan2002 millikan1989">(<a href="#ref-millikan1989" role="doc-biblioref">1989</a>, <a href="#ref-millikan2002" role="doc-biblioref">2002</a>)</span>, <span class="citation" data-cites="neander1991">Neander (<a href="#ref-neander1991" role="doc-biblioref">1991</a>)</span>, <span class="citation" data-cites="kitcher1993">Kitcher (<a href="#ref-kitcher1993" role="doc-biblioref">1993</a>)</span>, and <span class="citation" data-cites="godfrey-smith1993">Godfrey-Smith (<a href="#ref-godfrey-smith1993" role="doc-biblioref">1993</a>)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The distinction between <em>how-</em>questions and <em>why</em>-questions is an analytical distinction<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Following <span class="citation" data-cites="mayr1961">Mayr (<a href="#ref-mayr1961" role="doc-biblioref">1961</a>)</span>, biologists commonly distinguish between “evolutionary” and “functional” descriptions of traits. The first deals with the historical explanations in terms of natural selection (e.g., why did an organism evolved a particular trait), whereas the second deals with physiology (e.g., how does a heart manage to pump blood). In philosophy, <span class="citation" data-cites="salmon1984">Salmon (<a href="#ref-salmon1984" role="doc-biblioref">1984, p. 275</a>)</span> refers to this same distinction as emphasizing the difference between <em>etiological</em> and <em>constitutive</em> aspects of explanations.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>“…<em>when one undertakes to explain a social phenomenon the efficient cause which produces it and the function it fulfills must be investigated separately.</em> We use the word ‘function’ in preference to ‘end’ or ‘goal’ precisely because social phenomena generally do not exist for the usefulness of the results they produce” <span class="citation" data-cites="durkheim1982">(<a href="#ref-durkheim1982" role="doc-biblioref">Durkheim 1982, p. 81</a>)</span>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>“The decisive reason for the advance of bureaucratic organization has always been its purely technical superiority over any other form of organization” <span class="citation" data-cites="weber1978">(<a href="#ref-weber1978" role="doc-biblioref">Weber 1978, p. 973</a>)</span>—i.e., bureaucratic forms of government proliferated because they were efficient adaptation.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>The capacity of fingerprints to contribute to larger surveillance systems may be better characterized as an <em>exaptation</em>—i.e., traits designed for some other purpose (or no purpose at all) often get co-opted to serve new purposes.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p><span class="citation" data-cites="bromley2012">Bromley and Powell (<a href="#ref-bromley2012" role="doc-biblioref">2012</a>)</span> use the notion of <em>means-ends decoupling</em> to describe situations in which organizations pursue activities that are weakly linked to their intended goals. When organizational goals are ambiguous and the consequences of various actions are hard to measure, the appearance of new calculable practices (or “means”) may reshape activities in ways that hold little connection to professed goals (or “ends”). Hence the term of “decoupling” <span class="citation" data-cites="meyer1977">(see <a href="#ref-meyer1977" role="doc-biblioref">Meyer and Rowan 1977</a>)</span>. <span class="citation" data-cites="merton1968">(<a href="#ref-merton1968" role="doc-biblioref">Merton 1968, p. 253</a>)</span> refers to this phenomena—when “an instrumental value becomes a terminal value”—as <em>goal displacement</em>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>See <span class="citation" data-cites="barrow1993">Barrow (<a href="#ref-barrow1993" role="doc-biblioref">1993</a>)</span> for a review of Marxists theories about how states serve a “maintenance function” within capitalist systems. The premise is that capitalist societies are inherently prone to crises and that the state serves the “function” of protecting, repairing, and reproducing the capitalist system.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>One of the ongoing tensions within the literature on “racial capitalism”—which argues that racism played a key role in the development and spread of capitalism via colonialism—is precisely the extent to which race has a proper function or merely a role function. It’s obvious that racial stratification provides all sorts of benefits to powerful groups, but it’s not obvious that race exists because it provides such benefits <span class="citation" data-cites="go2021">(<a href="#ref-go2021" role="doc-biblioref">Go 2021, pp. 43–44</a>)</span>.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>“Because the gut reaction of sociologists is that formality is all a fraud, I am led to write a book emphasizing that formality can work and that one can tell whether formality satisfies the criteria that can make it work” <span class="citation" data-cites="stinchcombe2001">(<a href="#ref-stinchcombe2001" role="doc-biblioref">Stinchcombe 2001, p. 1</a>)</span>.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/acastroaraujo\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
