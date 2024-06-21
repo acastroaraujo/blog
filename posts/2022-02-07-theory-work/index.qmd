@@ -8,11 +8,12 @@ categories:
   - Sociology
 date: 2022-02-07
 bibliography: references.bib
+image: construction14.png
 ---
 
 ### Theory-Work
 
-Theoretical work should strive, among other things, "to improve the precision, clarity, and coherence of our ideas" [@martin2014].
+Theoretical work should strive, among other things, to improve the precision, clarity, and coherence of our ideas.
 
 This involves cultivating good habits.
 
@@ -28,7 +29,7 @@ Sometimes it involves avoiding common traps---e.g., the three "nuance traps" des
 >
 > @healy2017 [pp. 120-1]
 
-Relatedly, sociologists will sometimes stretch their concepts to fit new cases in such a way that brings about the careless redefinition of important terms. For example, @martin2014 cites Niklas Luhmann saying that "All meaninglessness... has meaning again through its strangeness." The statement is only true if we accept a *new* definition for the word *meaning*. And why should we?
+Relatedly, sociologists will sometimes stretch their concepts to fit new cases in such a way that brings about the careless redefinition of important terms. For example, @martin2014 cites Niklas Luhmann saying that "All meaninglessness... has meaning again through its strangeness." The statement is only true if we accept a *new* definition for the word *meaning*. But why should we?
 
 > Most generally, whenever we find ourselves rushing to claim that "things outside of any set are *themselves* in the set" we may be changing our terminology in ways we do not understand. And if we make a habit of it, we'll end up using meaningless statements.
 >

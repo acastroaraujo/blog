@@ -8,6 +8,7 @@ categories:
   - Sociology
 date: 2024-01-11
 bibliography: references.bib
+image: ideologo.png
 ---
 
 The new editors of *Theory & Society* have a strange new [statement of goals](https://link.springer.com/journal/11186/updates/26605018) with some minor platitudes about what makes for a good theory---e.g., "general, abstract, and amenable to empirical investigation."
