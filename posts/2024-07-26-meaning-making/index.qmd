@@ -12,9 +12,9 @@ bibliography: references.bib
 
 Most sociologists seem to believe that [meaning-making]{.allcaps} is at the center of [cultural sociology]{.allcaps} [@spillman2020].
 
-The problem is that I have never encountered a coherent definition of what [meaning-making]{.allcaps} is supposed be. It is a mostly empty signifier that stands in for all sorts of overlapping concepts—e.g., narrative, habitus, classification, repertoire, norm, script, preference, skill, belief, value, prototype, perception, representation, etc.
+The problem is that I have never encountered a coherent definition of what [meaning-making]{.allcaps} is supposed be. It is mostly an empty signifier that stands in for all sorts of overlapping concepts—e.g., narrative, habitus, classification, repertoire, norm, script, preference, skill, belief, value, prototype, perception, representation, etc.
 
-Somehow [meaning-making]{.allcaps} is *more* ambiguous than the concept of [culture]{.allcaps}. It cannot be the center of gravity for an entire subfield. So we should get rid of it.
+Thus, [meaning-making]{.allcaps} is somehow *more* ambiguous than the concept of [culture]{.allcaps}. It cannot be the center of gravity for an entire subfield. So we should get rid of it.
 
 In the meantime this how I make sense of [meaning-making]{.allcaps}.
 
