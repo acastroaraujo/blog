@@ -4,7 +4,7 @@ description: |
   Cowards and Professional Integrity
 author: andrés castro araújo
 date: 2024-07-24
-draft:
+draft: true
 ---
 
 ::: {style="text-align: right; padding-left: 120px;"}
