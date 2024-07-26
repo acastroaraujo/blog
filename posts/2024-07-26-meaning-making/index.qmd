@@ -20,7 +20,7 @@ In the meantime this how I make sense of [meaning-making]{.allcaps}.
 
 1.  Anything that can be described as an *expressive* activity produced within some authoritative "cultural" domain, such as art, music, film, literature, dance, and so on.
 
-    This is not what most most cultural sociologists have in mind when they think of [meaning-making]{.allcaps}. But it is what the "production of culture" perspective is all about [@peterson2004].
+    This is not what most most cultural sociologists have in mind when they think of [meaning-making]{.allcaps}. But it is what the [production of culture]{.allcaps} perspective is all about [@peterson2004].
 
 2.  *Information-processing.* We *hear* some spoken message, we *smell* something. We react quickly, perhaps unconsciously, on the basis of some habitual way of seeing things that is grounded in personal experience. Following @goldberg, this means that we [interpret]{.allcaps} a stimulus through [categorization]{.allcaps} and [association]{.allcaps}.
 
