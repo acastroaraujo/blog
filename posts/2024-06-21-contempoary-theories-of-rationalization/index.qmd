@@ -1,0 +1,30 @@
+---
+title: "Contempoary Theories of Rationalization"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-06-21
+draft: true
+---
+
+Weber
+
+Science as a vocation. Rationalization means that “one can, in principle, master all things by calculation"
+
+Knowledge, Impersonality, and Control
+
+Stinchcombe.
+
+Foucault. Hacking. Biopolitics.
+
+Neoinstitutionalism. Rationality as myth and ceremony.
+
+Espeland and Sauder. Double-entry book keeping.
+
+Espeland and Sauder. Quantification, commensuration.
+
+Fourcade and Healy, and the reenchament of the world.
+
+Lorraine Daston on Rules. Laws and Algorithms.
+
+Hart on discretion.

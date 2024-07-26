@@ -11,7 +11,7 @@ date: 2024-03-10
 bibliography: references.bib
 ---
 
-A path-dependent explanation can usually be decomposed into two causal components: (1) an original cause and (2) a maintenance structure. More contemporary formulations refer to this same distinction in terms of "critical junctures" and "mechanisms of reproduction."
+A path-dependent explanation can usually be decomposed into two causal components: (1) an original cause and (2) a maintenance structure. More contemporary formulations refer to this same distinction in terms of [critical junctures]{.allcaps} and [mechanisms of reproduction]{.allcaps}.
 
 > The first is the particular circumstances which caused a tradition to be started. The second is the general process by which social patterns reproduce themselves.
 >

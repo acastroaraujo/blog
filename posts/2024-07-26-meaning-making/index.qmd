@@ -1,0 +1,38 @@
+---
+title: "Meaning-Making"
+description: |
+  Mostly useless?
+author: andrés castro araújo
+date: 2024-07-26
+bibliography: references.bib
+---
+
+Most sociologists seem to believe that [meaning-making]{.allcaps} is at the center of [cultural sociology]{.allcaps} [@spillman2020].
+
+The problem is that I have never encountered a coherent definition of what [meaning-making]{.allcaps} is supposed be. It is a mostly empty signifier that stands in for all sorts of overlapping concepts—e.g., narrative, habitus, classification, repertoire, norm, script, preference, skill, belief, value, prototype, perception, representation, etc.
+
+Somehow [meaning-making]{.allcaps} is *more* ambiguous than the concept of [culture]{.allcaps}. It cannot be the center of gravity for an entire subfield. So we should get rid of it.
+
+In the meantime this how I make sense of [meaning-making]{.allcaps}.
+
+1.  Anything that can be described as an *expressive* activity produced within some authoritative "cultural" domain, such as art, music, film, literature, dance, and so on.
+
+    This is not what most most cultural sociologists have in mind when they think of [meaning-making]{.allcaps}. But it is what the "production of culture" perspective is all about [@peterson2004].
+
+2.  *Information-processing.* We *hear* some spoken message, we *smell* something. We react quickly, perhaps unconsciously, on the basis of some habitual way of seeing things that is grounded in personal experience. Following @goldberg, this means that we [interpret]{.allcaps} a stimulus through [categorization]{.allcaps} and [association]{.allcaps}.
+
+    Is that *thing* a bird? Is it a plane? That's [categorization]{.allcaps} [@rosch1975].
+
+    Then we have [semantic association]{.allcaps}. That bird can turn out to be food, scary, dirty, sacred, and so on.
+
+3.  *Purpose.*
+
+    Here, "meaning" is something most people try to *find* as they go around "making sense" of their lives.
+
+    Sociologists usually take one of two common approaches. First, the meaning-as-motive approach seeks to understand action in terms of goals and values. Second, the meaning-as-justification approach which focuses on understanding the *reasons* people give to why-questions. The former finds the "true springs of action" in motivational concepts (e.g., desires, interests, values), whereas the latter sees "meaning" as something that works retroactively (e.g., narratives, accounts).[^1]
+
+    So we have two different ways of thinking about "purpose" that *not always* overlap: [cause]{.allcaps} and [reason]{.allcaps}.
+
+[^1]: See @mills1940, @scott1968, @swidler1986, @vaisey2009, @small2021, and so on. Fortunately, the idea that "motives" and "talk of motives" are somehow at odds with each other is no longer prevalent.
+
+*Note. If you combine information-processing and meaning-as-motive you end up with a modern rendition of Max Weber's [-@weber1978] interpretative sociology. This should be the actual "center of gravity" for cultural sociologists.*
