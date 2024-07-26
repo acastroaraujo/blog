@@ -34,7 +34,7 @@ In the meantime this how I make sense of [meaning-making]{.allcaps}.
 
     Sociologists usually take one of two common approaches. First, the meaning-as-motive approach seeks to understand action in terms of goals and values. Second, the meaning-as-justification approach which focuses on understanding the *reasons* people give to why-questions. The former finds the "true springs of action" in motivational concepts (e.g., desires, interests, values), whereas the latter sees "meaning" as something that works retroactively (e.g., narratives, accounts).[^1]
 
-    So we have two different ways of thinking about "purpose" that *not always* overlap: [cause]{.allcaps} and [reason]{.allcaps}.
+    So we have two different ways of thinking about "purpose" that *do* *not always* overlap: [cause]{.allcaps} and [reason]{.allcaps}.
 
 [^1]: See @mills1940, @scott1968, @swidler1986, @vaisey2009, @small2021, and so on. Fortunately, the idea that "motives" and "talk of motives" are somehow at odds with each other is no longer prevalent.
 
