@@ -4,6 +4,9 @@ description: |
   Mostly useless?
 author: andrés castro araújo
 date: 2024-07-26
+categories: 
+  - Culture
+  - Sociology
 bibliography: references.bib
 ---
 
