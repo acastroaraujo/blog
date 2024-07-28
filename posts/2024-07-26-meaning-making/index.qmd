@@ -10,7 +10,7 @@ categories:
 bibliography: references.bib
 ---
 
-Most sociologists seem to believe that [meaning-making]{.allcaps} is at the center of [cultural sociology]{.allcaps} [@spillman2020].
+Most sociologists seem to believe that [meaning-making]{.allcaps} is at the center of [cultural sociology]{.allcaps} [e.g., @spillman2020].
 
 The problem is that I have never encountered a coherent definition of what [meaning-making]{.allcaps} is supposed be. It is mostly an empty signifier that stands in for all sorts of overlapping concepts—e.g., narrative, habitus, classification, repertoire, norm, script, preference, skill, belief, value, prototype, perception, representation, etc.
 
@@ -22,20 +22,24 @@ In the meantime this how I make sense of [meaning-making]{.allcaps}.
 
     This is not what most most cultural sociologists have in mind when they think of [meaning-making]{.allcaps}. But it is what the [production of culture]{.allcaps} perspective is all about [@peterson2004].
 
-2.  *Information-processing.* We *hear* some spoken message, we *smell* something. We react quickly, perhaps unconsciously, on the basis of some habitual way of seeing things that is grounded in personal experience. Following @goldberg, this means that we [interpret]{.allcaps} a stimulus through [categorization]{.allcaps} and [association]{.allcaps}.
+2.  *Information-processing.*
+
+    We *hear* some spoken message, we *smell* something. Then we react quickly, perhaps unconsciously, on the basis of some habitual way of seeing things that is grounded in personal experience. Following @goldberg, this means that we [interpret]{.allcaps} a stimulus through [categorization]{.allcaps} and [association]{.allcaps}.
 
     Is that *thing* a bird? Is it a plane? That's [categorization]{.allcaps} [@rosch1975].
 
-    Then we have [semantic association]{.allcaps}. That bird can turn out to be food, scary, dirty, sacred, and so on.
+    Then we have [semantic association]{.allcaps}. The bird can in turn elicit all sort of connected concepts, such as food, disease, sacred, dinosaur, and so on.[^1]
 
 3.  *Purpose.*
 
-    Here, "meaning" is something most people try to *find* as they go around "making sense" of their lives.
+    Here, "meaning" is something people try to *find* as they go around "making sense" of their lives.
 
-    Sociologists usually take one of two common approaches. First, the meaning-as-motive approach seeks to understand action in terms of goals and values. Second, the meaning-as-justification approach which focuses on understanding the *reasons* people give to why-questions. The former finds the "true springs of action" in motivational concepts (e.g., desires, interests, values), whereas the latter sees "meaning" as something that works retroactively (e.g., narratives, accounts).[^1]
+    Sociologists usually take one of two common approaches. First, the meaning-as-motive approach seeks to understand action in terms of goals and values. Second, the meaning-as-justification approach which focuses on understanding the *reasons* people give to why-questions. The former finds the "true springs of action" in motivational concepts (e.g., desires, interests, values), whereas the latter sees "meaning" as something that works retroactively (e.g., narratives, accounts).[^2]
 
     So we have two different ways of thinking about "purpose" that *do* *not always* overlap: [cause]{.allcaps} and [reason]{.allcaps}.
 
-[^1]: See @mills1940, @scott1968, @swidler1986, @vaisey2009, @small2021, and so on. Fortunately, the idea that "motives" and "talk of motives" are somehow at odds with each other is no longer prevalent.
+[^1]: The notion of "connectedness" needs further clarification, but it's usually conceived as some "distance" along some kind of conceptual space.
+
+[^2]: See @mills1940, @scott1968, @swidler1986, @vaisey2009, @small2021, and so on. Fortunately, the idea that "motives" and "talk of motives" are somehow at odds with each other is no longer prevalent.
 
 *Note. If you combine information-processing and meaning-as-motive you end up with a modern rendition of Max Weber's [-@weber1978] interpretative sociology. This should be the actual "center of gravity" for cultural sociologists.*
