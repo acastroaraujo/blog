@@ -10,12 +10,21 @@
 <atom:link href="https://acastroaraujo.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>andrés writes unpublishable stuff instead of working on his dissertation</description>
 <generator>quarto-1.5.55</generator>
-<lastBuildDate>Fri, 26 Jul 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 28 Jul 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Cowards</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2024-07-28-weasels/</link>
+  <description><![CDATA[ Hedges, Weasels, and Professional Integrity ]]></description>
+  <category>Ethics</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2024-07-28-weasels/</guid>
+  <pubDate>Sun, 28 Jul 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Meaning-Making</title>
   <dc:creator>andrés castro araújo</dc:creator>
   <link>https://acastroaraujo.github.io/blog/posts/2024-07-26-meaning-making/</link>
-  <description><![CDATA[ Mostly useless? ]]></description>
+  <description><![CDATA[ Disambiguation. ]]></description>
   <category>Culture</category>
   <category>Sociology</category>
   <guid>https://acastroaraujo.github.io/blog/posts/2024-07-26-meaning-making/</guid>
