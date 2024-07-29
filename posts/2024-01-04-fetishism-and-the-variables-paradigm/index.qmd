@@ -75,7 +75,7 @@ Here are the charges:
 
 -   *They are* *plain silly*.
 
-    They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132]. For example, they actually believe that some abstraction called [education]{.allcaps} acts on another abstraction called [occupation]{.allcaps}.
+    They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132]. For example, they actually believe that some abstraction called [education]{.smallcaps} acts on another abstraction called [occupation]{.smallcaps}.
 
     > Our normal methods parse social reality into fixed entities with variable qualities. They attribute causality to the variables---hypostatized social characteristics---rather than to agents; variables do things, not social actors.
     >

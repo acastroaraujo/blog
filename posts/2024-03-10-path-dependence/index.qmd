@@ -11,7 +11,7 @@ date: 2024-03-10
 bibliography: references.bib
 ---
 
-A path-dependent explanation can usually be decomposed into two causal components: (1) an original cause and (2) a maintenance structure. More contemporary formulations refer to this same distinction in terms of [critical junctures]{.allcaps} and [mechanisms of reproduction]{.allcaps}.
+A path-dependent explanation can usually be decomposed into two causal components: (1) an original cause and (2) a maintenance structure. More contemporary formulations refer to this same distinction in terms of [critical junctures]{.smallcaps} and [mechanisms of reproduction]{.smallcaps}.
 
 > The first is the particular circumstances which caused a tradition to be started. The second is the general process by which social patterns reproduce themselves.
 >
@@ -30,7 +30,7 @@ According to @pierson2011, path-dependent (or self-reinforcing) processes share 
 >
 > @pierson2011 [pp. 44]
 
-The preferred metaphor is that of a [Polya urn process]{.allcaps}.
+The preferred metaphor is that of a [Polya urn process]{.smallcaps}.
 
 Here's some R code:
 

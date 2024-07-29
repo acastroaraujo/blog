@@ -125,6 +125,6 @@ At the moment, computational social scientists seem to be focusing too much on n
 
 **Cybernetics or Cognitive Science?**
 
-Unsurprisingly, many have described cognitive science as a powerful role model for CSS [e.g., @lazer2009]. But perhaps we might end up like cybernetics---i.e., very influential, still relevant, largely forgotten, and with every good thing about it absorbed into nearby disciplines that are no longer talk to each other. Much of the hype surrounding artificial intelligence these days resembles the "cybernetics craze" of the 1950s and 1960s [@kline2015, chapter 3]. Individual researchers are incentivized to jump on the bandwagon and ultimately bite off more than what they can chew. 
+Unsurprisingly, many have described cognitive science as a powerful role model for CSS [e.g., @lazer2009]. But perhaps we might end up like cybernetics---i.e., very influential, still relevant, largely forgotten, and with every good thing about it absorbed into nearby disciplines that are no longer talk to each other. Much of the hype surrounding artificial intelligence these days resembles the "cybernetics craze" of the 1950s and 1960s [@kline2015, chapter 3]. Individual researchers are incentivized to jump on the bandwagon and ultimately bite off more than what they can chew.
 
 If this goes unchecked, CSS might end up as minor historical footnote, and all trade could halt.

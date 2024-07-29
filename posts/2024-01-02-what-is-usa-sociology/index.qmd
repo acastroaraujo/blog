@@ -144,13 +144,13 @@ Presumably, we are not as interdisciplinary as we would like to believe.
 
 ***Note. The visualization provided below is provisional. I will need to email someone at the ASA and politely ask for permission to use the full directory.***
 
-When a sociologist joins the *American Sociological Association* (ASA), they have the options to choose up to four "areas of interest" for everyone else to see. For example, I chose (1) [Theory]{.allcaps}; (2) [Quantitative Methodology]{.allcaps}; (3) [Organizations, Formal and Complex]{.allcaps}; and (4) [Law and Society]{.allcaps}. *And I would probably have chosen something different on a different day.*
+When a sociologist joins the *American Sociological Association* (ASA), they have the options to choose up to four "areas of interest" for everyone else to see. For example, I chose (1) [Theory]{.smallcaps}; (2) [Quantitative Methodology]{.smallcaps}; (3) [Organizations, Formal and Complex]{.smallcaps}; and (4) [Law and Society]{.smallcaps}. *And I would probably have chosen something different on a different day.*
 
 So, I created a dataset containing the areas of interest of over 1,000 individuals associated with 20 sociology programs in the USA. This dataset is provisional, but see @tbl-sample in case you are curious about the sample.
 
-Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is [Stratification/ Mobility]{.allcaps}, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as sub-disciplinary avatars---[Cultural Sociology]{.allcaps}, [Economic Sociology]{.allcaps}, and [Political Sociology]{.allcaps}---which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
+Each of these individuals chose anywhere between one and four areas of interest. @fig-areas highlights the ten largest areas of interest in [blue]{style="color:#63B8FF;"}. The largest is [Stratification/ Mobility]{.smallcaps}, which gives credence to the view that inequality defines the subject-matter of sociology. Among the top ten we also find what some may describe as sub-disciplinary avatars---[Cultural Sociology]{.smallcaps}, [Economic Sociology]{.smallcaps}, and [Political Sociology]{.smallcaps}---which gives credence to the view that sociology is a miniature version of all social science. Furthermore, the view that sociology is mostly concerned with race, class, and gender is also well represented in this top ten.
 
-Note that some areas of interest like [Demography]{#.allcaps} and Medical Sociology are very well represented but don't seem to
+Note that some areas of interest like [Demography]{#.smallcaps} and Medical Sociology are very well represented but don't seem to
 
 ```{r}
 #| label: fig-areas
@@ -195,7 +195,7 @@ This is what the next section is all about.
 
 ## Two-Mode Networks
 
-The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974]. This idea should be familiar to everyone who chose [Social Networks]{.allcaps} as area of interest.
+The direct ties between individuals and areas can be transmogrified---via simple matrix multiplication ---into indirect ties among areas [@agneessens2013; @breiger1974]. This idea should be familiar to everyone who chose [Social Networks]{.smallcaps} as area of interest.
 
 <aside>transmogrification is not the "technical" term for this</aside>
 
@@ -227,9 +227,9 @@ I used Zachary Neal's [-@neal2022] `backbone` package to do all this.[^3]
     \
     *The choice of algorithm and threshold level is rarely discussed in most publications of this sort, so I guess I'm sort of following tradition here.
 
-As we may have expected, there is a strong overlap between [Stratification/ Mobility]{.allcaps} and [Education]{.allcaps}; [Demography]{.allcaps} and [Family]{.allcaps}; [Medical Sociology]{.allcaps} and [Mental Health]{.allcaps}; [Migration/Immigration]{.allcaps} and [Latina/o Sociology]{.allcaps}; and so on.
+As we may have expected, there is a strong overlap between [Stratification/ Mobility]{.smallcaps} and [Education]{.smallcaps}; [Demography]{.smallcaps} and [Family]{.smallcaps}; [Medical Sociology]{.smallcaps} and [Mental Health]{.smallcaps}; [Migration/Immigration]{.smallcaps} and [Latina/o Sociology]{.smallcaps}; and so on.
 
-The strong overlap between [Cultural Sociology]{.allcaps} and so-called [Theory]{.allcaps} deserves its own blog post.
+The strong overlap between [Cultural Sociology]{.smallcaps} and so-called [Theory]{.smallcaps} deserves its own blog post.
 
 *Note. All isolate nodes have been removed. A bigger sample of individuals and their chosen areas would obviously result in more connected areas.*
 
@@ -246,13 +246,13 @@ visualize(vnd)
 
 The result is that we get to see more "structure."
 
-For example, the heterogeneity *within* [Economic Sociology]{.allcaps} may be more easily understood by looking at adjacent areas: [Social Networks]{.allcaps}, [Political Economy]{.allcaps}, [Science and Technology]{.allcaps}, and [Organizations, Formal and Complex]{.allcaps}. The same might be said for other areas that look like "hubs" (e.g., [Stratification/ Mobility]{.allcaps}, [Political Sociology]{.allcaps}).
+For example, the heterogeneity *within* [Economic Sociology]{.smallcaps} may be more easily understood by looking at adjacent areas: [Social Networks]{.smallcaps}, [Political Economy]{.smallcaps}, [Science and Technology]{.smallcaps}, and [Organizations, Formal and Complex]{.smallcaps}. The same might be said for other areas that look like "hubs" (e.g., [Stratification/ Mobility]{.smallcaps}, [Political Sociology]{.smallcaps}).
 
-Futhermore, perhaps we may hypothesize that "triangles"---like the overlap between [Medical Sociology]{.allcaps}, [Aging/ Social Gerontology]{.allcaps}, and [Demography]{.allcaps}---are formed by somewhat distinct underlying groups of sociologists.
+Futhermore, perhaps we may hypothesize that "triangles"---like the overlap between [Medical Sociology]{.smallcaps}, [Aging/ Social Gerontology]{.smallcaps}, and [Demography]{.smallcaps}---are formed by somewhat distinct underlying groups of sociologists.
 
-Also, note that [Quantitative Methodology]{.allcaps} now appears connected to three areas ([Stratification/ Mobility]{.allcaps}, [Demography]{.allcaps}, and [Mathematical Sociology]{.allcaps}), but [Qualitative Methodology]{.allcaps} is nowhere to be seen yet. This does *not* mean that one is more important than the other. It just means that the overlap between [Quantitative Methodology]{.allcaps} and those three areas is stronger than what we would expect by chance; whereas the overlap between [Qualitative Methodology]{.allcaps} and other areas is more compatible with a "null model" of random ties between areas.[^4]
+Also, note that [Quantitative Methodology]{.smallcaps} now appears connected to three areas ([Stratification/ Mobility]{.smallcaps}, [Demography]{.smallcaps}, and [Mathematical Sociology]{.smallcaps}), but [Qualitative Methodology]{.smallcaps} is nowhere to be seen yet. This does *not* mean that one is more important than the other. It just means that the overlap between [Quantitative Methodology]{.smallcaps} and those three areas is stronger than what we would expect by chance; whereas the overlap between [Qualitative Methodology]{.smallcaps} and other areas is more compatible with a "null model" of random ties between areas.[^4]
 
-[^4]: The area of [Ethnography (Anthropology)]{.allcaps}---which has about half the amount of individuals as [Qualitative Methodology]{.allcaps}---has a connection to [Urban Sociology]{.allcaps}, reflecting a long tradition of famous urban ethnographies.
+[^4]: The area of [Ethnography (Anthropology)]{.smallcaps}---which has about half the amount of individuals as [Qualitative Methodology]{.smallcaps}---has a connection to [Urban Sociology]{.smallcaps}, reflecting a long tradition of famous urban ethnographies.
 
 ```{r}
 #| label: fig-0.05
@@ -263,7 +263,7 @@ vnd <- suppressMessages(process(A, 0.05))
 visualize(vnd)
 ```
 
-Finally, @fig-0.06 uses a significance level of $0.06$ to draw ties, just enough for connections between smaller areas to start showing up (e.g., [Marxist Sociology]{.allcaps}, [Alcohol and Drugs]{.allcaps}). [Religion]{.allcaps} is now connected to [Cultural Sociology]{.allcaps}
+Finally, @fig-0.06 uses a significance level of $0.06$ to draw ties, just enough for connections between smaller areas to start showing up (e.g., [Marxist Sociology]{.smallcaps}, [Alcohol and Drugs]{.smallcaps}). [Religion]{.smallcaps} is now connected to [Cultural Sociology]{.smallcaps}
 
 Please keep in mind that this does *not* mean that these connections are somehow "weaker" than the other ones in any *substantive* way. Hypothesis testing is extremely dependent on sample size.
 

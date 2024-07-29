@@ -14,9 +14,9 @@ Data, plural for the Latin word *datum.*
 
 I find it useful to distinguish between *data* and *phenomena*.
 
--   **Phenomena**: recurrent features of the world.
+-   [Phenomena]{.smallcaps}: recurrent features of the world.
 
--   **Data**: "public records produced by measurement and experiment that serve as evidence for the existence or features of phenomena" [@woodward2011, pp. 166]
+-   [Data]{.smallcaps}: "public records produced by measurement and experiment that serve as evidence for the existence or features of phenomena" [@woodward2011, pp. 166]
 
     Even in well-designed experiments, the data will reflect the influence of many other causal factors that have nothing to do with the phenomena of interest.
 

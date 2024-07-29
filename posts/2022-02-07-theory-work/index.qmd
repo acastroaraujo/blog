@@ -39,7 +39,7 @@ In short, good theory-work should give us the tools to avoid common traps. It sh
 
 ## Deepities
 
-Good theory-work should also prevent us from saying **deepities**.
+Good theory-work should also prevent us from saying [deepities]{.smallcaps}.
 
 > A deepity is a proposition that *seems* both important and true ---and profound--- but that achieves this effect by being ambiguous. On one reading it is manifestly false, but it would be earth-shaking if it were true; on the other reading it is true but trivial. The unwary listener picks up the glimmer of truth from the second reading, and the devastating importance from the first reading, and thinks, Wow! That's a deepity.
 >
@@ -53,7 +53,7 @@ In other words, good theory-work should constrain our thinking so that saying st
 
 Deepities are found all over social science and the humanities, in the sense that ambiguous statements will get rewarded if they *seem* profound. A lot of constructionist arguments, for example, become deepities when they take the form "$X$ is socially constructed, therefore $X$ is not real".
 
-But most sociologists often take the opposite perspective: "$X$ is real *because* it's socially constructed".[^1]
+But most sociologists often take the opposite perspective: "$X$ is real *because* it is socially constructed".[^1]
 
 [^1]: This is what drove Durkheim to speak of *social facts* and it's what drives contemporary sociologists to speak of *institutions.*
 
@@ -78,6 +78,6 @@ This kind of argument is *not trivial* when $X$ is taken for granted---i.e., whe
 
 How can skin color *cause* segregation? How can skin color *cause* a stop-and-frisk incident?
 
-In a way, this is the opposite of Dennet's "deepity." It is a statement that looks trivial and true at first glance. But, upon closer reflection, it has no well-formed meaning. And if it were true, it would have earth shattering consequences to our conception of causality. *Which begs the question: why did it originally seem so unremarkable?*
+In a way, this is the opposite of Dennet's "deepity." It is a statement that looks trivial and true at first glance. But, upon closer reflection, it has no well-formed meaning. And if it were true, it would have earth shattering consequences to our conception of causality. Which begs the question: *why did it originally seem so unremarkable?*
 
 At their most ambitious, social constructionist arguments are an indictment of *folk* social theory (or "the culture"). They remind us that many arbitrary things come to be seen as "natural" or "inevitable" in the course of everyday life.
