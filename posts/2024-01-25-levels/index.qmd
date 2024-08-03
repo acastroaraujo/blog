@@ -12,13 +12,15 @@ image: wimsatt.png
 tbl-cap-location: bottom
 ---
 
-The metaphor of *levels* is used to describe the world *all the time.*
+Metaphors about 'levels' are used to describe the world all the time.
 
-These metaphors are too basic to how we organize the world. Scientists use them all the time. Rejecting these metaphors just because some obscure sociologist made poor use of them is laughable. So, the word "level" is inevitable, but it is also vague and invites confusion.
+We cannot avoid them. Scientists use them all the time. And so rejecting these metaphors outright just because some obscure sociologist made poor use of them is wrongheaded.
+
+Nevertheless, the levels metaphor is also vague and invites confusion.
 
 **Problems**
 
-Most problems with the levels metaphor stem from being committed to the following:
+Most problems stem from being committed to the following:
 
 -   The division of the world into distinct monolithic levels (or "layers").
 
@@ -38,7 +40,7 @@ These commitments seem innocuous and maybe obvious at times. For example, Andrew
 >
 > @abbott2001 [pp. 140]
 
-Sounds insightful, right? Maybe, a little bit, but it's also *very misleading.*
+This sounds insightful, but it is wrong.
 
 Most disciplines cast a wide net. The relationship between scientific disciplines and "ontological levels" is *many-to-many.* For example, evolutionary biology encompasses genes, organisms, populations, and environments. Take a look at virtually any scientific discipline and you'll find the same.
 
@@ -107,7 +109,7 @@ These are levels of *realization.* A computation is implemented by an algorithm,
 > @marr1982 [pp. 63]
 
 | Computational theory                                                                                                              | Representation and algorithm                                                                                                                                            | Hardware implementation                                          |
-|------------------------|-------------------------------|-----------------|
+|------------------------|------------------------------|------------------|
 | What is the goal of the computation, why is it appropriate, and what is the logic of the strategy by which it can be carried out? | How can this computational theory be implemented? In particular, what is the representation for the input and output, and what is the algorithm for the transformation? | How can the representation and algorithm be realized physically? |
 
 : The three levels at which any machine carrying out an information-processing task must be understood. {#tbl-marr tbl-colwidths="\[33,34,33\]"}
@@ -146,7 +148,7 @@ For example, a researcher might be interested in explaining how human groups acc
 
 A [mechanism]{.smallcaps} approach to levels also guards against "spooky emergentism" or ontologically unmoored macro abstractions---i.e., what happens when sociologists commit to the existence of higher-level phenomena that have no explanation in terms of the organized activities of their component parts. Nothing "emerges" from levels of [mechanisms]{.smallcaps} except in the trivial sense that organized parts do things that they cannot do in isolation.
 
-Importantly, mechanistic explanations are *not* committed to [methodological individualism]{.smallcaps}---i.e., the view according to which good explanations must always point towards individuals and their choices.
+Importantly, mechanistic explanations are *not* committed to [methodological individualism]{.smallcaps}---i.e., the view according to which good explanations in the social sciences must always point towards individuals and their choices.
 
 > It is not part of our view that all explanations must bottom out in some privileged set of fundamental entities and activities...
 >
