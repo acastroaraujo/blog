@@ -1,0 +1,15 @@
+{
+  "hash": "bf38fcac82e6397263ae7df07ef74af4",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Regression to the Mean II\"\n#description: |\n  \nauthor: andrés castro araújo\ndate: 2024-07-30\ndraft: true\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\nroll <- function(n) {\n    replicate(n, {\n         x <- sample(1:6, size = 2, replace = TRUE)\n         sum(x)\n    })\n}\n\nN <- 10\n```\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

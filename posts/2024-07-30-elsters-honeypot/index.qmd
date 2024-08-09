@@ -1,0 +1,12 @@
+---
+title: "Elster's Honeypot"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-07-30
+draft: true
+---
+
+<https://www.lrb.co.uk/the-paper/v08/n22/ian-hacking/knowledge>
+
+I think the remmitance explanation shows up in Stinchcombe.

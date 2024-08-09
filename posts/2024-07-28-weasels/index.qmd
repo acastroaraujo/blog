@@ -21,11 +21,13 @@ For example, sociologists will use weasel words to insinuate causal claims witho
 
 <aside>*Amateurs, dilettantes, hacks, cowboys, clones* 🎶</aside>
 
-This feeling is not widespread. We are also told that injecting uncertainty or ambiguity into our writing is a mark of caution and humility, not cowardice. [Hedges](https://en.wikipedia.org/wiki/Hedge_(linguistics)) are a marker of polite speech [@yeomans2020]. And American sociologists value politeness above all else, including professional integrity. *("We are not rude like the economists!").*
+This feeling is not widespread. We are also told that injecting uncertainty or ambiguity into our writing is a mark of caution and humility, not cowardice. [Hedges](https://en.wikipedia.org/wiki/Hedge_(linguistics)) are a marker of *polite speech*. And American sociologists value politeness above all else, including professional integrity. *("We are not rude like the economists!").*
 
-Injecting uncertainty and ambiguity in the things you say creates the image of humility and politeness. But it also insulates you from being wrong. *("A feature, not a bug").* You will never be wrong unless you make a commitment. Do not be a coward.
+Injecting uncertainty and ambiguity in the things you say creates the image of humility and politeness. But it also insulates you from being wrong. *("A feature, not a bug").* You will never be wrong unless you make a commitment.
 
-::: {style="background-color: #F5F3ED; padding-left: 100px; padding-right: 60px; padding-top: 50px; padding-bottom: 50px; margin-left: 100px; margin-right: 100px; text-align: center;"}
+Do not be a coward.
+
+::: {style="background-color: #F5F3ED; padding-left: 2em; padding-right: 2em; padding-top: 2em; padding-bottom: 2em; margin-left: 5em; margin-right: 5em; text-align: center;"}
 Say what you mean. Bear witness. Iterate.
 
 John M. Ford, “De Vermis”.[^1]

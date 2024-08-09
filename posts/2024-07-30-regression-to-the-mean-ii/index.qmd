@@ -1,0 +1,85 @@
+---
+title: "Regression to the Mean II"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-07-30
+draft: true
+---
+
+```{r}
+#| message: false
+
+library(tidyverse)
+theme_set(theme_light(base_family = "Optima"))
+
+roll <- function(n) {
+  replicate(n, {
+    x <- sample(1:6, size = 2, replace = TRUE)
+    sum(x)
+  })
+}
+
+N <- 1000
+
+d <- tibble(T = roll(N), E1 = roll(N), E2 = roll(N))
+
+d <- d |> 
+  mutate(X = T + E1, Y = T + E2)
+
+with(d, cor(X, Y))
+
+d |> 
+  ggplot(aes(X, Y)) + 
+  geom_jitter(
+    width = 1/8, height = 1/8, size = 1/3, alpha = 1/3
+  ) + 
+  geom_smooth(method = "lm") + 
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red")
+
+
+d |> 
+  ggplot(aes(X, Y)) + 
+  stat_summary(
+    fun.data = \(x) mean_cl_boot(x, conf.int = 0.89)
+  ) +
+  geom_smooth(method = "lm") + 
+  geom_abline(intercept = 0, slope = 1)
+
+d
+
+d |> 
+  mutate(dist = abs(X - Y)) |> 
+  rowid_to_column(var = "id") |> 
+  pivot_longer(c(X, Y), names_to = "var") |> 
+  ggplot(aes(var, value, group = id)) + 
+  geom_point(size = 1/3) + 
+  geom_line(
+    alpha = 1/3, linewidth = 1/5
+  )
+
+d |> 
+  group_by(X) |> 
+  summarize(Y = mean(Y)) |> 
+  rowid_to_column("id") |> 
+  pivot_longer(c(X, Y), names_to = "var") |> 
+  ggplot(aes(var, value, group = id)) + 
+  geom_point() +
+  geom_line() + 
+  labs(x = latex2exp::TeX("\\rightarrow"))
+
+
+
+```
+
+> It is instructive to consider what a Galton squeeze diagram would be for different values of the correlation coefficient. If the correlation were zero, all of the lines would theoretically converge to a single point, the posttest mean.
+>
+> \[...\]
+>
+> Regression toward the mean is thus not a true process working through time but a methodological artifact, a tautological restatement of imperfect correlation (Campbell & Boruch, 1975).
+
+Again:
+
+> Regression toward the mean is a fact. Because of a less than perfect correlation, the predicted score of a variable tends not to be as extreme in terms of standard score units than the predictor variable in standard score units.
+>
+> 19

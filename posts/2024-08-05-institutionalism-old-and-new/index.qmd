@@ -1,0 +1,22 @@
+---
+title: "Institutionalism, Old and New"
+#description: |
+  
+author: andrés castro araújo
+date: 2024-08-05
+draft: true
+---
+
+This is all symbolic violence. Those two-column tables encourage a polemicist attitude, a caricature.
+
+Hallet
+
+Stinchcombe
+
+Selznick
+
+> "Organizational forms, structural components, and rules, not specific organizations, are institutionalized"; and "not norms and values but taken-for-granted scripts, rules and classifications are the stuff of which institutions are made" (DiMaggio and Powell, 1991: 14-15, emphasis supplied). These and other contrasts may well describe some (possibly transient) differences in focus, but institutional theory should encompass them all and trace their connections.
+
+Dropping Parsons did not mean dropping Freud in exchange for the much better cognitive alternative. It meant dropping "values" which, back then, meant goals and purposes. This was a mistake. Organizations have goals. People organize to accomplish things that they cannot accomplish in isolation.
+
+Berger and Luckman, sharedness of culture (macro-phenomenology)

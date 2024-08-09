@@ -7,24 +7,46 @@ date: 2024-06-21
 draft: true
 ---
 
-Weber
+-   Weber
 
-Science as a vocation. Rationalization means that “one can, in principle, master all things by calculation"
+    Science as a vocation. Rationalization means that “one can, in principle, master all things by calculation"
 
-Knowledge, Impersonality, and Control
+    Knowledge, Impersonality, and Control
 
-Stinchcombe.
+-   Stinchcombe.
 
-Foucault. Hacking. Biopolitics.
+```{=html}
+<!-- -->
+```
+-   Foucault. Hacking. Biopolitics.
 
-Neoinstitutionalism. Rationality as myth and ceremony.
+```{=html}
+<!-- -->
+```
+-   Neoinstitutionalism. Rationality as myth and ceremony.
 
-Espeland and Sauder. Double-entry book keeping.
+```{=html}
+<!-- -->
+```
+-   Espeland and Sauder. Double-entry book keeping.
 
-Espeland and Sauder. Quantification, commensuration.
+```{=html}
+<!-- -->
+```
+-   Espeland and Sauder. Quantification, commensuration.
 
-Fourcade and Healy, and the reenchament of the world.
+```{=html}
+<!-- -->
+```
+-   Fourcade and Healy, and the reenchament of the world.
 
-Lorraine Daston on Rules. Laws and Algorithms.
+```{=html}
+<!-- -->
+```
+-   Lorraine Daston on Rules. Laws and Algorithms.
 
-Hart on discretion.
+    Algorithms are just rules that can be executed mechanically.
+
+    "no universal can foresee all the particulars that it will encounter"
+
+-   Hart on discretion.
