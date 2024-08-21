@@ -22,9 +22,9 @@ In the meantime this how I make sense of [meaning-making]{.smallcaps}.
 
 2.  *Information-processing.*
 
-    We *hear* some spoken message, we *smell* something. We then react quickly, perhaps unconsciously, on the basis of some habitual way of seeing things that is grounded in personal experience.
+    We *hear* some spoken message, we *smell* something. We then react quickly, perhaps unconsciously, on the basis of some habitual way of seeing things that is grounded in personal experience. In other words, we [interpret]{.smallcaps} a stimulus via [categorization]{.smallcaps} and [association]{.smallcaps} [@goldberg].
 
-    This means that we [interpret]{.smallcaps} a stimulus through [categorization]{.smallcaps} and [association \[]{.smallcaps}@goldberg[\]]{.smallcaps}. Is that *thing* a bird? Is it a plane? That's [categorization]{.smallcaps} [@rosch1975]. In turn, the bird can elicit all sort of "connected" concepts, such as food, disease, sacred, dinosaur, and so on. That's [semantic association]{.smallcaps}.[^1]
+    Is that *thing* a bird? Or is it a plane? This is [categorization]{.smallcaps} [@rosch1975]. In turn, the bird can elicit all sort of "connected" concepts, such as food, disease, sacred, dinosaur, and so on. This is [semantic association]{.smallcaps}.[^1]
 
 3.  *Purpose.*
 
