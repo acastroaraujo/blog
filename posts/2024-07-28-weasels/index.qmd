@@ -9,19 +9,19 @@ categories:
 bibliography: references.bib
 ---
 
-It happened sometime during the last few years. I lost all patience for [weasel words](https://en.wikipedia.org/wiki/Weasel_word). I react viscerally when I see other people injecting ambiguity and uncertainty in their writing. I feel some sort of catholic guilt when I catch myself doing it.
+It happened sometime during the last few years. I lost all patience for [weasel words](https://en.wikipedia.org/wiki/Weasel_word). I react viscerally when I see other people injecting ambiguity and uncertainty in their writing. And I feel some sort of catholic guilt when I catch myself doing it.
 
-This *feeling* is not rooted in a preference for clear thinking or a disdain for ambiguity or lazy thinking. No, it has more to do with integrity. I am thinking about the kinds of words that create distance between yourself and what you say. These words remove accountability. *Cowards use them all the time.*
+This *feeling* is not rooted in a preference for clear thinking, nor is it a disdain for ambiguity or lazy thinking. No, it has more to do with integrity. I am thinking about the kinds of words that create distance between yourself and what you say. These words remove accountability. *Cowards use them all the time.*
 
 > *And what may weasel words be? Why weasel words are words that suck all the life out of the words next to them, just as a weasel sucks an egg and leaves the shell.*
 >
 > Stewart Chaplin
 
-For example, sociologists will use weasel words to insinuate causal claims without having to commit—e.g., 'affect', 'influence', 'shape', and so on. They will describe someone or some policy as being 'complicit with' or 'enabling' something bad instead of describing them outright as *doing* something bad.
+For example, sociologists will use weasel words to insinuate causal claims without having to commit to them---e.g., 'affect', 'influence', 'shape', and so on. They will describe someone or some policy as being 'complicit with' or 'enabling' something bad instead of describing them outright as *doing* something bad.
 
 <aside>*Amateurs, dilettantes, hacks, cowboys, clones* 🎶</aside>
 
-This feeling is not widespread. We are also told that injecting uncertainty or ambiguity into our writing is a mark of caution and humility, not cowardice. [Hedges](https://en.wikipedia.org/wiki/Hedge_(linguistics)) are a marker of *polite speech*. And American sociologists value politeness above all else, including professional integrity. *("We are not rude like the economists!").*
+This feeling is not widespread. We are also told that injecting uncertainty or ambiguity into our writing is a mark of caution and humility, not cowardice. [Hedges](https://en.wikipedia.org/wiki/Hedge_(linguistics)) are a marker of *polite speech*. And American sociologists value politeness above all else *("We are not rude like the economists!").*
 
 Injecting uncertainty and ambiguity in the things you say creates the image of humility and politeness. But it also insulates you from being wrong. *("A feature, not a bug").* You will never be wrong unless you make a commitment.
 
