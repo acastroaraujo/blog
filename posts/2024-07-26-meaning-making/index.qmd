@@ -36,6 +36,12 @@ In the meantime this how I make sense of [meaning-making]{.smallcaps}.
 
 [^1]: The notion of "connectedness" needs further clarification, but it's usually conceived as a "distance" along some kind of conceptual space.
 
-[^2]: See @mills1940, @scott1968, @swidler1986, @vaisey2009, @small2021, and so on. The idea that "motives" and "talk of motives" are somehow at odds with each other is no longer prevalent.
+[^2]: See @mills1940, @scott1968, @swidler1986, @vaisey2009, @small2021, and so on.
 
-*Note. If you combine information-processing and meaning-as-motive you end up with a modern rendition of Max Weber's [-@weber1978] interpretative sociology. This should be the actual "center of gravity" for cultural sociologists.*
+*Note. The meaning-as-motive approach should not be deny the importance of "habits" or "unawareness." Motives do not have to operate consciously to be causal [@vaisey2009].*
+
+> *In the great majority of cases actual action goes on in a state of inarticulate half-consciousness or actual unconsciousness of its subjective meaning. The actor is more likely to "be aware" of it in a vague sense than he is to "know" what he is doing or be explicitly self-conscious about it. In most cases his action is governed by impulse or habit. Only occasionally and, in the uniform action of large numbers, often only in the case of a few individuals, is the subjective meaning of the action... brought clearly into consciousness. The ideal type of meaningful action where the meaning is fully conscious and explicit is a marginal case.*
+>
+> @weber1978[*21-2*]
+
+*If you combine information-processing and meaning-as-motive you end up with a modern rendition of Max Weber's [-@weber1978] interpretative sociology. This should be the actual "center of gravity" for cultural sociologists.*
