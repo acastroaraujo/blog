@@ -22,7 +22,7 @@ In the meantime this how I have to come to make sense of [meaning-making]{.small
 
 2.  *Information-processing.*
 
-    We *hear* some spoken message, we *smell* something. We then react quickly, perhaps unconsciously, on the basis of some habitual way of seeing things that is grounded in personal experience. In other words, we [interpret]{.smallcaps} a stimulus via [categorization]{.smallcaps} and [association]{.smallcaps} [@goldberg].
+    We *hear* some spoken message, we *smell* something. We then react quickly, perhaps unconsciously, on the basis of some habitual way of seeing things that is grounded in personal experience. In other words, we [interpret]{.smallcaps} a stimulus via [categorization]{.smallcaps} and [association]{.smallcaps} [@goldberg2024].
 
     Is that *thing* a bird? Or is it a plane? This is [categorization]{.smallcaps} [@rosch1975]. In turn, the bird can elicit all sort of "connected" concepts, such as food, disease, sacred, dinosaur, and so on. This is [semantic association]{.smallcaps}.[^1]
 
