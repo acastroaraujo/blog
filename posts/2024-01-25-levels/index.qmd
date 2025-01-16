@@ -58,7 +58,7 @@ The rest of this entry focuses on more legitimate ways of using the levels metap
 
 -   *Levels of [processing]{.smallcaps}, in which different processing units are related as "upstream" or "downstream" from each other in some [flow of information]{.smallcaps}* *(or in some [sequence of production]{.smallcaps}). In other words, the relation between units is temporal.*
 
-    *Many interesting discoveries only make sense within this framework. For example, the idea that information flows in organizational hierarchies are characterized by "uncertainty absorption" [@march1993, pp. 165]. Workers near the bottom of organizational hierarchies collect "raw" information; this information is then edited, standardized, and summarized in the process of moving upward through the organizational hierarchy; thus, by the time it reaches those at the top, the information appears more robust than it actually is.*
+    *Many interesting discoveries only make sense within this framework. For example, the idea that "information flows" in organizational hierarchies are characterized by "uncertainty absorption" [@march1993, pp. 186]. Workers near the bottom of organizational hierarchies collect "raw" information; this information is then edited, standardized, and summarized in the process of moving upward through the organizational hierarchy; thus, by the time it reaches those at the top, the information appears more robust than it actually is.*
 
 -   *Levels defined with regards to loosely defined and overlapping [disciplinary topics]{.smallcaps} (e.g., economic, political, social, cultural). These levels seem straightforward because they mimic the academic division of labor between economics, political science, sociology, and anthropology. But these levels shouldn't be taken seriously. At best, they serve heuristic purposes; at worst, they distort reality.*
 
@@ -108,8 +108,8 @@ These are levels of *realization.* A computation is implemented by an algorithm,
 >
 > @marr1982 [pp. 63]
 
-| Computational theory                                                                                                              | Representation and algorithm                                                                                                                                            | Hardware implementation                                          |
-|------------------------|------------------------------|------------------|
+| Computational theory | Representation and algorithm | Hardware implementation |
+|------------------------|------------------------------|-------------------|
 | What is the goal of the computation, why is it appropriate, and what is the logic of the strategy by which it can be carried out? | How can this computational theory be implemented? In particular, what is the representation for the input and output, and what is the algorithm for the transformation? | How can the representation and algorithm be realized physically? |
 
 : The three levels at which any machine carrying out an information-processing task must be understood. {#tbl-marr tbl-colwidths="\[33,34,33\]"}

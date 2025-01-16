@@ -1,0 +1,17 @@
+{
+  "hash": "0c0402b1d43fd3588a8f24929b6f3f62",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Bias remaining after adjustment.\"\n#description: |\n  \nauthor: andrés castro araújo\ndate: 2024-12-11\ndraft: true\n---\n\n\n\n<https://statmodeling.stat.columbia.edu/2024/12/10/bias-remaining-after-adjusting-for-pre-treatment-variables-also-the-challenges-of-learning-through-experimentation/>\n\nAdd the thing from the agnostic statistic book.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nrescale <- function(x, to = c(0, 1), na.rm = TRUE) {\n  from <- range(x, na.rm = na.rm)\n  (x - from[1]) / diff(from) * diff(to) + to[1]\n}\n\n\n\nout <- replicate(5000, {\n  \n  n <- 100\n  x <- runif(n, -2, 2)\n  #x <- scales::rescale(rbeta(n, 5, 1), to = c(-3, 3))\n  z <- rbinom(n, 1, plogis(x))\n  y <- 0.2 + 0.3*x + 1*x^2 + 0.5*z + rnorm(n, 0, 0.4)\n  fake <- data.frame(x, y, z)\n  fit <- lm(y ~ x + z, data=fake)\n  coef(fit)[\"z\"]\n\n})\n\nsummary(out)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n-0.4010  0.3156  0.4960  0.4957  0.6806  1.4487 \n```\n\n\n:::\n\n```{.r .cell-code}\nhist(out)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n\n```{.r .cell-code}\nsd(out) / sqrt(1e4)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 0.00277541\n```\n\n\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

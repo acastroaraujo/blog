@@ -1,5 +1,5 @@
 ---
-title: "Cowards"
+title: "Cowardice"
 description: |
   Hedges, Weasels, and Professional Integrity
 author: andrés castro araújo
@@ -9,13 +9,13 @@ categories:
 bibliography: references.bib
 ---
 
-::: {style="padding-left: 30%;"}
+:::: {style="padding-left: 30%;"}
 *And what may weasel words be? Why weasel words are words that suck all the life out of the words next to them, just as a weasel sucks an egg and leaves the shell.*
 
 ::: {style="text-align: right;"}
 *—Stewart Chaplin*
 :::
-:::
+::::
 
 I have finally lost all patience for [weasel words](https://en.wikipedia.org/wiki/Weasel_word). I react viscerally when I see people unnecessarily injecting ambiguity and uncertainty in their writing. And I feel a sort of catholic guilt when I catch myself doing it.
 
