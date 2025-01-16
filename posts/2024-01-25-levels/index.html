@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,10 +58,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-70d37b45c5086134dc26dbb10e888fc0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-86ca5e0a6c4883bdc7660071621ff56d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -255,7 +255,7 @@ window.Quarto = {
 <li><p><em>Levels defined with regard to <span class="smallcaps">scale</span> (temporal or spatial). These are levels defined by some kind of zooming-in and zooming-out operation, to which we commonly apply the adjectives of micro, meso, and macro.</em></p>
 <p><em>These levels cannot be fixed a priori; they are analytical distinctions driven by pragmatic concerns.</em></p></li>
 <li><p><em>Levels of <span class="smallcaps">processing</span>, in which different processing units are related as “upstream” or “downstream” from each other in some <span class="smallcaps">flow of information</span></em> <em>(or in some <span class="smallcaps">sequence of production</span>). In other words, the relation between units is temporal.</em></p>
-<p><em>Many interesting discoveries only make sense within this framework. For example, the idea that information flows in organizational hierarchies are characterized by “uncertainty absorption” <span class="citation" data-cites="march1993">(<a href="#ref-march1993" role="doc-biblioref">March and Simon 1993, p. 165</a>)</span>. Workers near the bottom of organizational hierarchies collect “raw” information; this information is then edited, standardized, and summarized in the process of moving upward through the organizational hierarchy; thus, by the time it reaches those at the top, the information appears more robust than it actually is.</em></p></li>
+<p><em>Many interesting discoveries only make sense within this framework. For example, the idea that “information flows” in organizational hierarchies are characterized by “uncertainty absorption” <span class="citation" data-cites="march1993">(<a href="#ref-march1993" role="doc-biblioref">March and Simon 1993, p. 186</a>)</span>. Workers near the bottom of organizational hierarchies collect “raw” information; this information is then edited, standardized, and summarized in the process of moving upward through the organizational hierarchy; thus, by the time it reaches those at the top, the information appears more robust than it actually is.</em></p></li>
 <li><p><em>Levels defined with regards to loosely defined and overlapping <span class="smallcaps">disciplinary topics</span> (e.g., economic, political, social, cultural). These levels seem straightforward because they mimic the academic division of labor between economics, political science, sociology, and anthropology. But these levels shouldn’t be taken seriously. At best, they serve heuristic purposes; at worst, they distort reality.</em></p>
 <p><em>Avoid when possible.</em></p>
 <p><em>Some sociologists embrace this framework and then start talking about the constant interpenetration of abstract subsystems or institutional spheres. But vague talk about “interpenetration” should be understood as an admission of non-distinctiveness between levels.</em></p></li>
@@ -509,8 +509,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -621,7 +619,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
