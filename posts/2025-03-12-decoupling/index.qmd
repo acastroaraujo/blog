@@ -1,8 +1,9 @@
 ---
-title: "The New Mechanicals"
+title: "Decoupling"
 #description: |
   
 author: andrés castro araújo
-date: 2024-01-25
+date: 2025-03-12
 draft: true
 ---
+

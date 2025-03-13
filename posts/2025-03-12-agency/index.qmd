@@ -1,11 +1,10 @@
 ---
-title: "What is Agency?"
-#description: |
-  
+title: "Agency"
+description: |
+  Never talk to me about agency versus structure
 author: andrés castro araújo
-date: 2024-01-09
+date: 2025-03-12
 draft: true
-bibliography: references.bib
 ---
 
 @tomasello2022
@@ -21,3 +20,9 @@ attribution theory and sellars
 <https://culturecog.blog/2022/01/24/the-lexical-semantics-of-agency-part-i/>
 
 To be an agent, a system must engage in goal-directed interaction with an environment.
+
+Haveman book.
+
+> "Agency" connotes competence, intentionality, and accountability. To be an agent is to act purposely, and to do so on behalf of a principal or in the service of a goal or a policy.
+>
+> Common Wealth, pp. 238

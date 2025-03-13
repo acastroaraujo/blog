@@ -1,9 +1,9 @@
 ---
-title: "The Desire for Just So Stories"
+title: '"Just-So" Stories'
 #description: |
   
 author: andrés castro araújo
-date: 2024-05-30
+date: 2025-03-12
 draft: true
 ---
 
