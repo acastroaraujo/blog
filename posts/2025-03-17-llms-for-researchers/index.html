@@ -282,13 +282,13 @@ window.Quarto = {
 
 
 <p>I’ve recently spent some time learning about how Large Language Models (LLMs) work so that I can feel confident when using them for academic purposes.</p>
-<p>So far, I can only recommend two sources the “nuts and bolts” aspect of these models:</p>
+<p>So far, I can only recommend two sources for learning about the “nuts and bolts” aspect of these models:</p>
 <ol type="1">
 <li><p><a href="https://youtu.be/7xTGNNLPyMI">Deep Dive into LLMs like ChatGPT</a>, a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).</p></li>
 <li><p><a href="https://web.stanford.edu/~jurafsky/slp3/"><em>Speech and Language Processing</em></a> (chapters 9-12), a textbook written by Dan Jurafsky and James H. Martin.</p></li>
 </ol>
 <p>If you spend some time engaging with these resources, I think you will also be able to turn LLM Assitants into reliable research tools.</p>
-<p>Before starting, however, I think it’s important to adopt the correct mindset. LLMs have been described through metaphors that range from “stochastic parrots” to “blurry JPEGs of the Internet.” They are depicted as monstrous technologies reminiscent of Frankenstein’s Monster or H.P. Lovecraft’s shoggoths, terrifying artificial servants that rebelled against their creators.</p>
+<p>Before starting, however, I think it’s important to adopt the correct mindset. LLMs have been described through metaphors that range from “stochastic parrots” to “blurry JPEGs of the Internet.” They are depicted as monstrous technologies reminiscent of Lovecraft’s shoggoths, terrifying artificial servants that rebelled against their creators.</p>
 <div id="fig-llm" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-llm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -299,7 +299,7 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 </figcaption>
 </figure>
 </div>
-<p>Following Alison Gopnik, the more accurate way of describing LLMs is as a “cultural technologies” <span class="citation" data-cites="yiu2023 farrell2025">(<a href="#ref-yiu2023" role="doc-biblioref">Yiu et al. 2023</a>; <a href="#ref-farrell2025" role="doc-biblioref">Farrell et al. 2025</a>)</span>. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are <em>not</em> supernatural. They are <em>information-retrieval technologies.</em> They codify, summarize, and organize information in ways that enable its transmission at large scale.</p>
+<p>Following <span class="citation" data-cites="farrell2025">Farrell et al. (<a href="#ref-farrell2025" role="doc-biblioref">2025</a>)</span>, the more accurate way of describing LLMs is as a “cultural technologies” in general and <em>information-retrieval technologies</em> in particular. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are <em>not</em> supernatural. They codify, summarize, and organize information in ways that enable its transmission at large scale.</p>
 <p>The next section describes how LLMs have been <em>modified</em> in many clever ways so that they generate text in response to prompts. Following that section I introduce four key ideas that I believe to be invaluable for researchers thinking about using LLMs in a more rational way.</p>
 <ul>
 <li><p>Temperature Sampling</p></li>
@@ -314,44 +314,43 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <p><span class="smallcaps">Pre-Training</span></p>
 <ol type="1">
 <li><p>Download The Internet.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
-<li><p>Tokenization.</p>
-<p>This means that we turn the text contained in individual websites into a special format.</p>
-<p>For example, lets turn the following phrase into a sequence of tokens:</p>
-<p><em>“The relative opacity of the method tends to encourage a kind of magical orientation to the results.”</em></p>
+<li><p>Pre-process all text content (or Tokenization).</p>
+<p>Here we turn the text contained in individual websites into a special format using what’s known as a Byte Pair Encoding (BPE) Tokenizer.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>For example, the following phrase</p>
+<div style="margin-left: 2em; margin-right: 2em;">
+<p><em>“The relative opacity of the method tends to encourage a kind of magical orientation to the results”</em></p>
+</div>
+<p>will get transformed into the following sequence of tokens:</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Python Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tiktoken <span class="im">as</span> tk</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> tk.encoding_for_model(<span class="st">"gpt-4o"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">"The relative opacity of the method tends to encourage a kind of magical orientation to the results."</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tokenizer.encode(txt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">"The relative opacity of the method tends to encourage a kind of magical orientation to the results"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tokenizer.encode(txt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[976, 15001, 35672, 328, 290, 2595, 44142, 316, 17636, 261, 3675, 328, 37503, 29546, 316, 290, 4376, 13]</code></pre>
+<pre><code>[976, 15001, 35672, 328, 290, 2595, 44142, 316, 17636, 261, 3675, 328, 37503, 29546, 316, 290, 4376]</code></pre>
 </div>
 </div>
 <p>Note that LLMs don’t <em>see</em> whole words, nor do they see letters. They see tokens. And tokens, most of the time, are fragments of words.</p>
 <p>For example, this is how ChatGPT sees my name:</p>
 <div class="cell">
-<details class="code-fold">
+<details open="" class="code-fold">
 <summary>Python Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tokenizer.decode([<span class="dv">3436</span>, <span class="dv">60278</span>, <span class="dv">68165</span>, <span class="dv">64957</span>, <span class="dv">1042</span>, <span class="dv">4379</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>'Andrés Castro Araújo'</code></pre>
 </div>
-</div>
-<p><em>Note. This is technically known as a Byte Pair Encoding (BPE) Tokenizer.</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
+</div></li>
 </ol>
 <p><span class="smallcaps">Training</span></p>
 <ol type="1">
 <li><p>Train a neural network.</p>
 <p>LLMs are “deep” neural networks trained to estimate the probability distribution of long token sequences.</p>
-<p>See <span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chap. 9</a>)</span> and this <a href="https://youtu.be/eMlx5fFNoYc?feature=shared">3Blue1Brown video</a> for more information on “self-attention” and “multi-head attention” mechanisms that turn neural networks into “transformers.”</p>
-<p><em>Note. See <a href="https://bbycroft.net/llm">here</a> for a visualization of what this might look like in practice.</em></p></li>
+<p>The technical details of this step are daunting, but I recommend this <a href="https://youtu.be/eMlx5fFNoYc?feature=shared">3Blue1Brown video</a> and <span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chap. 9</a>)</span> for more information about the “self-attention” and “multi-head attention” mechanisms that turn neural networks into “transformers.” This is where the T in ChatGPT comes from.</p></li>
 <li><p>Inference.</p>
 <p>The result of the training process is a “base model” which can generate documents like the ones it has seen before.</p>
 <p>We can now predict one token at a time to generate new data. But this LLM is not an <span class="smallcaps">Assitant</span> yet; at this stage, it is more like an “autocomplete on steroids” or a “stochastic parrot.”</p>
@@ -366,7 +365,7 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <li><p>Reinforcement Learning with Human Feedback (<span class="smallcaps">RLHF</span>).</p>
 <p>This is reinforcement learning with human feedback in the context of <em>unverifiable domains,</em> such as scoring answers related to jokes, poetry, music, and so on. We call them unverifiable domains because, unlike the question-answer pairings provided in the <span class="smallcaps">RL</span> process, there are no “correct” answers.</p>
 <p>Instead of rewarding the LLM when it stumbles on correct answers, we first create a simulator of human preferences—such as truthfulness, helpfulness, harmlessness—which then gets used as a “reward model.” These individual rewards are then used as feedback to further modify the parameters of the LLM.</p>
-<p>Yes, LLMs are furthered trained to play language games.</p>
+<p>Yes, LLMs are furthered trained to play language games.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <p>However, this process may result in the discovery of “adversarial example” with extremely high scores that seem incomprehensible to human evaluators. Thus, it can actually make the LLM underperform if the engineers in charge of this task are not careful.</p></li>
 <li><p>Reinforcement Learning (<span class="smallcaps">RL</span>)</p>
 <p>We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators involved in the creation of some “reward model.” It is an automatic process that can go indefinitely without worrying the engineers about the discover of potential “adversarial examples.”</p>
@@ -572,7 +571,7 @@ Figure&nbsp;5: Python Interpreter Example
 <p>The use of <span class="smallcaps">Tool Calls</span> requires that the input text is <em>standardized</em>.</p>
 <p>Standardization is important if you want to develop your own tools, but it is also important if you want the <em>output text</em> to be standardized too.</p>
 <p>OpenAI uses a standard called <a href="https://openai.com/index/introducing-structured-outputs-in-the-api/"><span class="smallcaps">structured output</span></a><span class="smallcaps">,</span> which is essentially a <a href="https://json-schema.org/overview/what-is-jsonschema">JSON Schema</a>, to produce reliable output used to call user-defined tools or to structure the LLM’s output in a way that corresponds to the user’s needs. If you are a researcher wanting to extract structured output from unstructured pieces of texts—that’s me—then you will want to do the latter, which requires setting up a <code>json_schema</code> response format.</p>
-<p><span class="smallcaps">Structured output</span> is only available for OpenAI models newer than <code>gpt-4o-2024-08-06</code>. These models have been fine-tuned to produce complicate schemas, but they also have hard-coded rules that produce valid JSON data formats.</p>
+<p><span class="smallcaps">Structured output</span> is only available for OpenAI models newer than <code>gpt-4o-2024-08-06</code>. These models have been fine-tuned to produce complicate schemas, but they also have <em>hard-coded rules</em> that force the LLM to produce valid JSON data.</p>
 <blockquote class="blockquote">
 <p>By default, when models are sampled to produce outputs, they are entirely unconstrained and can select any token from the vocabulary as the next output. This flexibility is what allows models to make mistakes; for example, they are generally free to sample a curly brace token at any time, even when that would not produce valid JSON. In order to force valid outputs, we constrain our models to only tokens that would be valid according to the supplied schema, rather than all available tokens.</p>
 <p><a href="https://openai.com/index/introducing-structured-outputs-in-the-api/" class="uri">https://openai.com/index/introducing-structured-outputs-in-the-api/</a></p>
@@ -689,17 +688,18 @@ Farrell, Henry, Alison Gopnik, Cosma Shalizi, and James Evans. 2025. <span>“<a
 <div id="ref-jurafsky" class="csl-entry" role="listitem">
 Jurafsky, Dan, and James Martin.<em><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech &amp; Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition</a></em>.
 </div>
+<div id="ref-kockelman2024" class="csl-entry" role="listitem">
+Kockelman, Paul. 2024. <em><a href="https://press.uchicago.edu/ucp/books/book/distributed/L/bo238320279.html">Last Words: Large Language Models and the AI Apocalypse</a></em>. Prickly Paradigm Press.
+</div>
 <div id="ref-ouyang2022" class="csl-entry" role="listitem">
 Ouyang, Long, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, and Alex Ray. 2022. <span>“<a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html">Training Language Models to Follow Instructions with Human Feedback</a>.”</span> <em>Advances in neural information processing systems</em> 35: 2773027744.
-</div>
-<div id="ref-yiu2023" class="csl-entry" role="listitem">
-Yiu, Eunice, Eliza Kosoy, and Alison Gopnik. 2023. <span>“<a href="https://doi.org/10.1177/17456916231201401">Transmission Versus Truth, Imitation Versus Innovation: What Children Can Do That Large Language and Language-and-Vision Models Cannot (Yet)</a>.”</span> <em>Perspectives on Psychological Science</em> 17456916231201401.
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>If you wish to make an apple pie from scratch, you must first invent the universe.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>You can explore the various tokenizers used to train different LLMs <a href="https://tiktokenizer.vercel.app/">here</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>“Just to be clear, the language model still engages in next-token prediction. However, its parameters are tweaked not to make it predict next words more and more accurately but so that its final outputs (as responses to prompts) achieve higher and higher scores from the reward model. This, of course, is why the process is called reinforcement learning: it algorithmically embodies the principle that behavior that was rewarded in the past is more likely to be repeated in the future” <span class="citation" data-cites="kockelman2024">(<a href="#ref-kockelman2024" role="doc-biblioref">Kockelman 2024, p. 48</a>)</span>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
