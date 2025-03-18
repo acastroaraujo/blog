@@ -1,7 +1,7 @@
 ---
 title: "Theory-Work"
 description: |
-  Deepities, social constructionism, and sociological theory.
+  Deepities, social constructionism, and theory.
 author: andrés castro araújo
 categories:
   - Theory
@@ -70,7 +70,9 @@ The logic behind constructionist arguments is fairly straightforward.
 >
 > @hacking1999 [pp. 6]
 
-This kind of argument is *not trivial* when $X$ is taken for granted---i.e., when $X$ appears to be inevitable. Take the notion of *racecraft*, which is used to describe how social hierarchy gets *projected* into "nature" in the form of "race."
+This kind of argument is *not* trivial when $X$ is *taken for granted*---i.e., when $X$ appears to be inevitable.
+
+Take the notion of *racecraft*, which is used to describe how social hierarchy gets *projected* into "nature" in the form of "race."
 
 > Consider the statement "black Southerners were segregated because of their skin color"---a perfectly natural sentence to the ears of most Americans, who tend to overlook its *weird causality.*
 >
@@ -80,4 +82,4 @@ How can skin color *cause* segregation? How can skin color *cause* a stop-and-fr
 
 In a way, this is the opposite of Dennet's "deepity." It is a statement that looks trivial and true at first glance. But, upon closer reflection, it has no well-formed meaning. And if it were true, it would have earth shattering consequences to our conception of causality. Which begs the question: *why did it originally seem so unremarkable?*
 
-At their most ambitious, social constructionist arguments are an indictment of *folk* social theory (or "the culture"). They remind us that many arbitrary things come to be seen as "natural" or "inevitable" in the course of everyday life.
+At their most ambitious, social constructionist arguments are an indictment of *folk* social theory. They remind us that many arbitrary things come to be seen as "natural" or "inevitable" in the course of everyday life. They also provide clarity and precision to the things we say.

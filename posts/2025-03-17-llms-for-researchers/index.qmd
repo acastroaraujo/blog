@@ -4,6 +4,12 @@ description: |
   Some useful information, before you start using them.
 author: andrés castro araújo
 date: 2025-03-17
+categories:
+  - Computation
+  - Social Science
+  - R
+  - Python
+  - Language
 bibliography: references.bib
 ---
 
@@ -11,8 +17,9 @@ I've recently spent some time learning about how Large Language Models (LLMs) wo
 
 So far, I can only recommend two sources the "nuts and bolts" aspect of these models:
 
-1.  [*Speech and Language Processing*](https://web.stanford.edu/~jurafsky/slp3/) (chapters 10 & 12), a textbook written by Dan Jurafsky and James H. Martin.
-2.  [Deep Dive into LLMs like ChatGPT](https://youtu.be/7xTGNNLPyMI), a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).
+1.  [Deep Dive into LLMs like ChatGPT](https://youtu.be/7xTGNNLPyMI), a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).
+
+2.  [*Speech and Language Processing*](https://web.stanford.edu/~jurafsky/slp3/) (chapters 9-12), a textbook written by Dan Jurafsky and James H. Martin.
 
 If you spend some time engaging with these resources, I think you will also be able to turn LLM Assitants into reliable research tools.
 
@@ -32,11 +39,11 @@ The next section describes how LLMs have been *modified* in many clever ways so 
 
 -   Structured Output
 
-No magic, no oracles, no supernatural forces, no demonology.
+*No magical thinking, no oracles, no supernatural forces, no demonology.*
 
 ## Creating an LLM Assistant
 
-LLM Assitants, like OpenAI's ChatGPT or Anthropic's Claude are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a "base model," an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an [Assistant]{.smallcaps} (also known as "model alignment").
+LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a "base model," an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an [Assistant]{.smallcaps} (also known as "model alignment").
 
 [Pre-Training]{.smallcaps}
 
@@ -44,11 +51,14 @@ LLM Assitants, like OpenAI's ChatGPT or Anthropic's Claude are created in a thre
 
 2.  Tokenization.
 
-    These models typically use a Byte Pair Encoding (BPE) Tokenizer.
+    This means that we turn the text contained in individual websites into a special format.
+
+    LLMs typically use a Byte Pair Encoding (BPE) Tokenizer.
 
     For example:
 
     ```{python}
+    #code-summary: Python Code
     import tiktoken as tk
 
     tokenizer = tk.encoding_for_model("gpt-4o")
@@ -63,6 +73,7 @@ LLM Assitants, like OpenAI's ChatGPT or Anthropic's Claude are created in a thre
     For example, this is how ChatGPT sees my name:
 
     ```{python}
+    #| code-summary: Python Code
     tokenizer.decode([3436, 60278, 68165, 64957, 1042, 4379])
     ```
 
@@ -94,19 +105,19 @@ LLM Assitants, like OpenAI's ChatGPT or Anthropic's Claude are created in a thre
 
     This dataset typically comes from expert human annotators.
 
--   Reinforcement Learning ([RL]{.smallcaps})
-
-    We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators here; it is an automatic process.
-
-    The new "thinking" models, such as `o1` and `o3-mini`, are created through this process.
-
 -   Reinforcement Learning with Human Feedback ([RLHF]{.smallcaps}).
 
     This is reinforcement learning with human feedback in the context of *unverifiable domains,* such as scoring answers related to jokes, poetry, music, and so on. We call them unverifiable domains because, unlike the question-answer pairings provided in the [RL]{.smallcaps} process, there are no "correct" answers.
 
-    Instead of providing correct answers, we first create a simulator of human preferences which then gets used as a "reward model" [@ziegler2020]. It is essentially another neural network, created to imitate human judges, which then gets used to generate the rewards used to further fine-tune the LLM.
+    Instead of rewarding the LLM when it stumbles on correct answers, we first create a simulator of human preferences---such as truthfulness, helpfulness, harmlessness---which then gets used as a "reward model." These rewards are then used to fine-tune the parameters of the LLM.
 
-    However, the [RL]{.smallcaps} process may result in the discovery of "adversarial example" with extremely high scores that seem incomprehensible to human evaluators.
+    However, this process may result in the discovery of "adversarial example" with extremely high scores that seem incomprehensible to human evaluators. Thus, it can actually make the LLM underperform if the engineers in charge of this task are not careful.
+
+-   Reinforcement Learning ([RL]{.smallcaps})
+
+    We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators involved in the creation of some "reward model." It is an automatic process that can go indefinitely without worrying the engineers about the discover of potential "adversarial examples."
+
+    The new "thinking" models, such as `o1` and `o3-mini`, are created through this process.
 
 Regardless of how the LLM was created, and assuming it incorporates some kind of [SFT]{.smallcaps}, this is the most important thing to know:
 
@@ -142,7 +153,7 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 <|im_end|>
 ```
 
-This is how the dataset of conversations used during [SFT]{.smallcaps} looks like too.
+This is how the dataset of conversations used during [SFT]{.smallcaps} looks like too!
 
 ## Temperature Sampling
 
@@ -171,6 +182,7 @@ So we have to use a different sampling procedure.
 To get a sense of how this works, @fig-temperature shows different probability distributions for 10 fruits and and different temperature values. You can think of this as a combination of [top-k]{.smallcaps} and [temperature sampling]{.smallcaps}. When $\tau = 0$ we are essentially picking the most likely token. When $\tau = 1$ we are essentially doing random sampling.
 
 ```{r}
+#| code-summary: R Code
 #| code-fold: true
 #| label: fig-temperature
 #| fig-cap: As $\tau$ increases, the resulting distribution becomes more uniform. Note that this plot shows "fruits" instead of actual tokens, which tend to be chunks of words. Also, this procedure resembles a combination of [top-k]{.smallcaps} and [temperature sampling]{.smallcaps}.
@@ -265,7 +277,7 @@ Karpathy also notes that *LLMs need tokens to "think" with.* This means that LLM
 
 However, when asked to show the process and then provide the answer at the end, it will produce the correct answer. This is because the process becomes part of the [context window.]{.smallcaps} The process shown in @fig-chat-apples is not for the benefit of the user, it is for the benefit of the LLM.
 
-![Context Window Example. Similar results follow if you add "Let's think step by step" at the end of any prompt. ](images/paste-3.png){#fig-chat-apples fig-align="center" width="80%"}
+![Context Window Example. Similar results follow if you add "Let's think step by step" at the end of any prompt.](images/paste-3.png){#fig-chat-apples fig-align="center" width="80%"}
 
 There is a large implication here if we wish to repurpose LLMs for decision-making: *any text produced by the model after it provides the answer is a post-hoc justification by definition.* The answer has already been produced, what follows is just next-token prediction.
 
@@ -323,6 +335,7 @@ There is some extensive [documentation](https://platform.openai.com/docs/guides/
 1.  Using the `ellmer` package in R:
 
 ```{r}
+#| code-summary: R Code
 #| eval: false
 
 library(ellmer)
@@ -357,6 +370,7 @@ str(out)
 2.  Using the `pydantic` and `openai` libraries in Python:
 
 ```{python}
+#| code-summary: Python Code
 #| eval: false
 
 from pydantic import BaseModel, Field
