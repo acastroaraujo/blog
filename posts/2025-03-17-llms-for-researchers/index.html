@@ -512,7 +512,7 @@ Figure&nbsp;2: As <span class="math inline">\(\tau\)</span> increases, the resul
 <p>Andrej Karpathy refers to information encoded in the parameters of an LLM as a sort of “vague recollection” and information in the <em>tokens</em> of the <span class="smallcaps">context window</span> as a sort of “working memory.” The tokens in the <span class="smallcaps">context window</span> have also been described as providing a sort of <em>in-context learning</em> <span class="citation" data-cites="jurafsky">(<a href="#ref-jurafsky" role="doc-biblioref">Jurafsky and Martin, chap. 12</a>)</span>.</p>
 <p>Karpathy also notes that <em>LLMs need tokens to “think” with.</em> This means, among other things, that LLMs will underperform if we truncate their <span class="smallcaps">context window</span>. For example, <a href="#fig-chat-apples" class="quarto-xref">Figure&nbsp;3</a> shows a query in which some user has artificially truncated the context window by asking “Just give me the answer. Do not show me the process.”</p>
 <p>As a result ChatGPT provides a wrong answer.</p>
-<p>However, when asked to show the process and then provide the answer at the end, it will produce the correct answer. This is because the process becomes part of the <span class="smallcaps">context window.</span></p>
+<p>However, it will produce the correct answer when asked to show the process first and then provide the answer at the end. This is because the process is now incorporated in the <span class="smallcaps">context window.</span></p>
 <div id="fig-chat-apples" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-chat-apples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -524,6 +524,7 @@ Figure&nbsp;3: Context Window Example. Similar results follow if you add “Let�
 </figure>
 </div>
 <p>The process shown in <a href="#fig-chat-apples" class="quarto-xref">Figure&nbsp;3</a> is not for the benefit of the user, it is for the benefit of the LLM.</p>
+<hr>
 <p>There is an important implication here if we wish to repurpose LLMs for decision-making: <em>any text produced by the model after it provides the answer is a post-hoc justification.</em> The answer has already been produced, what follows is just next-token prediction.</p>
 <p>In contrast, anything that is written before the answer is now part of the LLM’s <span class="smallcaps">context window</span> and thus plays some role in what the actual answer <em>is.</em></p>
 </section>
@@ -540,8 +541,8 @@ Figure&nbsp;3: Context Window Example. Similar results follow if you add “Let�
     "tools": [{ "type": "web_search_preview" }],
     "input": "What was a positive news story from today?"
   }'</code></pre>
-<p>Here, if the Chat Assistant determines that a “tool call” is warranted it will request that the user’s computer run that tool and return the result to the Assistant. This additional information is then incorporated in the context window before the LLM continues with the task of next-token prediction.</p>
-<p>This is worth repeating, as shown in <a href="#fig-tool" class="quarto-xref">Figure&nbsp;4</a>, ChatGPT is using <em>your</em> computer to get the answer, which it will then inject into the <span class="smallcaps">context window</span>.</p>
+<p>If the Chat Assistant determines that a “tool call” is warranted, it will request that the user’s computer run that tool and return the result to the Assistant. This additional information is then incorporated in the context window before the LLM continues with the next-token prediction task.</p>
+<p>This is worth repeating, as shown in <a href="#fig-tool" class="quarto-xref">Figure&nbsp;4</a>, ChatGPT is using <em>your</em> computer to get the answer, which it will then <em>inject</em> into the <span class="smallcaps">context window</span>.</p>
 <div id="fig-tool" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
