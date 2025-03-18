@@ -8,6 +8,7 @@ categories:
   - Culture
   - Sociology
 bibliography: references.bib
+image: weber.png
 ---
 
 Most sociologists seem to believe that [meaning-making]{.smallcaps} is at the center of cultural sociology [e.g., @spillman2020]. But I have never encountered a coherent definition of what [meaning-making]{.smallcaps} is supposed be. It is mostly an empty signifier that stands in for all sorts of overlapping concepts—e.g., narrative, habitus, classification, repertoire, norm, script, preference, skill, belief, value, prototype, perception, representation, etc.
