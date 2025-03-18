@@ -287,11 +287,13 @@ Karpathy also notes that *LLMs need tokens to "think" with.* This means, among o
 
 As a result ChatGPT provides a wrong answer.
 
-However, when asked to show the process and then provide the answer at the end, it will produce the correct answer. This is because the process becomes part of the [context window.]{.smallcaps}
+However, it will produce the correct answer when asked to show the process first and then provide the answer at the end. This is because the process is now incorporated in the [context window.]{.smallcaps}
 
 ![Context Window Example. Similar results follow if you add "Let's think step by step" at the end of any prompt.](images/paste-3.png){#fig-chat-apples fig-align="center" width="80%"}
 
 The process shown in @fig-chat-apples is not for the benefit of the user, it is for the benefit of the LLM.
+
+------------------------------------------------------------------------
 
 There is an important implication here if we wish to repurpose LLMs for decision-making: *any text produced by the model after it provides the answer is a post-hoc justification.* The answer has already been produced, what follows is just next-token prediction.
 
@@ -316,9 +318,9 @@ curl https://api.openai.com/v1/responses \
   }'
 ```
 
-Here, if the Chat Assistant determines that a "tool call" is warranted it will request that the user's computer run that tool and return the result to the Assistant. This additional information is then incorporated in the context window before the LLM continues with the task of next-token prediction.
+If the Chat Assistant determines that a "tool call" is warranted, it will request that the user's computer run that tool and return the result to the Assistant. This additional information is then incorporated in the context window before the LLM continues with the next-token prediction task.
 
-This is worth repeating, as shown in @fig-tool, ChatGPT is using *your* computer to get the answer, which it will then inject into the [context window]{.smallcaps}.
+This is worth repeating, as shown in @fig-tool, ChatGPT is using *your* computer to get the answer, which it will then *inject* into the [context window]{.smallcaps}.
 
 ![<https://ellmer.tidyverse.org/articles/tool-calling.html>](images/paste-2.png){#fig-tool fig-align="center" width="75%"}
 
