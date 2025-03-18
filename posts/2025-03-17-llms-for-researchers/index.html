@@ -304,40 +304,39 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <ul>
 <li><p>Temperature Sampling</p></li>
 <li><p>The Context Window</p></li>
-<li><p>Tools</p></li>
+<li><p>Tool Calling</p></li>
 <li><p>Structured Output</p></li>
 </ul>
 <p><em>No magical thinking, no oracles, no supernatural forces, no demonology.</em></p>
 <section id="creating-an-llm-assistant" class="level2">
 <h2 class="anchored" data-anchor-id="creating-an-llm-assistant">Creating an LLM Assistant</h2>
-<p>LLM Assitants, like OpenAI’s ChatGPT, Anthropic’s Claude, or Google’s Gemini, are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a “base model,” an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an <span class="smallcaps">Assistant</span> (also known as “model alignment”).</p>
+<p>LLM Assitants, like OpenAI’s ChatGPT, Anthropic’s Claude, or Google’s Gemini, are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a “base model,” an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an <span class="smallcaps">Assistant</span> in a process that is also known as “model alignment.”</p>
 <p><span class="smallcaps">Pre-Training</span></p>
 <ol type="1">
-<li><p>Download The Internet.</p></li>
+<li><p>Download The Internet.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
 <li><p>Tokenization.</p>
 <p>This means that we turn the text contained in individual websites into a special format.</p>
-<p>LLMs typically use a Byte Pair Encoding (BPE) Tokenizer.</p>
-<p>For example:</p>
+<p>For example, lets turn the following phrase into a sequence of tokens:</p>
+<p><em>“The relative opacity of the method tends to encourage a kind of magical orientation to the results.”</em></p>
 <div class="cell">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#code-summary: Python Code</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tiktoken <span class="im">as</span> tk</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> tk.encoding_for_model(<span class="st">"gpt-4o"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">"The relative opacity of the method tends to encourage a kind of magical orientation to the results."</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>tokenizer.encode(txt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold">
+<summary>Python Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tiktoken <span class="im">as</span> tk</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> tk.encoding_for_model(<span class="st">"gpt-4o"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">"The relative opacity of the method tends to encourage a kind of magical orientation to the results."</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tokenizer.encode(txt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[976, 15001, 35672, 328, 290, 2595, 44142, 316, 17636, 261, 3675, 328, 37503, 29546, 316, 290, 4376, 13]</code></pre>
 </div>
 </div>
-<p>This is important: LLMs don’t <em>see</em> whole words, they don’t see letters either, they see tokens. And tokens, most of the time, are “chunks” of words.</p>
+<p>Note that LLMs don’t <em>see</em> whole words, nor do they see letters. They see tokens. And tokens, most of the time, are fragments of words.</p>
 <p>For example, this is how ChatGPT sees my name:</p>
 <div class="cell">
-<details open="" class="code-fold">
+<details class="code-fold">
 <summary>Python Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tokenizer.decode([<span class="dv">3436</span>, <span class="dv">60278</span>, <span class="dv">68165</span>, <span class="dv">64957</span>, <span class="dv">1042</span>, <span class="dv">4379</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -345,13 +344,13 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <pre><code>'Andrés Castro Araújo'</code></pre>
 </div>
 </div>
-<p>You can explore the various tokenizers used to train different LLMs <a href="https://tiktokenizer.vercel.app/">here</a>.</p></li>
+<p><em>Note. This is technically known as a Byte Pair Encoding (BPE) Tokenizer.</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
 </ol>
 <p><span class="smallcaps">Training</span></p>
 <ol type="1">
 <li><p>Train a neural network.</p>
 <p>LLMs are “deep” neural networks trained to estimate the probability distribution of long token sequences.</p>
-<p>See <span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chap. 9</a>)</span> and this <a href="https://youtu.be/eMlx5fFNoYc?feature=shared">3Blue1Brown video</a> for more information on “self-attention” and “multi-head attention” mechanisms that turn neural networks into “transformers.” However, this is probably the less important thing to understand from the point of view of applied research in computational social science.</p>
+<p>See <span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chap. 9</a>)</span> and this <a href="https://youtu.be/eMlx5fFNoYc?feature=shared">3Blue1Brown video</a> for more information on “self-attention” and “multi-head attention” mechanisms that turn neural networks into “transformers.”</p>
 <p><em>Note. See <a href="https://bbycroft.net/llm">here</a> for a visualization of what this might look like in practice.</em></p></li>
 <li><p>Inference.</p>
 <p>The result of the training process is a “base model” which can generate documents like the ones it has seen before.</p>
@@ -362,22 +361,24 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <ul>
 <li><p>Supervised Fine-Tuning (<span class="smallcaps">SFT</span>).</p>
 <p>We create and curate a dataset of conversations between some “user” and some “assistant” in order to turn the LLM (a next-token prediction machine) into an <span class="smallcaps">Assistant</span> <span class="citation" data-cites="ouyang2022">(<a href="#ref-ouyang2022" role="doc-biblioref">Ouyang et al. 2022</a>)</span>.</p>
-<p>This dataset typically comes from expert human annotators.</p></li>
+<p>This dataset typically comes from expert human annotators.</p>
+<p>Earlier iterations of ChatGPT had no qualms about providing users with instructions on how to build bombs. This was later fixed through the incorporation of new question-response pairs in post-training datasets. This is also how newer iterations of ChatGPT will respond that it cannot answer specific prompts that demand factual answers in contexts that would have previously resulted in “hallucinations.”</p></li>
 <li><p>Reinforcement Learning with Human Feedback (<span class="smallcaps">RLHF</span>).</p>
 <p>This is reinforcement learning with human feedback in the context of <em>unverifiable domains,</em> such as scoring answers related to jokes, poetry, music, and so on. We call them unverifiable domains because, unlike the question-answer pairings provided in the <span class="smallcaps">RL</span> process, there are no “correct” answers.</p>
-<p>Instead of rewarding the LLM when it stumbles on correct answers, we first create a simulator of human preferences—such as truthfulness, helpfulness, harmlessness—which then gets used as a “reward model.” These rewards are then used to fine-tune the parameters of the LLM.</p>
-<p>Yes, LLMs are furthered trained to play language games. However, this process may result in the discovery of “adversarial example” with extremely high scores that seem incomprehensible to human evaluators. Thus, it can actually make the LLM underperform if the engineers in charge of this task are not careful.</p></li>
+<p>Instead of rewarding the LLM when it stumbles on correct answers, we first create a simulator of human preferences—such as truthfulness, helpfulness, harmlessness—which then gets used as a “reward model.” These individual rewards are then used as feedback to further modify the parameters of the LLM.</p>
+<p>Yes, LLMs are furthered trained to play language games.</p>
+<p>However, this process may result in the discovery of “adversarial example” with extremely high scores that seem incomprehensible to human evaluators. Thus, it can actually make the LLM underperform if the engineers in charge of this task are not careful.</p></li>
 <li><p>Reinforcement Learning (<span class="smallcaps">RL</span>)</p>
 <p>We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators involved in the creation of some “reward model.” It is an automatic process that can go indefinitely without worrying the engineers about the discover of potential “adversarial examples.”</p>
 <p>The new “thinking” models, such as <code>o1</code> and <code>o3-mini</code>, are created through this process.</p></li>
 </ul>
-<p>Regardless of how the LLM was created, and assuming it incorporates some kind of <span class="smallcaps">SFT</span>, this is the most important thing to know:</p>
-<div style="font-size: 1.25em; text-align: center;">
+<p>Regardless of how the LLM was created, but assuming it incorporates some kind of <span class="smallcaps">SFT</span>, this is the most important thing to always remember:</p>
+<div style="font-size: 1.25em; padding-left: 1em; padding-right: 1em; padding-top: 1em; padding-bottom: 1em; text-align: center; margin-left: 2em; margin-right: 2em;">
 <p>Every interaction with an <span class="smallcaps">LLM Assistant</span> is a one-dimensional token sequence. And every new token generated by the LLM is the result of next-token prediction.</p>
 </div>
 <p>For example, this is how one full interaction with ChatGPT looks like:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python code-overflow-wrap code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">200264</span>, <span class="dv">17360</span>, <span class="dv">200266</span>, <span class="dv">3575</span>, <span class="dv">553</span>, <span class="dv">261</span>, <span class="dv">10297</span>, <span class="dv">29186</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">1428</span>, <span class="dv">200266</span>, <span class="dv">176289</span>, <span class="dv">10093</span>, <span class="dv">83377</span>, <span class="dv">885</span>, <span class="dv">14266</span>, <span class="dv">328</span>, <span class="dv">43286</span>, <span class="dv">2860</span>, <span class="dv">306</span>, <span class="dv">220</span>, <span class="dv">20</span>, <span class="dv">6391</span>, <span class="dv">13</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">173781</span>, <span class="dv">200266</span>, <span class="dv">3538</span>, <span class="dv">262</span>, <span class="dv">112368</span>, <span class="dv">11</span>, <span class="dv">168709</span>, <span class="dv">11</span>, <span class="dv">17456</span>, <span class="dv">11</span>, <span class="dv">40722</span>, <span class="dv">11</span>, <span class="dv">3580</span>, <span class="dv">13</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">173781</span>, <span class="dv">200266</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This one-dimensional token sequence contains a couple of “special tokens” (<code>200264</code>, <code>200265</code>, and <code>200266</code>) used internally by ChatGPT to distinguish between text provided by the <span class="smallcaps">User</span> and by the <span class="smallcaps">Assistant</span>.</p>
+<p>This one-dimensional token sequence contains a couple of “special tokens” (<code>200264</code>, <code>200265</code>, and <code>200266</code>) used internally by ChatGPT to distinguish between text provided by the <span class="smallcaps">User</span> from text provided by the <span class="smallcaps">Assistant</span>.</p>
 <pre><code>&lt;|im_start|&gt;
 system
 &lt;|im_sep|&gt;
@@ -395,7 +396,7 @@ assistant
 &lt;|im_sep|&gt;
 Disenchantment, bureaucracy, efficiency, calculation, control.
 &lt;|im_end|&gt;</code></pre>
-<p>This is how the dataset of conversations used during <span class="smallcaps">SFT</span> looks like too!</p>
+<p><em>Note. This is how the dataset of conversations used during <span class="smallcaps">SFT</span> looks like too.</em></p>
 </section>
 <section id="temperature-sampling" class="level2">
 <h2 class="anchored" data-anchor-id="temperature-sampling">Temperature Sampling</h2>
@@ -474,7 +475,7 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 <img src="index_files/figure-html/fig-temperature-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: As <span class="math inline">\(\tau\)</span> increases, the resulting distribution becomes more uniform. Note that this plot shows “fruits” instead of actual tokens, which tend to be chunks of words. Also, this procedure resembles a combination of <span class="smallcaps">top-k</span> and <span class="smallcaps">temperature sampling</span>.
+Figure&nbsp;2: As <span class="math inline">\(\tau\)</span> increases, the resulting distribution becomes more uniform. Note that this plot shows “fruits” instead of actual tokens, which tend to be chunks of words. Also, this particular hypothetical procedure resembles a combination of <span class="smallcaps">top-k</span> and <span class="smallcaps">temperature sampling</span>.
 </figcaption>
 </figure>
 </div>
@@ -510,8 +511,9 @@ Figure&nbsp;2: As <span class="math inline">\(\tau\)</span> increases, the resul
 <section id="the-context-window" class="level2">
 <h2 class="anchored" data-anchor-id="the-context-window">The Context Window</h2>
 <p>Andrej Karpathy refers to information encoded in the parameters of an LLM as a sort of “vague recollection” and information in the <em>tokens</em> of the <span class="smallcaps">context window</span> as a sort of “working memory.” The tokens in the <span class="smallcaps">context window</span> have also been described as providing a sort of <em>in-context learning</em> <span class="citation" data-cites="jurafsky">(<a href="#ref-jurafsky" role="doc-biblioref">Jurafsky and Martin, chap. 12</a>)</span>.</p>
-<p>Karpathy also notes that <em>LLMs need tokens to “think” with.</em> This means that LLMs will underperform if we truncate its <span class="smallcaps">context window</span>. For example, <a href="#fig-chat-apples" class="quarto-xref">Figure&nbsp;3</a> shows a query in which the user has artificially truncated the context window by asking “Do not show me the process.” As a result ChatGPT provides a wrong answer.</p>
-<p>However, when asked to show the process and then provide the answer at the end, it will produce the correct answer. This is because the process becomes part of the <span class="smallcaps">context window.</span> The process shown in <a href="#fig-chat-apples" class="quarto-xref">Figure&nbsp;3</a> is not for the benefit of the user, it is for the benefit of the LLM.</p>
+<p>Karpathy also notes that <em>LLMs need tokens to “think” with.</em> This means, among other things, that LLMs will underperform if we truncate their <span class="smallcaps">context window</span>. For example, <a href="#fig-chat-apples" class="quarto-xref">Figure&nbsp;3</a> shows a query in which some user has artificially truncated the context window by asking “Just give me the answer. Do not show me the process.”</p>
+<p>As a result ChatGPT provides a wrong answer.</p>
+<p>However, when asked to show the process and then provide the answer at the end, it will produce the correct answer. This is because the process becomes part of the <span class="smallcaps">context window.</span></p>
 <div id="fig-chat-apples" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-chat-apples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -522,8 +524,9 @@ Figure&nbsp;3: Context Window Example. Similar results follow if you add “Let�
 </figcaption>
 </figure>
 </div>
-<p>There is a large implication here if we wish to repurpose LLMs for decision-making: <em>any text produced by the model after it provides the answer is a post-hoc justification.</em> The answer has already been produced, what follows is just next-token prediction.</p>
-<p>In contrast, anything that is written before the answer is now part of the model’s <span class="smallcaps">context window</span> and plays some role in what the answer <em>is.</em></p>
+<p>The process shown in <a href="#fig-chat-apples" class="quarto-xref">Figure&nbsp;3</a> is not for the benefit of the user, it is for the benefit of the LLM.</p>
+<p>There is an important implication here if we wish to repurpose LLMs for decision-making: <em>any text produced by the model after it provides the answer is a post-hoc justification.</em> The answer has already been produced, what follows is just next-token prediction.</p>
+<p>In contrast, anything that is written before the answer is now part of the LLM’s <span class="smallcaps">context window</span> and thus plays some role in what the actual answer <em>is.</em></p>
 </section>
 <section id="tools" class="level2">
 <h2 class="anchored" data-anchor-id="tools">Tools</h2>
@@ -678,6 +681,7 @@ Figure&nbsp;5: Python Interpreter Example
 
 </section>
 
+
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-farrell2025" class="csl-entry" role="listitem">
 Farrell, Henry, Alison Gopnik, Cosma Shalizi, and James Evans. 2025. <span>“<a href="https://doi.org/10.1126/science.adt9819">Large AI Models Are Cultural and Social Technologies</a>.”</span> <em>Science</em> 387(6739): 1153–56.
@@ -691,7 +695,13 @@ Ouyang, Long, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mi
 <div id="ref-yiu2023" class="csl-entry" role="listitem">
 Yiu, Eunice, Eliza Kosoy, and Alison Gopnik. 2023. <span>“<a href="https://doi.org/10.1177/17456916231201401">Transmission Versus Truth, Imitation Versus Innovation: What Children Can Do That Large Language and Language-and-Vision Models Cannot (Yet)</a>.”</span> <em>Perspectives on Psychological Science</em> 17456916231201401.
 </div>
-</div></section></div></main> <!-- /main -->
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>If you wish to make an apple pie from scratch, you must first invent the universe.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>You can explore the various tokenizers used to train different LLMs <a href="https://tiktokenizer.vercel.app/">here</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
