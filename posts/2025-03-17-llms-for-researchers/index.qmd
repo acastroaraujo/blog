@@ -396,12 +396,12 @@ str(out)
 from pydantic import BaseModel, Field
 from openai import OpenAI
 
-client = OpenAI()
-
 class CalendarEvent(BaseModel):
-    name: str = Field(..., description = "The name of the event.")
-    date: str = Field(..., description = "The date of the event.")
-    participants: list[str] = Field(..., description = "A list of participants attending the event.")
+    name: str = Field(description = "The name of the event.")
+    date: str = Field(description = "The date of the event.")
+    participants: list[str] = Field(description = "A list of participants attending the event.")
+
+client = OpenAI()
 
 completion = client.beta.chat.completions.parse(
     model="gpt-4o-2024-08-06",
@@ -410,6 +410,7 @@ completion = client.beta.chat.completions.parse(
         {"role": "user", "content": "Alice and Bob are going to a science fair on Friday."},
     ],
     response_format=CalendarEvent,
+    temperature = 0
 )
 
 event = completion.choices[0].message.parsed.model_dump()
