@@ -167,9 +167,9 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 
 ## Temperature Sampling
 
-A [softmax]{.smallcaps} function turns any arbitrary list of numbers into a valid probability distribution. This is the function applied to the last layer of the LLM, before assigning a probability to each of the tokens the [vocabulary]{.smallcaps}. In other words, each time an LLM predicts the next token, it looks up the probabilities assigned to every token, conditional on the tokens in the [context window]{.smallcaps} and samples accordingly.
+A [softmax]{.smallcaps} function turns any arbitrary list of numbers into a valid probability distribution. This is the function applied to the last layer of the LLM, before assigning a probability to each of the tokens the [vocabulary]{.smallcaps}. In other words, each time an LLM predicts the next token it looks up the probabilities assigned to every token, conditional on the tokens in the [context window,]{.smallcaps} and samples accordingly.
 
-However, note that the [vocabulary]{.smallcaps} consists of hundreds of thousands of tokens. This means that *random sampling* will not work quite well because each unique token—in the grand scheme of things—has a very low probability, and so the output will be noisy and unreliable.
+However, note that the [vocabulary]{.smallcaps} consists of hundreds of thousands of tokens. This means that *random sampling* will not work quite well because each unique token—in the grand scheme of things—has a very low probability mass, and so the output will be noisy and unreliable.
 
 > The problem is that even though random sampling is mostly going to generate sensible, high-probable words, there are many odd, low-probability words in the tail of the distribution, and even though each one is low-probability, if you add up all the rare words, they constitute a large enough portion of the distribution that they get chosen often enough to result in generating weird sentences. For this reason, instead of random sampling, we usually use sampling methods that avoid generating the very unlikely words.
 >
@@ -184,12 +184,12 @@ So we have to use a different sampling procedure.
 -   [Temperature Sampling]{.smallcaps}. Instead of truncating the distribution of words, we can *reshape* it using a "temperature" parameter; where $\tau \in [0, \infty)$. Then we pass this to the [softmax]{.smallcaps} function and do random sampling.
 
     $$
-    \mathbf y = \text{softmax}(\boldsymbol \mu / \tau)
+    \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_k\end{bmatrix}  = \text{softmax}(\boldsymbol \mu / \tau)
     $$
 
     Note that as we increase $\tau$ the distribution becomes more uniform. This is why many LLM interfaces remove the possibility of choosing temperatures above 2. Companies like OpenAI or Anthropic do not want people using their models to produce results that look bad.
 
-To get a sense of how this works, @fig-temperature shows different probability distributions for 10 fruits and and different temperature values. You can think of this as a combination of [top-k]{.smallcaps} and [temperature sampling]{.smallcaps}. When $\tau = 0$ we are essentially picking the most likely token. When $\tau = 1$ we are essentially doing random sampling.
+To get a sense of how this works, @fig-temperature shows a hypothetical probability distribution for 10 fruits at different temperature values. You can think of this as a combination of [top-k]{.smallcaps} and [temperature sampling]{.smallcaps}. When $\tau = 0$ we are essentially picking the most likely token. When $\tau = 1$ we are essentially doing random sampling. As we keep increasing $\tau$ the probability distribution becomes more random.
 
 ```{r}
 #| code-summary: R Code
@@ -255,6 +255,8 @@ As noted by @jurafsky [Chapter 10, 6, *emphasis added*]:
 Boring is good, boring is reliable!
 
 ------------------------------------------------------------------------
+
+**Modifying the temperature in an API call**
 
 You can set the temperature parameter to interface with OpenAI models like this:
 
