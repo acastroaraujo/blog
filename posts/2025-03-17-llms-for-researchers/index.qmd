@@ -81,7 +81,7 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
     tokenizer.decode([3436, 60278, 68165, 64957, 1042, 4379])
     ```
 
-[^1]: If you wish to make an apple pie from scratch, you must first invent the universe.
+[^1]: "If you wish to make an apple pie from scratch, you must first invent the universe."
 
 [^2]: You can explore the various tokenizers used to train different LLMs [here](https://tiktokenizer.vercel.app/).
 
@@ -115,19 +115,17 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
 
     This is reinforcement learning with human feedback in the context of *unverifiable domains,* such as scoring answers related to jokes, poetry, music, and so on. We call them unverifiable domains because, unlike the question-answer pairings provided in the [RL]{.smallcaps} process, there are no "correct" answers.
 
-    Instead of rewarding the LLM when it stumbles on correct answers, we first create a simulator of human preferences---such as truthfulness, helpfulness, harmlessness---which then gets used as a "reward model." These individual rewards are then used as feedback to further modify the parameters of the LLM.
+    Instead of rewarding the LLM when it stumbles on correct answers, we first create a simulator of human preferences---such as truthfulness, helpfulness, harmlessness---which then gets used as a "reward model." These individual rewards are then used as feedback to further modify the parameters of the LLM [@christiano2017].
 
-    Yes, LLMs are furthered trained to play language games.[^3]
+    Yes, LLMs are furthered trained to play language games. At this stage the parameters of the neural network are not modified with the goal of improving the accuracy of next-token prediction, but rather with the goal of obtaining higher "rewards" from a human preference simulator.
 
-    However, this process may result in the discovery of "adversarial example" with extremely high scores that seem incomprehensible to human evaluators. Thus, it can actually make the LLM underperform if the engineers in charge of this task are not careful.
+    However, this process may result in the discovery of "adversarial example" that are incomprehensible to real humans but that receive extremely high scores from the reward model. In other words, RHLF could actually result in a worse LLM unless the engineers in charge of this task are careful.
 
 -   Reinforcement Learning ([RL]{.smallcaps})
 
     We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators involved in the creation of some "reward model." It is an automatic process that can go indefinitely without worrying the engineers about the discover of potential "adversarial examples."
 
     The new "thinking" models, such as `o1` and `o3-mini`, are created through this process.
-
-[^3]: "Just to be clear, the language model still engages in next-token prediction. However, its parameters are tweaked not to make it predict next words more and more accurately but so that its final outputs (as responses to prompts) achieve higher and higher scores from the reward model. This, of course, is why the process is called reinforcement learning: it algorithmically embodies the principle that behavior that was rewarded in the past is more likely to be repeated in the future" [@kockelman2024, 48].
 
 Regardless of how the LLM was created, but assuming it incorporates some kind of [SFT]{.smallcaps}, this is the most important thing to always remember:
 
@@ -297,9 +295,11 @@ The process shown in @fig-chat-apples is not for the benefit of the user, it is 
 
 ------------------------------------------------------------------------
 
-There is an important implication here if we wish to repurpose LLMs for decision-making: *any text produced by the model after it provides the answer is a post-hoc justification.* The answer has already been produced, what follows is just next-token prediction.
+**Post Hoc Justification**
 
-In contrast, anything that is written before the answer is now part of the LLM's [context window]{.smallcaps} and thus plays some role in what the actual answer *is.*
+There is an important implication here, especially if we wish to repurpose LLMs for decision-making. *Any text produced by the LLM after it provides an answer is a post-hoc justification.* This is true by definition. The answer has already been generated, the "reason giving" that follows is just more next-token prediction.
+
+Insofar reasoning giving is a discursive pattern found in the Internet, the LLM will also generate reasons for its claim. But the LLM is merely going through the motions of reasoning. In contrast, any text that occurs before the answer is generated is part of the LLM's [context window]{.smallcaps} and does play some role in what the actual answer *is.*
 
 ## Tools
 
