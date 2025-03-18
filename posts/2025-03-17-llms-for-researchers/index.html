@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="andrés castro araújo">
+<meta name="dcterms.date" content="2025-03-17">
+<meta name="description" content="Some useful information, before you start using them.">
+
+<title>LLMs for Researchers – blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-9ac0fa60fcd2ae55f2ddd9f231fc218f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-016ce503cd10de0fcca976903e015630.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="LLMs for Researchers – blog">
+<meta property="og:description" content="Some useful information, before you start using them.">
+<meta property="og:image" content="https://acastroaraujo.github.io/blog/posts/2025-03-17-llms-for-researchers/images/paste-1.png">
+<meta property="og:site_name" content="blog">
+<meta property="og:image:height" content="758">
+<meta property="og:image:width" content="1357">
+<meta name="twitter:title" content="LLMs for Researchers – blog">
+<meta name="twitter:description" content="Some useful information, before you start using them.">
+<meta name="twitter:image" content="https://acastroaraujo.github.io/blog/posts/2025-03-17-llms-for-researchers/images/paste-1.png">
+<meta name="twitter:image-height" content="758">
+<meta name="twitter:image-width" content="1357">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://acastroaraujo.github.io"> <i class="bi bi-house" role="img">
+</i> 
+<span class="menu-text">about</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://acastroaraujo.github.io/cv/"> <i class="bi bi-file-person" role="img">
+</i> 
+<span class="menu-text">cv</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://github.com/acastroaraujo"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text">github</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> <i class="bi bi-chat-text" role="img">
+</i> 
+<span class="menu-text">blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">LLMs for Researchers</h1>
+                  <div>
+        <div class="description">
+          <p>Some useful information, before you start using them.</p>
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>andrés castro araújo </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 17, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>I’ve recently spent some time learning about how Large Language Models (LLMs) work so that I can feel confident when using them for academic purposes.</p>
+<p>So far, I can only recommend two sources the “nuts and bolts” aspect of these models:</p>
+<ol type="1">
+<li><a href="https://web.stanford.edu/~jurafsky/slp3/"><em>Speech and Language Processing</em></a> (chapters 10 &amp; 12), a textbook written by Dan Jurafsky and James H. Martin.</li>
+<li><a href="https://youtu.be/7xTGNNLPyMI">Deep Dive into LLMs like ChatGPT</a>, a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).</li>
+</ol>
+<p>If you spend some time engaging with these resources, I think you will also be able to turn LLM Assitants into reliable research tools.</p>
+<p>Before starting, however, I think it’s important to adopt the correct mindset. LLMs have been described through metaphors that range from “stochastic parrots” to “blurry JPEGs of the Internet.” They are depicted as monstrous technologies reminiscent of Frankenstein’s Monster or H.P. Lovecraft’s shoggoths (see <a href="#fig-llm" class="quarto-xref">Figure&nbsp;1</a>), terrifying artificial servants that rebelled against their creators.</p>
+<div id="fig-llm" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-llm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/paste-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-llm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face-artificial-intelligence" class="uri">https://knowyourmeme.com/memes/shoggoth-with-smiley-face-artificial-intelligence</a>
+</figcaption>
+</figure>
+</div>
+<p>Following Alison Gopnik, the more accurate way of describing LLMs is as a “cultural technologies” <span class="citation" data-cites="yiu2023 farrell2025">(<a href="#ref-yiu2023" role="doc-biblioref">Yiu et al. 2023</a>; <a href="#ref-farrell2025" role="doc-biblioref">Farrell et al. 2025</a>)</span>. LLMs are more like libraries, the printing press or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are not supernatural. They are <em>information-retrieval technologies.</em> They codify, summarize, and organize information in ways that enable its transmission.</p>
+<p>The next section describes how LLMs have been <em>modified</em> in many clever ways so that they generate text in response to prompts. Following that section I introduce four key ideas that I believe to be invaluable for researchers thinking about using LLMs in a more rational way.</p>
+<ul>
+<li><p>Temperature Sampling</p></li>
+<li><p>The Context Window</p></li>
+<li><p>Tools</p></li>
+<li><p>Structured Output</p></li>
+</ul>
+<p>No magic, no oracles, no supernatural forces, no demonology.</p>
+<section id="creating-an-llm-assistant" class="level2">
+<h2 class="anchored" data-anchor-id="creating-an-llm-assistant">Creating an LLM Assistant</h2>
+<p>LLM Assitants, like OpenAI’s ChatGPT or Anthropic’s Claude are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a “base model,” an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an <span class="smallcaps">Assistant</span> (also known as “model alignment”).</p>
+<p><span class="smallcaps">Pre-Training</span></p>
+<ol type="1">
+<li><p>Download The Internet.</p></li>
+<li><p>Tokenization.</p>
+<p>These models typically use a Byte Pair Encoding (BPE) Tokenizer.</p>
+<p>For example:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tiktoken <span class="im">as</span> tk</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> tk.encoding_for_model(<span class="st">"gpt-4o"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">"The relative opacity of the method tends to encourage a kind of magical orientation to the results."</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tokenizer.encode(txt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[976, 15001, 35672, 328, 290, 2595, 44142, 316, 17636, 261, 3675, 328, 37503, 29546, 316, 290, 4376, 13]</code></pre>
+</div>
+</div>
+<p>This is important: LLMs don’t <em>see</em> whole words, they don’t see letters either, they see tokens. And tokens, most of the time, are “chunks” of words.</p>
+<p>For example, this is how ChatGPT sees my name:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tokenizer.decode([<span class="dv">3436</span>, <span class="dv">60278</span>, <span class="dv">68165</span>, <span class="dv">64957</span>, <span class="dv">1042</span>, <span class="dv">4379</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>'Andrés Castro Araújo'</code></pre>
+</div>
+</div>
+<p>You can explore the various tokenizers used to train different LLMs <a href="https://tiktokenizer.vercel.app/">here</a>.</p></li>
+</ol>
+<p><span class="smallcaps">Training</span></p>
+<ol type="1">
+<li><p>Train a neural network.</p>
+<p>LLMs are “deep” neural networks trained to estimate the probability distribution of long token sequences.</p>
+<p>See <span class="citation" data-cites="vaswani2017">Vaswani et al. (<a href="#ref-vaswani2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chap. 9</a>)</span>, and this <a href="https://youtu.be/eMlx5fFNoYc?feature=shared">3Blue1Brown video</a> for more information on “self-attention” and “multi-head attention” mechanisms that turn neural networks into “transformers.”</p>
+<p>Also see <a href="https://bbycroft.net/llm">here</a> for a visualization of what this might look like.</p></li>
+<li><p>Inference.</p>
+<p>The result of the training process is a “base model” which can generate documents like the ones it has seen before.</p>
+<p>We can now predict one token at a time to generate new data. But this LLM is not an <span class="smallcaps">Assitant</span>, at this stage it is more like an “autocomplete on steroids” or a “stochastic parrot.”</p>
+<p>LLMs become Assistants in <span class="smallcaps">post-training</span>.</p></li>
+</ol>
+<p><span class="smallcaps">Post-Training</span></p>
+<ul>
+<li><p>Supervised Fine-Tuning (<span class="smallcaps">SFT</span>).</p>
+<p>We create and curate a dataset of conversations between some “user” and some “assistant” in order to turn the LLM (a next-token prediction machine) into an <span class="smallcaps">Assistant</span> <span class="citation" data-cites="ouyang2022">(<a href="#ref-ouyang2022" role="doc-biblioref">Ouyang et al. 2022</a>)</span>.</p>
+<p>This dataset typically comes from expert human annotators.</p></li>
+<li><p>Reinforcement Learning (<span class="smallcaps">RL</span>)</p>
+<p>We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators here; it is an automatic process.</p>
+<p>The new “thinking” models, such as <code>o1</code> and <code>o3-mini</code>, are created through this process.</p></li>
+<li><p>Reinforcement Learning with Human Feedback (<span class="smallcaps">RLHF</span>).</p>
+<p>This is reinforcement learning with human feedback in the context of <em>unverifiable domains,</em> such as scoring answers related to jokes, poetry, music, and so on. We call them unverifiable domains because, unlike the question-answer pairings provided in the <span class="smallcaps">RL</span> process, there are no “correct” answers.</p>
+<p>Instead of providing correct answers, we first create a simulator of human preferences which then gets used as a “reward model” <span class="citation" data-cites="ziegler2020">(<a href="#ref-ziegler2020" role="doc-biblioref">Ziegler et al. 2020</a>)</span>. It is essentially another neural network, created to imitate human judges, which then gets used to generate the rewards used to further fine-tune the LLM.</p>
+<p>However, the <span class="smallcaps">RL</span> process may result in the discovery of “adversarial example” with extremely high scores that seem incomprehensible to human evaluators.</p></li>
+</ul>
+<p>Regardless of how the LLM was created, and assuming it incorporates some kind of <span class="smallcaps">SFT</span>, this is the most important thing to know:</p>
+<div style="font-size: 1.25em; text-align: center;">
+<p>Every interaction with an <span class="smallcaps">LLM Assistant</span> is a one-dimensional token sequence. And every new token generated by the LLM is the result of next-token prediction.</p>
+</div>
+<p>For example, this is how one full interaction with ChatGPT looks like:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-overflow-wrap code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">200264</span>, <span class="dv">17360</span>, <span class="dv">200266</span>, <span class="dv">3575</span>, <span class="dv">553</span>, <span class="dv">261</span>, <span class="dv">10297</span>, <span class="dv">29186</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">1428</span>, <span class="dv">200266</span>, <span class="dv">176289</span>, <span class="dv">10093</span>, <span class="dv">83377</span>, <span class="dv">885</span>, <span class="dv">14266</span>, <span class="dv">328</span>, <span class="dv">43286</span>, <span class="dv">2860</span>, <span class="dv">306</span>, <span class="dv">220</span>, <span class="dv">20</span>, <span class="dv">6391</span>, <span class="dv">13</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">173781</span>, <span class="dv">200266</span>, <span class="dv">3538</span>, <span class="dv">262</span>, <span class="dv">112368</span>, <span class="dv">11</span>, <span class="dv">168709</span>, <span class="dv">11</span>, <span class="dv">17456</span>, <span class="dv">11</span>, <span class="dv">40722</span>, <span class="dv">11</span>, <span class="dv">3580</span>, <span class="dv">13</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">173781</span>, <span class="dv">200266</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This one-dimensional token sequence contains a couple of “special tokens” (<code>200264</code>, <code>200265</code>, and <code>200266</code>) used internally by ChatGPT to distinguish between text provided by the <span class="smallcaps">User</span> and by the <span class="smallcaps">Assistant</span>.</p>
+<pre><code>&lt;|im_start|&gt;
+system
+&lt;|im_sep|&gt;
+You are a helpful assistant
+&lt;|im_end|&gt;
+
+&lt;|im_start|&gt;
+user
+&lt;|im_sep|&gt;
+Explain Max Weber's discussion of rationalization in 5 words.
+&lt;|im_end|&gt;
+
+&lt;|im_start|&gt;
+assistant
+&lt;|im_sep|&gt;
+Disenchantment, bureaucracy, efficiency, calculation, control.
+&lt;|im_end|&gt;</code></pre>
+<p>This is how the dataset of conversations used during <span class="smallcaps">SFT</span> looks like too.</p>
+</section>
+<section id="temperature-sampling" class="level2">
+<h2 class="anchored" data-anchor-id="temperature-sampling">Temperature Sampling</h2>
+<p>A <span class="smallcaps">softmax</span> function turns any arbitrary list of numbers into a valid probability distribution. This is the function applied to the last layer of the LLM, before assigning a probability to each of the tokens the <span class="smallcaps">vocabulary</span>. In other words, each time an LLM predicts the next token, it looks up the probabilities assigned to every token, conditional on the tokens in the <span class="smallcaps">context window</span> and samples accordingly.</p>
+<p>However, note that the <span class="smallcaps">vocabulary</span> consists of hundreds of thousands of tokens. This means that <em>random sampling</em> will not work quite well because each unique token—in the grand scheme of things—has a very low probability, and so the output will be noisy and unreliable.</p>
+<blockquote class="blockquote">
+<p>The problem is that even though random sampling is mostly going to generate sensible, high-probable words, there are many odd, low-probability words in the tail of the distribution, and even though each one is low-probability, if you add up all the rare words, they constitute a large enough portion of the distribution that they get chosen often enough to result in generating weird sentences. For this reason, instead of random sampling, we usually use sampling methods that avoid generating the very unlikely words.</p>
+<p><span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chaps. 10, 6</a>)</span></p>
+</blockquote>
+<p>So we have to use a different sampling procedure.</p>
+<ul>
+<li><p><span class="smallcaps">Truncated Sampling</span>. We can first truncate the distribution of words to the <span class="math inline">\(k\)</span> most likely words, passing that subset of words to the <span class="smallcaps">softmax</span> function, and then do random sampling. This is called <span class="smallcaps">top-k sampling</span>.</p>
+<p>Similarly, we can first truncate the distribution of words to keep the <span class="math inline">\(p\)</span> percent of the probability mass. You can use a quantile function to do this. Then you repeat the same procedure above. This is called <span class="smallcaps">top-p sampling</span>.</p></li>
+<li><p><span class="smallcaps">Temperature Sampling</span>. Instead of truncating the distribution of words, we can <em>reshape</em> it using a “temperature” parameter; where <span class="math inline">\(\tau \in [0, \infty)\)</span>. Then we pass this to the <span class="smallcaps">softmax</span> function and do random sampling.</p>
+<p><span class="math display">\[
+\mathbf y = \text{softmax}(\boldsymbol \mu / \tau)
+\]</span></p>
+<p>Note that as we increase <span class="math inline">\(\tau\)</span> the distribution becomes more uniform. This is why many LLM interfaces remove the possibility of choosing temperatures above 2. Companies like OpenAI or Anthropic don’t want people using their models to produce nonsensical results.</p></li>
+</ul>
+<p>To get a sense of how this works, <a href="#fig-temperature" class="quarto-xref">Figure&nbsp;2</a> shows different probability distributions for 10 fruits and and different temperature values. You can think of this as a combination of <span class="smallcaps">top-k</span> and <span class="smallcaps">temperature sampling</span>. When <span class="math inline">\(\tau = 0\)</span> we are essentially picking the most likely token. When <span class="math inline">\(\tau = 1\)</span> we are essentially doing random sampling.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>softmax <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">temp =</span> <span class="dv">1</span>) {</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">length</span>(temp) <span class="sc">==</span> <span class="dv">1</span>, temp <span class="sc">&gt;=</span> <span class="dv">0</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (temp <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    i <span class="ot">&lt;-</span> <span class="fu">which.max</span>(x)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    x[] <span class="ot">&lt;-</span> <span class="dv">0</span>L</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    x[i] <span class="ot">&lt;-</span> <span class="dv">1</span>L</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(x)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Apply temperature</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  x_scaled <span class="ot">&lt;-</span> x <span class="sc">/</span> temp</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Shift x for numerical stability</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  shifted_x <span class="ot">&lt;-</span> x_scaled <span class="sc">-</span> <span class="fu">max</span>(x_scaled)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Apply softmax</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  exp_x <span class="ot">&lt;-</span> <span class="fu">exp</span>(shifted_x)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(exp_x <span class="sc">/</span> <span class="fu">sum</span>(exp_x))</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  exp_x <span class="ot">&lt;-</span> <span class="fu">exp</span>(x <span class="sc">/</span> temp)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  exp_x <span class="sc">/</span> <span class="fu">sum</span>(exp_x)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(k) <span class="ot">&lt;-</span> <span class="fu">sample</span>(stringr<span class="sc">::</span>fruit, <span class="dv">10</span>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>temps <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">10</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_df</span>(temps, <span class="cf">function</span>(t) {</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  out <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">enframe</span>(<span class="fu">softmax</span>(k, t))</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  out<span class="sc">$</span>temperature <span class="ot">&lt;-</span> t</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(out)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>lvls <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">sort</span>(<span class="fu">softmax</span>(k)))</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>name <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>name, <span class="at">levels =</span> lvls)</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>d <span class="sc">|&gt;</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value, name)) <span class="sc">+</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">xend =</span> value, <span class="at">x =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>, <span class="at">fill =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">facets =</span> <span class="sc">~</span>temperature,</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">labeller =</span> <span class="fu">labeller</span>(<span class="at">temperature =</span> \(x) <span class="fu">paste</span>(<span class="st">"temperature:"</span>, x))</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"probability"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_family =</span> <span class="st">"Avenir Next Condensed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-temperature" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-temperature-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: As <span class="math inline">\(\tau\)</span> increases, the resulting distribution becomes more uniform. Note that this plot shows “fruits” instead of actual tokens, which tend to be chunks of words. Also, this procedure resembles a combination of <span class="smallcaps">top-k</span> and <span class="smallcaps">temperature sampling</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Low Temperature Sampling is Important for Research</strong></p>
+<p>As noted by <span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chaps. 10, 6</a>, <em>emphasis added</em>)</span>:</p>
+<blockquote class="blockquote">
+<p>Methods that emphasize the most probable words tend to produce generations that are rated by people as <em>more accurate, more coherent, and more factual, but also more boring and more repetitive.</em> Methods that give a bit more weight to the middle-probability words tend to be more creative and more diverse, but less factual and more likely to be incoherent or otherwise low-quality.</p>
+</blockquote>
+<p>Boring is good, boring is reliable!</p>
+<hr>
+<p>You can set the temperature parameter to interface with OpenAI models like this:</p>
+<pre><code>curl https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "model": "gpt-4",
+    "messages": [{"role": "system", "content": "You are a helpful assistant."}],
+    "temperature": 0
+  }'</code></pre>
+<p>Or using R code, like this:</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>chat <span class="ot">&lt;-</span> ellmer<span class="sc">::</span><span class="fu">chat_openai</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> <span class="st">"gpt-4o"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">api_args =</span> <span class="fu">list</span>(<span class="at">temperature =</span> <span class="dv">0</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="the-context-window" class="level2">
+<h2 class="anchored" data-anchor-id="the-context-window">The Context Window</h2>
+<p>Andrej Karpathy refers to information encoded in the parameters of an LLM as a sort of “vague recollection” and information in the <em>tokens</em> of the <span class="smallcaps">context window</span> as a sort of “working memory.” <span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chap. 12</a>)</span> describe the tokens in the <span class="smallcaps">context window</span> as providing <em>in-context learning.</em></p>
+<p>Karpathy also notes that <em>LLMs need tokens to “think” with.</em> This means that LLMs will underperform if we truncate its <span class="smallcaps">context window</span>. For example, <a href="#fig-chat-apples" class="quarto-xref">Figure&nbsp;3</a> shows a query in which the user has artificially truncated the context window by asking “Do not show me the process.” As a result ChatGPT provides a wrong answer.</p>
+<p>However, when asked to show the process and then provide the answer at the end, it will produce the correct answer. This is because the process becomes part of the <span class="smallcaps">context window.</span> The process shown in <a href="#fig-chat-apples" class="quarto-xref">Figure&nbsp;3</a> is not for the benefit of the user, it is for the benefit of the LLM.</p>
+<div id="fig-chat-apples" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chat-apples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/paste-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chat-apples-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Context Window Example
+</figcaption>
+</figure>
+</div>
+<p>There is a large implication here if we wish to repurpose LLMs for decision-making: <em>any text produced by the model after it provides the answer is a post-hoc justification by definition.</em> The answer has already been produced, what follows is just next-token prediction.</p>
+<p>In contrast, anything that is written before the answer is now part of the model’s <span class="smallcaps">context window</span> and plays some role in what the answer <em>is.</em></p>
+</section>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p>At some point, LLM Assitants became enhanced with a variety of <a href="https://platform.openai.com/docs/guides/tools">tool calls</a>. The most obvious tools are the ones that allow for <a href="https://openai.com/index/introducing-chatgpt-search/">web search</a> or information retrieval on a custom collection of files (<a href="https://platform.openai.com/docs/guides/retrieval">RAG</a>).</p>
+<p>These tools will inject information to the <span class="smallcaps">context window</span> with the goal of providing better answers for the user.</p>
+<p>For example, suppose I send a query to ChatGPT and ask it to do a web search. This might look something like this:</p>
+<pre><code>curl https://api.openai.com/v1/responses \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -d '{
+    "model": "gpt-4o",
+    "tools": [{ "type": "web_search_preview" }],
+    "input": "What was a positive news story from today?"
+  }'</code></pre>
+<p>Here, if the Chat Assistant determines that a “tool call” is warranted it will request that the user run that tool and return the result to the Assistant, which then incorporates that additional information in its context window. This is worth repeating. As shown in <a href="#fig-tool" class="quarto-xref">Figure&nbsp;4</a>, ChatGPT is using <em>your</em> computer to get the answer, which it will then inject into the <span class="smallcaps">context window</span>.</p>
+<div id="fig-tool" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/paste-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: <a href="https://ellmer.tidyverse.org/articles/tool-calling.html" class="uri">https://ellmer.tidyverse.org/articles/tool-calling.html</a>
+</figcaption>
+</figure>
+</div>
+<p>Another example is the Python Interpreter used by ChatGPT to answer math questions. You can also ask the Assistant to use it by adding prompts such as “Use code.”</p>
+<p><a href="#fig-apples-code" class="quarto-xref">Figure&nbsp;5</a> shows an example of this.</p>
+<div id="fig-apples-code" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-apples-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/paste-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apples-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Python Interpreter Example
+</figcaption>
+</figure>
+</div>
+<p>ChatGPT is using a calculator instead of relying on its “mental arithmetic.” The result is more reliable and will remain accurate across wide variety of examples.</p>
+</section>
+<section id="structured-output" class="level2">
+<h2 class="anchored" data-anchor-id="structured-output">Structured Output</h2>
+<p>The use of <span class="smallcaps">Tool Calls</span> requires that the input text is <em>standardized</em>.</p>
+<p>Standardization is important if you want to develop your own tools, but it is also important if you want the <em>output text</em> to be standardized too.</p>
+<p>OpenAI uses a standard called <a href="https://openai.com/index/introducing-structured-outputs-in-the-api/"><span class="smallcaps">structured output</span></a><span class="smallcaps">,</span> which is essentially a <a href="https://json-schema.org/overview/what-is-jsonschema">JSON Schema</a>, to produce reliable output used to call user-defined tools or to structure the LLM’s output in a way that corresponds to the user’s needs. If you are a researcher wanting to extract structured output from unstructured pieces of texts—that’s me—then you will want to do the latter, which requires setting up a <code>json_schema</code> response format.</p>
+<p><span class="smallcaps">Structured output</span> is only available for OpenAI models newer than <code>gpt-4o-2024-08-06</code>. These models have been fine-tuned to produce complicate schemas, but they also have hard-coded rules that produce valid JSON data formats.</p>
+<blockquote class="blockquote">
+<p>By default, when models are sampled to produce outputs, they are entirely unconstrained and can select any token from the vocabulary as the next output. This flexibility is what allows models to make mistakes; for example, they are generally free to sample a curly brace token at any time, even when that would not produce valid JSON. In order to force valid outputs, we constrain our models to only tokens that would be valid according to the supplied schema, rather than all available tokens.</p>
+<p><a href="https://openai.com/index/introducing-structured-outputs-in-the-api/" class="uri">https://openai.com/index/introducing-structured-outputs-in-the-api/</a></p>
+</blockquote>
+<p>There is some extensive <a href="https://platform.openai.com/docs/guides/structured-outputs">documentation</a> on how to use structured outputs, but it will suffice to use packages like <code>ellmer</code> in R or a combination <a href="https://www.datacamp.com/tutorial/open-ai-structured-outputs">combination of <code>openai</code> and <code>pydantic</code></a> in Python.</p>
+<p><strong>Example</strong></p>
+<ol type="1">
+<li>Using the <code>ellmer</code> package in R:</li>
+</ol>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ellmer)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>calendarEvent <span class="ot">&lt;-</span> <span class="fu">type_object</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extract the event information."</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="fu">type_string</span>(<span class="at">description =</span> <span class="st">"Name of the event."</span>),</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">date =</span> <span class="fu">type_string</span>(<span class="at">description =</span> <span class="st">"The date of the event."</span>),</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">participants =</span> <span class="fu">type_array</span>(</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">description =</span> <span class="st">"A list of participants attending the event."</span>,</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">items =</span> <span class="fu">type_string</span>()</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>chat <span class="ot">&lt;-</span> <span class="fu">chat_openai</span>(</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> <span class="st">"gpt-4o-mini"</span>,</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">api_args =</span> <span class="fu">list</span>(<span class="at">temperature =</span> <span class="dv">0</span>)</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>out <span class="ot">&lt;-</span> chat<span class="sc">$</span><span class="fu">extract_data</span>(</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Alice and Bob are going to a science fair on Friday."</span>,</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> calendarEvent</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(out)</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co"># List of 3</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co"># $ name        : chr "Science Fair"</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co"># $ date        : chr "Friday"</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co"># $ participants: chr [1:2] "Alice" "Bob"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<ol start="2" type="1">
+<li>Using the <code>pydantic</code> and <code>openai</code> libraries in Python:</li>
+</ol>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel, Field</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> OpenAI</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> OpenAI()</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CalendarEvent(BaseModel):</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    name: <span class="bu">str</span> <span class="op">=</span> Field(..., description <span class="op">=</span> <span class="st">"The name of the event."</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    date: <span class="bu">str</span> <span class="op">=</span> Field(..., description <span class="op">=</span> <span class="st">"The date of the event."</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    participants: <span class="bu">list</span>[<span class="bu">str</span>] <span class="op">=</span> Field(..., description <span class="op">=</span> <span class="st">"A list of participants attending the event."</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>completion <span class="op">=</span> client.beta.chat.completions.parse(</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    model<span class="op">=</span><span class="st">"gpt-4o-2024-08-06"</span>,</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    messages<span class="op">=</span>[</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>        {<span class="st">"role"</span>: <span class="st">"system"</span>, <span class="st">"content"</span>: <span class="st">"Extract the event information."</span>},</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>        {<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: <span class="st">"Alice and Bob are going to a science fair on Friday."</span>},</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    response_format<span class="op">=</span>CalendarEvent,</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>event <span class="op">=</span> completion.choices[<span class="dv">0</span>].message.parsed.model_dump()</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>event</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co"># {'name': 'Science Fair', 'date': 'Friday', 'participants': ['Alice', 'Bob']}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>In both examples, an extra parameter to the OpenAI API called <code>response_format</code> will be added. This will look something like this:</p>
+<pre><code>{
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "calendar_event",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the event."
+          },
+          "date": {
+            "type": "string",
+            "description": "The date of the event."
+          },
+          "participants": {
+            "type": "array",
+            "description": "A list of participants attending the event.",
+            "items": {"type": "string"}
+          }
+        },
+        "required": ["name", "date", "participants"]
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}</code></pre>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-farrell2025" class="csl-entry" role="listitem">
+Farrell, Henry, Alison Gopnik, Cosma Shalizi, and James Evans. 2025. <span>“<a href="https://doi.org/10.1126/science.adt9819">Large AI Models Are Cultural and Social Technologies</a>.”</span> <em>Science</em> 387(6739): 1153–56.
+</div>
+<div id="ref-jurafsky" class="csl-entry" role="listitem">
+Jurafsky, Dan, and James Martin.<em><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech &amp; Language Processing: An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition</a></em>.
+</div>
+<div id="ref-ouyang2022" class="csl-entry" role="listitem">
+Ouyang, Long, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, and Alex Ray. 2022. <span>“<a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html">Training Language Models to Follow Instructions with Human Feedback</a>.”</span> <em>Advances in neural information processing systems</em> 35: 2773027744.
+</div>
+<div id="ref-vaswani2017" class="csl-entry" role="listitem">
+Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, Ł ukasz Kaiser, and Illia Polosukhin. 2017. <span>“<a href="https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html">Attention Is All You Need</a>.”</span> Curran Associates, Inc.
+</div>
+<div id="ref-yiu2023" class="csl-entry" role="listitem">
+Yiu, Eunice, Eliza Kosoy, and Alison Gopnik. 2023. <span>“<a href="https://doi.org/10.1177/17456916231201401">Transmission Versus Truth, Imitation Versus Innovation: What Children Can Do That Large Language and Language-and-Vision Models Cannot (Yet)</a>.”</span> <em>Perspectives on Psychological Science</em> 17456916231201401.
+</div>
+<div id="ref-ziegler2020" class="csl-entry" role="listitem">
+Ziegler, Daniel M., Nisan Stiennon, Jeffrey Wu, Tom B. Brown, Alec Radford, Dario Amodei, Paul Christiano, and Geoffrey Irving. 2020. <span>“<a href="https://doi.org/10.48550/arXiv.1909.08593">Fine-Tuning Language Models from Human Preferences</a>.”</span>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/acastroaraujo\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

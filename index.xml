@@ -10,7 +10,15 @@
 <atom:link href="https://acastroaraujo.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>andrés writes unpublishable stuff instead of working on his dissertation</description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Sun, 28 Jul 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 17 Mar 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>LLMs for Researchers</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2025-03-17-llms-for-researchers/</link>
+  <description><![CDATA[ Some useful information, before you start using them. ]]></description>
+  <guid>https://acastroaraujo.github.io/blog/posts/2025-03-17-llms-for-researchers/</guid>
+  <pubDate>Mon, 17 Mar 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Cowardice</title>
   <dc:creator>andrés castro araújo</dc:creator>
@@ -29,6 +37,7 @@
   <category>Sociology</category>
   <guid>https://acastroaraujo.github.io/blog/posts/2024-07-26-meaning-making/</guid>
   <pubDate>Fri, 26 Jul 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://acastroaraujo.github.io/blog/posts/2024-07-26-meaning-making/weber.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Path Dependence</title>
