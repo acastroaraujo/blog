@@ -15,7 +15,7 @@ bibliography: references.bib
 
 I've recently spent some time learning about how Large Language Models (LLMs) work so that I can feel confident when using them for academic purposes.
 
-So far, I can only recommend two sources the "nuts and bolts" aspect of these models:
+So far, I can only recommend two sources for learning about the "nuts and bolts" aspect of these models:
 
 1.  [Deep Dive into LLMs like ChatGPT](https://youtu.be/7xTGNNLPyMI), a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).
 
@@ -23,11 +23,11 @@ So far, I can only recommend two sources the "nuts and bolts" aspect of these mo
 
 If you spend some time engaging with these resources, I think you will also be able to turn LLM Assitants into reliable research tools.
 
-Before starting, however, I think it's important to adopt the correct mindset. LLMs have been described through metaphors that range from "stochastic parrots" to "blurry JPEGs of the Internet." They are depicted as monstrous technologies reminiscent of Frankenstein's Monster or H.P. Lovecraft's shoggoths, terrifying artificial servants that rebelled against their creators.
+Before starting, however, I think it's important to adopt the correct mindset. LLMs have been described through metaphors that range from "stochastic parrots" to "blurry JPEGs of the Internet." They are depicted as monstrous technologies reminiscent of Lovecraft's shoggoths, terrifying artificial servants that rebelled against their creators.
 
 ![<https://knowyourmeme.com/memes/shoggoth-with-smiley-face-artificial-intelligence>](images/paste-1.png){#fig-llm fig-align="center" width="80%"}
 
-Following Alison Gopnik, the more accurate way of describing LLMs is as a "cultural technologies" [@yiu2023; @farrell2025]. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are *not* supernatural. They are *information-retrieval technologies.* They codify, summarize, and organize information in ways that enable its transmission at large scale.
+Following @farrell2025, the more accurate way of describing LLMs is as a "cultural technologies" in general and *information-retrieval technologies* in particular. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are *not* supernatural. They codify, summarize, and organize information in ways that enable its transmission at large scale.
 
 The next section describes how LLMs have been *modified* in many clever ways so that they generate text in response to prompts. Following that section I introduce four key ideas that I believe to be invaluable for researchers thinking about using LLMs in a more rational way.
 
@@ -49,13 +49,17 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
 
 1.  Download The Internet.[^1]
 
-2.  Tokenization.
+2.  Pre-process all text content (or Tokenization).
 
-    This means that we turn the text contained in individual websites into a special format.
+    Here we turn the text contained in individual websites into a special format using what's known as a Byte Pair Encoding (BPE) Tokenizer.[^2]
 
-    For example, lets turn the following phrase into a sequence of tokens:
+    For example, the following phrase
 
-    *"The relative opacity of the method tends to encourage a kind of magical orientation to the results."*
+    ::: {style="margin-left: 2em; margin-right: 2em;"}
+    *"The relative opacity of the method tends to encourage a kind of magical orientation to the results"*
+    :::
+
+    will get transformed into the following sequence of tokens:
 
     ```{python}
     #| code-summary: Python Code
@@ -63,9 +67,7 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
     import tiktoken as tk
 
     tokenizer = tk.encoding_for_model("gpt-4o")
-
-    txt = "The relative opacity of the method tends to encourage a kind of magical orientation to the results."
-
+    txt = "The relative opacity of the method tends to encourage a kind of magical orientation to the results"
     tokenizer.encode(txt)
     ```
 
@@ -75,11 +77,9 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
 
     ```{python}
     #| code-summary: Python Code
-    #| code-fold: true
+    #| code-fold: show
     tokenizer.decode([3436, 60278, 68165, 64957, 1042, 4379])
     ```
-
-    *Note. This is technically known as a Byte Pair Encoding (BPE) Tokenizer.*[^2]
 
 [^1]: If you wish to make an apple pie from scratch, you must first invent the universe.
 
@@ -91,9 +91,7 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
 
     LLMs are "deep" neural networks trained to estimate the probability distribution of long token sequences.
 
-    See @jurafsky [Chapter 9] and this [3Blue1Brown video](https://youtu.be/eMlx5fFNoYc?feature=shared) for more information on "self-attention" and "multi-head attention" mechanisms that turn neural networks into "transformers."
-
-    *Note. See [here](https://bbycroft.net/llm) for a visualization of what this might look like in practice.*
+    The technical details of this step are daunting, but I recommend this [3Blue1Brown video](https://youtu.be/eMlx5fFNoYc?feature=shared) and @jurafsky [Chapter 9] for more information about the "self-attention" and "multi-head attention" mechanisms that turn neural networks into "transformers." This is where the T in ChatGPT comes from.
 
 2.  Inference.
 
@@ -119,7 +117,7 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
 
     Instead of rewarding the LLM when it stumbles on correct answers, we first create a simulator of human preferences---such as truthfulness, helpfulness, harmlessness---which then gets used as a "reward model." These individual rewards are then used as feedback to further modify the parameters of the LLM.
 
-    Yes, LLMs are furthered trained to play language games.
+    Yes, LLMs are furthered trained to play language games.[^3]
 
     However, this process may result in the discovery of "adversarial example" with extremely high scores that seem incomprehensible to human evaluators. Thus, it can actually make the LLM underperform if the engineers in charge of this task are not careful.
 
@@ -128,6 +126,8 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
     We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators involved in the creation of some "reward model." It is an automatic process that can go indefinitely without worrying the engineers about the discover of potential "adversarial examples."
 
     The new "thinking" models, such as `o1` and `o3-mini`, are created through this process.
+
+[^3]: "Just to be clear, the language model still engages in next-token prediction. However, its parameters are tweaked not to make it predict next words more and more accurately but so that its final outputs (as responses to prompts) achieve higher and higher scores from the reward model. This, of course, is why the process is called reinforcement learning: it algorithmically embodies the principle that behavior that was rewarded in the past is more likely to be repeated in the future" [@kockelman2024, 48].
 
 Regardless of how the LLM was created, but assuming it incorporates some kind of [SFT]{.smallcaps}, this is the most important thing to always remember:
 
@@ -338,7 +338,7 @@ Standardization is important if you want to develop your own tools, but it is al
 
 OpenAI uses a standard called [[structured output]{.smallcaps}](https://openai.com/index/introducing-structured-outputs-in-the-api/)[,]{.smallcaps} which is essentially a [JSON Schema](https://json-schema.org/overview/what-is-jsonschema), to produce reliable output used to call user-defined tools or to structure the LLM's output in a way that corresponds to the user's needs. If you are a researcher wanting to extract structured output from unstructured pieces of texts—that's me—then you will want to do the latter, which requires setting up a `json_schema` response format.
 
-[Structured output]{.smallcaps} is only available for OpenAI models newer than `gpt-4o-2024-08-06`. These models have been fine-tuned to produce complicate schemas, but they also have hard-coded rules that produce valid JSON data formats.
+[Structured output]{.smallcaps} is only available for OpenAI models newer than `gpt-4o-2024-08-06`. These models have been fine-tuned to produce complicate schemas, but they also have *hard-coded rules* that force the LLM to produce valid JSON data.
 
 > By default, when models are sampled to produce outputs, they are entirely unconstrained and can select any token from the vocabulary as the next output. This flexibility is what allows models to make mistakes; for example, they are generally free to sample a curly brace token at any time, even when that would not produce valid JSON. In order to force valid outputs, we constrain our models to only tokens that would be valid according to the supplied schema, rather than all available tokens.
 >
