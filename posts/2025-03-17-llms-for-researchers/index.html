@@ -415,7 +415,7 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 \]</span></p>
 <p>Note that as we increase <span class="math inline">\(\tau\)</span> the distribution becomes more uniform. This is why many LLM interfaces remove the possibility of choosing temperatures above 2. Companies like OpenAI or Anthropic do not want people using their models to produce results that look bad.</p></li>
 </ul>
-<p>To get a sense of how this works, <a href="#fig-temperature" class="quarto-xref">Figure&nbsp;2</a> shows a hypothetical probability distribution for 10 fruits at different temperature values. You can think of this as a combination of <span class="smallcaps">top-k</span> and <span class="smallcaps">temperature sampling</span>. When <span class="math inline">\(\tau = 0\)</span> we are essentially picking the most likely token. When <span class="math inline">\(\tau = 1\)</span> we are essentially doing random sampling. As we keep increasing <span class="math inline">\(\tau\)</span> the probability distribution becomes more random.</p>
+<p>To get a sense of how this works, <a href="#fig-temperature" class="quarto-xref">Figure&nbsp;2</a> shows a hypothetical probability distribution for 10 fruits at different temperature values. You can think of this as a combination of <span class="smallcaps">top-k</span>, since there are only 10 words, and <span class="smallcaps">temperature sampling</span>. When <span class="math inline">\(\tau = 0\)</span> we are essentially picking the most likely token. When <span class="math inline">\(\tau = 1\)</span> we are essentially doing random sampling. As we keep increasing <span class="math inline">\(\tau\)</span> the probability distribution becomes more random.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>R Code</summary>
@@ -474,7 +474,7 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 <img src="index_files/figure-html/fig-temperature-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-temperature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: As <span class="math inline">\(\tau\)</span> increases, the resulting distribution becomes more uniform. Note that this plot shows “fruits” instead of actual tokens, which tend to be chunks of words. Also, this particular hypothetical procedure resembles a combination of <span class="smallcaps">top-k</span> and <span class="smallcaps">temperature sampling</span>.
+Figure&nbsp;2: As <span class="math inline">\(\tau\)</span> increases, the resulting distribution becomes more uniform. Note that this plot shows “fruits” instead of actual tokens, which tend to be chunks of words.
 </figcaption>
 </figure>
 </div>
