@@ -123,7 +123,7 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
 
 -   Reinforcement Learning ([RL]{.smallcaps})
 
-    We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators involved in the creation of some "reward model." It is an automatic process that can go indefinitely without worrying the engineers about the discover of potential "adversarial examples."
+    We create a dataset with question-answer keys, such that solutions that provide correct answers are rewarded. There are no expert human annotators involved in the creation of some "reward model." It is an automatic process that can go indefinitely without worrying the engineers about the accidental discovery of "adversarial examples."
 
     The new "thinking" models, such as `o1` and `o3-mini`, are created through this process.
 
@@ -139,7 +139,7 @@ For example, this is how one full interaction with ChatGPT looks like:
 [200264, 17360, 200266, 3575, 553, 261, 10297, 29186, 200265, 200264, 1428, 200266, 176289, 10093, 83377, 885, 14266, 328, 43286, 2860, 306, 220, 20, 6391, 13, 200265, 200264, 173781, 200266, 3538, 262, 112368, 11, 168709, 11, 17456, 11, 40722, 11, 3580, 13, 200265, 200264, 173781, 200266]
 ```
 
-This one-dimensional token sequence contains a couple of "special tokens" (`200264`, `200265`, and `200266`) used internally by ChatGPT to distinguish between text provided by the [User]{.smallcaps} from text provided by the [Assistant]{.smallcaps}.
+This one-dimensional token sequence contains a couple of "special tokens" (`200264`, `200265`, `200266`) used internally by ChatGPT to distinguish between text provided by the [User]{.smallcaps} from text provided by the [Assistant]{.smallcaps}.
 
 ```         
 <|im_start|>
