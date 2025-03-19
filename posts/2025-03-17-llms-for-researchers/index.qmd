@@ -187,13 +187,13 @@ So we have to use a different sampling procedure.
 
     Note that as we increase $\tau$ the distribution becomes more uniform. This is why many LLM interfaces remove the possibility of choosing temperatures above 2. Companies like OpenAI or Anthropic do not want people using their models to produce results that look bad.
 
-To get a sense of how this works, @fig-temperature shows a hypothetical probability distribution for 10 fruits at different temperature values. You can think of this as a combination of [top-k]{.smallcaps} and [temperature sampling]{.smallcaps}. When $\tau = 0$ we are essentially picking the most likely token. When $\tau = 1$ we are essentially doing random sampling. As we keep increasing $\tau$ the probability distribution becomes more random.
+To get a sense of how this works, @fig-temperature shows a hypothetical probability distribution for 10 fruits at different temperature values. You can think of this as a combination of [top-k]{.smallcaps}, since there are only 10 words, and [temperature sampling]{.smallcaps}. When $\tau = 0$ we are essentially picking the most likely token. When $\tau = 1$ we are essentially doing random sampling. As we keep increasing $\tau$ the probability distribution becomes more random.
 
 ```{r}
 #| code-summary: R Code
 #| code-fold: true
 #| label: fig-temperature
-#| fig-cap: As $\tau$ increases, the resulting distribution becomes more uniform. Note that this plot shows "fruits" instead of actual tokens, which tend to be chunks of words. Also, this particular hypothetical procedure resembles a combination of [top-k]{.smallcaps} and [temperature sampling]{.smallcaps}.
+#| fig-cap: As $\tau$ increases, the resulting distribution becomes more uniform. Note that this plot shows "fruits" instead of actual tokens, which tend to be chunks of words.
 
 library(ggplot2)
 
