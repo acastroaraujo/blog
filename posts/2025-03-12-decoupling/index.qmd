@@ -7,3 +7,4 @@ date: 2025-03-12
 draft: true
 ---
 
+![](images/paste-1.png)

@@ -342,7 +342,7 @@ Standardization is important if you want to develop your own tools, but it is al
 
 OpenAI uses a standard called [[structured output]{.smallcaps}](https://openai.com/index/introducing-structured-outputs-in-the-api/)[,]{.smallcaps} which is essentially a [JSON Schema](https://json-schema.org/overview/what-is-jsonschema), to produce reliable output used to call user-defined tools or to structure the LLM's output in a way that corresponds to the user's needs. If you are a researcher wanting to extract structured output from unstructured pieces of texts—that's me—then you will want to do the latter, which requires setting up a `json_schema` response format.
 
-[Structured output]{.smallcaps} is only available for OpenAI models newer than `gpt-4o-2024-08-06`. These models have been fine-tuned to produce complicate schemas, but they also have *hard-coded rules* that force the LLM to produce valid JSON data.
+[Structured output]{.smallcaps} is only available for OpenAI models newer than `gpt-4o-2024-08-06`. These models have been fine-tuned to produce complicated schemas, but they also have *hard-coded rules* that force the LLM to produce valid JSON data.
 
 > By default, when models are sampled to produce outputs, they are entirely unconstrained and can select any token from the vocabulary as the next output. This flexibility is what allows models to make mistakes; for example, they are generally free to sample a curly brace token at any time, even when that would not produce valid JSON. In order to force valid outputs, we constrain our models to only tokens that would be valid according to the supplied schema, rather than all available tokens.
 >
