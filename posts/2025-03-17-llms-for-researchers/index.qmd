@@ -299,7 +299,7 @@ The process shown in @fig-chat-apples is not for the benefit of the user, it is 
 
 There is an important implication here, especially if we wish to repurpose LLMs for decision-making. *Any text produced by the LLM after it provides an answer is a post-hoc justification.* This is true by definition. The answer has already been generated, the "reason giving" that follows is just more next-token prediction.
 
-Insofar reasoning giving is a discursive pattern found in the Internet, the LLM will also generate reasons for its claim. But the LLM is merely going through the motions of reasoning. In contrast, any text that occurs before the answer is generated is part of the LLM's [context window]{.smallcaps} and does play some role in what the actual answer *is.*
+Insofar "reason giving" is a discursive pattern found in the Internet, the LLM will also generate reasons for its claim. But the LLM is merely going through the motions of reasoning. In contrast, any text that occurs before the answer is generated is part of the LLM's [context window]{.smallcaps} and does play *some* role in what the actual answer *is.*
 
 ## Tools
 
@@ -348,7 +348,7 @@ OpenAI uses a standard called [[structured output]{.smallcaps}](https://openai.c
 >
 > <https://openai.com/index/introducing-structured-outputs-in-the-api/>
 
-There is some extensive [documentation](https://platform.openai.com/docs/guides/structured-outputs) on how to use structured outputs, but it will suffice to use packages like `ellmer` in R or a combination [combination of `openai` and `pydantic`](https://www.datacamp.com/tutorial/open-ai-structured-outputs) in Python.
+There is some extensive [documentation](https://platform.openai.com/docs/guides/structured-outputs) on how to use structured outputs, but it will suffice to use packages like [`ellmer`](https://ellmer.tidyverse.org/articles/structured-data.html) in R or a combination [combination of `openai` and `pydantic`](https://www.datacamp.com/tutorial/open-ai-structured-outputs) in Python.
 
 **Example**
 
