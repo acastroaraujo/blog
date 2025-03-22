@@ -528,7 +528,7 @@ Figure&nbsp;3: Context Window Example. Similar results follow if you add “Let�
 <hr>
 <p><strong>Post Hoc Justification</strong></p>
 <p>There is an important implication here, especially if we wish to repurpose LLMs for decision-making. <em>Any text produced by the LLM after it provides an answer is a post-hoc justification.</em> This is true by definition. The answer has already been generated, the “reason giving” that follows is just more next-token prediction.</p>
-<p>Insofar reasoning giving is a discursive pattern found in the Internet, the LLM will also generate reasons for its claim. But the LLM is merely going through the motions of reasoning. In contrast, any text that occurs before the answer is generated is part of the LLM’s <span class="smallcaps">context window</span> and does play some role in what the actual answer <em>is.</em></p>
+<p>Insofar “reason giving” is a discursive pattern found in the Internet, the LLM will also generate reasons for its claim. But the LLM is merely going through the motions of reasoning. In contrast, any text that occurs before the answer is generated becomes part of the LLM’s <span class="smallcaps">context window</span> and does play <em>some</em> role in what the actual answer <em>is.</em></p>
 </section>
 <section id="tools" class="level2">
 <h2 class="anchored" data-anchor-id="tools">Tools</h2>
@@ -579,7 +579,7 @@ Figure&nbsp;5: Python Interpreter Example
 <p>By default, when models are sampled to produce outputs, they are entirely unconstrained and can select any token from the vocabulary as the next output. This flexibility is what allows models to make mistakes; for example, they are generally free to sample a curly brace token at any time, even when that would not produce valid JSON. In order to force valid outputs, we constrain our models to only tokens that would be valid according to the supplied schema, rather than all available tokens.</p>
 <p><a href="https://openai.com/index/introducing-structured-outputs-in-the-api/" class="uri">https://openai.com/index/introducing-structured-outputs-in-the-api/</a></p>
 </blockquote>
-<p>There is some extensive <a href="https://platform.openai.com/docs/guides/structured-outputs">documentation</a> on how to use structured outputs, but it will suffice to use packages like <code>ellmer</code> in R or a combination <a href="https://www.datacamp.com/tutorial/open-ai-structured-outputs">combination of <code>openai</code> and <code>pydantic</code></a> in Python.</p>
+<p>There is some extensive <a href="https://platform.openai.com/docs/guides/structured-outputs">documentation</a> on how to use structured outputs, but it will suffice to use packages like <a href="https://ellmer.tidyverse.org/articles/structured-data.html"><code>ellmer</code></a> in R or a combination <a href="https://www.datacamp.com/tutorial/open-ai-structured-outputs">combination of <code>openai</code> and <code>pydantic</code></a> in Python.</p>
 <p><strong>Example</strong></p>
 <ol type="1">
 <li>Using the <code>ellmer</code> package in R:</li>
