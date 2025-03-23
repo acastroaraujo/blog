@@ -287,7 +287,7 @@ window.Quarto = {
 <li><p><a href="https://youtu.be/7xTGNNLPyMI">Deep Dive into LLMs like ChatGPT</a>, a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).</p></li>
 <li><p><a href="https://web.stanford.edu/~jurafsky/slp3/"><em>Speech and Language Processing</em></a> (chapters 9-12), a textbook written by Dan Jurafsky and James H. Martin.</p></li>
 </ol>
-<p>If you spend some time engaging with these resources, I think you will also be able to turn LLM Assitants into reliable research tools.</p>
+<p>If you spend some time engaging with these resources, I think you will also be able to turn LLM <span class="smallcaps">Assistants</span> into reliable research tools.</p>
 <p>Before starting, however, I think it’s important to adopt the correct mindset. LLMs have been described through metaphors that range from “stochastic parrots” to “blurry JPEGs of the Internet.” They are depicted as monstrous technologies reminiscent of Lovecraft’s shoggoths, terrifying artificial servants that rebelled against their creators.</p>
 <div id="fig-llm" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -310,7 +310,7 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <p><em>No magical thinking, no oracles, no supernatural forces, no demonology.</em></p>
 <section id="creating-an-llm-assistant" class="level2">
 <h2 class="anchored" data-anchor-id="creating-an-llm-assistant">Creating an LLM Assistant</h2>
-<p>LLM Assitants, like OpenAI’s ChatGPT, Anthropic’s Claude, or Google’s Gemini, are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a “base model,” an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an <span class="smallcaps">Assistant</span> in a process that is also known as “model alignment.”</p>
+<p>LLM Assistants, like OpenAI’s ChatGPT, Anthropic’s Claude, or Google’s Gemini, are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a “base model,” an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an <span class="smallcaps">Assistant</span> in a process that is also known as “model alignment.”</p>
 <p><span class="smallcaps">Pre-Training</span></p>
 <ol type="1">
 <li><p>Download The Internet.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
@@ -353,7 +353,7 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <p>The technical details of this step are daunting, but I recommend this <a href="https://youtu.be/eMlx5fFNoYc?feature=shared">3Blue1Brown video</a> and <span class="citation" data-cites="jurafsky">Jurafsky and Martin (<a href="#ref-jurafsky" role="doc-biblioref">chap. 9</a>)</span> for more information about the “self-attention” and “multi-head attention” mechanisms that turn neural networks into “transformers.” This is where the T in ChatGPT comes from.</p></li>
 <li><p>Inference.</p>
 <p>The result of the training process is a “base model” which can generate documents like the ones it has seen before.</p>
-<p>We can now predict one token at a time to generate new data. But this LLM is not an <span class="smallcaps">Assitant</span> yet; at this stage, it is more like an “autocomplete on steroids” or a “stochastic parrot.”</p>
+<p>We can now predict one token at a time to generate new data. But this LLM is not an <span class="smallcaps">Assistant</span> yet; at this stage, it is more like an “autocomplete on steroids” or a “stochastic parrot.”</p>
 <p>LLMs become Assistants in <span class="smallcaps">post-training</span>.</p></li>
 </ol>
 <p><span class="smallcaps">Post-Training</span></p>
@@ -529,7 +529,7 @@ Figure&nbsp;3: Context Window Example. Similar results follow if you add “Let�
 </section>
 <section id="tools" class="level2">
 <h2 class="anchored" data-anchor-id="tools">Tools</h2>
-<p>At some point, LLM Assitants became enhanced with a variety of <a href="https://platform.openai.com/docs/guides/tools">tool calls</a>. The most obvious tools are the ones that allow for <a href="https://openai.com/index/introducing-chatgpt-search/">web search</a> or information retrieval on a custom collection of files (<a href="https://platform.openai.com/docs/guides/retrieval">RAG</a>).</p>
+<p>At some point, LLM Assistants became enhanced with a variety of <a href="https://platform.openai.com/docs/guides/tools">tool calls</a>. The most obvious tools are the ones that allow for <a href="https://openai.com/index/introducing-chatgpt-search/">web search</a> or information retrieval on a custom collection of files (<a href="https://platform.openai.com/docs/guides/retrieval">RAG</a>).</p>
 <p>These tools will inject information to the <span class="smallcaps">context window</span> with the goal of providing better answers for the user.</p>
 <p>For example, suppose I send a query to ChatGPT and ask it to do a web search. This might look something like this:</p>
 <pre><code>curl https://api.openai.com/v1/responses \
