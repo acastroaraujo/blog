@@ -21,7 +21,7 @@ So far, I can only recommend two sources for learning about the "nuts and bolts"
 
 2.  [*Speech and Language Processing*](https://web.stanford.edu/~jurafsky/slp3/) (chapters 9-12), a textbook written by Dan Jurafsky and James H. Martin.
 
-If you spend some time engaging with these resources, I think you will also be able to turn LLM Assitants into reliable research tools.
+If you spend some time engaging with these resources, I think you will also be able to turn LLM [Assistants]{.smallcaps} into reliable research tools.
 
 Before starting, however, I think it's important to adopt the correct mindset. LLMs have been described through metaphors that range from "stochastic parrots" to "blurry JPEGs of the Internet." They are depicted as monstrous technologies reminiscent of Lovecraft's shoggoths, terrifying artificial servants that rebelled against their creators.
 
@@ -43,7 +43,7 @@ The next section describes how LLMs have been *modified* in many clever ways so 
 
 ## Creating an LLM Assistant
 
-LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a "base model," an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an [Assistant]{.smallcaps} in a process that is also known as "model alignment."
+LLM Assistants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, are created in a three-step process. The first step is a massive effort at pre-processing. The second produces a "base model," an LLM that works perfectly fine as a next-word prediction machine but that is otherwise limited in applications. The third step turns the LLM into an [Assistant]{.smallcaps} in a process that is also known as "model alignment."
 
 [Pre-Training]{.smallcaps}
 
@@ -97,7 +97,7 @@ LLM Assitants, like OpenAI's ChatGPT, Anthropic's Claude, or Google's Gemini, ar
 
     The result of the training process is a "base model" which can generate documents like the ones it has seen before.
 
-    We can now predict one token at a time to generate new data. But this LLM is not an [Assitant]{.smallcaps} yet; at this stage, it is more like an "autocomplete on steroids" or a "stochastic parrot."
+    We can now predict one token at a time to generate new data. But this LLM is not an [Assistant]{.smallcaps} yet; at this stage, it is more like an "autocomplete on steroids" or a "stochastic parrot."
 
     LLMs become Assistants in [post-training]{.smallcaps}.
 
@@ -301,7 +301,7 @@ Insofar "reason giving" is a discursive pattern found in the Internet, the LLM w
 
 ## Tools
 
-At some point, LLM Assitants became enhanced with a variety of [tool calls](https://platform.openai.com/docs/guides/tools). The most obvious tools are the ones that allow for [web search](https://openai.com/index/introducing-chatgpt-search/) or information retrieval on a custom collection of files ([RAG](https://platform.openai.com/docs/guides/retrieval)).
+At some point, LLM Assistants became enhanced with a variety of [tool calls](https://platform.openai.com/docs/guides/tools). The most obvious tools are the ones that allow for [web search](https://openai.com/index/introducing-chatgpt-search/) or information retrieval on a custom collection of files ([RAG](https://platform.openai.com/docs/guides/retrieval)).
 
 These tools will inject information to the [context window]{.smallcaps} with the goal of providing better answers for the user.
 
