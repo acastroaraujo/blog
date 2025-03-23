@@ -165,7 +165,7 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 
 ## Temperature Sampling
 
-A [softmax]{.smallcaps} function turns any arbitrary list of numbers into a valid probability distribution. This is the function applied to the last layer of the LLM, before assigning a probability to each of the tokens the [vocabulary]{.smallcaps}. In other words, each time an LLM predicts the next token it looks up the probabilities assigned to every token, conditional on the tokens in the [context window,]{.smallcaps} and samples accordingly.
+A [softmax]{.smallcaps} function turns any arbitrary list of numbers into a valid probability distribution. This is the function applied to the last layer of the LLM, before assigning a probability to each of the tokens in the [vocabulary]{.smallcaps}. In other words, each time an LLM predicts the next token it looks up the probabilities assigned to every token, conditional on the tokens in the [context window,]{.smallcaps} and samples accordingly.
 
 However, note that the [vocabulary]{.smallcaps} consists of hundreds of thousands of tokens. This means that *random sampling* will not work quite well because each unique token—in the grand scheme of things—has a very low probability mass, and so the output will be noisy and unreliable.
 
@@ -179,13 +179,9 @@ So we have to use a different sampling procedure.
 
     Similarly, we can first truncate the distribution of words to keep the $p$ percent of the probability mass. You can use a quantile function to do this. Then you repeat the same procedure above. This is called [top-p sampling]{.smallcaps}.
 
--   [Temperature Sampling]{.smallcaps}. Instead of truncating the distribution of words, we can *reshape* it using a "temperature" parameter; where $\tau \in [0, \infty)$. Then we pass this to the [softmax]{.smallcaps} function and do random sampling.
+-   [Temperature Sampling]{.smallcaps}. Instead of truncating the distribution of words, we can *reshape* it using a "temperature" parameter, $\tau \in [0, \infty)$. Then we pass these modified values to the [softmax]{.smallcaps} function and do random sampling.
 
-    $$
-    \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_k\end{bmatrix}  = \text{softmax}(\boldsymbol \mu / \tau)
-    $$
-
-    Note that as we increase $\tau$ the distribution becomes more uniform. This is why many LLM interfaces remove the possibility of choosing temperatures above 2. Companies like OpenAI or Anthropic do not want people using their models to produce results that look bad.
+    As we increase $\tau$ the distribution becomes more uniform. This is why many LLM interfaces remove the possibility of choosing temperatures above 2. Companies like OpenAI or Anthropic do not want people using their models to produce results that look bad.
 
 To get a sense of how this works, @fig-temperature shows a hypothetical probability distribution for 10 fruits at different temperature values. You can think of this as a combination of [top-k]{.smallcaps}, since there are only 10 words, and [temperature sampling]{.smallcaps}. When $\tau = 0$ we are essentially picking the most likely token. When $\tau = 1$ we are essentially doing random sampling. As we keep increasing $\tau$ the probability distribution becomes more random.
 
