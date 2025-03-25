@@ -11,7 +11,7 @@ bibliography: references.bib
 image: images/redpill.jpeg
 ---
 
-Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables-based approach" in sociology (i.e., most standard quantitative research).
+Karl Marx's criticism of commodity fetishism is very similar to Andrew Abbott's criticism of the so-called "variables-based approach" in sociology, which encompasses most standard quantitative research.
 
 The former denounces the idea of "value" as an alleged property of commodities *(and not people doing things)* to be a capitalist illusion. The latter denounces the idea of "causality" as an alleged property of variables *(and not people doing things)* to be a positivist illusion.
 
@@ -21,33 +21,39 @@ Before getting into detail, let me note the following:
 
 -   This kind of criticism exhibits an "unmasking style" which I find to be deeply immature [cf. @baehr2019].
 
-    See: Plato's Cave; Marxist false consciousness; the famous red pill scene from The Matrix; etc.
+    See: Plato's Cave; Marxist false consciousness; that famous red pill scene from The Matrix; etc.
 
 -   The critic (or "critical thinker") is in a unique position to expose some widespread delusion and show that what "normal" people believe to be true is in reality false.
 
     In other words, you get to cosplay as deep critical thinker that has somehow gained a unique access to a "reality" that is *hidden away* from the masses.
 
-    This ambition is deeply ingrained in the discipline. It is our exposé tradition. "The first wisdom of sociology" according to Peter Berger is that "things are not what they seem." *Wake up, sheeple!*
+    This ambition is deeply ingrained in the discipline. It is our exposé tradition. "The first wisdom of sociology" according to Peter Berger is that "things are not what they seem."[^1]
 
 -   In order to engage in such criticism, the best strategy is to write in such a way that makes other people look foolish (or at least less sophisticated).
 
--   This is related to what Kieran Healy calls the *nuance of the connoisseur.*
+-   This is related to what Kieran calls the *nuance of the connoisseur.*
 
     > Connoisseurs call for the contemplation of complexity almost for its own sake or remind everyone that things are subtler than they seem. The attractive thing about this move is that it is always available to the person who wants to make it. Theory is founded on abstraction, abstraction means throwing away detail for the sake of a bit of generality, and so things in the world are always "more complicated than that"---for any value of "that." Connoisseurship gets its aesthetic bite from the easy insinuation that the person trying to simplify things is a bit less sophisticated a thinker than the person pointing out that things are more complicated.
     >
     > @healy2017 [pp. 123]
 
+[^1]: "Wake up, sheeple!"
+
 ## Commodity Fetishism
 
-> A commodity appears at first sight an extremely obvious, trivial thing. But its analysis brings out that it is a very strange thing, abounding in metaphysical subtleties and theological niceties.
->
-> --- Karl Marx, *Capital*
+:::: {style="text-size: 0.8em;"}
+A commodity appears at first sight an extremely obvious, trivial thing. But its analysis brings out that it is a very strange thing, abounding in metaphysical subtleties and theological niceties.
+
+::: {style="text-align: right;"}
+— Karl Marx, *Capital*
+:::
+::::
 
 The commodity fetishism argument is an invitation to look beyond the *surface of appearances,* an illusion according to which "the definite social relation between men themselves" assumes "the fantastic form of a relation between things."
 
 The accusation is that normal people see value as an *intrinsic* property of commodities and fail to see it for what it is: a *relational* property*.*
 
-This is the best two-paragraph explanation I've seen of what all this means.
+This is the best two-paragraph explanation I've seen of what all this means:
 
 > There are two ways of ascribing properties to objects. Both have the same surface grammatical form: $A$ is $F$. The book is red, the man is tall, the woman is rich. They differ, however, at a deeper level. The height of a person is a quality that inheres in him quite independently of social context. Wealth, on the other hand, can only be predicated of a person who is inserted in a web of social relations. It makes sense to say that Robinson Crusoe on his island was tall, not that he was rich, even if perhaps he brought some gold coins along with him. To be rich means that other people are willing to exchange their goods or labor for your money. Being rich, unlike being tall, is a relational predicate.
 >
@@ -59,7 +65,7 @@ This is the best two-paragraph explanation I've seen of what all this means.
 
 I agree. It's hard to believe that anyone has ever thought about the value of commodities in this way. But being more sophisticated than others makes us *feel* *good*.
 
-*Note. Other accusations of economic fetishism are more on point. For example, the idea that "money" has an intrinsic value (especially in the form of gold or silver) has been an amply documented illusion throughout history. A similar dynamic happens with "capital" when it's considered as raw materials or instruments of labor; the "stuff" we identify as capital only becomes capital when it's embedded in a process of accumulation (M-C-M′).*
+*Note. Other accusations of economic fetishism are more on point. For example, the idea that "money" has an intrinsic value (especially in the form of gold or silver) has been an amply documented illusion throughout history. A similar dynamic happens with "capital" when it's considered as raw materials or instruments of labor—the "stuff" we identify as capital only becomes capital when it's embedded in a process of accumulation (M-C-M′).*
 
 *Thus, arguments about fetishism may hold true in certain domains (e.g., money, capital), but we should doubt about the truthfulness of the more narrow commodity fetishism argument.*
 
@@ -77,7 +83,7 @@ Here are the charges:
 
     They don't see individuals as *motivated* *actors*, but merely as the locale for the variables "doing their thing" [@abbott2001, pp. 132]. For example, they actually believe that some abstraction called [education]{.smallcaps} acts on another abstraction called [occupation]{.smallcaps}.
 
-    > Our normal methods parse social reality into fixed entities with variable qualities. They attribute causality to the variables---hypostatized social characteristics---rather than to agents; variables do things, not social actors.
+    > Our normal methods parse social reality into fixed entities with variable qualities. They attribute causality to the variables—hypostatized social characteristics—rather than to agents; variables do things, not social actors.
     >
     > @abbott2001 [pp. 183]
 
@@ -89,19 +95,15 @@ Here are the charges:
 
     *Except it's not nonsense!*
 
-The problem with this discussion is that the target of criticism---the so-called "variables paradigm"---does not exist. It has never existed. *It's hard to believe that someone out there is really that dumb.*
+The problem with this discussion is that the target of criticism—the so-called "variables paradigm"—does not exist. It has never existed. *It's hard to believe that someone out there is really that dumb.*
 
-In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^1] Now imagine overhearing a conversation in which someone mentions the sunset and then concluding they're being foolish fool for believing the sun revolves around the earth. It is deeply obnoxious. We must be able to distinguish between convenient "figures of speech" and actual "beliefs."
+In a particularly egregious example of bad faith, Andrew Abbott reads a couple of articles from the *American Journal of Sociology* and finds that "narrative sentences usually have variables as subjects" [@abbott2001, pp. 140].[^2] Now imagine overhearing a conversation in which someone mentions the sunset and then concluding they're being foolish for believing that the sun revolves around the earth. It is deeply obnoxious. We must be able to distinguish between convenient *figures of speech* and actual "beliefs."
 
-[^1]: "My procedure is simple. I find all the narrative sentences, the sentences whose predicates are activities or parts of the social process. I then consider who are the subjects of these sentences, what kinds of activities are involved, and how the predicates are related to causality" [@abbott2001, pp. 130].
+[^2]: "My procedure is simple. I find all the narrative sentences, the sentences whose predicates are activities or parts of the social process. I then consider who are the subjects of these sentences, what kinds of activities are involved, and how the predicates are related to causality" [@abbott2001, pp. 130].
 
-*Note. After writing the above I came across Mustafa Emirbayer's [-@emirbayer1997] "Manifesto for a Relational Sociology."*
+*Note. After writing the above I came across Mustafa Emirbayer's [-@emirbayer1997] "Manifesto for a Relational Sociology." Among other things, he argues that it's futile for quantitative researchers to adjust for confounders because all such attempts "ignore the ontological embeddedness or locatedness of entities within actual situational contexts" [@emirbayer1997, pp. 289].*
 
-*TL;DR it's not good, it's mostly nonsense.*
-
-*Among other things, he argues that it's futile for quantitative researchers to adjust for confounders because all such attempts "ignore the ontological embeddedness or locatedness of entities within actual situational contexts" [@emirbayer1997, pp. 289].*
-
-*Yikes!*
+🙈
 
 ## Data and Phenomena
 
@@ -115,19 +117,19 @@ Criticism of the so-called "variables paradigm" may be valid in the rare circums
 
 Self-proclaimed critical thinkers might complain and insist that quantitative research is riddled with variable fetishism; that GLMs and DAGs merely depict relationships between variables, not between real-world phenomena; and that convenient figures of speech reveal some kind of weird metaphysics.
 
-But, I assure you, *no one out there really thinks that variables "cause" other variables in a social vacuum.*
+But, I assure you, *no one out there really thinks that variables "cause" other variables in some social vacuum.*
 
 ## On Trained Incapacities
 
-*Note. I added this section after receiving some useful feedback from friends.*
+*Note. I added this section after receiving some useful feedback from friends. The main comment I received is some amount of skepticism—"I think it's true that many social scientists reify the categories used in a regression." Furthermore, many network researchers—or "network imperialists" as some great people here at Duke like to call themselves—say pretty much the same thing, that all individual characteristics (age, gender, education) are reductive proxies for the webs of social relations that ultimately matter.*
 
-Here's a more charitable view of Andrew Abbott's full-blown attack on linear regression.
+Anyways, here is a more charitable view of Andrew Abbott's full-blown attack on linear regression:
 
--   Traditional linear regression---particularly when used to model cross-sectional datasets---is ignorant of temporal context in ways that are counterproductive. The significance of some measured "variables" is severely distorted when they're ripped from their temporal context, making some research questions impossible to answer.
+-   Traditional linear regression—particularly when used to model cross-sectional datasets—is ignorant of temporal context in ways that are counterproductive. The significance of some measured "variables" is severely distorted when they're ripped from their temporal context, making some research questions impossible to answer.
 
     In particular, *the order in which things happen* determines the outcomes that most historical researchers are interested in explaining.
 
--   A similar thing happens when we want to answer questions for which spatial context is important. This is why there's a whole subfield of statistics dedicated to modeling "spatial data."
+-   A similar thing happens when we want to answer questions for which spatial context is important. But this is why there's a whole subfield in statistics dedicated to modeling "spatial data."
 
 -   Paul Pierson has a great culinary analogy for how time "works" in linear regression for cross-sectional data:
 
@@ -137,17 +139,17 @@ Here's a more charitable view of Andrew Abbott's full-blown attack on linear reg
     >
     > @pierson2011 [pp. 1]
 
-    But quantitative research does not *have* to be decontextualized in this way. There are many ways of adapting quantitative research to answer *some* of the criticisms levied by scholars like Pierson and Abbott [e.g., @wawro2022].
+    But quantitative research does not *have* to be decontextualized in this way. There are many ways of adapting quantitative research to answer *some* of the criticisms levied by scholars like Pierson and Abbott [e.g., @wawro2022]. Thinking about temporal assumptions in linear regression can be very helpful, and so many quantitative researchers actually devote significant time to this.[^3]
 
-    Actually, thinking about temporal assumptions in linear regression can be very helpful---e.g., did you know that fixed-effect models produce wrong estimates when the "causal lags in the real world do not match the lags found in panel data" [@vaisey2017]?
-
-    However, there is only one correct way of answering to someone calling you an unsophisticated fool with weird metaphysics: *silence*.
+    However, there is only one reasonable way of answering to someone accusing you of being an unsophisticated fool with weird metaphysics. You don't.
 
 -   Specializing in quantitative methods produces a sort of "trained incapacity," limiting the scope of questions that researchers can answer. People that specialize in qualitative methods are *usually* not experts in quantitative research; people that specialize in social network analysis are *usually* not experts in archival research; and so on.
 
-    *Note. Sociology is actually better than most other disciplines at producing researchers that defy these expectations (e.g., Mario Small, Emily Erikson, Peter Bearman).*
-
     *However, there's no reason to think that becoming competent in one form of social research will make you less competent in another.*
+
+    *Sociology is actually better than most other disciplines at producing researchers that defy these expectations (e.g., Mario Small, Emily Erikson, Peter Bearman).*
+
+[^3]: For example, did you know that fixed-effect models produce wrong estimates when the "causal lags in the real world do not match the lags found in panel data"? [@vaisey2017].
 
 This last point is worth repeating. I worry that students will stumble upon criticism of the "variables paradigm" and conclude that learning about linear regression will actually make them *worse* sociologists. *I had a similar reaction about a decade ago.*
 

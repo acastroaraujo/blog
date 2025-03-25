@@ -21,13 +21,13 @@ So far, I can only recommend two sources for learning about the "nuts and bolts"
 
 2.  [*Speech and Language Processing*](https://web.stanford.edu/~jurafsky/slp3/) (chapters 9-12), a textbook written by Dan Jurafsky and James H. Martin.
 
-If you spend some time engaging with these resources, I think you will also be able to turn LLM [Assistants]{.smallcaps} into reliable research tools.
+If you spend some time engaging with these resources, I think you will also be able to cut through the hype and turn LLM [Assistants]{.smallcaps} into reliable research tools for *some* tasks.
 
-Before starting, however, I think it's important to adopt the correct mindset. LLMs have been described through metaphors that range from "stochastic parrots" to "blurry JPEGs of the Internet." They are depicted as monstrous technologies reminiscent of Lovecraft's shoggoths, terrifying artificial servants that rebelled against their creators.
+Before starting, however, I think it's important to adopt the correct mindset. LLMs have been described through metaphors that range from "stochastic parrots" to "blurry JPEGs of the Internet." They are also depicted as monstrous technologies reminiscent of Lovecraft's shoggoths, terrifying artificial servants that rebelled against their creators.
 
 ![<https://knowyourmeme.com/memes/shoggoth-with-smiley-face-artificial-intelligence>](images/paste-1.png){#fig-llm fig-align="center" width="80%"}
 
-Following @farrell2025, the more accurate way of describing LLMs is as a "cultural technologies" in general and *information-retrieval technologies* in particular. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are *not* supernatural. They codify, summarize, and organize information in ways that enable its transmission at large scale.
+Following @farrell2025, the more accurate way of describing LLMs is as "cultural technologies" in general and *information-retrieval technologies* in particular. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are *not* supernatural. They codify, summarize, and organize information in ways that enable its transmission at large scale.
 
 The next section describes how LLMs have been *modified* in many clever ways so that they generate text in response to prompts. Following that section I introduce four key ideas that I believe to be invaluable for researchers thinking about using LLMs in a more rational way.
 
