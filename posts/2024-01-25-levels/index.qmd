@@ -12,6 +12,10 @@ image: wimsatt.png
 tbl-cap-location: bottom
 ---
 
+::: {style="text-size: 0.8em;"}
+*April 25, 2025 Update. @craver2025 just published a new article that clarifies a lot of the issues raised here.*
+:::
+
 Metaphors about 'levels' are used to describe the world all the time.
 
 We cannot avoid them. Scientists use them all the time. And so rejecting these metaphors outright just because some obscure sociologist made poor use of them is wrongheaded.
@@ -109,7 +113,7 @@ These are levels of *realization.* A computation is implemented by an algorithm,
 > @marr1982 [pp. 63]
 
 | Computational theory | Representation and algorithm | Hardware implementation |
-|------------------------|------------------------------|-------------------|
+|------------------------|-----------------------------|-------------------|
 | What is the goal of the computation, why is it appropriate, and what is the logic of the strategy by which it can be carried out? | How can this computational theory be implemented? In particular, what is the representation for the input and output, and what is the algorithm for the transformation? | How can the representation and algorithm be realized physically? |
 
 : The three levels at which any machine carrying out an information-processing task must be understood. {#tbl-marr tbl-colwidths="\[33,34,33\]"}
