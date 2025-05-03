@@ -1,7 +1,7 @@
 ---
 title: "Positivism is a Bundle of Words"
 description: |
-  and you should be able to identify with at least one of them
+  Stop worrying about it.
 author: andrés castro araújo
 date: 2025-05-03
 ---
