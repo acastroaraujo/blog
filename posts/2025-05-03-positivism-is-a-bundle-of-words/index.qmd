@@ -10,19 +10,19 @@ date: 2025-05-03
 
 When sociologists speak about positivism, they are typically making reference to one of three polemics regarding
 
--   the "essence" of science;
+1.  the "essence" of science;
 
--   the "output" of science; and
+2.  the "output" of science; and
 
--   the "scope" of general claims.
+3.  the "scope" of general claims.
 
-### The [essence]{.smallcaps} of science
+### The essence of science
 
-Here, the term positivism is associated with the idea that we should distinguish *descriptive* statements of fact and *prescriptive* statements of value. More importantly, it is related to the idea that can we separate explanations from justifications, and that we cannot derive statements about what *ought* to be from statements about what *is.*
+Here, the term positivism is associated with the idea that we can distinguish *descriptive* statements of fact from *prescriptive* statements of value. More importantly, it is related to the idea that we cannot derive statements about what *ought* to be from statements about what *is.*
 
-I was first introduced to this distinction as an economics undergraduate. My professors insisted that economics was purely concerned with "positive" statements and not with "normative" ones. But these same professors would then introduce the concept of a social welfare function and proceed to calculate the optimal level of unemployment in the economy, or the optimal level of pollution in the environment. So the criticism typically aimed a positivists, in this sense, is that they are being disingenuous—that they are concealing their politics and that it's much better to have them out in the open.
+I was first introduced to this distinction as an economics undergraduate. My professors insisted that economics was purely concerned with "positive" statements and not with "normative" ones. But these same professors would then introduce the concept of a social welfare function and proceed to calculate the optimal level of unemployment in the economy, or the optimal level of pollution in the environment. So the criticism typically aimed a positivists, in this sense, is that they are being disingenuous—that they are concealing their politics and that it is much better to have them out in the open.
 
-But my lawyer friends were introduced to this distinction as a debate in legal jurisprudence. On one hand, the legal positivists argue that the "essence" of law has nothing to do with morality. Sure, we can characterize some legal systems as morally defective—but Nazi law is still law nonetheless. On the other hand, the natural law theorists believe that “an unjust law is no law at all,” and so there is no such thing as immoral law. There problem with this view is that by putting moral constraints on the *definition* of law, we are forced to conclude (1) that the Nazi's did not have a legal system and (2) that people calling for civil disobedience are not actually protesting against morally defective laws since there is no such thing. So it is the legal positivist who accuses the other side of being disingenuous.
+My lawyer friends were introduced to this distinction as a debate in legal jurisprudence. On one hand, the legal positivists argue that the "essence" of law has nothing to do with morality. Sure, we can characterize some legal systems as morally defective—but Nazi law is still *law* nonetheless. On the other hand, the natural law theorists believe that “an unjust law is no law at all,” and so there is no such thing as immoral law. There problem with this view is that by putting moral constraints on the *definition* of law, we are forced to conclude (1) that the Nazi's did not have a legal system and (2) that people calling for civil disobedience are not actually protesting against morally defective laws since there is no such thing. So it is the legal positivist who accuses the other side of being disingenuous.
 
 **My choice**
 
@@ -30,7 +30,7 @@ I am positivist in both science and jurisprudence. There is an undeniable *analy
 
 However, the most important lesson from this polemic is that people who obscure their value commitments are doing everyone a disservice.
 
-### The [output]{.smallcaps} of science
+### The output of science
 
 Here, the term "positivist" is used to denote two very different things.
 
@@ -38,11 +38,11 @@ Here, the term "positivist" is used to denote two very different things.
 
 The positivist believes that many important aspects of reality can be measured. That we can use statistical methods to make inferences about populations and identify causal effects.
 
-You can be a *Qualitative* and still believe that this is possible, but that it is just not your cup of tea. But that people who deny this possibility exclusively do qualitative research (if they do any research at all).
+You can be a *Qualitative* and still believe that this is possible, but that it is just not your cup of tea. But those who deny this possibility do qualitative research exclusively—if they do any research at all.
 
 **The General**
 
-The positivist believes that the output of our work should include generalizations. That we can learn about the world writ large from our more narrow empirical work. And that different phenomena, across a wide variety of contexts, are comparable.
+The positivist believes that the output of our work should include generalizations. That we can learn about the world writ large from our more narrow empirical work. And that different phenomena are comparable across a wide variety of contexts.
 
 The alternative is to be a *Local* and think that everything we produce is very narrow in scope. That generalizations are fleeting and that most things are incommensurable. So we should give up on explaining altogether and focus on interpretation \[sic\].
 
@@ -50,11 +50,9 @@ More often than not, the *Local* will insist that they are not making general cl
 
 **My choice**
 
-I am a positivist in both senses of the word.
+I am a positivist in both senses of the word, but you can be a *Qualitative* and a positivist too.
 
-Importantly, you can be a *Qualitative* and a positivist too.
-
-### The [scope]{.smallcaps} of general claims
+### The scope of general claims
 
 If you read enough bullshit you will sometimes encounter that positivists are dumb because we naively think we can create "universal" knowledge that applies to all places and times.
 
@@ -62,6 +60,6 @@ This meaning of positivism refers to the deductive-nomological (or “covering l
 
 **My choice**
 
-Most self-diagnosed positivists these days are not very interested in the philosophy of science, but some of them have decided to adopt the search for [mechanisms](https://plato.stanford.edu/entries/science-mechanisms/) as the new abstract model for scientific explanation.
+Most self-diagnosed positivists are not very interested in the philosophy of science these days, but some of them have decided to adopt the search for [mechanisms](https://plato.stanford.edu/entries/science-mechanisms/) as the new abstract model for scientific explanation.
 
-If you want to insist that being a positivist means embracing the DN model of scientific explanation, then I am not a positivist. No one is. You are hurling insults at dead people.
+If you want to insist that being a positivist means embracing the DN model of scientific explanation, then sure, I am not a positivist. No one is. You are hurling insults at dead people.
