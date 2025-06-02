@@ -209,9 +209,6 @@ softmax <- function(x, temp = 1) {
   # Apply softmax
   exp_x <- exp(shifted_x)
   return(exp_x / sum(exp_x))
-
-  exp_x <- exp(x / temp)
-  exp_x / sum(exp_x)
 }
 
 set.seed(1)
