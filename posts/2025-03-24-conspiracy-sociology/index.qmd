@@ -8,7 +8,7 @@ categories:
 author: andrés castro araújo
 date: 2025-03-24
 bibliography: references.bib
-image: purpose.jpg
+image: purpose.png
 ---
 
 Natalie Wynn (NW) just uploaded her latest video on conspiracy theories,[^1] which reminded me that I had written something about this in earlier iterations of [[the functionalism paper]{.smallcaps}](https://osf.io/preprints/socarxiv/dfc4k) (TFP).
@@ -27,7 +27,7 @@ Ultimately we dropped this idea from TFP because conspiracy thinking is not typi
 
 Briefly, a teleological explanation seeks to explain the presence, shape, or behavior of some phenomena by making reference to its [purpose]{.smallcaps} [@ruse2017; @tugby2024]. This is a style of explanation that goes all the way back to Aristotle's discussions of "final cause" [@leunissen2010]. Less ambiguous forms of teleological explanation appear whenever people replace the word "purpose" with either [function]{.smallcaps} or [goal]{.smallcaps}, which still carry the connotation that there is some form of "design" lying in the background, whether intentional or not.
 
-Biologists don't like to talk about [purpose]{.smallcaps}, since it implies some form of "intelligent design." But Charles Darwin made [purpose]{.smallcaps} safe for biologists by transforming it into the blind mechanistic process we know as natural selection.[^2] Social scientists, however, cannot do without intentionality. Our world is filled with all sorts of designers in pursuit of their own goals, interests, and values. We wrote TFP in part because we cannot get rid of teleological explanations—intentional or not—and so we better come up with standards that distinguish the good ones from the bad ones.
+Biologists don't like to talk about [purpose]{.smallcaps}, since it implies some form of "intelligent design." Nonetheless, Charles Darwin made [purpose]{.smallcaps} safe for biologists by transforming it into the blind mechanistic process we know as natural selection.[^2] Social scientists, however, cannot do without intentionality. Our world is filled with all sorts of designers in pursuit of their own goals, interests, and values. We wrote TFP in part because we cannot get rid of teleological explanations—intentional or not—and so we better come up with standards that distinguish the good ones from the bad ones.
 
 [^2]: The idea of "teleology without intention" sometimes goes by awkward term of [teleonomy]{.smallcaps}. Google it if you must.
 
@@ -63,7 +63,7 @@ This is essentially what Jon Elster argues.
 >
 > @elster1983 [55]
 
-Yes, this is the point in which we apply teleological explanations to teleology itself. The argument is that conspiracy thinking allegedly satisfies some deep psychological "need." In one version, conspiracies are like the Trobriander rituals described by Malinowski, whose purpose is to *reduce the anxiety* linked to dangerous and uncertain fishing expeditions.
+*Yes, this is the point in which we apply teleological explanations to teleology itself.* The argument is that conspiracy thinking allegedly satisfies some deep psychological "need." In one version, conspiracies are like the Trobriander rituals described by Malinowski, whose purpose is to *reduce the anxiety* linked to dangerous and uncertain fishing expeditions.
 
 <aside>TFP has a small section devoted to explanations of ritual practices.</aside>
 
@@ -77,4 +77,4 @@ In another version of this argument, conspiracies are like the psychoanalytic se
 
 Perhaps these explanations of conspiracy thinking are themselves some form of meta conspiracy thinking. Or perhaps they are just valid teleological explanations that deserve further scrutiny on our part.
 
-Regardless, teleological explanations seem unavoidable. They are not going anywhere. So we should at least try and do a better job when using them.
+Regardless, teleological explanations seem unavoidable. They are not going away. So we should at least try and do a better job when using them.

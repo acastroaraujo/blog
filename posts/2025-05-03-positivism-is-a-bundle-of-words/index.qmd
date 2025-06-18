@@ -3,6 +3,9 @@ title: "Positivism is a Bundle of Words"
 description: |
   Stop worrying about it.
 author: andrés castro araújo
+categories: 
+  - Philosophy
+  - Sociology
 date: 2025-05-03
 ---
 
@@ -22,9 +25,9 @@ Here, the term positivism is associated with the idea that we can distinguish *d
 
 I was first introduced to this distinction as an economics undergraduate. My professors insisted that economics was purely concerned with "positive" statements and not with "normative" ones. But these same professors would then introduce the concept of a social welfare function and proceed to calculate the optimal level of unemployment in the economy, or the optimal level of pollution in the environment. So the criticism typically aimed a positivists, in this sense, is that they are being disingenuous—that they are concealing their politics and that it is much better to have them out in the open.
 
-My lawyer friends were introduced to this distinction as a debate in legal philosophy. On one hand, the legal positivists argue that the "essence" of law has nothing to do with morality. Sure, we can characterize some legal systems as morally defective—but Nazi law is still *law* nonetheless. On the other hand, the natural law theorists believe that “an unjust law is no law at all,” and so there is no such thing as immoral law. There problem with this view is that by putting moral constraints on the *definition* of law, we are forced to conclude (1) that the Nazi's did not have a legal system and (2) that people who call for civil disobedience are not actually protesting against morally defective laws since there is no such thing. So it is the legal positivist who accuses the other side of being disingenuous.
+My lawyer friends were introduced to this distinction as a debate in legal philosophy. On one hand, the legal positivists argue that the "essence" of law has nothing to do with morality. Sure, we can characterize some legal systems as morally defective—but Nazi law is nonetheless still *law*. On the other hand, the natural law theorists believe that “an unjust law is no law at all,” and so there is no such thing as immoral law. The problem with this view is that by putting moral constraints on the *definition* of law, we are forced to conclude (1) that the Nazi's did not have a legal system and (2) that people who call for civil disobedience are not actually protesting against morally defective laws since there is no such thing. So it is the legal positivist who accuses the other side of being disingenuous.
 
-To be sure, this does *not* mean that the law is devoid of moral consequences, or that legal reasoning is entirely devoid of moral considerations. That would be an absurd thing to say. It only means that what makes law *law* is independent of any particular moral point of view. The same reasonig applies to whatever it is that makes science *science.*
+This does *not* mean that the law is devoid of moral consequences, or that legal reasoning is devoid of moral considerations. That would be an absurd hill to die on. It only means that what makes law *law* is independent of any particular moral point of view. Importantly, the same reasoning applies to whatever it is that makes science *science.*
 
 **My choice**
 
@@ -36,19 +39,17 @@ However, the most important lesson from this polemic is that people who obscure 
 
 Here, the term "positivist" is used to denote two very different things.
 
-**The Quantitative**
+*The Quantitative*
 
-The positivist believes that many important aspects of reality can be measured. That we can use statistical methods to make inferences about populations and identify causal effects.
+The positivist believes that many important aspects of reality can be measured. And that we can use statistical methods to make inferences about populations and identify causal effects.
 
 You can be a *Qualitative* and still believe that this is possible, but that it is just not your cup of tea. But those who deny this possibility do qualitative research exclusively—if they do any research at all.
 
-**The General**
+*The General*
 
-The positivist believes that the output of our work should include generalizations. That we can learn about the world writ large from our more narrow empirical work. And that different phenomena are comparable across a wide variety of contexts.
+The positivist believes that the output of our work should include generalizations. That we can learn about the world writ large from our more narrow empirical oobservations. And that different phenomena are comparable across a wide variety of contexts.
 
-The alternative is to be a *Local* and think that everything we produce is very narrow in scope. That generalizations are fleeting and that most things are incommensurable. So we should give up on explaining altogether and focus on interpretation \[sic\].
-
-More often than not, the *Local* will insist that they are not making general claims in an effort to shield their general claims from empirical refutation.
+The alternative is to be *The* *Local* and think that everything we produce is necessarily narrow in scope. That generalizations are fleeting and that most things are incommensurable. And so we should give up on explaining altogether and focus on interpretation \[sic\]. More often than not, *The* *Local* will insist that they are not making general claims in an effort to shield their general claims from empirical refutation.
 
 **My choice**
 
@@ -56,12 +57,12 @@ I am a positivist in both senses of the word, but you can be a *Qualitative* and
 
 ### The scope of general claims
 
-If you read enough bullshit you will sometimes encounter that positivists are dumb because we naively think we can create "universal" knowledge that applies to all places and times.
+If you read enough ~~bullshit~~ you will sometimes encounter that positivists are naive because we aspire to produce "universal" knowledge that applies to all places and times.
 
-This meaning of positivism refers to the deductive-nomological (or “covering law”) model of scientific explanation inspired by classical physics and developed by Carl Hempel in the 1940s. Nobody adheres to this model of [scientific explanation](https://plato.stanford.edu/entries/scientific-explanation/) anymore. So people who criticize positivists for embracing a "covering law" model of scientific explanations are wasting your time.
-
-**My choice**
+This meaning of positivism refers to the deductive-nomological (or “covering law”) model of scientific explanation inspired by classical physics and developed by Carl Hempel in the 1940s. Nobody adheres to this model of [scientific explanation](https://plato.stanford.edu/entries/scientific-explanation/) anymore. And so people who criticize positivists for embracing a "covering law" model of scientific explanations are wasting everyone's time.
 
 Most self-diagnosed positivists are not very interested in the philosophy of science these days, but some of them have decided to adopt the search for [mechanisms](https://plato.stanford.edu/entries/science-mechanisms/) as the new abstract model for scientific explanation.
 
-If you want to insist that being a positivist means embracing the DN model of scientific explanation, then sure, I am not a positivist. No one is. You are hurling insults at dead people.
+**My choice**
+
+If you want to insist that being a positivist means embracing the DN model of scientific explanation, then sure, I am not a positivist. *But nobody is.* You are hurling insults at dead people.
