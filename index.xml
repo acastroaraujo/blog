@@ -9,13 +9,15 @@
 <link>https://acastroaraujo.github.io/blog/</link>
 <atom:link href="https://acastroaraujo.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>andrés writes unpublishable stuff instead of working on his dissertation</description>
-<generator>quarto-1.7.31</generator>
+<generator>quarto-1.7.32</generator>
 <lastBuildDate>Sat, 03 May 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Positivism is a Bundle of Words</title>
   <dc:creator>andrés castro araújo</dc:creator>
   <link>https://acastroaraujo.github.io/blog/posts/2025-05-03-positivism-is-a-bundle-of-words/</link>
   <description><![CDATA[ Stop worrying about it. ]]></description>
+  <category>Philosophy</category>
+  <category>Sociology</category>
   <guid>https://acastroaraujo.github.io/blog/posts/2025-05-03-positivism-is-a-bundle-of-words/</guid>
   <pubDate>Sat, 03 May 2025 00:00:00 GMT</pubDate>
 </item>
@@ -28,7 +30,7 @@
   <category>Philosophy</category>
   <guid>https://acastroaraujo.github.io/blog/posts/2025-03-24-conspiracy-sociology/</guid>
   <pubDate>Mon, 24 Mar 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://acastroaraujo.github.io/blog/posts/2025-03-24-conspiracy-sociology/purpose.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://acastroaraujo.github.io/blog/posts/2025-03-24-conspiracy-sociology/purpose.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>LLMs for Researchers</title>
