@@ -8,7 +8,7 @@ categories:
 author: andrés castro araújo
 date: 2025-03-24
 bibliography: references.bib
-image: purpose.png
+image: conspiracy.png
 ---
 
 Natalie Wynn (NW) just uploaded her latest video on conspiracy theories,[^1] which reminded me that I had written something about this in earlier iterations of [[the functionalism paper]{.smallcaps}](https://osf.io/preprints/socarxiv/dfc4k) (TFP).
