@@ -39,4 +39,3 @@ bibliography: references.bib
 ...
 
 > An example of such a ritualistic application is researchers copying the superficial trappings of a statistical procedure... without implementing, or even understanding, the fundamental assumptions on which the validity of the procedure is predicated—or worse, without even asking what is needed for the method to be valid and reliable enough to use in practice.
-

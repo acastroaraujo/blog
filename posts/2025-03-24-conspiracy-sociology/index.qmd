@@ -21,7 +21,7 @@ This was motivated by two loose ideas.
 
     This is not something unique to left-wing theorists embarking on some *unmasking project*; even conservative sociologist Peter Berger once said that “the first wisdom of sociology is that things are not what they seem” [cf. @baehr2019].
 
-2.  Many influential arguments against teleological explanations—which play a big part in "functionalism"—have really been arguments against conspiracy thinking or "just-so stories" [e.g., @gould1979; @elster1983].
+2.  Many influential arguments against teleological explanations—which feature prominently in "functionalism"—have really been arguments against conspiracy thinking or "just-so stories" [e.g., @gould1979; @elster1983].
 
 Ultimately we dropped this idea from TFP because conspiracy thinking is not typically published in major sociology outlets, and so it seemed like an unnecessary rant.
 

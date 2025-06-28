@@ -13,9 +13,11 @@ categories:
 bibliography: references.bib
 ---
 
+*Note. The R code in this blogpost is already outdated. Things are changing fast.*
+
 I've recently spent some time learning about how Large Language Models (LLMs) work so that I can feel confident when using them for academic purposes.
 
-So far, I can only recommend two sources for learning about the "nuts and bolts" aspect of these models:
+So far, I recommend two sources for learning about the "nuts and bolts" aspect of these models:
 
 1.  [Deep Dive into LLMs like ChatGPT](https://youtu.be/7xTGNNLPyMI), a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).
 
@@ -27,7 +29,7 @@ Before starting, however, I think it's important to adopt the correct mindset. L
 
 ![<https://knowyourmeme.com/memes/shoggoth-with-smiley-face-artificial-intelligence>](images/paste-1.png){#fig-llm fig-align="center" width="80%"}
 
-Following @farrell2025, the more accurate way of describing LLMs is as "cultural technologies" in general and *information-retrieval technologies* in particular. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are *not* supernatural. They codify, summarize, and organize information in ways that enable its transmission at large scale.
+Following @farrell2025, I think the more accurate way of describing LLMs is as "cultural technologies" in general and *information-retrieval technologies* in particular. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are *not* supernatural. They codify, summarize, and organize information in ways that enable its transmission at large scale.
 
 The next section describes how LLMs have been *modified* in many clever ways so that they generate text in response to prompts. Following that section I introduce four key ideas that I believe to be invaluable for researchers thinking about using LLMs in a more rational way.
 
