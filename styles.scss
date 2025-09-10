@@ -3,8 +3,10 @@
 @import url('https://www.cssfontstack.com/Optima');
 $optima-font: 'Optima', sans-serif;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-$roboto-font: 'Roboto Condensed', sans-serif;
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+$roboto-font: 'Roboto', sans-serif;
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 $fira-font: 'Fira Code', monospace; 
@@ -21,7 +23,7 @@ $font-family-sans-serif: $roboto-font;
 $font-family-monospace: $fira-font; 
 $link-color: #DC143C;
 $code-block-bg: #F4F4F4;
-$font-size-root: 1em;
+$font-size-root: 1.1em;
 $navbar-bg: #F8F9FA;
 //$body-bg: #FEFDFA;
 //$primary: #4974A5;
@@ -30,7 +32,7 @@ $navbar-bg: #F8F9FA;
 /*-- scss:rules --*/
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $roboto-font;
+  font-family: $header-font;
   font-weight: 300;
 }
 
