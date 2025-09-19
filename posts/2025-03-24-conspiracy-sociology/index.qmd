@@ -11,23 +11,25 @@ bibliography: references.bib
 image: conspiracy.png
 ---
 
-Natalie Wynn (NW) just uploaded her latest video on conspiracy theories,[^1] which reminded me that I had written something about this in earlier iterations of [[the functionalism paper]{.smallcaps}](https://osf.io/preprints/socarxiv/dfc4k) (TFP).
+Natalie Wynn (NW) just uploaded her latest video on conspiracy theories,[^1] which reminded me that I had written something about this in earlier iterations of [[the functionalism paper]{.smallcaps}](https://sociologicalscience.com/articles-v12-20-456/) (TFP).
 
 [^1]: <https://youtu.be/teqkK0RLNkI>
 
-This was motivated by two loose ideas.
+This was motivated by two loose intuitions.
 
 1.  Sociology has a little conspiracy thinking problem in the way we market ourselves to undergraduates.
 
-    This is not something unique to left-wing theorists embarking on some *unmasking project*; even conservative sociologist Peter Berger once said that “the first wisdom of sociology is that things are not what they seem” [cf. @baehr2019].
+    This is not something unique to left-wing theorists embarking on some *unmasking project;* even conservative sociologist Peter Berger once said that “the first wisdom of sociology is that things are not what they seem” [cf. @baehr2019].
 
 2.  Many influential arguments against teleological explanations—which feature prominently in "functionalism"—have really been arguments against conspiracy thinking or "just-so stories" [e.g., @gould1979; @elster1983].
 
 Ultimately we dropped this idea from TFP because conspiracy thinking is not typically published in major sociology outlets, and so it seemed like an unnecessary rant.
 
-Briefly, a teleological explanation seeks to explain the presence, shape, or behavior of some phenomena by making reference to its [purpose]{.smallcaps} [@ruse2017; @tugby2024]. This is a style of explanation that goes all the way back to Aristotle's discussions of "final cause" [@leunissen2010]. Less ambiguous forms of teleological explanation appear whenever people replace the word "purpose" with either [function]{.smallcaps} or [goal]{.smallcaps}, which still carry the connotation that there is some form of "design" lying in the background, whether intentional or not.
+**Background**
 
-Biologists don't like to talk about [purpose]{.smallcaps}, since it implies some form of "intelligent design." Nonetheless, Charles Darwin made [purpose]{.smallcaps} safe for biologists by transforming it into the blind mechanistic process we know as natural selection.[^2] Social scientists, however, cannot do without intentionality. Our world is filled with all sorts of designers in pursuit of their own goals, interests, and values. We wrote TFP in part because we cannot get rid of teleological explanations—intentional or not—and so we better come up with standards that distinguish the good ones from the bad ones.
+Briefly, a teleological explanation seeks to explain the presence, shape, or behavior of some phenomena by making reference to its [purpose]{.smallcaps} [@ruse2017; @tugby2024]. This is a style of explanation that goes all the way back to Aristotle's discussions of "final causes" [@leunissen2010]. Less ambiguous forms of teleological explanation appear whenever people replace the word "purpose" with either [function]{.smallcaps} or [goal]{.smallcaps}, which still carry the connotation that there is some form of "design" lying in the background, whether intentional or not.
+
+The "intelligent design" connotation is the main reason why biologists don't like to talk about [purpose.]{.smallcaps} Nonetheless, Charles Darwin made [purpose]{.smallcaps} safe for biologists by transforming it into the blind mechanistic process we know as natural selection.[^2] Social scientists, however, cannot do without intentionality. Our world is filled with all sorts of designers in pursuit of their own goals, interests, and values. We wrote TFP in part because we cannot get rid of teleological explanations—intentional or not—and so we better come up with standards that distinguish the good ones from the bad ones.
 
 [^2]: The idea of "teleology without intention" sometimes goes by awkward term of [teleonomy]{.smallcaps}. Google it if you must.
 
@@ -35,7 +37,7 @@ Biologists don't like to talk about [purpose]{.smallcaps}, since it implies some
 
 The accusation of conspiracy thinking has been leveled more forcefully at two very different kinds of scholars: evolutionary theorists and Marxists.
 
-Stephen Jay Gould gave us the term "just-so story" in reference to the "adaptationist research program" in evolutionary science. This refers to speculations about the "fitness" of this or that phenomenon without much evidence to back them up. It is the kind of conspiracy thinking that's typically associated with its own adjective, "Panglossian."
+Stephen Jay Gould gave us the term "just-so story" in reference to the "adaptationist research program" in evolutionary science. This refers to speculations about the "fitness" of this or that phenomenon without much evidence to back them up. It is the kind of conspiracy thinking that's typically associated with its own adjective: "Panglossian."
 
 <aside>[Adaptationism (Wikipedia)](https://en.wikipedia.org/wiki/Adaptationism){.uri}</aside>
 
@@ -43,7 +45,7 @@ Stephen Jay Gould gave us the term "just-so story" in reference to the "adaptati
 >
 > @gould1979 [153]
 
-On the Marxist side, it was Jon Elster, another insider, who took over the charge against teleology. Except that it wasn't directed at "natural selection" but rather against the idea that powerful elites are behind most social phenomena.
+On the Marxist side, it was Jon Elster who took over the charge against teleology. Except that it wasn't directed at "natural selection" but rather against the idea that powerful elites are behind most social phenomena.
 
 The main problem with teleological explanations—he called them all "functionalist" [@elster1982; @elster1983]—is that they are very easy to fabricate. It is easy to imagine ways in which some phenomena is "beneficial" (whatever that means) to at least some subset of the population and then convince yourself—via leap of faith, the conviction that "nothing happens by accident"—that this is a tremendous display of critical thinking on your part. It is easy to speculate that these "beneficiaries" may be following some hidden agenda or that they are being directed towards a “goal” that they rather keep secret.
 
@@ -63,11 +65,9 @@ This is essentially what Jon Elster argues.
 >
 > @elster1983 [55]
 
-*Yes, this is the point in which we apply teleological explanations to teleology itself.* The argument is that conspiracy thinking allegedly satisfies some deep psychological "need." In one version, conspiracies are like the Trobriander rituals described by Malinowski, whose purpose is to *reduce the anxiety* linked to dangerous and uncertain fishing expeditions.
+The argument is that conspiracy thinking allegedly satisfies some deep psychological "need." *Yes, this is the point in which we apply teleological explanations to teleology itself.*
 
-<aside>TFP has a small section devoted to explanations of ritual practices.</aside>
-
-In another version of this argument, conspiracies are like the psychoanalytic self-defense mechanism of *displacement.* Judith Butler's [-@butler2024] discussion of the Right Wing obsession with "gender ideology" is premised on this idea. In her view, the discourse around "gender" serves the psychoanalytic "function" of absorbing the fear, trauma, and anxiety created by neoliberal economies (whatever that means).
+In one version, conspiracies are like the Trobriander rituals described by Malinowski, whose purpose is to *reduce the anxiety* linked to dangerous and uncertain fishing expeditions. In another version of this argument, conspiracies are like the psychoanalytic self-defense mechanism of *displacement.* For example, Judith Butler's [-@butler2024] discussion of the Right Wing obsession with "gender ideology" is premised on this idea. In her view, the discourse around "gender" serves the psychoanalytic "function" of absorbing the fear, trauma, and anxiety created by neoliberal economies (whatever that means).
 
 <aside>[Displacement (Wikipedia)](https://en.wikipedia.org/wiki/Displacement_(psychology)){.uri}</aside>
 
