@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -55,14 +55,15 @@ div.csl-indent {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-20f56f9f4466276064db71a9d523dd84.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3078d9348410f514cc0570d96940468d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-92ffd7f7cfce5d4fd9ad646b781ad333.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3c6b33ab6a9e1473c14d1292865bf1ad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,7 +110,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -145,6 +146,10 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -820,10 +825,10 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
 }
 </style>
 
-<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <thead>
 <tr class="gt_heading header">
-<th colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border">Universities and Individuals</th>
+<td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border">Universities and Individuals</td>
 </tr>
 <tr class="gt_col_headings even">
 <th class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"></th>
@@ -833,107 +838,107 @@ Figure&nbsp;4: “Strongish” Ties ( α = 0.06 )
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Northwestern University</td>
+<th id="stub_1_1" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Northwestern University</th>
 <td class="gt_row gt_center" headers="stub_1_1 n">84</td>
 <td class="gt_row gt_center" headers="stub_1_1 prop">7.55%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Michigan-Ann Arbor</td>
+<th id="stub_1_2" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Michigan-Ann Arbor</th>
 <td class="gt_row gt_center" headers="stub_1_2 n">76</td>
 <td class="gt_row gt_center" headers="stub_1_2 prop">6.83%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Chicago</td>
+<th id="stub_1_3" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Chicago</th>
 <td class="gt_row gt_center" headers="stub_1_3 n">72</td>
 <td class="gt_row gt_center" headers="stub_1_3 prop">6.47%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_4" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Harvard University</td>
+<th id="stub_1_4" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Harvard University</th>
 <td class="gt_row gt_center" headers="stub_1_4 n">69</td>
 <td class="gt_row gt_center" headers="stub_1_4 prop">6.21%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_5" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Wisconsin-Madison</td>
+<th id="stub_1_5" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Wisconsin-Madison</th>
 <td class="gt_row gt_center" headers="stub_1_5 n">68</td>
 <td class="gt_row gt_center" headers="stub_1_5 prop">6.12%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_6" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Stanford University</td>
+<th id="stub_1_6" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Stanford University</th>
 <td class="gt_row gt_center" headers="stub_1_6 n">66</td>
 <td class="gt_row gt_center" headers="stub_1_6 prop">5.94%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_7" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Pennsylvania</td>
+<th id="stub_1_7" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Pennsylvania</th>
 <td class="gt_row gt_center" headers="stub_1_7 n">66</td>
 <td class="gt_row gt_center" headers="stub_1_7 prop">5.94%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_8" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Cornell University</td>
+<th id="stub_1_8" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Cornell University</th>
 <td class="gt_row gt_center" headers="stub_1_8 n">65</td>
 <td class="gt_row gt_center" headers="stub_1_8 prop">5.85%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_9" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Brown University</td>
+<th id="stub_1_9" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Brown University</th>
 <td class="gt_row gt_center" headers="stub_1_9 n">62</td>
 <td class="gt_row gt_center" headers="stub_1_9 prop">5.58%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_10" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">New York University</td>
+<th id="stub_1_10" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">New York University</th>
 <td class="gt_row gt_center" headers="stub_1_10 n">61</td>
 <td class="gt_row gt_center" headers="stub_1_10 prop">5.49%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_11" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Princeton University</td>
+<th id="stub_1_11" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Princeton University</th>
 <td class="gt_row gt_center" headers="stub_1_11 n">59</td>
 <td class="gt_row gt_center" headers="stub_1_11 prop">5.31%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_12" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Columbia University</td>
+<th id="stub_1_12" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Columbia University</th>
 <td class="gt_row gt_center" headers="stub_1_12 n">47</td>
 <td class="gt_row gt_center" headers="stub_1_12 prop">4.23%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_13" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">UC Berkeley</td>
+<th id="stub_1_13" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">UC Berkeley</th>
 <td class="gt_row gt_center" headers="stub_1_13 n">46</td>
 <td class="gt_row gt_center" headers="stub_1_13 prop">4.14%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_14" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Ohio State University</td>
+<th id="stub_1_14" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Ohio State University</th>
 <td class="gt_row gt_center" headers="stub_1_14 n">45</td>
 <td class="gt_row gt_center" headers="stub_1_14 prop">4.05%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_15" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Duke University</td>
+<th id="stub_1_15" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Duke University</th>
 <td class="gt_row gt_center" headers="stub_1_15 n">42</td>
 <td class="gt_row gt_center" headers="stub_1_15 prop">3.78%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_16" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Yale University</td>
+<th id="stub_1_16" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Yale University</th>
 <td class="gt_row gt_center" headers="stub_1_16 n">42</td>
 <td class="gt_row gt_center" headers="stub_1_16 prop">3.78%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_17" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of California-Los Angeles</td>
+<th id="stub_1_17" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of California-Los Angeles</th>
 <td class="gt_row gt_center" headers="stub_1_17 n">41</td>
 <td class="gt_row gt_center" headers="stub_1_17 prop">3.69%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_18" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of North Carolina-Chapel Hill</td>
+<th id="stub_1_18" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of North Carolina-Chapel Hill</th>
 <td class="gt_row gt_center" headers="stub_1_18 n">36</td>
 <td class="gt_row gt_center" headers="stub_1_18 prop">3.24%</td>
 </tr>
 <tr class="odd">
-<td id="stub_1_19" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Indiana University-Bloomington</td>
+<th id="stub_1_19" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">Indiana University-Bloomington</th>
 <td class="gt_row gt_center" headers="stub_1_19 n">33</td>
 <td class="gt_row gt_center" headers="stub_1_19 prop">2.97%</td>
 </tr>
 <tr class="even">
-<td id="stub_1_20" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Texas-Austin</td>
+<th id="stub_1_20" class="gt_row gt_center gt_stub" data-quarto-table-cell-role="th" scope="row">University of Texas-Austin</th>
 <td class="gt_row gt_center" headers="stub_1_20 n">32</td>
 <td class="gt_row gt_center" headers="stub_1_20 prop">2.88%</td>
 </tr>
 <tr class="odd">
-<td id="grand_summary_stub_1" class="gt_row gt_left gt_stub gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row" data-quarto-table-cell-role="th" scope="row">Total</td>
+<th id="grand_summary_stub_1" class="gt_row gt_left gt_stub gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row" data-quarto-table-cell-role="th" scope="row">Total</th>
 <td class="gt_row gt_center gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row" headers="grand_summary_stub_1 n">1,112</td>
 <td class="gt_row gt_center gt_grand_summary_row gt_first_grand_summary_row gt_last_summary_row" headers="grand_summary_stub_1 prop">100%</td>
 </tr>
@@ -1059,13 +1064,14 @@ Vaisey, Stephen. 2021. <span>“Welcome to the Real World: Escaping the Sociolog
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

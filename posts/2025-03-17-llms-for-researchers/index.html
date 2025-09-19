@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -90,14 +90,15 @@ div.csl-indent {
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-20f56f9f4466276064db71a9d523dd84.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-3078d9348410f514cc0570d96940468d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-92ffd7f7cfce5d4fd9ad646b781ad333.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3c6b33ab6a9e1473c14d1292865bf1ad.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -140,7 +141,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -176,6 +177,10 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -326,11 +331,11 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <div class="cell">
 <details class="code-fold">
 <summary>Python Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tiktoken <span class="im">as</span> tk</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tiktoken <span class="im">as</span> tk</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> tk.encoding_for_model(<span class="st">"gpt-4o"</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>txt <span class="op">=</span> <span class="st">"The relative opacity of the method tends to encourage a kind of magical orientation to the results"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tokenizer.encode(txt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tokenizer.encode(txt)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[976, 15001, 35672, 328, 290, 2595, 44142, 316, 17636, 261, 3675, 328, 37503, 29546, 316, 290, 4376]</code></pre>
@@ -341,7 +346,7 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Python Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tokenizer.decode([<span class="dv">3436</span>, <span class="dv">60278</span>, <span class="dv">68165</span>, <span class="dv">64957</span>, <span class="dv">1042</span>, <span class="dv">4379</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tokenizer.decode([<span class="dv">3436</span>, <span class="dv">60278</span>, <span class="dv">68165</span>, <span class="dv">64957</span>, <span class="dv">1042</span>, <span class="dv">4379</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>'Andrés Castro Araújo'</code></pre>
@@ -378,7 +383,7 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 <p>Every interaction with an <span class="smallcaps">LLM Assistant</span> is a one-dimensional token sequence. And every new token generated by the LLM is the result of next-token prediction.</p>
 </div>
 <p>For example, this is how one full interaction with ChatGPT looks like:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-overflow-wrap code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">200264</span>, <span class="dv">17360</span>, <span class="dv">200266</span>, <span class="dv">3575</span>, <span class="dv">553</span>, <span class="dv">261</span>, <span class="dv">10297</span>, <span class="dv">29186</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">1428</span>, <span class="dv">200266</span>, <span class="dv">176289</span>, <span class="dv">10093</span>, <span class="dv">83377</span>, <span class="dv">885</span>, <span class="dv">14266</span>, <span class="dv">328</span>, <span class="dv">43286</span>, <span class="dv">2860</span>, <span class="dv">306</span>, <span class="dv">220</span>, <span class="dv">20</span>, <span class="dv">6391</span>, <span class="dv">13</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">173781</span>, <span class="dv">200266</span>, <span class="dv">3538</span>, <span class="dv">262</span>, <span class="dv">112368</span>, <span class="dv">11</span>, <span class="dv">168709</span>, <span class="dv">11</span>, <span class="dv">17456</span>, <span class="dv">11</span>, <span class="dv">40722</span>, <span class="dv">11</span>, <span class="dv">3580</span>, <span class="dv">13</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">173781</span>, <span class="dv">200266</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-overflow-wrap code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">200264</span>, <span class="dv">17360</span>, <span class="dv">200266</span>, <span class="dv">3575</span>, <span class="dv">553</span>, <span class="dv">261</span>, <span class="dv">10297</span>, <span class="dv">29186</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">1428</span>, <span class="dv">200266</span>, <span class="dv">176289</span>, <span class="dv">10093</span>, <span class="dv">83377</span>, <span class="dv">885</span>, <span class="dv">14266</span>, <span class="dv">328</span>, <span class="dv">43286</span>, <span class="dv">2860</span>, <span class="dv">306</span>, <span class="dv">220</span>, <span class="dv">20</span>, <span class="dv">6391</span>, <span class="dv">13</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">173781</span>, <span class="dv">200266</span>, <span class="dv">3538</span>, <span class="dv">262</span>, <span class="dv">112368</span>, <span class="dv">11</span>, <span class="dv">168709</span>, <span class="dv">11</span>, <span class="dv">17456</span>, <span class="dv">11</span>, <span class="dv">40722</span>, <span class="dv">11</span>, <span class="dv">3580</span>, <span class="dv">13</span>, <span class="dv">200265</span>, <span class="dv">200264</span>, <span class="dv">173781</span>, <span class="dv">200266</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This one-dimensional token sequence contains a couple of “special tokens” (<code>200264</code>, <code>200265</code>, <code>200266</code>) used internally by ChatGPT to distinguish between text provided by the <span class="smallcaps">User</span> from text provided by the <span class="smallcaps">Assistant</span>.</p>
 <pre><code>&lt;|im_start|&gt;
 system
@@ -418,7 +423,7 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 <div class="cell">
 <details class="code-fold">
 <summary>R Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>softmax <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">temp =</span> <span class="dv">1</span>) {</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">length</span>(temp) <span class="sc">==</span> <span class="dv">1</span>, temp <span class="sc">&gt;=</span> <span class="dv">0</span>)</span>
@@ -464,7 +469,7 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 <span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">labeller =</span> <span class="fu">labeller</span>(<span class="at">temperature =</span> \(x) <span class="fu">paste</span>(<span class="st">"temperature:"</span>, x))</span>
 <span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"probability"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_family =</span> <span class="st">"Avenir Next Condensed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_family =</span> <span class="st">"Avenir Next Condensed"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-temperature" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -500,10 +505,10 @@ Figure&nbsp;2: As <span class="math inline">\(\tau\)</span> increases, the resul
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>chat <span class="ot">&lt;-</span> ellmer<span class="sc">::</span><span class="fu">chat_openai</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>chat <span class="ot">&lt;-</span> ellmer<span class="sc">::</span><span class="fu">chat_openai</span>(</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">model =</span> <span class="st">"gpt-4o"</span>,</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">api_args =</span> <span class="fu">list</span>(<span class="at">temperature =</span> <span class="dv">0</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
@@ -586,7 +591,7 @@ Figure&nbsp;5: Python Interpreter Example
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ellmer)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ellmer)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>calendarEvent <span class="ot">&lt;-</span> <span class="fu">type_object</span>(</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Extract the event information."</span>,</span>
@@ -612,7 +617,7 @@ Figure&nbsp;5: Python Interpreter Example
 <span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co"># List of 3</span></span>
 <span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="co"># $ name        : chr "Science Fair"</span></span>
 <span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co"># $ date        : chr "Friday"</span></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co"># $ participants: chr [1:2] "Alice" "Bob"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="co"># $ participants: chr [1:2] "Alice" "Bob"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <ol start="2" type="1">
@@ -621,7 +626,7 @@ Figure&nbsp;5: Python Interpreter Example
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Python Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel, Field</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel, Field</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> openai <span class="im">import</span> OpenAI</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CalendarEvent(BaseModel):</span>
@@ -644,7 +649,7 @@ Figure&nbsp;5: Python Interpreter Example
 <span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>event <span class="op">=</span> completion.choices[<span class="dv">0</span>].message.parsed.model_dump()</span>
 <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>event</span>
 <span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co"># {'name': 'Science Fair', 'date': 'Friday', 'participants': ['Alice', 'Bob']}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="co"># {'name': 'Science Fair', 'date': 'Friday', 'participants': ['Alice', 'Bob']}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>In both examples, an extra parameter to the OpenAI API called <code>response_format</code> will be added. This will look something like this:</p>
@@ -756,13 +761,14 @@ Ouyang, Long, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mi
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
