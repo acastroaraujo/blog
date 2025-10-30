@@ -9,8 +9,17 @@
 <link>https://acastroaraujo.github.io/blog/</link>
 <atom:link href="https://acastroaraujo.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>andrés writes unpublishable stuff instead of working on his dissertation</description>
-<generator>quarto-1.8.24</generator>
-<lastBuildDate>Sat, 03 May 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.8.25</generator>
+<lastBuildDate>Tue, 28 Oct 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Rules of Artificial Intelligence</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2025-10-28-artificial-intelligence-and-normativity/</link>
+  <description><![CDATA[ Machine Learning algorithms take data-as-<em>inputs</em> and produce rules-as-<em>outputs</em>. This what distinguishes them from “classical programming,” where human experts create a set of rules-as-<em>inputs</em> that are then used to automate decision-making across a variety of tasks. ]]></description>
+  <category>Philosophy</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2025-10-28-artificial-intelligence-and-normativity/</guid>
+  <pubDate>Tue, 28 Oct 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Positivism is a Bundle of Words</title>
   <dc:creator>andrés castro araújo</dc:creator>
