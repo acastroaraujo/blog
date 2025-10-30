@@ -8,3 +8,5 @@
 /renv/
 Untitled.R
 Untitled.txt
+
+**/*.quarto_ipynb

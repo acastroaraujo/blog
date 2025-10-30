@@ -13,11 +13,11 @@ categories:
 bibliography: references.bib
 ---
 
-*Note. The R code in this blogpost is already outdated. Things are changing fast.*
+*Note. The R code in this blog post is already outdated. Things are changing fast.*
 
 I've recently spent some time learning about how Large Language Models (LLMs) work so that I can feel confident when using them for academic purposes.
 
-So far, I recommend two sources for learning about the "nuts and bolts" aspect of these models:
+I recommend two sources for learning about the "nuts and bolts" aspect of these models:
 
 1.  [Deep Dive into LLMs like ChatGPT](https://youtu.be/7xTGNNLPyMI), a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).
 
