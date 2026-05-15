@@ -9,7 +9,7 @@
 <link>https://acastroaraujo.github.io/blog/</link>
 <atom:link href="https://acastroaraujo.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>andrés writes unpublishable stuff instead of working on his dissertation</description>
-<generator>quarto-1.8.25</generator>
+<generator>quarto-1.9.37</generator>
 <lastBuildDate>Sat, 03 May 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Positivism is a Bundle of Words</title>
@@ -20,17 +20,6 @@
   <category>Sociology</category>
   <guid>https://acastroaraujo.github.io/blog/posts/2025-05-03-positivism-is-a-bundle-of-words/</guid>
   <pubDate>Sat, 03 May 2025 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Teleology &amp; Conspiracy</title>
-  <dc:creator>andrés castro araújo</dc:creator>
-  <link>https://acastroaraujo.github.io/blog/posts/2025-03-24-conspiracy-sociology/</link>
-  <description><![CDATA[ Some B-Sides from the Functionalism Paper ]]></description>
-  <category>Functionalism</category>
-  <category>Philosophy</category>
-  <guid>https://acastroaraujo.github.io/blog/posts/2025-03-24-conspiracy-sociology/</guid>
-  <pubDate>Mon, 24 Mar 2025 00:00:00 GMT</pubDate>
-  <media:content url="https://acastroaraujo.github.io/blog/posts/2025-03-24-conspiracy-sociology/conspiracy.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
   <title>LLMs for Researchers</title>
