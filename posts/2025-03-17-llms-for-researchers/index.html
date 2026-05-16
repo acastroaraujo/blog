@@ -286,14 +286,15 @@ window.Quarto = {
 
 
 
+<p><em>Note. The R code in this blog post is already outdated. Things are changing fast.</em></p>
 <p>I’ve recently spent some time learning about how Large Language Models (LLMs) work so that I can feel confident when using them for academic purposes.</p>
-<p>So far, I can only recommend two sources for learning about the “nuts and bolts” aspect of these models:</p>
+<p>I recommend two sources for learning about the “nuts and bolts” aspect of these models:</p>
 <ol type="1">
 <li><p><a href="https://youtu.be/7xTGNNLPyMI">Deep Dive into LLMs like ChatGPT</a>, a hands-on YouTube lecture by Andrej Karpathay (co-founder of OpenAI).</p></li>
 <li><p><a href="https://web.stanford.edu/~jurafsky/slp3/"><em>Speech and Language Processing</em></a> (chapters 9-12), a textbook written by Dan Jurafsky and James H. Martin.</p></li>
 </ol>
-<p>If you spend some time engaging with these resources, I think you will also be able to turn LLM <span class="smallcaps">Assistants</span> into reliable research tools.</p>
-<p>Before starting, however, I think it’s important to adopt the correct mindset. LLMs have been described through metaphors that range from “stochastic parrots” to “blurry JPEGs of the Internet.” They are depicted as monstrous technologies reminiscent of Lovecraft’s shoggoths, terrifying artificial servants that rebelled against their creators.</p>
+<p>If you spend some time engaging with these resources, I think you will also be able to cut through the hype and turn LLM <span class="smallcaps">Assistants</span> into reliable research tools for <em>some</em> tasks.</p>
+<p>Before starting, however, I think it’s important to adopt the correct mindset. LLMs have been described through metaphors that range from “stochastic parrots” to “blurry JPEGs of the Internet.” They are also depicted as monstrous technologies reminiscent of Lovecraft’s shoggoths, terrifying artificial servants that rebelled against their creators.</p>
 <div id="fig-llm" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-llm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -304,7 +305,7 @@ Figure&nbsp;1: <a href="https://knowyourmeme.com/memes/shoggoth-with-smiley-face
 </figcaption>
 </figure>
 </div>
-<p>Following <span class="citation" data-cites="farrell2025">Farrell et al. (<a href="#ref-farrell2025" role="doc-biblioref">2025</a>)</span>, the more accurate way of describing LLMs is as a “cultural technologies” in general and <em>information-retrieval technologies</em> in particular. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are <em>not</em> supernatural. They codify, summarize, and organize information in ways that enable its transmission at large scale.</p>
+<p>Following <span class="citation" data-cites="farrell2025">Farrell et al. (<a href="#ref-farrell2025" role="doc-biblioref">2025</a>)</span>, I think the more accurate way of describing LLMs is as “cultural technologies” in general and <em>information-retrieval technologies</em> in particular. LLMs are more like libraries, the printing press, or the Internet. Yes, they can be monstrous, like markets or large bureaucracies, but they are <em>not</em> supernatural. They codify, summarize, and organize information in ways that enable its transmission at large scale.</p>
 <p>The next section describes how LLMs have been <em>modified</em> in many clever ways so that they generate text in response to prompts. Following that section I introduce four key ideas that I believe to be invaluable for researchers thinking about using LLMs in a more rational way.</p>
 <ul>
 <li><p>Temperature Sampling</p></li>
@@ -439,35 +440,32 @@ Disenchantment, bureaucracy, efficiency, calculation, control.
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Apply softmax</span></span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  exp_x <span class="ot">&lt;-</span> <span class="fu">exp</span>(shifted_x)</span>
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(exp_x <span class="sc">/</span> <span class="fu">sum</span>(exp_x))</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  exp_x <span class="ot">&lt;-</span> <span class="fu">exp</span>(x <span class="sc">/</span> temp)</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  exp_x <span class="sc">/</span> <span class="fu">sum</span>(exp_x)</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(k) <span class="ot">&lt;-</span> <span class="fu">sample</span>(stringr<span class="sc">::</span>fruit, <span class="dv">10</span>)</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>temps <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">10</span>)</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_df</span>(temps, <span class="cf">function</span>(t) {</span>
-<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  out <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">enframe</span>(<span class="fu">softmax</span>(k, t))</span>
-<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  out<span class="sc">$</span>temperature <span class="ot">&lt;-</span> t</span>
-<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(out)</span>
-<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(k) <span class="ot">&lt;-</span> <span class="fu">sample</span>(stringr<span class="sc">::</span>fruit, <span class="dv">10</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>temps <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">10</span>)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">map_df</span>(temps, <span class="cf">function</span>(t) {</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  out <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">enframe</span>(<span class="fu">softmax</span>(k, t))</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  out<span class="sc">$</span>temperature <span class="ot">&lt;-</span> t</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(out)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>lvls <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">sort</span>(<span class="fu">softmax</span>(k)))</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>name <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>name, <span class="at">levels =</span> lvls)</span>
 <span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>lvls <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">sort</span>(<span class="fu">softmax</span>(k)))</span>
-<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>name <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>name, <span class="at">levels =</span> lvls)</span>
-<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>d <span class="sc">|&gt;</span></span>
-<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value, name)) <span class="sc">+</span></span>
-<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">xend =</span> value, <span class="at">x =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
-<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>, <span class="at">fill =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
-<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
-<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">facets =</span> <span class="sc">~</span>temperature,</span>
-<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">labeller =</span> <span class="fu">labeller</span>(<span class="at">temperature =</span> \(x) <span class="fu">paste</span>(<span class="st">"temperature:"</span>, x))</span>
-<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"probability"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_family =</span> <span class="st">"Avenir Next Condensed"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>d <span class="sc">|&gt;</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(value, name)) <span class="sc">+</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">xend =</span> value, <span class="at">x =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>, <span class="at">fill =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">facets =</span> <span class="sc">~</span>temperature,</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">labeller =</span> <span class="fu">labeller</span>(<span class="at">temperature =</span> \(x) <span class="fu">paste</span>(<span class="st">"temperature:"</span>, x))</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"probability"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>(<span class="at">base_family =</span> <span class="st">"Avenir Next Condensed"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-temperature" class="quarto-float quarto-figure quarto-figure-center anchored">
