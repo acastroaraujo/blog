@@ -155,9 +155,7 @@ SVD helps us identify the "most importnat features of a system" (e.g., the impor
 
 Take a rectangular $m \times n$ matrix $\mathbf{A}$.
 
-$$
-\underset{\scriptsize{m \times n}}{\mathbf{A}_{}} \ \underset{\scriptsize{n \times 1}}{\widehat{\mathbf{v}_i}} = \sigma_i \underset{\scriptsize{m \times 1}}{\widehat{\mathbf{u}_i}}
-$$
+$$\underset{\scriptsize{m \times n}}{\mathbf{A}_{}} \ \underset{\scriptsize{n \times 1}}{\widehat{\mathbf{v}_i}} = \sigma_i \underset{\scriptsize{m \times 1}}{\widehat{\mathbf{u}_i}}$$
 
 The story is A sends v to u. It's a mapping.
 
