@@ -9,8 +9,18 @@
 <link>https://acastroaraujo.github.io/blog/</link>
 <atom:link href="https://acastroaraujo.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>andrés writes unpublishable stuff instead of working on his dissertation</description>
-<generator>quarto-1.9.37</generator>
-<lastBuildDate>Sat, 03 May 2025 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Tue, 29 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Conspiracy Theories</title>
+  <dc:creator>andrés castro araújo</dc:creator>
+  <link>https://acastroaraujo.github.io/blog/posts/2026-09-29-conspiracy-theories/</link>
+  <description><![CDATA[ The cultural and social structure of conspiracy theories ]]></description>
+  <category>Functionalism</category>
+  <category>Sociology</category>
+  <guid>https://acastroaraujo.github.io/blog/posts/2026-09-29-conspiracy-theories/</guid>
+  <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Positivism is a Bundle of Words</title>
   <dc:creator>andrés castro araújo</dc:creator>
